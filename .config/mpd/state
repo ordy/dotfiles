@@ -1,0 +1,68 @@
+sw_volume: 100
+audio_device_state:1:My ALSA Device
+state: stop
+current: 5
+random: 1
+repeat: 1
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+song_begin: http://199.187.121.124:10007
+Title: Tetsu 69 - Tightrope (Requiem Ver.)
+Name: AnimeAMAZE
+mtime: 0
+song_end
+song_begin: http://listen.radionomy.com:80/RadioAnimex-musicaanimeymuchomas-
+Title: Spot Radio Animex - 1
+Name: RadioAnimex(musicaanimeymuchomas)
+mtime: 0
+song_end
+song_begin: http://112.121.150.133:9012
+Title: ????ժ??? - Spot BaKaRadio Net
+Name: AutoBaKa @BaKaRadio
+mtime: 0
+song_end
+song_begin: http://158.69.9.92:443
+Title: Mike Vafeas - Sealed Door (Project Majestic Mix: A Tribute to Nobuo Uematsu)
+Name: AnimeNfo Radio | Serving you the best Anime and Doujin music!
+mtime: 0
+song_end
+song_begin: http://78.46.91.38:8000
+Title: Konishi Kayo & Kondoo Yukio - Heji
+Name: AnimeRadio.SU
+mtime: 0
+song_end
+song_begin: http://188.166.22.53:8080
+Title: Unknown Artist - Unknown Album : fear, and loathing in las vegas - chase the light!
+Name: Armitage's Dimension Jpop/Jrock/Anime, 40,000+ Songs, User Requests, Live Chat and more!
+mtime: 0
+song_end
+song_begin: http://38.107.243.18:8014
+Title: LOVE PSYCHEDELICO - O
+Name: Big B Radio #JPOP - The Hot Station for Asian Music
+mtime: 0
+song_end
+song_begin: http://184.95.62.170:9002
+Title: Mighty Mouth - Lalala (Feat. Soya)
+Name: Big B Radio #KPOP - The Only Hot Station for Asian Music | bigbradio.net
+mtime: 0
+song_end
+song_begin: http://67.20.48.71:8301
+Title: 0003.-ZONA DE MIEDO - copia
+Name: MultiAnime Radio http://multianime.com.mx
+mtime: 0
+song_end
+song_begin: http://67.212.165.162:7018
+Title: Hamatora - OP All Over
+Name: Radio Rakuen - Auto DJ
+mtime: 0
+song_end
+song_begin: http://37.59.41.178:8000
+Title: Takumi Inohaya - 青空の影
+Name: Touhou Radio [touhouradio.com]
+mtime: 0
+song_end
+playlist_end
