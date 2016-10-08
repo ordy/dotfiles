@@ -70,3 +70,4 @@ if (empty($TMUX))
 		set termguicolors
 	endif
 endif
+"Changes git
