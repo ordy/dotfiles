@@ -5,12 +5,16 @@ URxvt.scrollBar_right: false
 URxvt.scrollBar:	   false
 URxvt.geometry:		   120x40+240+120
 
-URxvt.font:     xft:Source Code Pro for Powerline:regular:size=9
-URxvt.boldfont: xft:Source Code Pro for Powerline:bold:size=9
 
-URxvt.perl-ext-common: 	   default,resize-font,matcher
+URxvt.font: 		   xft:PragmataPro\ for\ Powerline:size=11:antialias=true
+URxvt.font.boldFont:   xft:PragmataPro\ for\ Powerline:style=Bold:size=11:antialias=true
+URxvt.font.italicFont: xft:PragmataPro\ for\ Powerline:style=Italic:size=11:antialias=true
+URxvt.boldItalicFont:  xft:PragmataPro\ for\ Powerline:style=Bold Italic:size=10:antialias=true
+
+URxvt.perl-ext-common: 	   default,resize-font,url-select,matcher
 URxvt.resize-font.smaller: C-Down
 URxvt.resize-font.bigger:  C-Up
+URxvt.urlLauncher:         /usr/bin/chromium
 
 URxvt*cursorBlink: 		true
 URxvt*depth: 			32
