@@ -6,7 +6,7 @@ scope: pso2.csv
 contexts:
   main:
     # Start of triple quote
-    - match: '\"\"\"'
+    - match: '"""'
       scope: punctuation.definition.string.begin.pso2csv
       push: triple_quoted_string
     # ID offset
@@ -36,7 +36,7 @@ contexts:
       scope: punctuation.definition.tag.begin.pso2csv
       push: color_tag_string
     # End of triple quote
-    - match: '\"\"\"'
+    - match: '"""'
       scope: punctuation.definition.string.end.pso2csv
       pop: true
 
