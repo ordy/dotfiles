@@ -1,0 +1,64 @@
+%YAML 1.2
+---
+name: pso2csv
+file_extensions: [csv]
+scope: pso2.csv
+contexts:
+  main:
+    # Start of triple quote
+    - match: '\"\"\"'
+      scope: punctuation.definition.string.begin.pso2csv
+      push: triple_quoted_string
+    # ID offset
+    - match: '\b\#\d+\b'
+      scope: constant.numeric.pso2csv
+
+  triple_quoted_string:
+    - meta_scope: string.quoted.triple.pso2csv
+    # Tags and formating
+    - match: '<br>|<c>|\\u3000'
+      scope: keyword.other.pso2csv
+    - match: '(<pict\s)([A-Za-z0-9_]+)(>)'
+      scope: keyword.other.pso2csv
+    - match: '(<)(\%([a-zA-Z_]+))(>)'
+      scope: keyword.other.pso2csv
+    # Japanese strings
+    - match: '[\x{3000}-\x{30ff}]+|[\x{4e00}-\x{9faf}]+|[ａ-ｚＡ-Ｚ]+|[\x{ff00}-\x{ffef}]+'
+      scope: variable.other.pso2csv
+    # Escape character
+    - match: '\\.'
+      scope: constant.character.escape.pso2csv
+    # References
+    - match: '\$\(\d+\)'
+      scope: variable.other.pso2csv
+    # Start of color tag
+    - match: '(<)(c\s(?:[0-9a-fA-F]{3}){1,2}|green|red|yellow)(>)'
+      scope: punctuation.definition.tag.begin.pso2csv
+      push: color_tag_string
+    # End of triple quote
+    - match: '\"\"\"'
+      scope: punctuation.definition.string.end.pso2csv
+      pop: true
+
+  color_tag_string:
+    - meta_scope: constant.language.pso2csv
+    # End of color tag or end of line
+    - match: '<c>|.+?(?=""")'
+      scope: punctuation.definition.tag.end.pso2csv
+      pop: true
+    # Tags and formating
+    - match: '<br>|<c>|\\u3000'
+      scope: keyword.other.pso2csv
+    - match: '(<pict\s)([A-Za-z0-9_]+)(>)'
+      scope: keyword.other.pso2csv
+    - match: '(<)(\%([a-zA-Z_]+))(>)'
+      scope: keyword.other.pso2csv
+    # Japanese strings
+    - match: '[\x{3000}-\x{30ff}]+|[\x{4e00}-\x{9faf}]+|[ａ-ｚＡ-Ｚ]+|[\x{ff00}-\x{ffef}]+'
+      scope: variable.other.pso2csv
+    # Escape character
+    - match: '\\.'
+      scope: constant.character.escape.pso2csv
+    # References
+    - match: '\$\(\d+\)'
+      scope: variable.other.pso2csv
