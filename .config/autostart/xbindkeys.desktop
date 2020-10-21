@@ -1,1 +1,8 @@
-/home/ordnas/.config/autostart/xbindkeys.desktop
+[Desktop Entry]
+Type=Application
+Name=xbindkeys
+Exec=/usr/bin/xbindkeys
+OnlyShowIn=GNOME;
+Terminal=false;
+Hidden=false;
+StartupNotify=false;
