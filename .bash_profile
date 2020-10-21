@@ -1,1 +1,5 @@
-/home/ordnas/.bash_profile
+#
+# ~/.bash_profile
+#
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc

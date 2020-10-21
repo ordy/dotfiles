@@ -1,1 +1,3 @@
-/home/ordnas/.pam_environment
+# Qt5 Configuration Tool
+QT_QPA_PLATFORMTHEME=qt5ct
+
