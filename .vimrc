@@ -1,4 +1,4 @@
-runtime! archlinux.vim
+"" runtime! archlinux.vim
 
 "" General
 set number	" Show line numbers
@@ -6,6 +6,7 @@ set linebreak	" Break lines at word (requires Wrap lines)
 set showbreak=+++ 	" Wrap-broken line prefix
 set textwidth=100	" Line wrap (number of cols)
 set showmatch	" Highlight matching brace
+set clipboard=unnamedplus
  
 set hlsearch	" Highlight all search results
 set smartcase	" Enable smart-case search
@@ -20,11 +21,12 @@ set smartindent	" Enable smart-indent
 set smarttab	" Enable smart-tabs
 set tabstop=2	" Number of spaces per Tab
 set mouse=a
+set ttymouse=sgr
 syntax on
 
 "" Advanced
 set ruler	" Show row and column ruler information
-set guifont=Fire\ Code:h10
+set guifont=CaskaydiaCove\ Nerd\ Font\ Regular:h8.5
 command! -nargs=0 Sw w !sudo tee % > /dev/null
 
 set cursorline
@@ -37,18 +39,12 @@ set backspace=indent,eol,start	" Backspace behaviour
 
 set laststatus=2
 let g:powerline_pycmd="py3"
-set t_Co=256
 set termencoding=utf-8
 set encoding=utf-8
 
-if (empty($TMUX))
-  if (has("nvim"))
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
+  set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 
 "" Vundle Plugins
@@ -60,9 +56,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'joshdick/onedark.vim'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'ycm-core/YouCompleteMe'
 call vundle#end()
 filetype plugin indent on  
-
 
 colorscheme onedark
 set background=dark
