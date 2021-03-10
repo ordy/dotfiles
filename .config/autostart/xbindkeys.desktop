@@ -1,8 +1,10 @@
 [Desktop Entry]
-Type=Application
-Name=xbindkeys
-Exec=/usr/bin/xbindkeys
-OnlyShowIn=GNOME;
-Terminal=false;
+Exec=xbindkeys
 Hidden=false;
+Icon=
+Name=xbindkeys
+OnlyShowIn=GNOME;
+Path=
 StartupNotify=false;
+Terminal=False
+Type=Application

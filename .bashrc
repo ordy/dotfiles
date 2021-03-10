@@ -29,6 +29,11 @@ alias pacr="sudo pacman -Rs"
 alias pacu="sudo pacman -Syyu"
 alias pacmu="sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist"
 
+alias ytl="youtube-dl -F"
+alias yta="youtube-dl bestaudio"
+alias ytv="youtube-dl bestvideo[height=720, ext=webm]"
+alias yt="youtube-dl -f"
+
 alias sf="screenfetch"
 
 # Enable history appending instead of overwriting.  #139609
