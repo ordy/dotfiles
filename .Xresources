@@ -1,32 +1,32 @@
 ## urxvt config
-URxvt.termName: 	   rxvt-unicode
-URxvt.title: 		   urxvt
+URxvt.termName:        rxvt-unicode
+URxvt.title:           urxvt
 URxvt.scrollBar_right: false
-URxvt.scrollBar:	   false
-URxvt.geometry:		   120x40+240+120
+URxvt.scrollBar:       false
+URxvt.geometry:        120x40+240+120
 
-URxvt.font: 		   xft:Fira\ Code:size=9:antialias=true
+URxvt.font:            xft:Fira\ Code:size=9:antialias=true
 URxvt.font.boldFont:   xft:Fira\ Code:style=Bold:size=9:antialias=true
 URxvt.font.italicFont: xft:Fira\ Code:style=Italic:size=9:antialias=true
 URxvt.boldItalicFont:  xft:Fira\ Code:style=Bold Italic:size=9:antialias=true
 
-URxvt.perl-ext-common: 	   default,resize-font,url-select,matcher
+URxvt.perl-ext-common:     default,resize-font,url-select,matcher
 URxvt.resize-font.smaller: C-Down
 URxvt.resize-font.bigger:  C-Up
 URxvt.urlLauncher:         /usr/bin/firefox
-URxvt.letterSpace: -1
+URxvt.letterSpace:         -1
 
-URxvt*cursorBlink: 		true
-URxvt*depth: 			32
-URxvt*dynamicColors: 	on
+URxvt*cursorBlink:      true
+URxvt*depth:            32
+URxvt*dynamicColors:    on
 URxvt*cursorUnderline : true
 
 !{ Xft settings
-Xft.dpi:	   96              
+Xft.dpi:       96              
 Xft.antialias: true
 Xft.hinting:   true
-Xft.rgba: 	   rgb
-Xft.autohint: 0
+Xft.rgba:      rgb
+Xft.autohint:  0
 Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintslight
 !}
@@ -71,4 +71,3 @@ Xft.hintstyle: hintslight
 ! white
 *.color7:       #c6c6c6
 *.color15:      #ffffff
-
