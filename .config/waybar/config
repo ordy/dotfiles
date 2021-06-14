@@ -1,0 +1,236 @@
+{
+    "layer": "top", // Waybar at top layer
+        "position": "top", // Waybar position (top|bottom|left|right)
+        "height": 19, // Waybar height (to be removed for auto height)
+        "modules-left": [
+            "sway/workspaces", 
+        "sway/mode", 
+        "custom/media",
+        "custom/sep1", 
+        "mpd",
+        "custom/sep2"
+        ],
+        "modules-center": [
+            "cpu",
+        "custom/cpu_icon",
+        "memory", 
+        "custom/mem_icon",
+        "temperature",
+        "custom/temp_icon",
+        "backlight",
+        "custom/bright_icon",
+        "custom/weather",
+        "custom/weather_icon",
+        ],
+        "modules-right": [ 
+            "custom/sep3", 
+        "pulseaudio",
+        "custom/sep4", 
+        "network",
+        "custom/sep5",  
+        "battery",
+        "idle_inhibitor",
+        "tray",
+        "custom/sep6",  
+        "clock"
+        ],
+        // Modules configuration
+        "sway/workspaces": {
+            "disable-scroll": true,
+            "all-outputs": true,
+            "format": "{icon}",
+            "format-icons": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "urgent": "",
+                "focused": "",
+                "default": ""
+            }
+        },
+        "sway/mode": {
+            "format": "<span style=\"italic\">{}</span>"
+        },
+        "mpd": {
+            "format": "{artist} - {title}",
+            "format-disconnected": "Disconnected ",
+            "format-stopped": "",
+            "format-paused": "{stateIcon}",
+            "unknown-tag": "N/A",
+            "interval": 2,
+            "consume-icons": {
+                "on": " "
+            },
+            "random-icons": {
+                "off": "<span color=\"#f53c3c\"></span> ",
+                "on": " "
+            },
+            "repeat-icons": {
+                "on": " "
+            },
+            "single-icons": {
+                "on": "1 "
+            },
+            "state-icons": {
+                "paused": "",
+                "playing": ""
+            },
+            "tooltip-format": "MPD (connected)",
+            "tooltip-format-disconnected": "MPD (disconnected)"
+        },
+        "idle_inhibitor": {
+            "format": "{icon}",
+            "format-icons": {
+                "activated": "",
+                "deactivated": ""
+            }
+        },
+        "tray": {
+            "icon-size": 16,
+            "spacing": 10
+        },
+        "clock": {
+            // "timezone": "America/New_York",
+            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+            "format-alt": "{:%Y-%m-%d}"
+        },
+        "cpu": {
+            "format": "{usage}%",
+            "tooltip": false
+        },
+        "memory": {
+            "format": "{}%"
+        },
+        "custom/cpu_icon": {
+            "format": ""
+        },
+        "custom/mem_icon": {
+            "format": ""
+        },
+        "custom/temp_icon": {
+            "format": ""
+        },
+        "custom/bright_icon": {
+            "format": "◐︁"
+        },
+        "custom/weather_icon": {
+            "format": " "
+        },
+        "custom/sep1": {
+            "format": "▼",
+            "tooltip": false
+        },
+        "custom/sep2": {
+            "format": "▼",
+            "tooltip": false
+        },
+        "custom/sep3": {
+            "format": "▼",
+            "tooltip": false
+        },
+        "custom/sep4": {
+            "format": "▲",
+            "tooltip": false
+        },
+        "custom/sep5": {
+            "format": "▼",
+            "tooltip": false
+        },
+        "custom/sep6": {
+            "format": "▲",
+            "tooltip": false
+        },
+        "custom/sep7": {
+            "format": "▲",
+            "tooltip": false
+        },
+        "custom/sep8": {
+            "format": "▲",
+            "tooltip": false
+        },
+        "custom/sep9": {
+            "format": "▼",
+            "tooltip": false
+        },
+        "custom/sep10": {
+            "format": "▲",
+            "tooltip": false
+        },
+        "custom/sep11": {
+            "format": "▲",
+            "tooltip": false
+        },
+        "temperature": {
+            // "thermal-zone": 2,
+            // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+            "critical-threshold": 85,
+            // "format-critical": "{temperatureC}{icon}",
+            "format": "{temperatureC}",
+            "format-icons": ["","",""]
+        },
+        "backlight": {
+            "on-scroll-up": "light -s sysfs/backlight/acpi_video1 -A 10",
+            "on-scroll-down": "light -s sysfs/backlight/acpi_video1 -U 10",
+            "device": "acpi_video0",
+            "format": "{percent}%",
+            "format-icons": ["",""]
+        },
+        "battery": {
+            "states": {
+                // "good": 95,
+                "warning": 30,
+                "critical": 15
+            },
+            "format": "{capacity}% {icon}",
+            "format-charging": "{capacity}% ",
+            "format-plugged": "{capacity}% ",
+            "format-alt": "{time} {icon}",
+            // "format-good": "", // An empty format will hide the module
+            // "format-full": "",
+            "format-icons": ["", "", "", "", ""]
+        },  
+        "network": {
+            // "interface": "wlp2*", // (Optional) To force the use of this interface
+            "format-wifi": "{signalStrength}%  <span font='14px' rise='-950' style='normal'></span>",
+            "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+            "format-linked": "{ifname} (No IP) ",
+            "format-disconnected": "Disconnected ⚠",
+            "format-alt": "{ifname} on {essid}: {ipaddr}/{cidr}"
+        },
+        "pulseaudio": {
+            // "scroll-step": 1, // %, can be a float
+            "format": "{volume}% {icon} {format_source}",
+            "format-bluetooth": "{volume}% {icon} {format_source}",
+            "format-bluetooth-muted": " {icon} {format_source}",
+            "format-muted": " {format_source}",
+            "format-source": "{volume}%  <span font='13px' rise='-450' style='normal'></span>",
+            "format-source-muted": " <span font='13px' rise='-450' style='normal'></span>",
+            "format-icons": {
+                "headphone": " <span font='14px' rise='-1000'></span>",
+                "hands-free": "",
+                "headset": "",
+                "phone": "",
+                "portable": "",
+                "car": "",
+                "default": [
+                    " <span font='16px' rise='-1500' style='normal'></span>", 
+                " <span font='16px' rise='-1500' style='normal'></span>", 
+                " <span font='16px' rise='-1500' style='normal'></span>"
+                ]
+            },
+            "on-click": "pavucontrol"
+        },
+        "custom/weather": {
+            "format": "{}",
+            "format-alt": "{alt}: {}",
+            "format-alt-click": "click-right",
+            "interval": 1800,
+            "return-type": "json",
+            "exec": "~/.config/waybar/modules/weather.sh",
+            "exec-if": "ping wttr.in -c1",
+            // "on-click": "terminator -p Small -e 'bash -c \"curl -s https://en.wttr.in; read line\"'"
+            "on-click": "gnome-weather"
+        }
+}

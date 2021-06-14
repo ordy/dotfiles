@@ -6,3 +6,6 @@ rsync $HOME/.config/picom.conf ./.config/
 rsync $HOME/.config/mpd/mpd.conf ./.config/mpd/
 rsync -a $HOME/.bin .
 rsync -a $HOME/.config/fontconfig ./.config/
+rsync -a $HOME/.config/sway ./.config/
+rsync -a $HOME/.config/waybar ./.config/
+rsync -a $HOME/.config/wlogout ./.config/
