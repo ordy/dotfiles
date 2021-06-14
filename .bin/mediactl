@@ -1,0 +1,9 @@
+#!/bin/bash
+
+SPOTIFY_STATUS=$(playerctl -p spotify status)
+
+if [[ $SPOTIFY_STATUS == 'Playing' ]]; then
+	playerctl -p spotify $1
+else
+	playerctl -p mpd $1
+fi

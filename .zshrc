@@ -53,7 +53,7 @@ alias yta="youtube-dl -x -f bestaudio --audio-quality 0 --audio-format mp3"
 alias ytv="youtube-dl -f 302+bestaudio/247+bestaudio" #720p 60fps or 720p 30fps
 alias yt="youtube-dl -f"
 
-alias sf="screenfetch"
+alias sf="neofetch"
 
 # Enable colors for ls, etc. Prefer ~/.dir_colors #64489
 if [[ -f ~/.dir_colors ]] ; then
