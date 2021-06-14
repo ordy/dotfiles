@@ -1,0 +1,348 @@
+@define-color mpd #333385;
+@define-color volume #6a52c9;
+@define-color network #5843ad;
+@define-color cpu #705bff;
+@define-color memory #1d96ff;
+@define-color temperature #20f0ff;
+@define-color brightness #22fcaf;
+@define-color weather #43f265;
+@define-color clock #242464;
+@define-color tray #333385;
+
+* {
+	border: none;
+	border-radius: 0;
+	min-height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+#waybar {
+	font-family: 'FontAwesome, Chakra Petch';
+	font-size: 12px;
+	box-shadow: inset 0 -1px #222225;
+}
+
+window#waybar {
+	background-color: rgba(40, 39, 56, 1);
+	border-bottom: 0px solid rgba(53, 55, 65, 0.5);
+	color: #ffffff;
+	transition-property: background-color, border-bottom;
+	transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+window#waybar.empty {
+	background-color: rgba(30, 29, 58, 0.7);
+	box-shadow: inset 0 -1px  rgba(30, 29, 58, 0.8);
+}
+window#waybar.solo {
+	background-color: rgba(40, 39, 56, 1);
+	border-bottom: 0px solid rgba(53, 55, 65, 1);
+}
+
+window#waybar.chromium {
+	background-color: #000000;
+	border: none;
+}
+
+#workspaces button {
+	padding: 0 7px 0 7px;
+	background-color: @clock;
+	color: #6a6aa9;
+	font-size: 12px;
+	/* Use box-shadow instead of border so the text isn't offset */
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+	box-shadow: inset 0 -2px #ffffff;
+}
+
+#workspaces button.focused {
+	color: #ffffff;
+}
+
+#workspaces button.urgent {
+	background-color: #eb4d4b;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#custom-mem_icom,
+#custom-cpu_icom,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#custom-weather,
+#tray,
+#mode,
+#mpd {
+	color: #ffffff;
+	font-weight: bold;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+	margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+	margin-right: 0;
+}
+
+/***** Separators  *****/
+#custom-sep1 {
+	color: @tray;
+	background-color: @clock;
+	margin-bottom: -17px;
+	margin-top: -23px;
+	margin-right: -10px;
+	font-family: 'DejaVu Sans Mono';
+	font-size: 37px;
+}
+
+#custom-sep2 {
+	color: @mpd;
+	background-color: @transparent;
+	margin-bottom: -17px;
+	margin-top: -23px;
+	margin-left: -10px;
+	font-family: 'DejaVu Sans Mono';
+	font-size: 37px;
+}
+
+#custom-sep3 {
+	color: @volume;
+	background-color: transparent;
+	margin-bottom: -17px;
+	margin-top: -23px;
+	margin-right: -10px;
+	font-family: 'DejaVu Sans Mono';
+	font-size: 37px;
+}
+
+#custom-sep4 {
+	color: @network;
+	background-color: @volume;
+	margin-bottom: -17px;
+	margin-top: -23px;
+	margin-right: -10px;
+	font-family: 'DejaVu Sans Mono';
+	font-size: 37px;
+}
+
+#custom-sep5 {
+	color: @tray;
+	background-color: @network;
+	margin-bottom: -17px;
+	margin-top: -23px;
+	margin-right: -10px;
+	font-family: 'DejaVu Sans Mono';
+	font-size: 37px;
+}
+
+#custom-sep6 {
+	color: @clock;
+	background-color: @tray;
+	margin-bottom: -17px;
+	margin-top: -23px;
+	margin-right: -10px;
+	font-family: 'DejaVu Sans Mono';
+	font-size: 37px;
+}
+
+/**************/
+
+#clock {
+	padding: 1 12px 0 10px;
+	background-color: @clock;
+}
+
+#battery {
+	background-color: @tray;
+	padding: 0 3px 0 3px;
+	color: #ffffff;
+}
+
+#battery.charging,
+#battery.plugged {
+	color: #44ff65;
+	background-color: @tray;
+	padding: 0 3px 0 3px;
+}
+
+@keyframes blink {
+	to {
+		background-color: @tray;
+		color: #ff2022;
+	}
+}
+
+#battery.critical:not(.charging) {
+	background-color: @tray;
+	color: #ffffff;
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+label:focus {
+	background-color: #000000;
+}
+
+#cpu {
+	background-color: transparent;
+	color: @cpu;
+	padding: 0 0 0 0;
+	margin: 0 0 -1 0;
+}
+
+#memory {
+	background-color: transparent;
+	color: @memory;
+	padding: 0 0 0 0;
+	margin: 0 0 -1 0;
+}
+
+#custom-cpu_icon {
+	background-color: transparent;
+	color: @cpu;
+	font-family: 'SourceCodePro Nerd Font Medium';
+	font-size: 19px;
+	padding: 0 2 0 2;
+	margin: -2 11 -2 3;
+}
+
+#custom-mem_icon {
+	background-color: transparent;
+	color: @memory;
+	font-family: 'SourceCodePro Nerd Font Medium';
+	font-size: 17px;
+	padding: 1 1 0 2;
+	margin: -3 11 -2 3;
+}
+
+#custom-temp_icon {
+	background-color: transparent;
+	color: @temperature;
+	font-family: 'SourceCodePro Nerd Font Medium';
+	font-size: 13px;
+	padding: 0 0 0 2;
+	margin: -1 11 0 3;
+}
+
+#custom-bright_icon {
+	background-color: transparent;
+	color: @brightness;
+	font-family: 'SourceCodePro Nerd Font Medium';
+	font-size: 12px;
+	padding: 0 1 0 2;
+	margin: -1 11 1 2;
+}
+
+#custom-weather_icon {
+	background-color: transparent;
+	color: @weather;
+	font-family: 'SourceCodePro Nerd Font Medium';
+	font-size: 24px;
+	padding: 0 1 0 2;
+	margin: -7 11 -6 2;
+}
+
+#temperature {
+	background-color: transparent;
+	color: @temperature;
+	padding: 0 0 0 0;
+	margin: 0 0 -1 0;
+}
+
+#temperature.critical {
+	background-color: transparent;
+	color: @temperature;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+}
+
+#backlight {
+	background-color: transparent;
+	color: @brightness;
+	padding: 0 0 0 0;
+	margin: 0 0 -1 0;
+}
+
+#custom-weather {
+	background-color: transparent;
+	color: @weather;
+	padding: 0 0 0 0;
+	margin: 0 0 -1 0;
+}
+
+#tray {
+	background-color: @tray;
+	padding: 0px 7px 0 7px;
+}
+
+#idle_inhibitor {
+	background-color: @tray;
+	font-size: 16px;
+	padding: 0px 3px 0 7px;
+}
+
+#idle_inhibitor.activated {
+	background-color: @tray;
+	font-size: 16px;
+	color: #2d3436;
+	padding: 0px 3px 0 7px;
+}
+#network {
+	background-color: @network;
+	padding: 1 7px 0 7px;
+}
+
+#network.disconnected {
+	background-color: @network;
+	padding: 1 7px 0 7px;
+}
+
+#pulseaudio {
+	background-color: @volume;
+	padding: 0 7px 0 7px;
+}
+
+#pulseaudio.muted {
+	background-color: @volume;
+	padding: 0 7px 0 7px;
+	color: #2a5c45;
+}
+
+#mpd {
+	background-color: @mpd;
+	font-weight: 600;
+	font-size: 12px;
+	font-family: 'Leelawaedee UI';
+	padding: 1 7 0 5;
+}
+
+#mpd.stopped {
+	padding: 0 8px 0 5px;
+	font-family: 'FiraCode Nerd Font';
+	color: #6a6aa9;
+	font-size: 13pt;
+}
+
+#mpd.paused {
+	font-size: 9.5pt;
+	margin: 0 0 -2 0;
+}
