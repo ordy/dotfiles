@@ -8,3 +8,5 @@ Path=
 StartupNotify=false;
 Terminal=False
 Type=Application
+X-XFCE-Autostart-Override=true
+

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+IN=$(xrandr | grep -E "\bconnected\b" | grep -ohP "LVDS-\d")
+EXT=$(xrandr | grep -E "\bconnected\b" | grep -ohP "VGA-\d")
+
+if [-z $EXT]; then
+    xrandr --output $EXT --off --output $IN --auto
+else
+    xrandr --output $IN --off --output $EXT --auto
+fi

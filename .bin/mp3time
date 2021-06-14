@@ -1,0 +1,14 @@
+#!/bin/bash
+
+for filename in $(pwd)/*.mp3 
+do
+	comment_tag=$(exiftool -comment -b "$filename")
+	if [ ${#comment_tag} != 10 ]; then
+		echo "old comment of $(basename "$filename") NOT 10 --> $comment_tag"
+		creation_date=$(getfattr --only-values --absolute-names -n system.ntfs_crtime_be "$filename" | perl -MPOSIX -0777 -ne '$tvar = unpack("Q>");
+		print int($tvar/10000000-11644473600)')
+		mid3v2 -v -c "$creation_date" "$filename"
+	else
+		echo "Timestamp for $(basename "$filename") already set, skipped."
+	fi
+done

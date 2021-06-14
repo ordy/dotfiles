@@ -7,12 +7,13 @@ set showbreak=+++ 	" Wrap-broken line prefix
 set textwidth=100	" Line wrap (number of cols)
 set showmatch	" Highlight matching brace
 set clipboard=unnamedplus
- 
+
+highlight Comment cterm=italic
 set hlsearch	" Highlight all search results
 set smartcase	" Enable smart-case search
 set ignorecase	" Always case-insensitive
 set incsearch	" Searches for strings incrementally
- 
+
 set autoindent	" Auto-indent new lines
 set cindent	" Use 'C' style program indenting
 
@@ -42,10 +43,15 @@ let g:powerline_pycmd="py3"
 set termencoding=utf-8
 set encoding=utf-8
 
-  set termguicolors
+set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
+
+" Triger `autoread` when files changes on disk
+autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() !~ '\v(c|r.?|!|t)' && getcmdwintype() == '' | checktime | endif
+" Notification after file change
+autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
 "" Vundle Plugins
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -57,6 +63,7 @@ Plugin 'bling/vim-airline'
 Plugin 'joshdick/onedark.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'ycm-core/YouCompleteMe'
+Plugin 'ap/vim-css-color'
 call vundle#end()
 filetype plugin indent on  
 
@@ -65,4 +72,4 @@ set background=dark
 let g:airline_theme='onedark'
 let g:one_allow_italics = 1
 let g:airline_powerline_fonts = 1
-  
+
