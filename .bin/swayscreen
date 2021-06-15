@@ -1,0 +1,3 @@
+#! /bin/sh
+
+swaymsg output LVDS-1 toggle

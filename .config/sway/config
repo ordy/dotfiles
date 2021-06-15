@@ -210,7 +210,7 @@ bindsym $mod+d mode "resize"
     bindsym $mod+Ctrl+Backspace exec wlogout -b 5 -p layer-shell
 
     # Reload kanshi
-    bindsym $mod+p exec_always "systemctl --user restart kanshi.service"
+    bindsym $mod+p exec_always "swaymsg output LVDS-1 toggle"
 
     # Screenshots
     bindsym $mod+s exec grim -g "$(slurp)" sc_$RANDOM.png
