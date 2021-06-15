@@ -9,3 +9,4 @@ rsync -a $HOME/.config/fontconfig ./.config/
 rsync -a $HOME/.config/sway ./.config/
 rsync -a $HOME/.config/waybar ./.config/
 rsync -a $HOME/.config/wlogout ./.config/
+rsync -a $HOME/.config/kanshi ./.config/

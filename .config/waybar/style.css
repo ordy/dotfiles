@@ -18,8 +18,8 @@
 }
 
 #waybar {
-	font-family: 'FontAwesome, Chakra Petch';
-	font-size: 12px;
+	font-family: 'FontAwesome, ZenDots';
+	font-size: 10px;
 	box-shadow: inset 0 -1px #222225;
 }
 
@@ -87,7 +87,7 @@ window#waybar.chromium {
 #mode,
 #mpd {
 	color: #ffffff;
-	font-weight: bold;
+	font-weight: normal;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -329,15 +329,15 @@ label:focus {
 
 #mpd {
 	background-color: @mpd;
-	font-weight: 600;
-	font-size: 12px;
-	font-family: 'Leelawaedee UI';
+	font-weight: 400;
+	font-size: 14px;
+	font-family: 'Fira Sans';
 	padding: 1 7 0 5;
 }
 
 #mpd.stopped {
 	padding: 0 8px 0 5px;
-	font-family: 'FiraCode Nerd Font';
+	font-family: 'FiraCode Nerd Foint';
 	color: #6a6aa9;
 	font-size: 13pt;
 }
