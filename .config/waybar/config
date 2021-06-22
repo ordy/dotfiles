@@ -8,7 +8,6 @@
         "custom/media",
         "custom/sep1", 
         "mpd",
-        "custom/sep2"
         ],
         "modules-center": [
             "cpu",
@@ -23,7 +22,7 @@
         "custom/weather_icon",
         ],
         "modules-right": [ 
-            "custom/sep3", 
+        "custom/sep3", 
         "pulseaudio",
         "custom/sep4", 
         "network",
@@ -40,11 +39,11 @@
             "all-outputs": true,
             "format": "{icon}",
             "format-icons": {
-                "1": "",
-                "2": "",
-                "3": "",
-                "4": "",
-                "5": "",
+                "1": "",
+                "2": "<span font='14' rise='-19500'></span>",
+                "3": "<span font='18' rise='-24500'>﬏</span>",
+                "4": "<span font='11'></span>",
+                "5": "<span font='18' rise='-24000'></span>",
                 "urgent": "",
                 "focused": "",
                 "default": ""
@@ -54,8 +53,8 @@
             "format": "<span style=\"italic\">{}</span>"
         },
         "mpd": {
-            "format": "{artist} - {title}",
-            "format-disconnected": "Disconnected ",
+            "format": "<span color='#22fcaf'>{artist}</span>  •  {title}",
+            "format-disconnected": "Disconnected",
             "format-stopped": "",
             "format-paused": "{stateIcon}",
             "unknown-tag": "N/A",
@@ -74,7 +73,7 @@
                 "on": "1 "
             },
             "state-icons": {
-                "paused": "",
+                "paused": "      mpd",
                 "playing": ""
             },
             "tooltip-format": "MPD (connected)",
@@ -83,16 +82,16 @@
         "idle_inhibitor": {
             "format": "{icon}",
             "format-icons": {
-                "activated": "",
-                "deactivated": ""
+                "activated": "",
+                "deactivated": ""
             }
         },
         "tray": {
-            "icon-size": 16,
-            "spacing": 10
+            "icon-size": 15,
+            "spacing": 7
         },
         "clock": {
-            // "timezone": "America/New_York",
+            "timezone": "Europe/Brussels",
             "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
             "format-alt": "{:%Y-%m-%d}"
         },
@@ -119,15 +118,15 @@
             "format": " "
         },
         "custom/sep1": {
-            "format": "▼",
+            "format": "▲",
             "tooltip": false
         },
         "custom/sep2": {
-            "format": "▼",
+            "format": "▲",
             "tooltip": false
         },
         "custom/sep3": {
-            "format": "▼",
+            "format": "▲",
             "tooltip": false
         },
         "custom/sep4": {
@@ -135,7 +134,7 @@
             "tooltip": false
         },
         "custom/sep5": {
-            "format": "▼",
+            "format": "▲",
             "tooltip": false
         },
         "custom/sep6": {
@@ -151,7 +150,7 @@
             "tooltip": false
         },
         "custom/sep9": {
-            "format": "▼",
+            "format": "▲",
             "tooltip": false
         },
         "custom/sep10": {
@@ -193,7 +192,7 @@
         },  
         "network": {
             // "interface": "wlp2*", // (Optional) To force the use of this interface
-            "format-wifi": "{signalStrength}%  <span font='14px' rise='-950' style='normal'></span>",
+            "format-wifi": "{signalStrength}%  <span font='17px' rise='-400' style='normal'>﬉</span>",
             "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
             "format-linked": "{ifname} (No IP) ",
             "format-disconnected": "Disconnected ⚠",

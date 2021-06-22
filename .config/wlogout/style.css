@@ -1,48 +1,59 @@
 * {
-	background-image: none; 
+	background-image: none;
 }
+
 window {
 	background-color: rgba(12, 13, 19, 0.98);
 }
-button {
-	margin-right: 20px;
-	margin-top: 160px;
-	margin-bottom: 280px;
-	padding-top: 140px;
-	color: #FFFFFF;
-	background-color: #282738;
-	border-style: solid;
-	border-width: 2px;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 35%;
-}
 
-button:focus, button:active, button:hover {
-	background-color: #503BdB;
-	outline-style: none;
+button {
+	margin: 200 5 320 5;
+	font-family: "FiraCode Nerd Font";
+	color: #FFFFFF;
+	border-style: solid;
+	font-size: 100px;
+	border-width: 2px;
 }
 
 #lock {
-	background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
-}
-
-#logout {
-	background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+	background-color: #4895ef;
+	padding: 5 15 5 10;
 }
 
 #suspend {
-	background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+	background-color: #4361ee;
+	padding: 5 20 5 5;
 }
 
-#hibernate {
-	background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
-}
-
-#shutdown {
-	background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+#logout {
+	background-color: #3f37c9;
+	padding: 5 15 5 5;
 }
 
 #reboot {
-	background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+	background-color: #3a0ca3;
+	padding: 5 20 5 5;
 }
+
+#shutdown {
+	background-color: #480ca8;
+	padding: 5 20 5 10;
+}
+
+button:focus, button:hover {
+	outline-style: none;
+}
+
+button:focus#suspend, button:active#suspend, button:hover#suspend, 
+button:focus#lock, button:active#lock, button:hover#lock, 
+button:focus#logout, button:active#logout, button:hover#logout, 
+button:focus#reboot, button:active#reboot, button:hover#reboot {
+  box-shadow:  0 10 rgba(70, 243, 29, 1);
+	outline-style: none;
+}
+
+
+button:focus#shutdown, button:active#shutdown, button:hover#shutdown {
+  box-shadow:  0 10 rgba(240, 29, 29, 1);
+	outline-style: none;
+} 

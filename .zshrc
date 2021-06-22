@@ -9,17 +9,6 @@ SAVEHIST=1000
 # Path to your oh-my-zsh installation.
 export ZSH="/home/ordnas/.oh-my-zsh"
 
-#ZSH_THEME="robbyrussell"
-# CASE_SENSITIVE="true"
-# HYPHEN_INSENSITIVE="true"
-# DISABLE_AUTO_UPDATE="true"
-# DISABLE_UPDATE_PROMPT="true"
-# export UPDATE_ZSH_DAYS=13
-# DISABLE_MAGIC_FUNCTIONS="true"
-# ENABLE_CORRECTION="true"
-# HIST_STAMPS="mm/dd/yyyy"
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
 plugins=(
   git
   npm
@@ -34,6 +23,7 @@ alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias more=less
+alias vim=nvim
 
 alias ll='ls -alF'
 alias la='ls -A'
@@ -41,9 +31,10 @@ alias l='ls -CF'
 alias cls="echo -ne '\033c'"
 
 alias pacman="sudo pacman"
-alias pacs="sudo pacman -S"
-alias pacr="sudo pacman -Rs"
-alias pacu="sudo pacman -Syyu"
+alias pacs="pacman -S"
+alias paci="pacman -Qi"
+alias pacr="pacman -Rs"
+alias pacu="pacman -Syyu"
 alias pacmu="sudo reflector --verbose --latest 7 --sort rate --save /etc/pacman.d/mirrorlist"
 alias yas="yay -S --noconfirm"
 alias yar="yay -R"
@@ -64,7 +55,7 @@ fi
 
 CLICOLOR="YES";    
 LSCOLORS="ExGxFxdxCxDxDxhbadExEx";
-LS_COLORS=$LS_COLORS:'ow=10;44'
+LS_COLORS=$LS_COLORS:'ow=1;37;45'
 export CLICOLOR
 export LS_COLORS
 alias ls='ls --color=auto'
