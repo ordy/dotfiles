@@ -266,7 +266,7 @@ label:focus {
 	background-color: transparent;
 	color: @temperature;
 	padding: 0 0 0 0;
-	margin: 0 0 0 0;
+	margin: 0 0 -1 0;
 }
 
 #backlight {
