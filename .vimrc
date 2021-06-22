@@ -1,6 +1,4 @@
-"" runtime! archlinux.vim
-
-"" General
+" General
 set number	" Show line numbers
 set linebreak	" Break lines at word (requires Wrap lines)
 set showbreak=+++ 	" Wrap-broken line prefix
@@ -8,7 +6,6 @@ set textwidth=100	" Line wrap (number of cols)
 set showmatch	" Highlight matching brace
 set clipboard=unnamedplus
 
-highlight Comment cterm=italic
 set hlsearch	" Highlight all search results
 set smartcase	" Enable smart-case search
 set ignorecase	" Always case-insensitive
@@ -22,18 +19,19 @@ set smartindent	" Enable smart-indent
 set smarttab	" Enable smart-tabs
 set tabstop=2	" Number of spaces per Tab
 set mouse=a
-set ttymouse=sgr
 syntax on
+
+if !has('nvim')
+	set ttymouse=xterm2
+endif
 
 "" Advanced
 set ruler	" Show row and column ruler information
-set guifont=CaskaydiaCove\ Nerd\ Font\ Regular:h8.5
-command! -nargs=0 Sw w !sudo tee % > /dev/null
+set guifont=Cascadia\ Code\ PL:h9
 
 set cursorline
 hi CursorLine cterm=NONE ctermbg=black
 hi CursorLineNR cterm=NONE ctermbg=black
-
 
 set undolevels=1000	" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
@@ -46,6 +44,7 @@ set encoding=utf-8
 set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+let g:ycm_key_list_stop_completion = [ '<C-y>', '<tab>' ]
 
 
 " Triger `autoread` when files changes on disk
@@ -54,22 +53,23 @@ autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() !~ '\v(c|r.?|!|t
 autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
 "" Vundle Plugins
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/nerdtree'
-Plugin 'bling/vim-airline'
-Plugin 'joshdick/onedark.vim'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'ycm-core/YouCompleteMe'
-Plugin 'ap/vim-css-color'
-call vundle#end()
-filetype plugin indent on  
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdtree'
+Plug 'bling/vim-airline'
+Plug 'sheerun/vim-polyglot'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'lambdalisue/suda.vim'
+Plug 'ycm-core/YouCompleteMe'
+Plug 'ap/vim-css-color'
+call plug#end()
 
-colorscheme onedark
+colorscheme dracula
 set background=dark
-let g:airline_theme='onedark'
+hi Normal guibg=NONE ctermbg=NONE
+hi Comment gui=italic
+hi Comment cterm=italic
+let g:airline_theme=''
 let g:one_allow_italics = 1
+let g:palenight_terminal_italics=1
 let g:airline_powerline_fonts = 1
-

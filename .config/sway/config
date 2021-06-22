@@ -33,9 +33,9 @@ exec ~/.azotebg
 ### Idle configuration
 # Swaylock
 exec swayidle -w \
-          timeout 300 'swaylock -f -c 272731' \
+          timeout 300 'swaylock -f -c 0e071f' \
           timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-          before-sleep 'swaylock -f -c 272731'
+          before-sleep 'swaylock -f -c 0e071f'
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
@@ -240,9 +240,9 @@ bar {
 }
 
 #window colors
-set $border-color           #7E67ed
+set $border-color           #8A61E1
 set $inactive-border-color  #333333
-set $background-color       #7E67ed
+set $background-color       #8A61E1
 set $text-color             #dddddd
 set $inactive-text-color    #999999
 
@@ -253,7 +253,7 @@ default_border pixel 2
 hide_edge_borders smart 
 smart_borders on
 smart_gaps on
-gaps inner 5
+gaps inner 6
 
 exec_always "systemctl --user restart kanshi.service"
 exec_always "systemctl --user import-environment; systemctl --user start sway-session.target"

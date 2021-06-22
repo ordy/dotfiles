@@ -57,7 +57,7 @@ window:
 # Font configuration
 font:
   normal:
-    family: Cascadia Code Pl
+    family: Cascadia Code PL
     style: Regular 
 
   bold:
