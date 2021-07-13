@@ -1,4 +1,4 @@
-@define-color workspaces #3a0ca3;
+@define-color workspaces #322979;
 @define-color mpd #2d42d8;
 
 @define-color cpu #907bff;
@@ -7,27 +7,27 @@
 @define-color brightness #22fcaf;
 @define-color weather #43f265;
 
-@define-color volume #4895ef;
-@define-color network #4361ee;
-@define-color tray #3f37c9;
-@define-color clock #3a0ca3;
+@define-color volume #5C48CB;
+@define-color network #4E3EB0;
+@define-color tray #403394;
+@define-color clock #322979;
 
 * {
 	border: none;
 	border-radius: 0;
-	min-height: 0;
-	margin: 0;
-	padding: 0;
+	min-height: 0px;
+	margin: 0px;
+	padding: 0px;
 }
 
 #waybar {
 	font-family: 'FontAwesome, Fira Sans';
 	font-size: 12px;
-	box-shadow: inset 0 -1 rgba(50, 49, 77, 0.3);
+	box-shadow: inset 0 -1px rgba(50, 49, 77, 0.3);
 }
 
 window#waybar {
-	background-color: rgba(40, 39, 56, 0.94);
+	background-color: rgba(40, 39, 56, 0.5);
 	color: #ffffff;
 	transition-property: background-color, border-bottom;
 	transition-duration: 0.5s;
@@ -38,20 +38,20 @@ window#waybar.hidden {
 }
 
 window#waybar.empty {
-	background-color: rgba(30, 29, 58, 0.7);
-	box-shadow: inset 0 -1  rgba(30, 29, 158, 0.8);
+	background-color: rgba(30, 29, 58, 0.8);
+	box-shadow: inset 0 -3px  rgba(30, 29, 158, 0.8);
 }
+
 window#waybar.solo {
 	background-color: rgba(140, 39, 56, 1);
-	border-bottom: 0 solid rgba(53, 55, 65, 1);
+	box-shadow: inset 0 -1px rgba(253, 55, 65, 1);
 }
 
-
 #workspaces button {
-	padding: 0 7 0 7;
-	margin: -8 0 -8 0;
+	padding: 0px 7px 0px 7px;
+	margin: -8px 0px -8px 0px;
 	background-color: @workspaces;
-	color: #8a7be1;
+	color: #766ABF;
 	font-size: 12px;
 	/* Use box-shadow instead of border so the text isn't offset */
 }
@@ -66,7 +66,7 @@ window#waybar.solo {
 }
 
 #workspaces button.urgent {
-	background-color: #eb4d4b;
+	color: #4CF36E;
 }
 
 #clock,
@@ -103,81 +103,68 @@ window#waybar.solo {
 #custom-sep1 {
 	color: @workspaces;
 	background-color: transparent;
-	margin-bottom: -17;
-	margin-top: -23;
-	margin-left: -10;
-	font-family: 'DejaVu Sans Mono';
-	font-size: 37px;
+	margin-bottom: -10px;
+	margin-top: -10px;
+	font-size: 20px;
 }
 
 #custom-sep2 {
-	color: @mpd;
-	background-color: @transparent;
-	margin-bottom: -17;
-	margin-top: -23;
-	margin-left: -10;
-	font-family: 'DejaVu Sans Mono';
-	font-size: 37px;
+	color: @volume;
+	background-color: transparent;
+	margin-bottom: -10px;
+	margin-top: -10px;
+	margin-right: -1px;
+	font-size: 20px;
 }
 
 #custom-sep3 {
-	color: @volume;
-	background-color: transparent;
-	margin-bottom: -17;
-	margin-top: -23;
-	margin-right: -10;
-	font-family: 'DejaVu Sans Mono';
-	font-size: 37px;
+	color: @network;
+	background-color: @volume;
+	margin-bottom: -10px;
+	margin-top: -10px;
+	margin-right: -1px;
+	font-size: 20px;
 }
 
 #custom-sep4 {
-	color: @network;
-	background-color: @volume;
-	margin-bottom: -17;
-	margin-top: -23;
-	margin-right: -10;
-	font-family: 'DejaVu Sans Mono';
-	font-size: 37px;
+	color: @tray;
+	background-color: @network;
+	margin-bottom: -10px;
+	margin-top: -10px;
+	margin-right: -1px;
+	font-size: 20px;
 }
 
 #custom-sep5 {
-	color: @tray;
-	background-color: @network;
-	margin-bottom: -17;
-	margin-top: -23;
-	margin-right: -10;
-	font-family: 'DejaVu Sans Mono';
-	font-size: 37px;
-}
-
-#custom-sep6 {
 	color: @clock;
 	background-color: @tray;
-	margin-bottom: -17;
-	margin-top: -23;
-	margin-right: -10;
-	font-family: 'DejaVu Sans Mono';
-	font-size: 37px;
+	margin-bottom: -10px;
+	margin-top: -10px;
+	margin-right: -1px;
+	font-size: 20px;
 }
 
 /**************/
 
 #clock {
-	padding: 1 12 0 10;
+	padding: 1px 12px 0px 10px;
 	background-color: @clock;
+
 }
 
 #battery {
 	background-color: @tray;
-	padding: 0 3 0 3;
+	padding: 0px 0px 0px 7px;
+	margin: -18px 0px -20px 0px;
 	color: #ffffff;
 }
 
 #battery.charging,
 #battery.plugged {
-	color: #44ff65;
+	color: #ABFA9E;
 	background-color: @tray;
-	padding: 0 3 0 3;
+	padding: 0px 0px 0px 7px;
+	margin: -18px 0px -20px 0px;
 }
 
 @keyframes blink {
@@ -204,142 +191,144 @@ label:focus {
 #cpu {
 	background-color: transparent;
 	color: @cpu;
-	padding: 0 0 0 0;
-	margin: 0 0 -1 0;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px -1px 0px;
 }
 
 #memory {
 	background-color: transparent;
 	color: @memory;
-	padding: 0 0 0 0;
-	margin: 0 0 -1 0;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px -1px 0px;
 }
 
 #custom-cpu_icon {
 	background-color: transparent;
 	color: @cpu;
-	font-size: 14px;
-	padding: 0 0 0 2;
-	margin: -5 15 -6 3;
+	font-size: 13px;
+	padding: 0px 0px 0px 2px;
+	margin: -5px 15px -6px 3px;
 }
 
 #custom-mem_icon {
 	background-color: transparent;
 	color: @memory;
-	font-size: 14px;
-	padding: 1 0 0 2;
-	margin: -7 15 -7 3;
+	font-size: 13px;
+	padding: 1px 0px 0px 2px;
+	margin: -8px 15px -7px 3px;
 }
 
 #custom-temp_icon {
 	background-color: transparent;
 	color: @temperature;
 	font-size: 14px;
-	padding: 0 0 0 2;
-	margin: -1 15 -1 3;
+	padding: 0px 0px 0px 2px;
+	margin: -1px 15px -1px 3px;
 }
 
 #custom-bright_icon {
 	background-color: transparent;
 	color: @brightness;
 	font-size: 13.5px;
-	padding: 0 0 0 2;
-	margin: -5 15 -2 2;
+	padding: 0px 0px 0px 2px;
+	margin: -5px 15px -3px 2px;
 }
 
 #custom-weather_icon {
 	background-color: transparent;
 	color: @weather;
-	font-size: 26px;
-	padding: 0 0 0 2;
-	margin: -10 0 -10 2;
+	font-size: 24px;
+	padding: 0px 0px 0px 2px;
+	margin: -10px 0px -10px 2px;
 }
 
 #temperature {
 	background-color: transparent;
 	color: @temperature;
-	padding: 0 0 0 0;
-	margin: 0 0 -1 0;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px -1px 0px;
 }
 
 #temperature.critical {
 	background-color: transparent;
 	color: @temperature;
-	padding: 0 0 0 0;
-	margin: 0 0 -1 0;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px -1px 0px;
 }
 
 #backlight {
 	background-color: transparent;
 	color: @brightness;
-	padding: 0 0 0 0;
-	margin: 0 0 -1 0;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px -1px 0px;
 }
 
 #custom-weather {
 	background-color: transparent;
 	color: @weather;
-	padding: 0 0 0 0;
-	margin: 0 0 -1 0;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px -1px 0px;
 }
 
 #tray {
 	background-color: @tray;
-	padding: 0 5 0 0;
+	padding: 0px 5px 0px 0px;
 }
 
 #idle_inhibitor {
 	background-color: @tray;
 	font-size: 15px;
-	padding: 0 7 0 7;
-	margin: -1 0 -2 0;
+	padding: 0px 7px 0px 7px;
+	margin: -1px 0px -2px 0px;
 }
 
 #idle_inhibitor.activated {
 	background-color: @tray;
 	font-size: 16px;
-	padding: 0 7 0 7;
-	margin: -1 0 -2 0;
+	padding: 0px 7px 0px 7px;
+	margin: -1px 0px -2px 0px;
 }
 #network {
 	background-color: @network;
-	padding: 0 7 0 7;
-	margin: -2 0 0 0;
+	padding: 0px 7px 0px 7px;
+	margin: -2px 0px -3px 0px;
 }
 
 #network.disconnected {
 	background-color: @network;
-	padding: 1 7 0 7;
+	padding: 1px 7px 0px 7px;
+	margin: -1px 0px 0px 0px;
 }
 
 #pulseaudio {
+
 	background-color: @volume;
-	padding: 0 7 0 7;
-	margin: 0 0 -1 0;
+	padding: 0px 7px 0px 7px;
+	margin: -1px 0px -2px 0px;
 }
 
 #pulseaudio.muted {
 	background-color: @volume;
-	color: #4866c5;
-	padding: 0 7 0 7;
-	margin: 0 0 -1 0;
+	color: #A079FF;
+	padding: 0px 7px 0px 7px;
+	margin: -10px 0px -11px 0px;
 }
 
-#mpd {
+#mpd, #custom-media {
 	font-weight: 600;
-	font-size: 12px;
-	padding: 0 7 0 5;
-	margin: 0 0 -1 0;
+	font-size: 12.1px;
+	padding: 0px 7px 0px 8px;
+	margin: -9px 0px -10px 0px;
 }
 
 #mpd.stopped {
 	color: #9999b9;
 	font-size: 14px;
-	padding: 0 8 0 5;
-	margin: 0 0 -3 0;
+	padding: 0px 8px 0px 5px;
+	margin: 0px 0px -3px 0px;
 }
 
 #mpd.paused {
 	font-size: 12px;
-	margin: 0 0 -1 0;
+	margin: 0px 0px -1px 0px;
 }

@@ -52,7 +52,7 @@ if [[ -f ~/.dir_colors ]] ; then
 elif [[ -f /etc/DIR_COLORS ]] ; then
     eval $(dircolors -b /etc/DIR_COLORS)
 fi
-
+# Dircolors
 CLICOLOR="YES";    
 LSCOLORS="ExGxFxdxCxDxDxhbadExEx";
 LS_COLORS=$LS_COLORS:'ow=1;37;45'

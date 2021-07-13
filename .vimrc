@@ -4,7 +4,7 @@ set linebreak	" Break lines at word (requires Wrap lines)
 set showbreak=+++ 	" Wrap-broken line prefix
 set textwidth=100	" Line wrap (number of cols)
 set showmatch	" Highlight matching brace
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 
 set hlsearch	" Highlight all search results
 set smartcase	" Enable smart-case search
@@ -26,9 +26,6 @@ if !has('nvim')
 endif
 
 "" Advanced
-set ruler	" Show row and column ruler information
-set guifont=Cascadia\ Code\ PL:h9
-
 set cursorline
 hi CursorLine cterm=NONE ctermbg=black
 hi CursorLineNR cterm=NONE ctermbg=black
@@ -37,7 +34,6 @@ set undolevels=1000	" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
 
 set laststatus=2
-let g:powerline_pycmd="py3"
 set termencoding=utf-8
 set encoding=utf-8
 
@@ -62,6 +58,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'lambdalisue/suda.vim'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'ap/vim-css-color'
+Plug 'KabbAmine/vCoolor.vim'
 call plug#end()
 
 colorscheme dracula
@@ -69,7 +66,12 @@ set background=dark
 hi Normal guibg=NONE ctermbg=NONE
 hi Comment gui=italic
 hi Comment cterm=italic
-let g:airline_theme=''
+let g:airline_theme='dracula'
+
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+
 let g:one_allow_italics = 1
-let g:palenight_terminal_italics=1
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#whitespace#mixed_indent_algo = 1
+let g:airline#extensions#tabline#show_tab_type = 0
