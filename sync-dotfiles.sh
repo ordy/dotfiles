@@ -15,4 +15,5 @@ rsync -aP $HOME/.config/wlogout $DIR/.config/
 rsync -aP $HOME/.config/kanshi $DIR/.config/
 
 git -C $DIR add .
-git -C $DIR commit -m "$ISODATE Update" 
+git -C $DIR commit -m "$ISODATE Update"
+git -C $DIR push --progress
