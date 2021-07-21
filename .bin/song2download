@@ -1,3 +1,0 @@
-##!/bin/bash
-
-echo "`mpc current -f %title%`" >> /home/ordnas/Documents/music_downloads.txt

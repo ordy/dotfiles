@@ -206,20 +206,23 @@ bar {
 }
 
 #window colors
-set $border-color           #8A61E1
-set $inactive-border-color  #333333
-set $background-color       #8A61E1
-set $text-color             #dddddd
-set $inactive-text-color    #999999
+set $active-bg-color    #D6E7E3
+set $active-fg-color    #0E0E0E
+set $inactive-bg-color  #0D0F14
+set $inactive-fg-color  #3A3E4A
+
+font pango:Roboto Regular 10
 
 # Border
 #client.<class> <border> <background> <text> [<indicator> [<child_border>]]
-client.focused $border-color $background-color $text-color
+client.focused $active-bg-color $active-bg-color $active-fg-color
+client.unfocused $inactive-bg-color $inactive-bg-color $inactive-fg-color
+
 default_border pixel 2
 hide_edge_borders smart 
 smart_borders on
 smart_gaps on
-gaps inner 6
+gaps inner 5
 
 exec_always "systemctl --user restart kanshi.service"
 exec_always "systemctl --user import-environment; systemctl --user start sway-session.target"

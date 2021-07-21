@@ -1,3 +1,7 @@
+@define-color	focusColor #84C8C9;
+@define-color	poweroffColor #EC5757;
+
+
 * {
 	background-image: none;
 }
@@ -40,18 +44,18 @@ button:focus#reboot, button:hover#reboot,
 button:focus#suspend, button:hover#suspend, 
 button:focus#lock, button:hover#lock,
 button:focus#logout, button:hover#logout { 
-  box-shadow:  0px 10px #5a0cf3; 
+  box-shadow:  0px 10px @focusColor; 
 	outline-style: solid;
 	outline-width: 3px;
-	outline-color: #5a0cf3;
-	color: #5a0cf3;
+	outline-color: @focusColor;
+	color: @focusColor;
 }
 
 button:focus#shutdown, button:active#shutdown, button:hover#shutdown {
-  box-shadow:  0px 10px rgba(240, 29, 29, 1);
+  box-shadow:  0px 10px @poweroffColor;
 	outline-style: none;
 	outline-style: solid;
 	outline-width: 3px;
-	outline-color: rgba(240, 29, 29, 1);
-	color: rgba(240, 29, 29, 1);
+	outline-color: @poweroffColor;
+	color: @poweroffColor; 
 } 
