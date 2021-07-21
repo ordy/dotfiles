@@ -1,16 +1,16 @@
-@define-color workspaces #322979;
+@define-color workspaces #0D0D13;
 @define-color mpd #2d42d8;
 
-@define-color cpu #907bff;
-@define-color memory #1d96ff;
-@define-color temperature #20f0ff;
-@define-color brightness #22fcaf;
-@define-color weather #43f265;
+@define-color cpu #9892F1;
+@define-color memory #84B4ED;
+@define-color temperature #6DCCE8;
+@define-color brightness #A5E6BF;
+@define-color weather #DFE4AB;
 
-@define-color volume #5C48CB;
-@define-color network #4E3EB0;
-@define-color tray #403394;
-@define-color clock #322979;
+@define-color volume #2b3042;
+@define-color network #222634;
+@define-color tray #161a27;
+@define-color clock #03050d;
 
 * {
 	border: none;
@@ -23,12 +23,12 @@
 #waybar {
 	font-family: 'FontAwesome, Fira Sans';
 	font-size: 12px;
-	box-shadow: inset 0 -1px rgba(50, 49, 77, 0.3);
+	box-shadow: inset 0 -1px rgba(19, 19, 19, 0.5);
 }
 
 window#waybar {
-	background-color: rgba(40, 39, 56, 0.5);
-	color: #ffffff;
+	background-color: rgba(22, 24, 43, 0.9);
+	color: #e7e7e7;
 	transition-property: background-color, border-bottom;
 	transition-duration: 0.5s;
 }
@@ -51,22 +51,22 @@ window#waybar.solo {
 	padding: 0px 7px 0px 7px;
 	margin: -8px 0px -8px 0px;
 	background-color: @workspaces;
-	color: #766ABF;
+	color: #343a50;
 	font-size: 12px;
 	/* Use box-shadow instead of border so the text isn't offset */
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
-	box-shadow: inset 0 -2px #ffffff;
+	box-shadow: inset 0 -2px #e7e7e7;
 }
 
 #workspaces button.focused {
-	color: #fff;
+	color: #e7e7e7;
 }
 
 #workspaces button.urgent {
-	color: #4CF36E;
+	color: #F1C3A4;
 }
 
 #clock,
@@ -85,7 +85,7 @@ window#waybar.solo {
 #tray,
 #mode,
 #mpd {
-	color: #ffffff;
+	color: #e7e7e7;
 	font-weight: 600;
 }
 
@@ -277,21 +277,21 @@ label:focus {
 
 #idle_inhibitor {
 	background-color: @tray;
-	font-size: 15px;
+	font-size: 13px;
 	padding: 0px 7px 0px 7px;
-	margin: -1px 0px -2px 0px;
+	margin: -2px 0px -2px 0px;
 }
 
 #idle_inhibitor.activated {
 	background-color: @tray;
-	font-size: 16px;
+	font-size: 13px;
 	padding: 0px 7px 0px 7px;
-	margin: -1px 0px -2px 0px;
+	margin: -2px 0px -2px 0px;
 }
 #network {
 	background-color: @network;
 	padding: 0px 7px 0px 7px;
-	margin: -2px 0px -3px 0px;
+	margin: -3px 0px -3px 0px;
 }
 
 #network.disconnected {

@@ -1,7 +1,7 @@
 {
     "layer": "top", // Waybar at top layer
         "position": "top", // Waybar position (top|bottom|left|right)
-        "height": 19, // Waybar height (to be removed for auto height)
+        "height": 21, // Waybar height (to be removed for auto height)
         "modules-left": [
             "sway/workspaces", 
             "sway/mode", 
@@ -93,7 +93,7 @@
         "clock": {
             "timezone": "Europe/Brussels",
             "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-            "format-alt": "{:%Y-%m-%d}"
+            "format-alt": "{:%a, %d %B %Y}"
         },
         "cpu": {
             "format": "{usage}%",
@@ -174,7 +174,7 @@
         },  
         "network": {
             // "interface": "wlp2*", // (Optional) To force the use of this interface
-            "format-wifi": "{signalStrength}%  <span font='17px' rise='-400' style='normal'>﬉</span>",
+            "format-wifi": "{signalStrength}%  <span font='15px' style='normal'>﬉</span>",
             "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
             "format-linked": "{ifname} (No IP) ",
             "format-disconnected": "Disconnected ⚠",
