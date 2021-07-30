@@ -64,7 +64,7 @@ visualizer_data_source = /tmp/mpd.fifo
 ## are some problems with it.
 ##
 #
-visualizer_output_name = Pipe
+visualizer_output_name = my_fifo
 #
 ##
 ## If you set format to 44100:16:2, make it 'yes'.
@@ -75,7 +75,7 @@ visualizer_in_stereo = yes
 ## Multiply received samples by given value. Very
 ## useful for proper visualization of quiet music.
 ##
-#visualizer_sample_multiplier = 1
+#visualizer_sample_multiplier = 2
 #
 ##
 ## Note: Below parameter defines how often ncmpcpp
@@ -91,11 +91,11 @@ visualizer_in_stereo = yes
 #
 ## Available values: spectrum, wave, wave_filled, ellipse.
 ##
-visualizer_type = wave
+visualizer_type = spectrum
 #
-visualizer_look = ●▮
+visualizer_look = ▋▋
 #
-visualizer_color = green
+visualizer_color = 147
 #
 ## Alternative subset of 256 colors for terminals that support it.
 ##
@@ -199,14 +199,14 @@ message_delay_time = 3
 ##
 #
 #song_list_format = {%a - }{%t}|{$8%f$9}$R{$3(%l)$9}
-song_list_format = $1%a $5//$8 %t 
+song_list_format = $6%a $5//$8 %t 
 #
 song_status_format = $5%a $4⟫$3⟫ $8%t $4⟫$3⟫ $5%b
 #
 song_library_format = {%n - }{%t}|{%f}
 #
 #
-alternative_header_first_line_format = $b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
+alternative_header_first_line_format = $b$7$aqqu$/a$9 {%t}|{%f} $7$atqq$/a$9$/b
 #
 alternative_header_second_line_format = {{$5%a$9}}|{%D}
 #
@@ -320,7 +320,7 @@ centered_cursor = yes
 ## Note: You can specify third character which will
 ## be used to build 'empty' part of progressbar.
 ##
-progressbar_look = "─╼─" 
+progressbar_look = "▃▃▃"
 #
 ## Available values: database, playlist.
 ##
@@ -494,30 +494,30 @@ colors_enabled = yes
 #
 empty_tag_color = red
 #
-header_window_color = red
+header_window_color = magenta
 #
 #volume_color = default
 #
-state_line_color = black
+state_line_color = white
 #
-state_flags_color = yellow
+state_flags_color = cyan
 #
 main_window_color = green
 #
 #color1 = white
-#color2 = black
+color2 = blue
 #
 current_item_prefix = "$(blue)$r"
 #
 current_item_suffix = "$/r$(end)"
 #
-progressbar_color = red
+progressbar_color = black
 #
-progressbar_elapsed_color = magenta
+progressbar_elapsed_color = white 
 #
-statusbar_color = black
+statusbar_color = white
 #
-#alternative_ui_separator_color = black
+alternative_ui_separator_color = white
 #
 #active_column_color = red
 #

@@ -37,7 +37,12 @@ set laststatus=2
 set termencoding=utf-8
 set encoding=utf-8
 
-set termguicolors
+if (has('termguicolors'))
+	set termguicolors
+else
+	set t_Co=256
+endif
+
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 let g:ycm_key_list_stop_completion = [ '<C-y>', '<tab>' ]
@@ -54,24 +59,23 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
 Plug 'bling/vim-airline'
 Plug 'sheerun/vim-polyglot'
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'lambdalisue/suda.vim'
+Plug 'cocopon/iceberg.vim'
+Plug 'gkeep/iceberg-dark'
+Plug 'pangloss/vim-javascript'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'ap/vim-css-color'
 Plug 'KabbAmine/vCoolor.vim'
 call plug#end()
 
-colorscheme dracula
 set background=dark
 hi Normal guibg=NONE ctermbg=NONE
-hi Comment gui=italic
-hi Comment cterm=italic
-let g:airline_theme='dracula'
-
+let g:airline_theme='icebergDark'
+colorscheme iceberg
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
+hi Comment gui=italic
+hi Comment cterm=italic
 
-let g:one_allow_italics = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#mixed_indent_algo = 1
 let g:airline#extensions#tabline#show_tab_type = 0

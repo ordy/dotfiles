@@ -11,11 +11,11 @@ window:
 
   # Window padding (changes require restart)
   padding:
-    x: 5
-    y: 5
+    x: 0
+    y: 0
 
   # Spread additional padding evenly around the terminal content.
-  #dynamic_padding: false
+  dynamic_padding: true
 
   # Window decorations
   #
@@ -57,23 +57,23 @@ window:
 # Font configuration
 font:
   normal:
-    family: Cascadia Code PL
+    family: Cascadia Mono PL
     style: Regular 
 
   bold:
-    family: Cascadia Code PL
+    family: Cascadia Mono PL
     style: Bold
 
   italic:
-    family: Cascadia Code PL
+    family: Cascadia Mono PL
     style: Italic
 
   bold_italic:
-    family: Cascadia Code PL
+    family: Cascadia Mono PL
     style: Bold Italic
 
   # Point size
-  size: 9.5
+  size: 9.6
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -85,47 +85,48 @@ font:
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
   # right, increasing `y` moves the glyph upward.
-  glyph_offset:
-    x: 0
-    y: 0
+  #glyph_offset:
+  #  x: 0
+  #  y: 0
 
 # If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: true 
+#draw_bold_text_with_bright_colors: true 
 #
 #
+# Colors (Iceberg Dark)
 colors:
   # Default colors
   primary:
-    background: '0x20202e'
-    foreground: '0xc4cbd3'
+    background: '#1B1D29'
+    foreground: '#c6c8d1'
 
   # Normal colors
   normal:
-    black:   '0x282a2e'
-    red:     '0xe74f74'
-    green:   '0xb0e487'
-    yellow:  '0xedb23b'
-    blue:    '0x558af3'
-    magenta: '0xa347ba'
-    cyan:    '0xa28bdd'
-    white:   '0xe0ddd4'
+    black:   '#161821'
+    red:     '#e27878'
+    green:   '#b4be82'
+    yellow:  '#e2a478'
+    blue:    '#84a0c6'
+    magenta: '#a093c7'
+    cyan:    '#89b8c2'
+    white:   '#c6c8d1'
 
   # Bright colors
   bright:
-    black:   '0x373b41'
-    red:     '0xf06783'
-    green:   '0x71e67d'
-    yellow:  '0xeec063'
-    blue:    '0x4091f4'
-    magenta: '0xba66ff'
-    cyan:    '0x8a62ff'
-    white:   '0xffffff'
+    black:   '#6b7089'
+    red:     '#e98989'
+    green:   '#c0ca8e'
+    yellow:  '#e9b189'
+    blue:    '#91acd1'
+    magenta: '#ada0d3'
+    cyan:    '#95c4ce'
+    white:   '#d2d4de'
 
 #Background opacity
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.98
+background_opacity: 1
 
 #selection:
   # This string contains all characters that are used as separators for
