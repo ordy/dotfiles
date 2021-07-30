@@ -15,13 +15,13 @@
 * {
 	border: none;
 	border-radius: 0;
-	min-height: 0px;
+	min-height: 20px;
 	margin: 0px;
 	padding: 0px;
 }
 
 #waybar {
-	font-family: 'FontAwesome, Fira Sans';
+	font-family: FontAwesome, FiraSans;
 	font-size: 12px;
 	box-shadow: inset 0 -1px rgba(19, 19, 19, 0.5);
 }
@@ -37,7 +37,7 @@ window#waybar.hidden {
 	opacity: 0.2;
 }
 
-window#waybar.empty {
+/*window#waybar.empty {
 	background-color: rgba(30, 29, 58, 0.8);
 	box-shadow: inset 0 -3px  rgba(30, 29, 158, 0.8);
 }
@@ -45,7 +45,7 @@ window#waybar.empty {
 window#waybar.solo {
 	background-color: rgba(140, 39, 56, 1);
 	box-shadow: inset 0 -1px rgba(253, 55, 65, 1);
-}
+}*/
 
 #workspaces button {
 	padding: 0px 7px 0px 7px;
@@ -53,10 +53,8 @@ window#waybar.solo {
 	background-color: @workspaces;
 	color: #343a50;
 	font-size: 12px;
-	/* Use box-shadow instead of border so the text isn't offset */
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
 	box-shadow: inset 0 -2px #e7e7e7;
 }
@@ -237,9 +235,10 @@ label:focus {
 #custom-weather_icon {
 	background-color: transparent;
 	color: @weather;
+	font-family: octicons;
 	font-size: 24px;
 	padding: 0px 0px 0px 2px;
-	margin: -10px 0px -10px 2px;
+	margin: -8px 0px -9px 2px;
 }
 
 #temperature {
@@ -316,7 +315,7 @@ label:focus {
 
 #mpd, #custom-media {
 	font-weight: 600;
-	font-size: 12.1px;
+	font-size: 12px;
 	padding: 0px 7px 0px 8px;
 	margin: -9px 0px -10px 0px;
 }

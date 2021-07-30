@@ -23,7 +23,8 @@ alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias more=less
-alias vim=nvim
+alias vim=$EDITOR
+alias svim=sudoedit
 
 alias ll='ls -alF'
 alias la='ls -A'
@@ -44,7 +45,9 @@ alias yta="youtube-dl -x -f bestaudio --audio-quality 0 --audio-format mp3"
 alias ytv="youtube-dl -f 302+bestaudio/247+bestaudio" #720p 60fps or 720p 30fps
 alias yt="youtube-dl -f"
 
-alias sf="neofetch"
+alias sf="pfetch"
+export PF_INFO="ascii title os kernel pkgs shell de palette"
+export PF_COL3=6
 
 # Enable colors for ls, etc. Prefer ~/.dir_colors #64489
 if [[ -f ~/.dir_colors ]] ; then
@@ -55,7 +58,7 @@ fi
 # Dircolors
 CLICOLOR="YES";    
 LSCOLORS="ExGxFxdxCxDxDxhbadExEx";
-LS_COLORS=$LS_COLORS:'ow=1;37;45'
+LS_COLORS=$LS_COLORS:'ow=30;45'
 export CLICOLOR
 export LS_COLORS
 alias ls='ls --color=auto'

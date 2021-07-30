@@ -5,10 +5,10 @@ URxvt.scrollBar_right: false
 URxvt.scrollBar:       false
 URxvt.geometry:        120x40+240+120
 
-URxvt.font:            xft:Fira\ Code:size=9:antialias=true
-URxvt.font.boldFont:   xft:Fira\ Code:style=Bold:size=9:antialias=true
-URxvt.font.italicFont: xft:Fira\ Code:style=Italic:size=9:antialias=true
-URxvt.boldItalicFont:  xft:Fira\ Code:style=Bold Italic:size=9:antialias=true
+URxvt.font:            xft:FiraCode\ Nerd\ Font:size=9:antialias=true
+URxvt.font.boldFont:   xft:Cascadia\ Mono\ PL:style=Bold:size=9:antialias=true
+URxvt.font.italicFont: xft:Cascadia\ Mono\ PL:style=Italic:size=9:antialias=true
+URxvt.boldItalicFont:  xft:Cascadia\ Mono\ PL:style=Bold Italic:size=9:antialias=true
 
 URxvt.perl-ext-common:     default,resize-font,url-select,matcher
 URxvt.resize-font.smaller: C-Down
