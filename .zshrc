@@ -58,7 +58,7 @@ fi
 # Dircolors
 CLICOLOR="YES";    
 LSCOLORS="ExGxFxdxCxDxDxhbadExEx";
-LS_COLORS=$LS_COLORS:'ow=30;45'
+LS_COLORS=$LS_COLORS:'ow=0;40'
 export CLICOLOR
 export LS_COLORS
 alias ls='ls --color=auto'
