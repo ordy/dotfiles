@@ -177,7 +177,8 @@
             "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
             "format-linked": "{ifname} (No IP) ",
             "format-disconnected": "Disconnected ⚠",
-            "format-alt": "{ifname} on {essid}: {ipaddr}/{cidr}"
+            "format-alt": "{ifname} on {essid}: {ipaddr}/{cidr}",
+            "tooltip": false,
         },
         "pulseaudio": {
             // "scroll-step": 1, // %, can be a float
@@ -196,8 +197,8 @@
                 "car": "",
                 "default": [
                     " <span font='16px' rise='-1500' style='normal'> </span>", 
-                " <span font='16px' rise='-1500' style='normal'> </span>", 
-                " <span font='16px' rise='-1500' style='normal'> </span>"
+                    " <span font='16px' rise='-1500' style='normal'> </span>", 
+                    " <span font='16px' rise='-1500' style='normal'> </span>"
                 ]
             },
             "on-click": "pavucontrol"
@@ -211,18 +212,13 @@
             "exec": "~/.config/waybar/modules/weather.sh",
             "exec-if": "ping wttr.in -c1",
             // "on-click": "terminator -p Small -e 'bash -c \"curl -s https://en.wttr.in; read line\"'"
-            "on-click": "gnome-weather"
+            // "on-click": "gnome-weather"
         },
         "custom/media": {
         "format": "{}",
         "return-type": "json",
         "max-length": 45,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
         "escape": false,
         "exec": "~/.config/waybar/modules/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "~/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     }
 }
