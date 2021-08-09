@@ -207,7 +207,7 @@ bar {
 }
 
 #window colors
-set $active-bg-color    #98C2D9
+set $active-bg-color    #F4B843
 set $active-fg-color    #0E0E0E
 set $inactive-bg-color  #0D0F14
 set $inactive-fg-color  #3A3E4A
