@@ -22,7 +22,7 @@
 
 #waybar {
 	font-family: FontAwesome, FiraSans;
-	font-size: 12px;
+	font-size: 12.5px;
 	box-shadow: inset 0 -1px rgba(19, 19, 19, 0.5);
 }
 
@@ -35,6 +35,10 @@ window#waybar {
 
 window#waybar.hidden {
 	opacity: 0.2;
+}
+
+#workspaces > button:last-child {
+	padding-right: 8px;
 }
 
 #workspaces button {
@@ -290,7 +294,6 @@ label:focus {
 }
 
 #pulseaudio {
-
 	background-color: @volume;
 	padding: 0px 7px 0px 7px;
 	margin: -1px 0px -2px 0px;
@@ -304,10 +307,10 @@ label:focus {
 }
 
 #mpd, #custom-media {
-	font-weight: 600;
-	font-size: 12px;
+	font-weight: 700;
+	font-size: 13px;
 	padding: 0px 7px 0px 8px;
-	margin: -9px 0px -10px 0px;
+	margin: -10px 0px -10px 0px;
 }
 
 #mpd.stopped {

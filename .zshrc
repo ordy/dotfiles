@@ -6,6 +6,11 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
+# Removing '%' from partial line
+setopt PROMPT_CR
+setopt PROMPT_SP
+export PROMPT_EOL_MARK=""
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/ordnas/.oh-my-zsh"
 
