@@ -199,6 +199,7 @@ bindsym $mod+d mode "resize"
     for_window [class="Genymotion Player"] floating enable
     for_window [title="Slack Call Minipanel"] floating enable
     for_window [class="MEGAsync"] floating enable
+    for_window [app_id="screenkey"] floating enable
 
 # Status Bar:
 #
@@ -207,7 +208,7 @@ bar {
 }
 
 #window colors
-set $active-bg-color    #F4B843
+set $active-bg-color    #895EFF
 set $active-fg-color    #0E0E0E
 set $inactive-bg-color  #0D0F14
 set $inactive-fg-color  #3A3E4A

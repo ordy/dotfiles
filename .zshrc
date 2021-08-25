@@ -17,6 +17,7 @@ export ZSH="/home/ordnas/.oh-my-zsh"
 plugins=(
   git
   npm
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -31,9 +32,10 @@ alias more=less
 alias vim=$EDITOR
 alias svim=sudoedit
 
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias ls='exa --icons'
+alias ll='exa -alghF --octal-permissions --group-directories-first --icons'
+alias la='exa -a --group-directories-first --icons'
+alias l='exa -F --group-directories-first --icons'
 alias cls="echo -ne '\033c'"
 
 alias pacman="sudo pacman"
@@ -66,7 +68,6 @@ LSCOLORS="ExGxFxdxCxDxDxhbadExEx";
 LS_COLORS=$LS_COLORS:'ow=0;40'
 export CLICOLOR
 export LS_COLORS
-alias ls='ls --color=auto'
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
