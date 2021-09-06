@@ -43,7 +43,7 @@ alias pacs="pacman -S"
 alias paci="pacman -Qi"
 alias pacr="pacman -Rs"
 alias pacu="pacman -Syu"
-alias pacmu="sudo reflector --verbose --latest 7 --sort rate --save /etc/pacman.d/mirrorlist"
+alias pacmu="sudo reflector --verbose -c be,nl,fr,de --latest 10 --sort rate --save /etc/pacman.d/mirrorlist"
 alias yas="yay -S --noconfirm"
 alias yar="yay -R"
 
