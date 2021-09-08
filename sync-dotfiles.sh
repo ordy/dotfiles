@@ -13,6 +13,7 @@ rsync -aPr --delete-after $HOME/.config/sway $DIR/.config/
 rsync -aPr --delete-after $HOME/.config/waybar $DIR/.config/
 rsync -aPr --delete-after $HOME/.config/wlogout $DIR/.config/
 rsync -aPr --delete-after $HOME/.config/kanshi $DIR/.config/
+rsync -aPr --delete-after $HOME/.config/rofi $DIR/.config/
 
 git -C $DIR add .
 git -C $DIR commit -m "$ISODATE Update"
