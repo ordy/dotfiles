@@ -5,6 +5,8 @@ set showbreak=+++ 	" Wrap-broken line prefix
 set textwidth=100	" Line wrap (number of cols)
 set showmatch	" Highlight matching brace
 set clipboard+=unnamedplus
+set number relativenumber
+set nu rnu
 
 set hlsearch	" Highlight all search results
 set smartcase	" Enable smart-case search

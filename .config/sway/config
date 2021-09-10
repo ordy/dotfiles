@@ -28,7 +28,7 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 }
 input "4152:5929:SteelSeries_SteelSeries_Rival_110_Gaming_Mouse" {
     accel_profile flat
-    scroll_factor 2.0
+    scroll_factor 1.3
 }
 
 ### Key bindings
@@ -189,12 +189,21 @@ bindsym $mod+d mode "resize"
     assign [app_id="firefox"] workspace 1
     for_window [app_id="discord"] move workspace 4
     for_window [class="discord"] move workspace 4
+
+# Alt tab
+    bindsym $alt+tab workspace back_and_forth
+#    bindsym --whole-window BTN_FORWARD seat "*" press Ctrl+w
+#    bindsym --whole-window --release BTN_FORWARD seat "*" release Ctrl+w
+    bindsym --whole-window BTN_FORWARD exec ydotool key Ctrl+w 
+
+    
     
 # Auto float apps
     for_window [app_id="gnome-calculator"] floating enable
     for_window [app_id="^mpv$"] floating enable
     for_window [app_id="pavucontrol"] floating enable
     for_window [app_id="azote"] floating enable
+    for_window [class="Lxappearance"] floating enable
     for_window [class="Genymotion"] floating enable
     for_window [class="Genymotion Player"] floating enable
     for_window [title="Slack Call Minipanel"] floating enable
@@ -213,13 +222,14 @@ set $active-fg-color    #0E0E0E
 set $inactive-bg-color  #0D0F14
 set $inactive-fg-color  #3A3E4A
 
-font pango:Fira Sans 9
+font pango: Source Sans Pro 11
 
 # Border
 #client.<class> <border> <background> <text> [<indicator> [<child_border>]]
 client.focused $active-bg-color $active-bg-color $active-fg-color
 client.unfocused $inactive-bg-color $inactive-bg-color $inactive-fg-color
 
+default_floating_border pixel 2
 default_border pixel 2
 hide_edge_borders smart 
 smart_borders on

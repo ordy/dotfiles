@@ -1,6 +1,6 @@
 configuration {
   display-drun: "  ";
-  font: "Roboto Medium 12";
+  font: "Source Sans Pro Semibold 11.5";
   show-icons: true;
 }
 
