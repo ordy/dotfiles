@@ -192,11 +192,9 @@ bindsym $mod+d mode "resize"
 
 # Alt tab
     bindsym $alt+tab workspace back_and_forth
-#    bindsym --whole-window BTN_FORWARD seat "*" press Ctrl+w
-#    bindsym --whole-window --release BTN_FORWARD seat "*" release Ctrl+w
-    bindsym --whole-window BTN_FORWARD exec ydotool key Ctrl+w 
 
-    
+# Close tab
+    bindsym --whole-window BTN_FORWARD exec ydotool key Ctrl+w 
     
 # Auto float apps
     for_window [app_id="gnome-calculator"] floating enable
@@ -217,7 +215,7 @@ bar {
 }
 
 #window colors
-set $active-bg-color    #895EFF
+set $active-bg-color    #58AB94
 set $active-fg-color    #0E0E0E
 set $inactive-bg-color  #0D0F14
 set $inactive-fg-color  #3A3E4A
