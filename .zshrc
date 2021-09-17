@@ -53,7 +53,10 @@ alias yta="youtube-dl -x -f bestaudio --audio-quality 0 --audio-format mp3"
 alias ytv="youtube-dl -f 302+bestaudio/247+bestaudio" #720p 60fps or 720p 30fps
 alias yt="youtube-dl -f"
 
+
+alias swaytree='swaymsg -t get_tree | grep "\"app_id\"\|\"shell\""'
 alias sf="pfetch"
+
 export PF_INFO="ascii title os kernel pkgs shell de palette"
 export PF_COL3=6
 
