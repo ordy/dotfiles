@@ -189,6 +189,7 @@ bindsym $mod+d mode "resize"
     assign [app_id="firefox"] workspace 1
     for_window [app_id="discord"] move workspace 4
     for_window [class="discord"] move workspace 4
+    for_window [class="Spotify"] move workspace 5
 
 # Alt tab
     bindsym $alt+tab workspace back_and_forth
@@ -215,9 +216,9 @@ bar {
 }
 
 #window colors
-set $active-bg-color    #58AB94
+set $active-bg-color    #9EA6D5
 set $active-fg-color    #0E0E0E
-set $inactive-bg-color  #0D0F14
+set $inactive-bg-color  #1B1F27
 set $inactive-fg-color  #3A3E4A
 
 font pango: Source Sans Pro 11
