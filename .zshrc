@@ -37,7 +37,7 @@ alias ls='exa --icons'
 alias ll='exa -alghF --octal-permissions --group-directories-first --icons'
 alias la='exa -a --group-directories-first --icons'
 alias l='exa -F --group-directories-first --icons'
-alias cls="echo -ne '\033c'"
+alias cls="clear"
 
 alias pacman="sudo pacman"
 alias pacs="pacman -S"
@@ -54,7 +54,7 @@ alias ytv="youtube-dl -f 302+bestaudio/247+bestaudio" #720p 60fps or 720p 30fps
 alias yt="youtube-dl -f"
 
 
-alias swaytree='swaymsg -t get_tree | grep "\"app_id\"\|\"shell\""'
+alias swaytree='swaymsg -t get_tree | grep "\"app_id\"\|\"name\"\|\"shell\""'
 alias sf="pfetch"
 
 export PF_INFO="ascii title os kernel pkgs shell de palette"
