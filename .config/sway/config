@@ -171,7 +171,7 @@ bindsym $mod+d mode "resize"
     bindsym $mod+m exec "pactl set-sink-mute 0 toggle"
 
 # Applications
-    bindsym $mod+x exec thunar 
+    bindsym $mod+x exec nautilus 
     bindsym $mod+w exec firefox 
 
     bindsym $mod+Ctrl+Backspace exec wlogout -b 5 -p layer-shell
@@ -193,7 +193,7 @@ bindsym $mod+d mode "resize"
 
 # Alt tab
     bindsym $alt+tab workspace back_and_forth
-
+ 
 # Close tab
     bindsym --whole-window BTN_FORWARD exec ydotool key Ctrl+w 
     
@@ -221,7 +221,7 @@ set $active-fg-color    #0E0E0E
 set $inactive-bg-color  #1B1F27
 set $inactive-fg-color  #3A3E4A
 
-font pango: Source Sans Pro 11
+font pango: Roboto 11
 
 # Border
 #client.<class> <border> <background> <text> [<indicator> [<child_border>]]
