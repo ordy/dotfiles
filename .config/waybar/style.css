@@ -1,11 +1,11 @@
 @define-color workspaces #0D0D13;
 @define-color mpd #2d42d8;
 
-@define-color cpu #9892F1;
-@define-color memory #84B4ED;
-@define-color temperature #6DCCE8;
-@define-color brightness #A5E6BF;
-@define-color weather #B7E08D;
+@define-color cpu #BB9AF7;
+@define-color memory #7AA2F7;
+@define-color temperature #7DCFFF;
+@define-color brightness #9ECE6A;
+@define-color weather #E0AF68;
 
 @define-color volume #2b3042;
 @define-color network #222634;
@@ -139,7 +139,7 @@ window#waybar.hidden {
 /**************/
 
 #clock {
-	padding: 1px 12px 0px 10px;
+	padding: 1px 14px 0px 14px;
 	background-color: @clock;
 
 }
@@ -265,20 +265,20 @@ label:focus {
 
 #tray {
 	background-color: @tray;
-	padding: 0px 5px 0px 0px;
+	padding: 0px 5px 0px 5px;
 }
 
 #idle_inhibitor {
 	background-color: @tray;
 	font-size: 13px;
-	padding: 0px 7px 0px 7px;
+	padding: 0px 9px 0px 9px;
 	margin: -2px 0px -2px 0px;
 }
 
 #idle_inhibitor.activated {
 	background-color: @tray;
 	font-size: 13px;
-	padding: 0px 7px 0px 7px;
+	padding: 0px 9px 0px 9px;
 	margin: -2px 0px -2px 0px;
 }
 #network {
