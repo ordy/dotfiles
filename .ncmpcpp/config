@@ -95,7 +95,7 @@ visualizer_type = spectrum
 #
 visualizer_look = ▋▋
 #
-visualizer_color = 147
+visualizer_color = 190, 189, 188, 187, 186, 179, 215, 209, 203
 #
 ## Alternative subset of 256 colors for terminals that support it.
 ##

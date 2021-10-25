@@ -171,7 +171,7 @@ bindsym $mod+d mode "resize"
     bindsym $mod+m exec "pactl set-sink-mute 0 toggle"
 
 # Applications
-    bindsym $mod+x exec nautilus 
+    bindsym $mod+x exec thunar 
     bindsym $mod+w exec firefox 
 
     bindsym $mod+Ctrl+Backspace exec wlogout -b 5 -p layer-shell
@@ -212,11 +212,11 @@ bindsym $mod+d mode "resize"
 # Status Bar:
 #
 bar {
-     swaybar_command waybar
+ swaybar_command waybar
 }
 
 #window colors
-set $active-bg-color    #9EA6D5
+set $active-bg-color    #BB9AF7
 set $active-fg-color    #0E0E0E
 set $inactive-bg-color  #1B1F27
 set $inactive-fg-color  #3A3E4A

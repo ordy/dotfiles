@@ -86,13 +86,13 @@
             }
         },
         "tray": {
-            "icon-size": 15,
-            "spacing": 7
+            "icon-size": 14,
+            "spacing": 11
         },
         "clock": {
+            "format": "{:%a, %d %b  •  %H:%M}",
             "timezone": "Europe/Brussels",
-            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-            "format-alt": "{:%a, %d %B %Y}"
+            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
         },
         "cpu": {
             "format": "{usage}%",
