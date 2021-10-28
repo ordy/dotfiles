@@ -1,3 +1,4 @@
+@define-color launcher #262631;
 @define-color workspaces #0D0D13;
 @define-color mpd #2d42d8;
 
@@ -92,6 +93,15 @@ window#waybar.hidden {
 }
 
 /***** Separators  *****/
+#custom-sep0 {
+	color: @launcher;
+	background-color: @workspaces;
+	margin-bottom: -10px;
+	margin-top: -10px;
+	margin-left: -1px;
+	font-size: 20px;
+}
+
 #custom-sep1 {
 	color: @workspaces;
 	background-color: transparent;
@@ -137,7 +147,6 @@ window#waybar.hidden {
 }
 
 /**************/
-
 #clock {
 	padding: 1px 14px 0px 14px;
 	background-color: @clock;
@@ -192,6 +201,15 @@ label:focus {
 	color: @memory;
 	padding: 0px 0px 0px 0px;
 	margin: 0px 0px -1px 0px;
+}
+
+#custom-launcher {
+	color: #e7e7e7;
+	background-color: @launcher;
+	font-size: 25px;
+	font-weight: 400;
+	padding: 0px 10px 0px 10px;
+	margin: -12px -3px -12px -3px;
 }
 
 #custom-cpu_icon {
