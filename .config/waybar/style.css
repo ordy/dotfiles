@@ -1,6 +1,6 @@
-@define-color launcher #262631;
-@define-color workspaces #0D0D13;
-@define-color mpd #2d42d8;
+@define-color launcher #7DCFFF;
+@define-color workspaces #151723;
+@define-color mpd #2b3042;
 
 @define-color cpu #BB9AF7;
 @define-color memory #7AA2F7;
@@ -24,11 +24,11 @@
 #waybar {
 	font-family: FontAwesome, SourceSansVariable;
 	font-size: 13.5px;
-	box-shadow: inset 0 -1px rgba(19, 19, 19, 0.5);
+	box-shadow: inset 0 -1px rgba(19, 19, 19, 0.3);
 }
 
 window#waybar {
-	background-color: rgba(22, 24, 33, 0.9);
+	background-color: rgba(20, 22, 30, 0.9);
 	color: #e7e7e7;
 	transition-property: background-color, border-bottom;
 	transition-duration: 0.5s;
@@ -46,7 +46,7 @@ window#waybar.hidden {
 	padding: 0px 7px 0px 7px;
 	margin: -8px 0px -8px 0px;
 	background-color: @workspaces;
-	color: #343a50;
+	color: #3E445C;
 	font-size: 12px;
 }
 
@@ -59,7 +59,7 @@ window#waybar.hidden {
 }
 
 #workspaces button.urgent {
-	color: #F1C3A4;
+	color: #BEF78B;
 }
 
 #clock,
@@ -104,13 +104,22 @@ window#waybar.hidden {
 
 #custom-sep1 {
 	color: @workspaces;
-	background-color: transparent;
+	background-color: @mpd;
 	margin-bottom: -10px;
 	margin-top: -10px;
 	font-size: 20px;
 }
 
 #custom-sep2 {
+	color: @mpd;
+	background-color: transparent;
+	margin-bottom: -10px;
+	margin-top: -10px;
+	margin-left: -1px;
+	font-size: 20px;
+}
+
+#custom-sep3 {
 	color: @volume;
 	background-color: transparent;
 	margin-bottom: -10px;
@@ -119,7 +128,7 @@ window#waybar.hidden {
 	font-size: 20px;
 }
 
-#custom-sep3 {
+#custom-sep4 {
 	color: @network;
 	background-color: @volume;
 	margin-bottom: -10px;
@@ -128,7 +137,7 @@ window#waybar.hidden {
 	font-size: 20px;
 }
 
-#custom-sep4 {
+#custom-sep5 {
 	color: @tray;
 	background-color: @network;
 	margin-bottom: -10px;
@@ -137,7 +146,7 @@ window#waybar.hidden {
 	font-size: 20px;
 }
 
-#custom-sep5 {
+#custom-sep6 {
 	color: @clock;
 	background-color: @tray;
 	margin-bottom: -10px;
@@ -204,9 +213,9 @@ label:focus {
 }
 
 #custom-launcher {
-	color: #e7e7e7;
+	color: #181C2E;
 	background-color: @launcher;
-	font-size: 25px;
+	font-size: 23px;
 	font-weight: 400;
 	padding: 0px 10px 0px 10px;
 	margin: -12px -3px -12px -3px;
@@ -325,6 +334,7 @@ label:focus {
 }
 
 #mpd, #custom-media {
+	background-color: @mpd;
 	font-weight: 600;
 	font-size: 14px;
 	padding: 0px 7px 0px 8px;
@@ -334,11 +344,10 @@ label:focus {
 #mpd.stopped {
 	color: #9999b9;
 	font-size: 14px;
-	padding: 0px 8px 0px 5px;
+	padding: 0px 8px 0px 0px;
 	margin: 0px 0px -3px 0px;
 }
 
 #mpd.paused {
-	font-size: 12px;
-	margin: 0px 0px -1px 0px;
+	margin: -1px 0px -1px -25px;
 }
