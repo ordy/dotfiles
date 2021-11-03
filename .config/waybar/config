@@ -8,6 +8,7 @@
         "sway/mode",
         "custom/sep1",
         "custom/media",
+        "custom/sep2",
         ],
         "modules-center": [
             "cpu",
@@ -22,15 +23,15 @@
         "custom/weather_icon",
         ],
         "modules-right": [ 
-            "custom/sep2", 
+            "custom/sep3", 
         "pulseaudio",
-        "custom/sep3", 
+        "custom/sep4", 
         "network",
-        "custom/sep4",  
+        "custom/sep5",  
         "battery",
         "idle_inhibitor",
         "tray",
-        "custom/sep5",  
+        "custom/sep6",  
         "clock"
         ],
         // Modules configuration
@@ -74,7 +75,7 @@
                 "on": "1 "
             },
             "state-icons": {
-                "paused": "    mpd",
+                "paused": "  ssda mpd",
                 "playing": ""
             },
             "tooltip-format": "MPD (connected)",
@@ -127,7 +128,7 @@
             "tooltip": false
         },
         "custom/sep2": {
-            "format": "",
+            "format": "",
             "tooltip": false
         },
         "custom/sep3": {
@@ -234,6 +235,7 @@
         "custom/launcher" : {
             "format": "",
             "on-click": "rofi -modi drun -show drun -drun-display-format {name} | xargs swaymsg exec --",
-            "on-click-right": "wlogout -b 5 -p layer-shell"
+            "on-click-right": "wlogout -b 5 -p layer-shell",
+            "tooltip": false,
         }
 }

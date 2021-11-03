@@ -34,13 +34,13 @@ def on_metadata(player, metadata, manager):
     if player.props.player_name == 'firefox':
         track_info = 'Web Player'
     elif player.get_artist() != '' and player.get_title() != '':
-        track_info = '<span color="#8EDEE9">{artist}</span>  •  {title}'.format(artist=player.get_artist(),
+        track_info = '<span color="#7DCFFF">{artist}</span>  •  {title}'.format(artist=player.get_artist(),
                                                  title=player.get_title())
     else:
         track_info = player.get_title()
 
     if player.props.status != 'Playing' and track_info:
-        track_info = '      mpd'
+        track_info = '<span font="12px"></span>'
     write_output(track_info, player)
 
 
