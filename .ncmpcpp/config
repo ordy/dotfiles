@@ -33,7 +33,7 @@ mpd_port = 6600
 #
 ## Needed for tag editor and file operations to work.
 ##
-mpd_music_dir = /home/ordnas/Music
+mpd_music_dir = /home/sano/Music
 #
 mpd_crossfade_time = 3
 #

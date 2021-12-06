@@ -40,7 +40,7 @@ def on_metadata(player, metadata, manager):
         track_info = player.get_title()
 
     if player.props.status != 'Playing' and track_info:
-        track_info = '<span font="12px"></span>'
+        track_info = 'mpd'
     write_output(track_info, player)
 
 

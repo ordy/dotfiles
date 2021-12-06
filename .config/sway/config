@@ -14,6 +14,12 @@ set $term kitty
 # Application launcher
 set $menu rofi -modi drun -show drun -drun-display-format {name} | xargs swaymsg exec --
 
+exec "avizo-service"
+
+# Wayland Overlay Bar
+set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
+#exec "mkfifo $WOBSOCK && tail -f $WOBSOCK | wob"
+
 # Set the wallpaper 
 exec ~/.azotebg
 output * bg #000000 solid_color
@@ -164,11 +170,22 @@ bindsym $mod+d mode "resize"
     bindsym $alt+bracketleft exec mediactl previous
     bindsym $mod+$alt+space exec mediactl play-pause
 
-    bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%"
-    bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5%"
-    bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle"
-    bindsym XF86AudioMicMute exec "pactl set-source-mute 0 toggle"
-    bindsym $mod+m exec "pactl set-sink-mute 0 toggle"
+#    bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5% && pactl get-sink-volume 0 | sed 's/.*[ \t][ \t]*\([0-9][0-9]*\)%.*/\1/' | head -1 > $WOBSOCK"
+#    bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5% && pactl get-sink-volume 0 | sed 's/.*[ \t][ \t]*\([0-9][0-9]*\)%.*/\1/' | head -1 > $WOBSOCK"
+#    bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle"
+#    bindsym XF86AudioMicMute exec "pactl set-source-mute 0 toggle"
+#    bindsym $mod+m exec "pactl set-sink-mute 0 toggle" 
+
+
+bindsym XF86AudioRaiseVolume exec volumectl raise
+bindsym XF86AudioLowerVolume exec volumectl lower
+bindsym XF86AudioMute exec volumectl mute
+bindsym XF86AudioMicMute exec volumectl mute --mic
+
+bindsym XF86MonBrightnessUp exec lightctl raise
+bindsym XF86MonBrightnessDown exec lightctl lower
+
+
 
 # Applications
     bindsym $mod+x exec thunar 
@@ -221,8 +238,6 @@ set $active-fg-color    #0E0E0E
 set $inactive-bg-color  #1B1F27
 set $inactive-fg-color  #3A3E4A
 
-font pango: Roboto 11
-
 # Border
 #client.<class> <border> <background> <text> [<indicator> [<child_border>]]
 client.focused $active-bg-color $active-bg-color $active-fg-color
@@ -236,7 +251,9 @@ smart_gaps on
 gaps inner 5
 
 exec_always "systemctl --user restart kanshi.service"
-exec_always "systemctl --user import-environment; systemctl --user start sway-session.target"
+exec "systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK"
+exec "hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK"
+exec_always "systemctl --user start sway-session.target"
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 include /etc/sway/config.d/*

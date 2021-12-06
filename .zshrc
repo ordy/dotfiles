@@ -12,7 +12,7 @@ setopt PROMPT_SP
 export PROMPT_EOL_MARK=""
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/ordnas/.oh-my-zsh"
+export ZSH="/home/sano/.oh-my-zsh"
 
 plugins=(
   git
@@ -42,7 +42,8 @@ alias cls="clear"
 alias pacman="sudo pacman"
 alias pacs="pacman -S"
 alias paci="pacman -Qi"
-alias pacr="pacman -Rs"
+alias pacr="pacman -Rns"
+alias pacro="pacman -Qtdq | pacman -Rns -"
 alias pacu="pacman -Syu"
 alias pacmu="sudo reflector --verbose -c be,nl,fr,de --latest 10 --sort rate --save /etc/pacman.d/mirrorlist"
 alias yas="yay -S --noconfirm"
