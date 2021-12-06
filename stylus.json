@@ -98,7 +98,7 @@
     ],
     "updateDate": 1619734005399,
     "_id": "6da02f57-f2fe-4218-8082-c394173de968",
-    "_rev": 1619734005399,
+    "_rev": 1635972980507,
     "id": 1,
     "_usw": {}
   },
@@ -124,7 +124,7 @@
     ],
     "updateDate": 1632176428967,
     "_id": "c5a10287-35bf-4700-bfaf-30d7ede8bd97",
-    "_rev": 1632176428967,
+    "_rev": 1635972980507,
     "id": 3,
     "_usw": {}
   },
@@ -147,7 +147,7 @@
     "name": "Reddit Slate Nights (Fixed, Custom Fork) - Dark",
     "originalDigest": "978629a5ed4dc76622a50ab83f48b6a1c2be59ee",
     "_id": "3fc7cb81-f16c-4f7c-ba4c-0b44dd9c5461",
-    "_rev": 1633103066544,
+    "_rev": 1635972980508,
     "id": 4,
     "updateDate": 1633103066543,
     "etag": "W/\"dff0de506b9696474a300587ea7edc83ba0135eb14b2456f07fa21d2d6eaafd5\"",
@@ -181,7 +181,7 @@
     ],
     "updateDate": 1631017411370,
     "_id": "c2016a07-ce32-4de2-a1dc-58dd111e2c4e",
-    "_rev": 1631528716393,
+    "_rev": 1635972980556,
     "id": 6,
     "_usw": {}
   },
@@ -189,21 +189,19 @@
     "enabled": true,
     "updateUrl": null,
     "url": null,
-    "installDate": 1633282003560,
-    "name": "sports24.stream",
+    "installDate": 1637880584257,
+    "name": "bestsolaris.com",
     "sections": [
       {
-        "code": "footer {\n    display: none;\n}\n\nnav.d-flex.flex-column.flex-md-row.align-items-center.navbar.navbar-expand-lg.navbar-light.bg-light {\n    display: none !important;    \n}\n\ndiv.embed-responsive {\n    max-width: 100% !important;\n    width: 100vw !important;\n    box-shadow: none !important;\n}\n\nbr {\n    display: none !important;\n}\n \ndiv.container {\n    max-width: 100% !important;\n    padding: 0 !important;\n    margin: 0 !important;\n}\n\nbody {\n    background-color: #121317;\n}",
-        "urlPrefixes": [
-          "https://sports24.stream/tv",
-          "https://sports24.stream/nfl"
+        "code": ".site-content > .top-section::before {\n    display: none;\n}\n\ndiv.container-fluid:nth-child(2) {\n    padding: 0px;\n    margin: 0px;\n}\n\ndiv.post-inner-content:nth-child(1) {\n    padding: 0px;\n}\n\n.side-pull-right {\n    margin: 0px;\n    padding: 0px;\n}\n\n.main-content-inner {\n    padding: 0px;\n    width: 100%\n}\n\n.heateor_sss_mobile_footer{\n    display: none !important;\n}\n\n.heateor_sss_mobile_footer {\n    display: none !important;\n}",
+        "domains": [
+          "bestsolaris.com"
         ]
       }
     ],
-    "updateDate": 1633292045820,
-    "_id": "ad9698d9-bc86-4341-b5ea-cea368c0fd63",
-    "_rev": 1633292045820,
-    "id": 7,
-    "_usw": {}
+    "updateDate": 1637882146564,
+    "_id": "c6002c67-0dc0-4456-a9ea-7952ab09f63e",
+    "_rev": 1637882146564,
+    "id": 8
   }
 ]

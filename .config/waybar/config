@@ -43,9 +43,9 @@
                 "1": "",
                 "1": "<span font='11'></span>",
                 "2": "<span font='15'></span>",
-                "3": "<span font='18'>﬏</span>",
+                "3": "<span font='17'>﬏</span>",
                 "4": "<span font='12' rise='2000'></span>",
-                "5": "<span font='18'></span>",
+                "5": "<span font='17'></span>",
                 "urgent": "",
                 "focused": "",
                 "default": ""
@@ -75,7 +75,7 @@
                 "on": "1 "
             },
             "state-icons": {
-                "paused": "  ssda mpd",
+                "paused": "  mpd",
                 "playing": ""
             },
             "tooltip-format": "MPD (connected)",
@@ -156,8 +156,8 @@
             "format-icons": ["","",""]
         },
         "backlight": {
-            "on-scroll-up": "light -s sysfs/backlight/intel_backlight -A 3",
-            "on-scroll-down": "light -s sysfs/backlight/intel_backlight -U 3",
+            "on-scroll-up": "lightctl raise",
+            "on-scroll-down": "lightctl lower",
             "device": "intel_backliht",
             "format": "{percent}%",
             "format-icons": ["",""]
@@ -168,10 +168,10 @@
                 "warning": 30,
                 "critical": 15
             },
-            "format": "{capacity}% {icon}",
+            "format": "{capacity}%   {icon} ",
             "format-charging": "{capacity}  {icon} ",
             "format-plugged": "{capacity} ",
-            "format-alt": "{time} {icon}",
+            "format-alt": "{time}   {icon} ",
             // "format-good": "", // An empty format will hide the module
             // "format-full": "",
             "format-icons": [
@@ -212,7 +212,9 @@
                 " <span font='16px' rise='-1500' style='normal'> </span>"
                 ]
             },
-            "on-click": "pavucontrol"
+            "on-click": "pavucontrol",
+            "on-scroll-up": "volumectl raise",
+            "on-scroll-down": "volumectl lower",
         },
         "custom/weather": {
             "format": "{}",
@@ -230,6 +232,8 @@
             "return-type": "json",
             "max-length": 45,
             "escape": false,
+            "on-click": "mediactl previous",
+            "on-click-right": "mediactl next",
             "exec": "~/.config/waybar/modules/mediaplayer.py 2> /dev/null" // Script in resources folder
         },
         "custom/launcher" : {
