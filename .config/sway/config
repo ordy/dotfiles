@@ -40,7 +40,7 @@ input "4152:5929:SteelSeries_SteelSeries_Rival_110_Gaming_Mouse" {
 ### Key bindings
 #
 # Basics:
-#
+#-
 # Start a terminal
     bindsym $mod+Return exec $term
 
@@ -217,6 +217,7 @@ bindsym XF86MonBrightnessDown exec lightctl lower
 # Auto float apps
     for_window [app_id="gnome-calculator"] floating enable
     for_window [app_id="^mpv$"] floating enable
+    for_window [app_id="io.github.celluloid_player.Celluloid"] floating enable
     for_window [app_id="pavucontrol"] floating enable
     for_window [app_id="azote"] floating enable
     for_window [class="Lxappearance"] floating enable
@@ -243,8 +244,8 @@ set $inactive-fg-color  #3A3E4A
 client.focused $active-bg-color $active-bg-color $active-fg-color
 client.unfocused $inactive-bg-color $inactive-bg-color $inactive-fg-color
 
-default_floating_border pixel 2
-default_border pixel 2
+default_floating_border pixel 3
+default_border pixel 3
 hide_edge_borders smart 
 smart_borders on
 smart_gaps on
