@@ -89,8 +89,8 @@
             }
         },
         "tray": {
-            "icon-size": 14,
-            "spacing": 11
+            "icon-size": 16,
+            "spacing": 7
         },
         "clock": {
             "format": "{:%a, %d %b  •  %H:%M}",
