@@ -49,11 +49,9 @@ alias pacmu="sudo reflector --verbose -c be,nl,fr,de --latest 10 --sort rate --s
 alias yas="yay -S --noconfirm"
 alias yar="yay -R"
 
-alias ytl="youtube-dl -F"
-alias yta="youtube-dl -x -f bestaudio --audio-quality 0 --audio-format mp3"
-alias ytv="youtube-dl -f 302+bestaudio/247+bestaudio" #720p 60fps or 720p 30fps
-alias yt="youtube-dl -f"
-
+alias ytl="yt-dlp -F"
+alias yta="yt-dlp -x -f bestaudio --audio-quality 0 --audio-format mp3"
+alias ytv="yt-dlp -f 302+bestaudio/247+bestaudio" #720p 60fps or 720p 30fps
 
 alias swaytree='swaymsg -t get_tree | grep "\"app_id\"\|\"name\"\|\"shell\""'
 alias sf="pfetch"

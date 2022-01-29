@@ -20,6 +20,11 @@ exec "avizo-service"
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 #exec "mkfifo $WOBSOCK && tail -f $WOBSOCK | wob"
 
+exec_always {
+    gsettings set org.gnome.desktop.interface cursor-theme 'simp1e-dark'
+
+}
+
 # Set the wallpaper 
 exec ~/.azotebg
 output * bg #000000 solid_color
