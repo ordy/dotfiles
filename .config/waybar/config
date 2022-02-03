@@ -7,7 +7,8 @@
         "sway/workspaces",
         "sway/mode",
         "custom/sep1",
-        "custom/media",
+        "custom/artist",
+        "custom/title",
         "custom/sep2",
         ],
         "modules-center": [
@@ -55,29 +56,12 @@
             "format": "<span style=\"italic\">{}</span>"
         },
         "mpd": {
-            "format": "<span color='#22fcaf'>{artist}</span>  •  {title}",
+            "format": "<span color='#50EC91'>{artist}</span>  •  {title}",
             "format-disconnected": "Disconnected",
-            "format-stopped": "",
-            "format-paused": "{stateIcon}",
+            "format-stopped": "",
+            "format-paused": "",
             "unknown-tag": "N/A",
             "interval": 2,
-            "consume-icons": {
-                "on": " "
-            },
-            "random-icons": {
-                "off": "<span color=\"#f53c3c\"></span> ",
-                "on": " "
-            },
-            "repeat-icons": {
-                "on": " "
-            },
-            "single-icons": {
-                "on": "1 "
-            },
-            "state-icons": {
-                "paused": "  mpd",
-                "playing": ""
-            },
             "tooltip-format": "MPD (connected)",
             "tooltip-format-disconnected": "MPD (disconnected)"
         },
@@ -227,17 +211,26 @@
             // "on-click": "terminator -p Small -e 'bash -c \"curl -s https://en.wttr.in; read line\"'"
             // "on-click": "gnome-weather"
         },
-        "custom/media": {
+        "custom/artist": {
             "format": "{}",
             "return-type": "json",
             "max-length": 45,
             "escape": false,
             "on-click": "mediactl previous",
             "on-click-right": "mediactl next",
-            "exec": "~/.config/waybar/modules/mediaplayer.py 2> /dev/null" // Script in resources folder
+            "exec": "~/.config/waybar/modules/mediaplayer_a.py 2> /dev/null" // Script in resources folder
+        },
+        "custom/title": {
+            "format": "{}",
+            "return-type": "json",
+            "max-length": 45,
+            "escape": false,
+            "on-click": "mediactl previous",
+            "on-click-right": "mediactl next",
+            "exec": "~/.config/waybar/modules/mediaplayer_t.py 2> /dev/null" // Script in resources folder
         },
         "custom/launcher" : {
-            "format": "",
+            "format": "ﰩ",
             "on-click": "rofi -modi drun -show drun -drun-display-format {name} | xargs swaymsg exec --",
             "on-click-right": "wlogout -b 5 -p layer-shell",
             "tooltip": false,
