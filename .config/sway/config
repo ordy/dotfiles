@@ -22,7 +22,6 @@ set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 
 exec_always {
     gsettings set org.gnome.desktop.interface cursor-theme 'simp1e-dark'
-
 }
 
 # Set the wallpaper 
@@ -174,23 +173,15 @@ bindsym $mod+d mode "resize"
     bindsym $alt+bracketright exec mediactl next
     bindsym $alt+bracketleft exec mediactl previous
     bindsym $mod+$alt+space exec mediactl play-pause
+    bindsym XF86AudioNext exec mediactl next
+    bindsym XF86AudioPrev exec mediactl previous
+    bindsym XF86AudioPlay exec mediactl play-pause
 
-#    bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5% && pactl get-sink-volume 0 | sed 's/.*[ \t][ \t]*\([0-9][0-9]*\)%.*/\1/' | head -1 > $WOBSOCK"
-#    bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5% && pactl get-sink-volume 0 | sed 's/.*[ \t][ \t]*\([0-9][0-9]*\)%.*/\1/' | head -1 > $WOBSOCK"
-#    bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle"
-#    bindsym XF86AudioMicMute exec "pactl set-source-mute 0 toggle"
-#    bindsym $mod+m exec "pactl set-sink-mute 0 toggle" 
-
-
-bindsym XF86AudioRaiseVolume exec volumectl raise
-bindsym XF86AudioLowerVolume exec volumectl lower
-bindsym XF86AudioMute exec volumectl mute
-bindsym XF86AudioMicMute exec volumectl mute --mic
-
-bindsym XF86MonBrightnessUp exec lightctl raise
-bindsym XF86MonBrightnessDown exec lightctl lower
-
-
+    bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5% && pactl get-sink-volume 0 | sed 's/.*[ \t][ \t]*\([0-9][0-9]*\)%.*/\1/' | head -1 > $WOBSOCK"
+    bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5% && pactl get-sink-volume 0 | sed 's/.*[ \t][ \t]*\([0-9][0-9]*\)%.*/\1/' | head -1 > $WOBSOCK"
+    bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle"
+    bindsym XF86AudioMicMute exec "pactl set-source-mute 0 toggle"
+    bindsym $mod+m exec "pactl set-sink-mute 0 toggle" 
 
 # Applications
     bindsym $mod+x exec thunar 
@@ -217,7 +208,7 @@ bindsym XF86MonBrightnessDown exec lightctl lower
     bindsym $alt+tab workspace back_and_forth
  
 # Close tab
-    bindsym --whole-window BTN_FORWARD exec ydotool key Ctrl+w 
+    bindsym --whole-window BTN_FORWARD exec ydotool key 29:1 17:1 17:0 29:0 
     
 # Auto float apps
     for_window [app_id="gnome-calculator"] floating enable
