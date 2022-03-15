@@ -197,8 +197,8 @@
                 ]
             },
             "on-click": "pavucontrol",
-            "on-scroll-up": "volumectl raise",
-            "on-scroll-down": "volumectl lower",
+            "on-scroll-up": "pactl set-sink-volume 0 +5%",
+            "on-scroll-down": "pactl set-sink-volume 0 -5%",
         },
         "custom/weather": {
             "format": "{}",
@@ -214,8 +214,8 @@
         "custom/artist": {
             "format": "{}",
             "return-type": "json",
-            "max-length": 45,
-            "escape": false,
+            "max-length": 28,
+            "escape": true,
             "on-click": "mediactl previous",
             "on-click-right": "mediactl next",
             "exec": "~/.config/waybar/modules/mediaplayer_a.py 2> /dev/null" // Script in resources folder
@@ -223,8 +223,8 @@
         "custom/title": {
             "format": "{}",
             "return-type": "json",
-            "max-length": 45,
-            "escape": false,
+            "max-length": 35,
+            "escape": true,
             "on-click": "mediactl previous",
             "on-click-right": "mediactl next",
             "exec": "~/.config/waybar/modules/mediaplayer_t.py 2> /dev/null" // Script in resources folder

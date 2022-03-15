@@ -1,16 +1,16 @@
-@define-color launcher #0D0B1E;
+@define-color launcher #111014;
 @define-color workspaces #1B1E2D;
-@define-color mpd #2b3042;
+@define-color mpd #242837;
 
-@define-color cpu #BB9AF7;
-@define-color memory #7AA2F7;
-@define-color temperature #7DCFFF;
-@define-color brightness #9ECE6A;
-@define-color weather #E0AF68;
+@define-color cpu #8973F4;
+@define-color memory #5b89f0;
+@define-color temperature #5bb9f0;
+@define-color brightness #5bf0ce;
+@define-color weather #72F193;
 
-@define-color volume #2b3042;
-@define-color network #222634;
-@define-color tray #161a27;
+@define-color volume #242837;
+@define-color network #1F222E;
+@define-color tray #151823;
 @define-color clock #03050d;
 
 * {
@@ -28,7 +28,7 @@
 }
 
 window#waybar {
-	background-color: rgba(22, 23, 33, 0.9);
+	background-color: rgba(18, 19, 25, 0.7);
 	color: #e7e7e7;
 	transition-property: background-color, border-bottom;
 	transition-duration: 0.5s;
@@ -354,7 +354,7 @@ label:focus {
 }
 
 #custom-artist {
-	color: #73ECA3;
+	color: #72F193;
 	background-color: @mpd;
 	font-weight: 600;
 	font-size: 14px;
