@@ -1,21 +1,44 @@
 #!/bin/bash
 
-DIR=$(dirname $(readlink -f $0))
+options=(--archive --progress --delete-after --ignore-missing-args)
+
+# script in .bin sym linked to sync-dotfiles.sh
+# BACKUP is the path to the script location
+BACKUP=$(dirname $(readlink -f $0))
 ISODATE=$(date --iso)
 
-rsync -Pr --delete-after $HOME/{.zshrc,.p10k.zsh,.bash_profile,.bashrc,.dir_colors,.vimrc,.xbindkeysrc,.Xresources,.imwheelrc,.alacritty.yml} $DIR
-rsync -Pr --delete-after $HOME/.ncmpcpp/config $DIR/.ncmpcpp/
-rsync -Pr --delete-after $HOME/.config/picom.conf $DIR/config/
-rsync -Pr --delete-after $HOME/.config/mpd/mpd.conf $DIR/.config/mpd/
-rsync -aPr --delete-after $HOME/.bin $DIR
-rsync -aPr --delete-after $HOME/.config/fontconfig $DIR/.config/
-rsync -aPr --delete-after $HOME/.config/sway $DIR/.config/
-rsync -aPr --delete-after $HOME/.config/waybar $DIR/.config/
-rsync -aPr --delete-after $HOME/.config/wlogout $DIR/.config/
-rsync -aPr --delete-after $HOME/.config/kanshi $DIR/.config/
-rsync -aPr --delete-after $HOME/.config/rofi $DIR/.config/
-rsync -aPr --delete-after $HOME/.config/kitty $DIR/.config/
+# files
+rsync "${options[@]}" \
+$HOME/{\
+	.zshrc,\
+	.p10k.zsh,\
+	.bash_profile,\
+	.bashrc,\
+	.dir_colors,\
+	.vimrc,\
+	.xbindkeysrc,\
+	.Xresources,\
+	.imwheelrc,\
+	.alacritty.yml,\
+	.bin\
+} $BACKUP
 
-git -C $DIR add .
-git -C $DIR commit -m "$ISODATE Update"
-git -C $DIR push --progress
+# directories
+rsync "${options[@]}" $HOME/.ncmpcpp/config $BACKUP/.ncmpcpp/
+rsync "${options[@]}" $HOME/.config/mpd/mpd.conf $BACKUP/.config/mpd/
+
+# config directory
+rsync "${options[@]}" \
+	$HOME/.config/fontconfig \
+	$HOME/.config/sway \
+	$HOME/.config/waybar \
+	$HOME/.config/wlogout \
+	$HOME/.config/kanshi \
+	$HOME/.config/rofi \
+	$HOME/.config/kitty \
+  $HOME/.config/picom.conf \
+$BACKUP/.config/
+
+git -C $BACKUP add .
+git -C $BACKUP commit -m "$ISODATE Update"
+git -C $BACKUP push --progress
