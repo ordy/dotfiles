@@ -25,7 +25,7 @@
     --background-modifier-selected: rgba(60, 58, 94, 0.4);
     --background-modifier-accent: hsla(0, 0%, 100%, 0.06);
     --text-link: #00b0f4;
-    --text-normal: #dddddf;
+    --text-normal: #cfcfd3;
     --text-muted: #656b8b;
     --deprecated-panel-background: #292b2f;
     --deprecated-card-bg: rgba(0, 0, 0, 0.2);
@@ -60,4 +60,14 @@
     max-height: 50vh;
     border-radius: 0px;
     scrollbar-width: none;
+}
+
+.markup-eYLPri code {
+    font-family: Cascadia Code,Andale Mono WT,Andale Mono,Lucida Console,Lucida Sans Typewriter,DejaVu Sans Mono,Bitstream Vera Sans Mono,Liberation Mono,Nimbus Mono L,Monaco,Courier New,Courier,monospace;
+    font-size: 0.766rem;
+}
+
+.theme-dark {
+    --scrollbar-auto-thumb: #14131c;
+    --scrollbar-auto-track: #252531b0;
 }
