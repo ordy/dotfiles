@@ -537,7 +537,7 @@ inactive_tab_font_style normal
 
 #: Color scheme {{{
 
-background_opacity 0.97
+background_opacity 1.0
 dim_opacity 0.75
 # selection_background #3C404E
 # selection_foreground #9DA2B4
@@ -586,7 +586,7 @@ term xterm-kitty
 
 #: OS specific tweaks {{{
 # wayland_titlebar_color system
-linux_display_server auto
+#linux_display_server x11
 #: }}}
 
 #: Keyboard shortcuts {{{
@@ -976,6 +976,6 @@ map kitty_mod+f6 debug_config
 
 
 # BEGIN_KITTY_THEME
-# Galaxy
+# Tokyo Night
 include current-theme.conf
 # END_KITTY_THEME

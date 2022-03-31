@@ -1,17 +1,17 @@
-@define-color launcher #111014;
-@define-color workspaces #1B1E2D;
-@define-color mpd #242837;
+@define-color launcher #161320;
+@define-color workspaces #1A1826;
+@define-color mpd #232335;
 
-@define-color cpu #8973F4;
-@define-color memory #5b89f0;
-@define-color temperature #5bb9f0;
-@define-color brightness #5bf0ce;
-@define-color weather #72F193;
+@define-color cpu #BBA3F5;
+@define-color memory #A2BFF9;
+@define-color temperature #89DCEB;
+@define-color brightness #B5E8E0;
+@define-color weather #ABE9B3;
 
-@define-color volume #242837;
-@define-color network #1F222E;
-@define-color tray #151823;
-@define-color clock #03050d;
+@define-color volume #232335;
+@define-color network #1E1E2E;
+@define-color tray #1A1826;
+@define-color clock #0E0C16;
 
 * {
 	border: none;
@@ -28,7 +28,7 @@
 }
 
 window#waybar {
-	background-color: rgba(18, 19, 25, 0.7);
+	background-color: rgba(18, 16, 26, 0.9);
 	color: #e7e7e7;
 	transition-property: background-color, border-bottom;
 	transition-duration: 0.5s;
@@ -44,14 +44,14 @@ window#waybar.hidden {
 
 #workspaces button {
 	padding: 0px 7px 0px 7px;
-	margin: -8px 0px -8px 0px;
+	margin: -8px 0px;
 	background-color: @workspaces;
 	color: #3E445C;
 	font-size: 12px;
 }
 
 #workspaces button:hover {
-	box-shadow: inset 0 -2px #e7e7e7;
+	box-shadow: inset 0 0px #e7e7e7;
 }
 
 #workspaces button.focused {
@@ -217,7 +217,7 @@ label:focus {
 	background-color: @launcher;
 	font-size: 23px;
 	font-weight: 700;
-	padding: 0px 10px 0px 10px;
+	padding: 0px 17px 0px 17px;
 	margin: -12px -3px -12px -3px;
 }
 
@@ -329,7 +329,7 @@ label:focus {
 
 #pulseaudio.muted {
 	background-color: @volume;
-	color: #A079FF;
+	color: #F28FAD;
 	padding: 0px 7px 0px 7px;
 	margin: -10px 0px -11px 0px;
 }
@@ -354,7 +354,7 @@ label:focus {
 }
 
 #custom-artist {
-	color: #72F193;
+	color: #BBB3F8;
 	background-color: @mpd;
 	font-weight: 600;
 	font-size: 14px;

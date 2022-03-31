@@ -140,8 +140,8 @@
             "format-icons": ["","",""]
         },
         "backlight": {
-            "on-scroll-up": "lightctl raise",
-            "on-scroll-down": "lightctl lower",
+            "on-scroll-up": "light -s sysfs/backlight/intel_backlight -A 3",
+            "on-scroll-down": "light -s sysfs/backlight/intel_backlight -U 3",
             "device": "intel_backliht",
             "format": "{percent}%",
             "format-icons": ["",""]
