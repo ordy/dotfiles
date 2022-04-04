@@ -1,4 +1,4 @@
-@define-color launcher #161320;
+@define-color launcher #0E0C14;
 @define-color workspaces #1A1826;
 @define-color mpd #232335;
 
@@ -24,7 +24,6 @@
 #waybar {
 	font-family: FontAwesome, SourceSansVariable;
 	font-size: 14px;
-	box-shadow: inset 0 -1px rgba(19, 19, 19, 0.4);
 }
 
 window#waybar {

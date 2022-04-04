@@ -5,34 +5,34 @@ configuration {
 }
 
 * {
-  polar-1: #252a34;
-  polar-2: #303643;
-  polar-3: #434C5E;
-  polar-4: #4C566A;
+  dark-1: #1A1826;
+  dark-2: #1E1E2E;
+  dark-3: #302D41;
+  dark-4: #575268;
 
-  snow-1: #D8DEE9;
-  snow-2: #8B95A7;
-  snow-3: #ECEFF4;
+  light-1: #F5E0DC;
+  light-2: #C9CBFF;
+  light-3: #D9E0EE;
 
-  frost-1: #8FBCBB;
-  frost-2: #5A4EC7;
-  frost-3: #81A1C1;
-  frost-4: #5E81AC;
+  sky-1: #89DCEB;
+  sky-2: #96CDFB;
+  sky-3: #B5E8E0;
+  sky-4: #ABE9B3;
 
-  aurora-1: #BF616A;
-  aurora-2: #D08770;
-  aurora-3: #EBCB8B;
-  aurora-4: #A3BE8C;
-  aurora-5: #895eff;
+  flamingo-1: #F28FAD;
+  flamingo-2: #E8A2AF;
+  flamingo-3: #F5C2E7;
+  flamingo-4: #F2CDCD;
+  flamingo-5: #F5E0DC;
 
-  background-color: @polar-1;
-  background: @polar-1;
-  lightbg: @polar-1;
-  selected-normal-foreground: @snow-1;
-  selected-normal-background: @polar-4;
-  foreground: @snow-1;
+  background-color: @dark-1;
+  background: @dark-1;
+  lightbg: @dark-1;
+  selected-normal-foreground: @dark-3;
+  selected-normal-background: @light-2;
+  foreground: @light-1;
  
-  border-color: @aurora-5;
+  border-color: @dark-3;
 
   border: 0;
   margin: 0;
@@ -43,11 +43,11 @@ configuration {
 element {
   padding: 12;
   orientation: horizontal;
-  text-color: @frost-3;
+  text-color: @sky-3;
 }
 
 element selected {
-  text-color: @aurora-3;
+  text-color: @flamingo-3;
 }
 
 message {
@@ -56,10 +56,10 @@ message {
 }
 
 entry {
-  background-color: @polar-2;
+  background-color: @dark-2;
   padding: 12 10 12 3;
-  text-color: @snow-1;
-  placeholder-color: @snow-2; 
+  text-color: @light-1;
+  placeholder-color: @light-2; 
   placeholder:       "Search...";
 }
 
@@ -77,11 +77,11 @@ mainbox {
 }
 
 prompt {
-  background-color: @polar-2;
+  background-color: @dark-2;
   enabled: true;
   font: "FontAwesome 12";
   padding: 12 0 0 12;
-  text-color: @snow-1;
+  text-color: @light-1;
 }
 
 window {

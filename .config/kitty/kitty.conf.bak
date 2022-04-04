@@ -976,6 +976,6 @@ map kitty_mod+f6 debug_config
 
 
 # BEGIN_KITTY_THEME
-# Tokyo Night
+# Catppuccin
 include current-theme.conf
 # END_KITTY_THEME
