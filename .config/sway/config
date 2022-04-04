@@ -230,9 +230,9 @@ bar {
 }
 
 #window colors
-set $active-bg-color    #BB9AF7
+set $active-bg-color    #AEB1F3
 set $active-fg-color    #0E0E0E
-set $inactive-bg-color  #1B1F27
+set $inactive-bg-color  #302D41
 set $inactive-fg-color  #3A3E4A
 
 # Border
