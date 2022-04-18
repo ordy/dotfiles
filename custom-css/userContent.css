@@ -1,0 +1,11 @@
+@-moz-document url("about:newtab"), url("about:home") {  
+	body {
+		--newtab-primary-action-background: #7b77fa !important;
+		--newtab-background-color: #161320 !important;
+		--newtab-background-color-secondary: #302D41 !important;
+	}
+
+  .search-wrapper .logo-and-wordmark .logo {
+		filter: brightness(74%) contrast(173%) hue-rotate(99deg) saturate(75%) sepia(81%) invert(100%);
+	}
+}
