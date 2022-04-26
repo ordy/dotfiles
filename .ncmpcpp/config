@@ -54,7 +54,7 @@ mpd_crossfade_time = 3
 ##
 
 #
-visualizer_data_source = /tmp/mpd.fifo
+#visualizer_data_source = /tmp/mpd.fifo
 #
 ##
 ## Note: Below parameter is needed for ncmpcpp
@@ -64,12 +64,12 @@ visualizer_data_source = /tmp/mpd.fifo
 ## are some problems with it.
 ##
 #
-visualizer_output_name = my_fifo
+#visualizer_output_name = my_fifo
 #
 ##
 ## If you set format to 44100:16:2, make it 'yes'.
 ##
-visualizer_in_stereo = no
+#visualizer_in_stereo = no
 #
 ##
 ## Multiply received samples by given value. Very
@@ -91,18 +91,18 @@ visualizer_in_stereo = no
 #
 ## Available values: spectrum, wave, wave_filled, ellipse.
 ##
-visualizer_type = spectrum
+#visualizer_type = spectrum
 #
-visualizer_look = "●▮"
+#visualizer_look = "●▮"
 #
 #visualizer_color = 33, 32, 31, 30, 73, 21, 57, 19, 21
 #
-visualizer_color = blue, cyan, green, yellow, magenta, red
+#visualizer_color = blue, cyan, green, yellow, magenta, red
 ## Alternative subset of 256 colors for terminals that support it.
 ##
 #visualizer_color = 41, 83, 119, 155, 185, 215, 209, 203, 197, 161
 #
-visualizer_autoscale = yes
+#visualizer_autoscale = yes
 ##### system encoding #####
 ##
 ## ncmpcpp should detect your charset encoding

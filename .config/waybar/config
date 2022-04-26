@@ -1,7 +1,7 @@
 {
     "layer": "top",
         "position": "top",
-        "modules-left": [
+        "modules-left": [ 
         "custom/launcher",
         "custom/sep0",
         "sway/workspaces",
@@ -11,7 +11,7 @@
         "custom/title",
         "custom/sep2",
         ],
-        "modules-center": [
+        "modules-center": [ 
             "cpu",
         "custom/cpu_icon",
         "memory", 
@@ -77,31 +77,35 @@
             "spacing": 7
         },
         "clock": {
-            "format": "{:%a, %d %b  •  %H:%M}",
+            "format": "{:%a, %d %b  •  <b>%H:%M</b>}",
             "timezone": "Europe/Brussels",
             "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
         },
         "cpu": {
             "format": "{usage}%",
-            "tooltip": false
         },
         "memory": {
-            "format": "{}%"
+            "format": "{}%",
         },
         "custom/cpu_icon": {
-            "format": ""
+            "format": "",
+            "tooltip": false
         },
         "custom/mem_icon": {
-            "format": ""
+            "format": "",
+            "tooltip": false
         },
         "custom/temp_icon": {
-            "format": ""
+            "format": "",
+            "tooltip": false
         },
         "custom/bright_icon": {
-            "format": "◐︁"
+            "format": "◐︁",
+            "tooltip": false
         },
         "custom/weather_icon": {
-            "format": "   "
+            "format": "   ",
+            "tooltip": false
         },
         "custom/sep0": {
             "format": "",
@@ -153,18 +157,18 @@
                 "critical": 15
             },
             "format": "{capacity}%   {icon} ",
-            "format-charging": "{capacity}  {icon} ",
-            "format-plugged": "{capacity} ",
-            "format-alt": "{time}   {icon} ",
-            // "format-good": "", // An empty format will hide the module
-            // "format-full": "",
-            "format-icons": [
-                "<span font='13px'></span>", 
-            "<span font='13px'></span>", 
-            "<span font='13px'></span>", 
-            "<span font='13px'></span>", 
-            "<span font='13px'></span>" 
-            ]
+                "format-charging": "{capacity}  {icon} ",
+                "format-plugged": "{capacity} ",
+                "format-alt": "{time}   {icon} ",
+                // "format-good": "", // An empty format will hide the module
+                // "format-full": "",
+                "format-icons": [
+                    "<span font='13px'></span>", 
+                "<span font='13px'></span>", 
+                "<span font='13px'></span>", 
+                "<span font='13px'></span>", 
+                "<span font='13px'></span>" 
+                ]
         },  
         "network": {
             // "interface": "wlp2*", // (Optional) To force the use of this interface
@@ -202,14 +206,13 @@
         },
         "custom/weather": {
             "format": "{}",
-            "format-alt": "{alt}: {}",
+            "format-alt": "{alt}",
             "format-alt-click": "click-right",
-            "interval": 1800,
+            "interval": 1000,
             "return-type": "json",
+            "tooltip": true,
             "exec": "~/.config/waybar/modules/weather.sh",
             "exec-if": "ping wttr.in -c1",
-            // "on-click": "terminator -p Small -e 'bash -c \"curl -s https://en.wttr.in; read line\"'"
-            // "on-click": "gnome-weather"
         },
         "custom/artist": {
             "format": "{}",
