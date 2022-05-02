@@ -241,10 +241,10 @@ client.focused $active-bg-color $active-bg-color $active-fg-color
 client.unfocused $inactive-bg-color $inactive-bg-color $inactive-fg-color
 
 # Shadow
-border_images.focused $HOME/.config/sway/shadows.png
-border_images.focused_inactive $HOME/.config/sway/shadows.png
-border_images.unfocused $HOME/.config/sway/shadows.png
-border_images.urgent $HOME/.config/sway/shadows.png
+border_images.focused $HOME/.config/sway/shadows70.png
+border_images.focused_inactive $HOME/.config/sway/shadows70.png
+border_images.unfocused $HOME/.config/sway/shadows70.png
+border_images.urgent $HOME/.config/sway/shadows70.png
 
 default_floating_border pixel 3
 default_border pixel 3

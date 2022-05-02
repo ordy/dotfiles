@@ -1,5 +1,5 @@
-@define-color	focusColor #ECECEC;
-@define-color	poweroffColor #EC5757;
+@define-color	focusColor #D5BEF1;
+@define-color	poweroffColor #F77D7D;
 
 
 * {
@@ -14,7 +14,7 @@ button {
 	margin: 200px 5px 320px 5px;
 	font-family: "MesloLGS Nerd Font";
 	background-color: #16161E;
-	color: #222530;
+	color: #272736;
 	border-style: solid;
 	font-size: 100px;
 	border-width: 2px;
