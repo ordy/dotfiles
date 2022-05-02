@@ -2,152 +2,97 @@
     "layer": "top",
         "position": "top",
         "modules-left": [ 
-        "custom/launcher",
-        "custom/sep0",
-        "sway/workspaces",
-        "sway/mode",
-        "custom/sep1",
-        "custom/artist",
-        "custom/title",
-        "custom/sep2",
+            "custom/launcher",
+            "custom/sep0",
+            "sway/workspaces",
+            "sway/mode",
+            "custom/sep1",
+            "custom/artist",
+            "custom/title"
         ],
         "modules-center": [ 
             "cpu",
-        "custom/cpu_icon",
-        "memory", 
-        "custom/mem_icon",
-        "temperature",
-        "custom/temp_icon",
-        "backlight",
-        "custom/bright_icon",
-        "custom/weather",
-        "custom/weather_icon",
+            "memory", 
+            "temperature",
+            "backlight",
+            "custom/weather",
         ],
         "modules-right": [ 
             "custom/sep3", 
-        "pulseaudio",
-        "custom/sep4", 
-        "network",
-        "custom/sep5",  
-        "battery",
-        "idle_inhibitor",
-        "tray",
-        "custom/sep6",  
-        "clock"
+            "pulseaudio",
+            "custom/sep4", 
+            "network",
+            "custom/sep5",  
+            "battery",
+            "tray",
+            "custom/sep6",  
+            "clock"
         ],
-        // Modules configuration
         "sway/workspaces": {
             "disable-scroll": true,
             "all-outputs": true,
             "format": "{icon}",
             "format-icons": {
-                "1": "",
-                "1": "<span font='11'></span>",
-                "2": "<span font='15'></span>",
-                "3": "<span font='17'>﬏</span>",
-                "4": "<span font='12' rise='2000'></span>",
-                "5": "<span font='17'></span>",
+                "1": "<span font='11'> </span>",
+                "2": "<span font='16'> </span>",
+                "3": "<span font='12' rise='-2000'>﬏ </span>",
+                "4": "<span font='12'> </span>",
+                "5": "<span font='11'> </span>",
                 "urgent": "",
                 "focused": "",
                 "default": ""
             }
         },
         "sway/mode": {
-            "format": "<span style=\"italic\">{}</span>"
+            "format": "{}"
         },
-        "mpd": {
-            "format": "<span color='#50EC91'>{artist}</span>  •  {title}",
-            "format-disconnected": "Disconnected",
-            "format-stopped": "",
-            "format-paused": "",
-            "unknown-tag": "N/A",
-            "interval": 2,
-            "tooltip-format": "MPD (connected)",
-            "tooltip-format-disconnected": "MPD (disconnected)"
+        "custom/sep0": {
+            "format": "",
+            "tooltip": false
         },
-        "idle_inhibitor": {
-            "format": "{icon}",
-            "format-icons": {
-                "activated": "",
-                "deactivated": ""
-            }
+        "custom/sep1": {
+            "format": "",
+            "tooltip": false
+        },
+        "custom/sep3": {
+            "format": "",
+            "tooltip": false
+        },
+        "custom/sep4": {
+            "format": "",
+            "tooltip": false
+        },
+        "custom/sep5": {
+            "format": "",
+            "tooltip": false
+        },
+        "custom/sep6": {
+            "format": "",
+            "tooltip": false
         },
         "tray": {
-            "icon-size": 16,
-            "spacing": 7
+            "spacing": 10
         },
         "clock": {
-            "format": "{:%a, %d %b  •  <b>%H:%M</b>}",
+            "format": "{:%a, %d %b • <b>%H:%M</b>}",
             "timezone": "Europe/Brussels",
             "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
         },
         "cpu": {
-            "format": "{usage}%",
+            "format": "{usage}%  ",
         },
         "memory": {
-            "format": "{}%",
-        },
-        "custom/cpu_icon": {
-            "format": "",
-            "tooltip": false
-        },
-        "custom/mem_icon": {
-            "format": "",
-            "tooltip": false
-        },
-        "custom/temp_icon": {
-            "format": "",
-            "tooltip": false
-        },
-        "custom/bright_icon": {
-            "format": "◐︁",
-            "tooltip": false
-        },
-        "custom/weather_icon": {
-            "format": "   ",
-            "tooltip": false
-        },
-        "custom/sep0": {
-            "format": "",
-            "tooltip": false
-        },
-        "custom/sep1": {
-            "format": "",
-            "tooltip": false
-        },
-        "custom/sep2": {
-            "format": "",
-            "tooltip": false
-        },
-        "custom/sep3": {
-            "format": "",
-            "tooltip": false
-        },
-        "custom/sep4": {
-            "format": "",
-            "tooltip": false
-        },
-        "custom/sep5": {
-            "format": "",
-            "tooltip": false
-        },
-        "custom/sep6": {
-            "format": "",
-            "tooltip": false
+            "format": "{percentage}%  ",
         },
         "temperature": {
-            // "thermal-zone": 2,
-            // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
             "critical-threshold": 85,
-            // "format-critical": "{temperatureC}{icon}",
-            "format": "{temperatureC}",
-            "format-icons": ["","",""]
+		    "format": "{temperatureC}°C  ",
         },
         "backlight": {
             "on-scroll-up": "light -s sysfs/backlight/intel_backlight -A 3",
             "on-scroll-down": "light -s sysfs/backlight/intel_backlight -U 3",
             "device": "intel_backliht",
-            "format": "{percent}%",
+            "format": "{percent}%  ",
             "format-icons": ["",""]
         },
         "battery": {
@@ -162,17 +107,10 @@
                 "format-alt": "{time}   {icon} ",
                 // "format-good": "", // An empty format will hide the module
                 // "format-full": "",
-                "format-icons": [
-                    "<span font='13px'></span>", 
-                "<span font='13px'></span>", 
-                "<span font='13px'></span>", 
-                "<span font='13px'></span>", 
-                "<span font='13px'></span>" 
-                ]
+                "format-icons": ["","","","",""]
         },  
         "network": {
-            // "interface": "wlp2*", // (Optional) To force the use of this interface
-            "format-wifi": "{signalStrength}%  <span font='15px' style='normal'>﬉</span>",
+            "format-wifi": " {signalStrength}%  <span font='16' rise='-2500'></span> ",
             "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
             "format-linked": "{ifname} (No IP) ",
             "format-disconnected": "Disconnected ⚠",
@@ -184,20 +122,20 @@
             "format": "{volume}% {icon} {format_source}",
             "format-bluetooth": "{volume}% {icon} {format_source}",
             "format-bluetooth-muted": "{icon} {format_source}",
-            "format-muted": "<span rise='-5000' font='27px'></span> {format_source}",
-            "format-source": "  {volume}% <span font='13.5px' rise='-450' style='normal'> </span>",
-            "format-source-muted": " <span font='13px' rise='-450' style='normal'> </span>",
+            "format-muted": " {format_source}",
+            "format-source": "  {volume}% ",
+            "format-source-muted": "",
             "format-icons": {
-                "headphone": "<span font='14px' rise='-1000'> </span>",
+                "headphone": " ",
                 "hands-free": "",
                 "headset": "",
                 "phone": "",
                 "portable": "",
                 "car": "",
                 "default": [
-                    " <span font='16px' rise='-1500' style='normal'> </span>", 
-                " <span font='16px' rise='-1500' style='normal'> </span>", 
-                " <span font='16px' rise='-1500' style='normal'> </span>"
+                    "", 
+                    "", 
+                    ""
                 ]
             },
             "on-click": "pavucontrol",
@@ -205,7 +143,7 @@
             "on-scroll-down": "pactl set-sink-volume 0 -5%",
         },
         "custom/weather": {
-            "format": "{}",
+            "format": "{} ",
             "format-alt": "{alt}",
             "format-alt-click": "click-right",
             "interval": 1000,
@@ -233,7 +171,7 @@
             "exec": "~/.config/waybar/modules/mediaplayer_t.py 2> /dev/null" // Script in resources folder
         },
         "custom/launcher" : {
-            "format": "ﰩ",
+            "format": "<span font='13'>ﲅ</span>",
             "on-click": "rofi -modi drun -show drun -drun-display-format {name} | xargs swaymsg exec --",
             "on-click-right": "wlogout -b 5 -p layer-shell",
             "tooltip": false,

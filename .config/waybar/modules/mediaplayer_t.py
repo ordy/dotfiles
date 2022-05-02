@@ -26,7 +26,7 @@ def on_metadata(player, metadata, manager):
     if player.props.player_name == 'firefox':
         track_info = ''
     elif player.get_artist() != '' and player.get_title() != '':
-        track_info = '•  {title}'.format(title=player.get_title())
+        track_info = '• {title}'.format(title=player.get_title())
     else:
         track_info = player.get_title()
 
