@@ -115,6 +115,7 @@
             "format-linked": "{ifname} (No IP) ",
             "format-disconnected": "Disconnected ⚠",
             "format-alt": "{ifname} on {essid}: {ipaddr}/{cidr}",
+            "on-click-right": "kitty -e nmtui",
             "tooltip": false,
         },
         "pulseaudio": {
