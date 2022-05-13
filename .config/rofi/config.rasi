@@ -1,7 +1,8 @@
 configuration {
   display-drun: "  ";
-  font: "Source Sans Pro Semibold 11.5";
+  font: "Fira Sans Condensed Medium 11.7";
   show-icons: true;
+  width: 100px;
 }
 
 * {
@@ -10,7 +11,7 @@ configuration {
   dark-3: #302D41;
   dark-4: #575268;
 
-  light-1: #F5E0DC;
+  light-1: #F6F4FF;
   light-2: #C9CBFF;
   light-3: #D9E0EE;
 
@@ -48,6 +49,7 @@ element {
 
 element selected {
   text-color: @flamingo-3;
+  border-radius: 5 5 5 5;
 }
 
 message {
@@ -57,8 +59,10 @@ message {
 
 entry {
   background-color: @dark-2;
-  padding: 12 10 12 3;
+  padding: 11 10 12 3;
+  margin: 0 0 10 0;
   text-color: @light-1;
+  border-radius: 0 5 5 0;
   placeholder-color: @light-2; 
   placeholder:       "Search...";
 }
@@ -78,6 +82,8 @@ mainbox {
 
 prompt {
   background-color: @dark-2;
+  border-radius: 5 0 0 5;
+  margin: 0 0 10 0;
   enabled: true;
   font: "FontAwesome 12";
   padding: 12 0 0 12;
@@ -85,17 +91,17 @@ prompt {
 }
 
 window {
+width: 30%;
   transparency: "real";
-    padding:      0px 0px 0px 0px;
-    margin:      0px 0px 0px 0px;
+  padding:      5px 5px 5px 5px;
+  margin:      0px 0px 0px 0px;
   border: 2px;
 }
-
 
 listview {
     fixed-height: 0;
     padding:      0px 0px 0px 0px;
-    margin:      0px 0px 0px 0px;
+    margin:       0px 0px 0px 0px;
     scrollbar:    false;                  
     lines:        8;
     border-color: var(separatorcolor);

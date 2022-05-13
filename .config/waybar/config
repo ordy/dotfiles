@@ -34,7 +34,7 @@
             "format": "{icon}",
             "format-icons": {
                 "1": "<span font='11'> </span>",
-                "2": "<span font='16'> </span>",
+                "2": "<span font='16'></span>",
                 "3": "<span font='12' rise='-2000'>﬏ </span>",
                 "4": "<span font='12'> </span>",
                 "5": "<span font='11'> </span>",
@@ -110,7 +110,7 @@
                 "format-icons": ["","","","",""]
         },  
         "network": {
-            "format-wifi": " {signalStrength}%  <span font='16' rise='-2500'></span> ",
+            "format-wifi": " {signalStrength}%  ",
             "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
             "format-linked": "{ifname} (No IP) ",
             "format-disconnected": "Disconnected ⚠",
