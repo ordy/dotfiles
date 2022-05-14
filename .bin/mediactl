@@ -1,9 +1,9 @@
 #!/bin/bash
 
-SPOTIFY_STATUS=$(playerctl -p spotify status)
+SPOTIFY_STATUS=$(pgrep spotify -n)
 
-if [[ $SPOTIFY_STATUS == 'Playing' ]]; then
-	playerctl -p spotify $1
-else
+if [ -z "$SPOTIFY_STATUS" ]; then
 	playerctl -p mpd $1
+else
+	playerctl -p spotify $1
 fi
