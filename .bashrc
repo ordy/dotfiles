@@ -139,7 +139,7 @@ ex ()
     fi
 }
 
-export PATH="$HOME/.mybin:$PATH"
+export PATH="$HOME/.bin:$PATH"
 
 
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
