@@ -16,8 +16,6 @@ $HOME/{\
 	.bashrc,\
 	.dir_colors,\
 	.vimrc,\
-	.xbindkeysrc,\
-	.Xresources,\
 	.imwheelrc,\
 	.alacritty.yml,\
 	.bin\
@@ -36,7 +34,9 @@ rsync "${options[@]}" \
 	$HOME/.config/kanshi \
 	$HOME/.config/rofi \
 	$HOME/.config/kitty \
-  $HOME/.config/picom.conf \
+	$HOME/.config/xbindkeys \
+	$HOME/.config/X11 \
+	$HOME/.config/picom.conf \
 $BACKUP/.config/
 
 git -C $BACKUP add .
