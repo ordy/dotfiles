@@ -1,0 +1,15 @@
+#!/bin/bash
+
+wttrdir=~/.config/wttr
+
+if [ ! -d $wttrdir ]; then
+  mkdir -p $wttrdir
+fi
+
+if [ ! -f $wttrdir/geoloc ]; then
+  touch $wttrdir/geoloc
+fi
+
+if [ -z "$1" ]; then
+  echo $1 > $wttrdir/geoloc
+fi

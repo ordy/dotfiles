@@ -10,15 +10,15 @@ ISODATE=$(date --iso)
 # files
 rsync "${options[@]}" \
 $HOME/{\
-	.zshrc,\
-	.p10k.zsh,\
-	.bash_profile,\
-	.bashrc,\
-	.dir_colors,\
-	.vimrc,\
-	.imwheelrc,\
-	.alacritty.yml,\
-	.bin\
+.zshrc,\
+.p10k.zsh,\
+.bash_profile,\
+.bashrc,\
+.dir_colors,\
+.vimrc,\
+.imwheelrc,\
+.alacritty.yml,\
+.bin\
 } $BACKUP
 
 # directories
