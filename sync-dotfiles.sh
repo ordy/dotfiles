@@ -11,6 +11,7 @@ ISODATE=$(date --iso)
 rsync "${options[@]}" \
 $HOME/{\
 .zshrc,\
+.zshenv,\
 .p10k.zsh,\
 .bash_profile,\
 .bashrc,\
