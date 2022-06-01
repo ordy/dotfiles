@@ -5,10 +5,12 @@ URxvt.scrollBar_right: false
 URxvt.scrollBar:       false
 URxvt.geometry:        120x40+240+120
 
-URxvt.font:            xft:FiraCode\ Nerd\ Font:size=9:antialias=true
-URxvt.font.boldFont:   xft:Cascadia\ Mono\ PL:style=Bold:size=9:antialias=true
-URxvt.font.italicFont: xft:Cascadia\ Mono\ PL:style=Italic:size=9:antialias=true
-URxvt.boldItalicFont:  xft:Cascadia\ Mono\ PL:style=Bold Italic:size=9:antialias=true
+URxvt.font: xft:UbuntuMono Nerd Font-12
+URxvt.boldFont: xft:UbuntuMono Nerd Font:bold:pixelsize=14
+URxvt.italicFont: xft:UbuntuMono Nerd Font:italic:pixelsize=14
+URxvt.boldItalicFont: xft:UbuntuMono Nerd Font:bold:italic:pixelsize=14
+
+Xcursor.theme: simp1e-dark
 
 URxvt.perl-ext-common:     default,resize-font,url-select,matcher
 URxvt.resize-font.smaller: C-Down
@@ -37,7 +39,7 @@ Xft.hintstyle: hintslight
 !
 !! special
 *.foreground:   #919191
-*.background:   #121218
+*.background:   #22222B
 *.cursorColor:  #919191
 
 ! black
