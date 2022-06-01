@@ -11,29 +11,30 @@ window {
 }
 
 button {
-	margin: 200px 5px 320px 5px;
-	font-family: "MesloLGS Nerd Font";
+	margin: 200px 5px 250px 5px;
+	font-family: "UbuntuMono Nerd Font";
 	background-color: #16161E;
 	color: #272736;
 	border-style: solid;
-	font-size: 100px;
+	font-size: 120px;
 	border-width: 2px;
 }
 
 #lock {
-	padding: 5px 15px 5px 10px;
+	padding: 5px 30px 5px 20px;
 }
 
 #suspend, #reboot {
-	padding: 5px 20px 5px 5px;
+	padding: 5px 35px 5px 5px;
 }
 
 #logout {
-	padding: 5px 15px 5px 5px;
+	font-size: 110px;
+	padding: 5px 45px 5px 5px;
 }
 
 #shutdown {
-	padding: 5px 20px 5px 10px;
+	padding: 5px 40px 5px 5px;
 }
 
 button:focus, button:hover {
@@ -44,7 +45,7 @@ button:focus#reboot, button:hover#reboot,
 button:focus#suspend, button:hover#suspend, 
 button:focus#lock, button:hover#lock,
 button:focus#logout, button:hover#logout { 
-  box-shadow:  0px 10px @focusColor; 
+	box-shadow:  0px 10px @focusColor; 
 	outline-style: solid;
 	outline-width: 3px;
 	outline-color: @focusColor;
@@ -52,7 +53,7 @@ button:focus#logout, button:hover#logout {
 }
 
 button:focus#shutdown, button:active#shutdown, button:hover#shutdown {
-  box-shadow:  0px 10px @poweroffColor;
+	box-shadow:  0px 10px @poweroffColor;
 	outline-style: none;
 	outline-style: solid;
 	outline-width: 3px;
