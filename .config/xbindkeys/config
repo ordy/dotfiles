@@ -28,7 +28,7 @@
    b:10
 
 # Special copy paste
-"sleep 0.5; xdotool type '$(xclip -o -selection clipboard)'"
+'sleep 0.5; xdotool type "$(xclip -o -selection primary)"'
    Control+b
  
 #"xdotool type --delay 1 --clearmodifiers "$(xsel -bo)""

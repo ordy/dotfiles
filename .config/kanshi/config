@@ -1,9 +1,9 @@
 profile default {
-	output "Seiko Epson Corporation 0x324C 0x00000000" enable position 0,0 mode 1600x900
+	output LVDS-1 enable position 0,0 mode 1600x900
 }
 
 profile vga {
-	output "Seiko Epson Corporation 0x324C 0x00000000" disable
-	output "Acer Technologies X223W LAV0C1684034" enable position 0,0 mode 1680x1050
+	output LVDS-1 disable
+	output VGA-1 enable position 0,0 mode 1680x1050
 }
 
