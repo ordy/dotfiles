@@ -1,4 +1,4 @@
-# vim:fileencoding=utf-8:ft=conf:foldmethod=marker
+ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 
 #: Fonts {{{
 font_family      Cascadia Code PL
@@ -11,7 +11,7 @@ font_features CascadiaCodePL-Italic +ss19 +ss20
 font_size 10
 force_ltr no
 
-symbol_map U+23FB-U+23FE,U+2B58,U+E200-U+E2A9,U+E0A0-U+E0A3,U+E0B0-U+E0BF,U+E0C0-U+E0C8,U+E0CC-U+E0CF,U+E0D0-U+E0D2,U+E0D4,U+E700-U+E7C5,U+F000-U+F2E0,U+2665,U+26A1,U+F400-U+F4A8,U+F67C,U+E000-U+E00A,U+F300-U+F313,U+E5FA-U+E62B MesloLGM Nerd Font
+symbol_map U+23FB-U+23FE,U+2B58,U+E200-U+E2A9,U+E0A0-U+E0A3,U+E0B0-U+E0BF,U+E0C0-U+E0C8,U+E0CC-U+E0CF,U+E0D0-U+E0D2,U+E0D4,U+E700-U+E7C5,U+F000-U+F2E0,U+2665,U+26A1,U+F400-U+F4A8,U+F67C,U+E000-U+E00A,U+F300-U+F313,U+E5FA-U+E62B UbuntuMono Nerd Font
 
 #: Map the specified unicode codepoints to a particular font. Useful
 #: if you need special rendering for some symbols, such as for
@@ -24,7 +24,7 @@ symbol_map U+23FB-U+23FE,U+2B58,U+E200-U+E2A9,U+E0A0-U+E0A3,U+E0B0-U+E0BF,U+E0C0
 #:     symbol_map codepoints Font Family Name
 
 disable_ligatures never
-box_drawing_scale 0.001, 1.5, 1.5, 2
+box_drawing_scale 0.001, 1, 1.5, 2
 
 #: Change the sizes of the lines used for the box drawing unicode
 #: characters These values are in pts. They will be scaled by the
@@ -537,7 +537,7 @@ inactive_tab_font_style normal
 
 #: Color scheme {{{
 
-background_opacity 1.0
+background_opacity 1.00
 dim_opacity 0.75
 # selection_background #3C404E
 # selection_foreground #9DA2B4
@@ -976,6 +976,6 @@ map kitty_mod+f6 debug_config
 
 
 # BEGIN_KITTY_THEME
-# Catppuccin
+# Substrata
 include current-theme.conf
 # END_KITTY_THEME
