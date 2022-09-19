@@ -37,10 +37,7 @@
                 "2": "<span font='16'></span>",
                 "3": "<span font='12' rise='-2000'>﬏ </span>",
                 "4": "<span font='12'> </span>",
-                "5": "<span font='11'> </span>",
-                "urgent": "",
-                "focused": "",
-                "default": ""
+                "5": "<span font='11'> </span>"
             }
         },
         "sway/mode": {
