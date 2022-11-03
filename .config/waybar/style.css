@@ -21,6 +21,8 @@
 	font-size: 14px;
 	font-weight: 600;
 	margin: 0px;
+	padding: 0px;
+	border-radius: 0;
 }
 
 window#waybar {
@@ -174,6 +176,12 @@ tooltip {
 
 label:focus {
 	background-color: #000000;
+}
+
+label:disabled,
+button:disabled {
+	all: unset;
+	min-width: 0;
 }
 
 #cpu {
