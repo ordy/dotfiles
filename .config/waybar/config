@@ -5,8 +5,8 @@
             "custom/launcher",
             "custom/sep0",
             "sway/workspaces",
-            "sway/mode",
             "custom/sep1",
+            "sway/mode",
             "custom/artist",
             "custom/title"
         ],
@@ -18,14 +18,14 @@
             "custom/weather",
         ],
         "modules-right": [ 
-            "custom/sep3", 
+            "custom/sep3",
             "pulseaudio",
-            "custom/sep4", 
+            "custom/sep4",
             "network",
-            "custom/sep5",  
+            "custom/sep5",
             "battery",
             "tray",
-            "custom/sep6",  
+            "custom/sep6",
             "clock"
         ],
         "sway/workspaces": {
