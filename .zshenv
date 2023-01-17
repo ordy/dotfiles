@@ -1,4 +1,4 @@
-export PATH="${PATH}:${HOME}/.bin"
+export PATH="${PATH}:${HOME}/.bin:${HOME}/.cargo/bin"
 
 # XDG
 export XDG_CONFIG_HOME="$HOME"/.config
