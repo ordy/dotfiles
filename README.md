@@ -1,2 +1,2 @@
 # dotfiles
-My linux configurations and settings
+My linux configuration files backup.
