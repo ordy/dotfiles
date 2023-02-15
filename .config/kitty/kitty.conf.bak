@@ -363,7 +363,7 @@ single_window_margin_width -1
 #: values set top, horizontal and bottom. Four values set top, right,
 #: bottom and left.
 
-window_padding_width 0
+window_padding_width 3
 
 #: The window padding (in pts) (blank area between the text and the
 #: window border). A single value sets all four sides. Two values set
@@ -537,7 +537,7 @@ inactive_tab_font_style normal
 
 #: Color scheme {{{
 
-background_opacity 0.94
+background_opacity 0.98
 dim_opacity 0.75
 # selection_background #3C404E
 # selection_foreground #9DA2B4
@@ -976,6 +976,6 @@ map kitty_mod+f6 debug_config
 
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Macchiato
+# GitHub Dark Dimmed
 include current-theme.conf
 # END_KITTY_THEME
