@@ -1,9 +1,13 @@
 #!/bin/bash
 
-SPOTIFY_STATUS=$(pgrep spotify -n)
+SPOTIFY_STATUS=$(playerctl -p spotify status 2>&1)
+MPD_STATUS=$(playerctl -p mpd status 2>&1)
 
-if [ -z "$SPOTIFY_STATUS" ]; then
+if [[ "$SPOTIFY_STATUS" = "No players found" ]]; then
 	playerctl -p mpd $1
+elif [[ "$MPD_STATUS" = "Playing" ]]; then
+  playerctl -p mpd pause
+  playerctl -p spotify $1
 else
 	playerctl -p spotify $1
 fi

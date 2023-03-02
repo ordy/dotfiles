@@ -1,23 +1,23 @@
-@define-color barcolor #131020;
+@define-color barcolor #191724;
 
-@define-color launcher #161725;
-@define-color workspaces #222337;
+@define-color launcher #191724;
+@define-color workspaces #1f1d2e;
 @define-color mpd #232335;
 
-@define-color cpu #F28FAD;
-@define-color memory #DDB6F2;
-@define-color temperature #9BCBF4;
-@define-color brightness #ABE9B3;
-@define-color weather #F8C29E;
+@define-color cpu #ebbcba;
+@define-color memory #E0CEB7;
+@define-color temperature #9CD8CE;
+@define-color brightness #95BBF7;
+@define-color weather #BFB2FB;
 
-@define-color volume #4A4D68;
-@define-color network #383855;
-@define-color tray #282940;
-@define-color clock #1A1A29;
+@define-color volume #403d52;
+@define-color network #26233a;
+@define-color tray #1f1d2e;
+@define-color clock #191724;
 
 * {
 	border: none;
-	font-family:  SourceSansVariable,UbuntuMono Nerd Font,Weather Icons,sans-serif;
+	font-family: SourceSansVariable,UbuntuMono Nerd Font,Weather Icons,sans-serif;
 	font-size: 14px;
 	font-weight: 600;
 	margin: 0px;
@@ -151,7 +151,7 @@ tooltip {
 
 #battery.charging,
 #battery.plugged {
-	color: #ABFA9E;
+	color: #9CD8CE;
 	background-color: @tray;
 	padding-left: 4px;
 }

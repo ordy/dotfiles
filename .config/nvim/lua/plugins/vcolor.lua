@@ -1,0 +1,3 @@
+return {
+  "KabbAmine/vCoolor.vim",
+}

@@ -235,7 +235,7 @@ bar {
 }
 
 #window colors
-set $active-bg-color    #AEB1F3
+set $active-bg-color    #BFB2FB
 set $active-fg-color    #0E0E0E
 set $inactive-bg-color  #302D41
 set $inactive-fg-color  #3A3E4A
@@ -253,7 +253,7 @@ client.unfocused $inactive-bg-color $inactive-bg-color $inactive-fg-color
 
 default_floating_border pixel 3
 default_border pixel 3
-hide_edge_borders smart 
+hide_edge_borders smart
 smart_borders on
 smart_gaps on
 gaps inner 5
