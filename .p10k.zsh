@@ -478,7 +478,7 @@
   typeset -g POWERLEVEL9K_VCS_{STAGED,UNSTAGED,UNTRACKED,CONFLICTED,COMMITS_AHEAD,COMMITS_BEHIND}_MAX_NUM=-1
 
   # Icon color.
-  typeset -g POWERLEVEL9K_VCS_VISUAL_IDENTIFIER_COLOR=4
+  typeset -g POWERLEVEL9K_VCS_VISUAL_IDENTIFIER_COLOR=2
   typeset -g POWERLEVEL9K_VCS_LOADING_VISUAL_IDENTIFIER_COLOR=244
   # Custom icon.
   # typeset -g POWERLEVEL9K_VCS_VISUAL_IDENTIFIER_EXPANSION='⭐'
@@ -493,7 +493,7 @@
   # These settings are used for repositories other than Git or when gitstatusd fails and
   # Powerlevel10k has to fall back to using vcs_info.
   typeset -g POWERLEVEL9K_VCS_CLEAN_FOREGROUND=2
-  typeset -g POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND=2
+  typeset -g POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND=4
   typeset -g POWERLEVEL9K_VCS_MODIFIED_FOREGROUND=3
 
   ##########################[ status: exit code of the last command ]###########################

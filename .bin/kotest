@@ -1,7 +1,0 @@
-#! /bin/sh
-
-echo -e 'Korean:\n 한글과컴퓨터의 워드 프로세서 프로그램에 대해서는 한/글 문서를 참고하십시오'
-echo -e 'Hiragana:\n ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜ'
-echo -e 'Katakana:\n クグケゲコゴサザシジスズセゼソゾタダチヂッツヅテデトドナ'
-echo -e 'Kanji:\n 常用漢字常用漢字唐宋音, 哲士, 哲司, 敏, 諭, 智, 佐登司'
-echo -e 'Latin:\n It is a long established fact that a reader will be distracted'
