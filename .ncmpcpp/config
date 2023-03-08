@@ -93,9 +93,9 @@ mpd_crossfade_time = 3
 ##
 #visualizer_type = spectrum
 #
-#visualizer_look = "●▮"
+# visualizer_look = "●▮"
 #
-#visualizer_color = 33, 32, 31, 30, 73, 21, 57, 19, 21
+# visualizer_color = 33, 32, 31, 30, 73, 21, 57, 19, 21
 #
 #visualizer_color = blue, cyan, green, yellow, magenta, red
 ## Alternative subset of 256 colors for terminals that support it.
