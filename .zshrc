@@ -15,6 +15,8 @@ ZSH="/home/sano/.oh-my-zsh"
 plugins=(
   git
   npm
+  dirhistory
+  colored-man-pages
   zsh-autosuggestions
   zsh-syntax-highlighting
 )

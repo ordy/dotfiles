@@ -219,7 +219,7 @@ for_window [class="Spotify"] move workspace 5
 bindsym $alt+tab workspace back_and_forth
 
 # Close tab
-bindsym --whole-window BTN_FORWARD exec ydotool key 29:1 17:1 17:0 29:0 
+bindsym --whole-window BTN_FORWARD exec ydotool key 29:1 17:1 17:0 29:0
 
 # Auto float apps
 for_window [app_id="org.gnome.Calculator"] floating enable
