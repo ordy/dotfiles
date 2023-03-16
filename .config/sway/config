@@ -241,27 +241,21 @@ bar {
 }
 
 #window colors
-set $active-bg-color    #BFB2FB
-set $active-fg-color    #0E0E0E
-set $inactive-bg-color  #302D41
-set $inactive-fg-color  #3A3E4A
+set $active-bg-color    #585177
+set $active-fg-color    #191824
+set $inactive-bg-color  #0E0D14
+set $inactive-fg-color  #22252E
 
 # Border
 #client.<class> <border> <background> <text> [<indicator> [<child_border>]]
 client.focused $active-bg-color $active-bg-color $active-fg-color
 client.unfocused $inactive-bg-color $inactive-bg-color $inactive-fg-color
 
-# Shadow
-#border_images.focused $HOME/.config/sway/shadows70.png
-#border_images.focused_inactive $HOME/.config/sway/shadows70.png
-#border_images.unfocused $HOME/.config/sway/shadows70.png
-#border_images.urgent $HOME/.config/sway/shadows70.png
-
 default_floating_border pixel 3
 default_border pixel 3
 hide_edge_borders smart
-smart_borders on
 smart_gaps on
+smart_borders on
 gaps inner 5
 
 exec_always "systemctl --user restart kanshi.service"
