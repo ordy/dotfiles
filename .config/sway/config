@@ -128,7 +128,7 @@ bindsym $mod+v splitv
 # Switch the current container between different layout styles
 bindsym $mod+y layout stacking
 bindsym $mod+t layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+e layout toggle tabbed splitv splith
 
 # Make the current focus fullscreen
 bindsym $mod+f fullscreen
@@ -242,9 +242,9 @@ bar {
 
 #window colors
 set $active-bg-color    #585177
-set $active-fg-color    #191824
+set $active-fg-color    #DEDCF3
 set $inactive-bg-color  #0E0D14
-set $inactive-fg-color  #22252E
+set $inactive-fg-color  #565D72
 
 # Border
 #client.<class> <border> <background> <text> [<indicator> [<child_border>]]
