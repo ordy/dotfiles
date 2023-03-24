@@ -1,19 +1,19 @@
-@define-color barcolor #191724;
+@define-color barcolor #faf4ed;
 
-@define-color launcher #191724;
-@define-color workspaces #242236;
+@define-color launcher #C4C0BA;
+@define-color workspaces #D4CFC9;
 @define-color mpd #232335;
 
-@define-color cpu #ebbcba;
-@define-color memory #E0CEB7;
-@define-color temperature #9CD8CE;
-@define-color brightness #95BBF7;
-@define-color weather #BFB2FB;
+@define-color cpu #b4637a;
+@define-color memory #ea9d34;
+@define-color temperature #56949f;
+@define-color brightness #286983;
+@define-color weather #9B77C5;
 
-@define-color volume #393656;
-@define-color network #2F2C47;
-@define-color tray #262336;
-@define-color clock #191724;
+@define-color volume #EBE5DE;
+@define-color network #E1DBD4;
+@define-color tray #D4CFC9;
+@define-color clock #C4C0BA;
 
 * {
 	border: none;
@@ -27,7 +27,7 @@
 
 window#waybar {
 	background-color: @barcolor;
-	color: #D9E0EE;
+	color: #676479;
 	transition-property: background-color;
 	transition-duration: .5s;
 }
@@ -43,7 +43,7 @@ window#waybar {
 	padding: 0px 7px 0px 7px;
 	margin: -2px 0px;
 	background-color: @workspaces;
-	color: #565D7B;
+	color: #3D4256;
 }
 
 #workspaces button:hover {
@@ -51,7 +51,7 @@ window#waybar {
 }
 
 #workspaces button.focused {
-	color: #D9E0EE;
+	color: #575279;
 }
 
 #workspaces button.urgent {
@@ -140,12 +140,13 @@ tooltip {
 /**************/
 
 #clock {
+  color: #504b6b;
 	background-color: @clock;
 }
 
 #battery {
 	background-color: @tray;
-	color: #D9E0EE;
+	color: #504B6B;
 	padding-left: 4px;
 }
 
@@ -165,7 +166,7 @@ tooltip {
 
 #battery.critical:not(.charging) {
 	background-color: @tray;
-	color: #D9E0EE;
+	color: #575279;
 	animation-name: blink;
 	animation-duration: 0.5s;
 	animation-timing-function: linear;
@@ -197,7 +198,7 @@ button:disabled {
 }
 
 #custom-launcher {
-	color: #C9CBFF;
+	color: #575279;
 	padding-right: 15px;
 	padding-left: 10px;
 	background-color: @launcher;
@@ -258,7 +259,7 @@ button:disabled {
 }
 
 #custom-artist {
-	color: #C9CBFF;
+	color: #343445;
 	background-color: @barcolor;
 	margin-right: 0px;
 	padding-right: 5px;
@@ -266,7 +267,7 @@ button:disabled {
 
 #custom-title {
 	background-color: @barcolor;
-	color: #D9E0EE;
+	color: #575279;
 	margin-left: 0px;
 	padding-left: 0px;
 }
