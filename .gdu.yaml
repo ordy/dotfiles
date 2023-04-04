@@ -1,0 +1,40 @@
+log-file: /dev/null
+input-file: ""
+output-file: ""
+ignore-dirs:
+    - /proc
+    - /dev
+    - /sys
+    - /run
+    - /home/sano/Development
+    - /home/sano/Pictures
+    - /home/sano/Videos
+    - /home/sano/Documents
+    - /home/sano/Downloads
+    - /home/sano/Music
+ignore-dir-patterns: []
+ignore-from-file: ""
+max-cores: 4
+show-apparent-size: false
+show-relative-size: false
+no-color: false
+no-mouse: false
+non-interactive: false
+no-progress: false
+no-cross: false
+no-hidden: false
+follow-symlinks: false
+profiling: false
+const-gc: false
+summarize: false
+use-si-prefix: false
+no-prefix: false
+style:
+    selected-row:
+        text-color: ""
+        background-color: ""
+    progress-modal:
+        current-item-path-max-len: 0
+sorting:
+    by: ""
+    order: ""
