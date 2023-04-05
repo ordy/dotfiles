@@ -17,8 +17,8 @@
 
 * {
 	border: none;
-	font-family: SourceSansVariable,UbuntuMono Nerd Font,Weather Icons,sans-serif;
-	font-size: 14px;
+	font-family: Roboto,UbuntuMono Nerd Font,Weather Icons;
+	font-size: 13px;
 	font-weight: 600;
 	margin: 0px;
 	padding: 0px;
@@ -59,7 +59,7 @@ window#waybar {
 }
 
 tooltip {
-	font-family: FontAwesome, SourceSansVariable;
+	font-family: FontAwesome, Fira Sans;
 	font-size: 15px;
 	font-weight: 600;
 	border: 2px solid #C9CBFF;
@@ -82,61 +82,47 @@ tooltip {
 }
 
 /***** Separators  *****/
+#custom-sep0,
+#custom-sep1,
+#custom-sep3,
+#custom-sep4,
+#custom-sep5,
+#custom-sep6 {
+	margin-bottom: -6px;
+	margin-top: -2px;
+	margin-right: -3px;
+	font-size: 30px;
+}
+
 #custom-sep0 {
 	color: @workspaces;
 	background-color: @launcher;
-	margin-bottom: -14px;
-	margin-top: -10px;
-	margin-right: -3px;
-	font-size: 33px;
 }
 
 #custom-sep1 {
 	color: @barcolor;
 	background-color: @workspaces;
-	margin-bottom: -14px;
-	margin-top: -10px;
-	margin-right: -3px;
-	font-size: 33px;
 }
 
 #custom-sep3 {
 	color: @volume;
 	background-color: transparent;
-	margin-bottom: -14px;
-	margin-top: -10px;
-	margin-right: -3px;
-	font-size: 33px;
 }
 
 #custom-sep4 {
 	color: @network;
 	background-color: @volume;
-	margin-bottom: -14px;
-	margin-top: -10px;
-	margin-right: -3px;
-	font-size: 33px;
 }
-
 
 #custom-sep5 {
 	color: @tray;
 	background-color: @network;
-	margin-bottom: -14px;
-	margin-top: -10px;
-	margin-right: -3px;
-	font-size: 33px;
 }
 
 #custom-sep6 {
 	color: @clock;
 	background-color: @tray;
-	margin-bottom: -14px;
-	margin-top: -10px;
-	margin-right: -3px;
-	font-size: 33px;
 }
-
 /**************/
 
 #clock {
