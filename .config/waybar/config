@@ -33,11 +33,11 @@
             "all-outputs": true,
             "format": "{icon}",
             "format-icons": {
-                "1": "<span font='11'> </span>",
-                "2": "<span font='16'></span>",
-                "3": "<span font='12' rise='-2000'>﬏ </span>",
-                "4": "<span font='12'> </span>",
-                "5": "<span font='11'> </span>"
+                "1": "<span font='13'></span>",
+                "2": "<span font='14'></span>",
+                "3": "<span font='11' rise='-2000'>﬏</span>",
+                "4": "<span font='13'></span>",
+                "5": "<span font='11'></span>"
             }
         },
         "sway/mode": {
@@ -104,10 +104,10 @@
                 "format-alt": "{time}   {icon} ",
                 // "format-good": "", // An empty format will hide the module
                 // "format-full": "",
-                "format-icons": ["","","","",""]
+                "format-icons": ["<span font='13'></span>","<span font='13'></span>","<span font='13'></span>","<span font='13'></span>","<span font='13'></span>"]
         },  
         "network": {
-            "format-wifi": " {signalStrength}%  ",
+            "format-wifi": " {signalStrength}%  <span font='10' rise='1000'></span>",
             "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
             "format-linked": "{ifname} (No IP) ",
             "format-disconnected": "Disconnected ⚠",
@@ -121,10 +121,10 @@
             "format-bluetooth": "{volume}% {icon} {format_source}",
             "format-bluetooth-muted": "{icon} {format_source}",
             "format-muted": " {format_source}",
-            "format-source": "  {volume}% ",
-            "format-source-muted": "",
+            "format-source": "  {volume}% <span font='11' rise='600'></span>",
+            "format-source-muted": "<span font='11' rise='600'></span>",
             "format-icons": {
-                "headphone": " ",
+                "headphone": "<span font='12'></span>",
                 "hands-free": "",
                 "headset": "",
                 "phone": "",
@@ -141,7 +141,7 @@
             "on-scroll-down": "pactl set-sink-volume 0 -5%",
         },
         "custom/weather": {
-            "format": "{} ",
+            "format": "{} <span font='14'></span>",
             "format-alt": "{alt}",
             "format-alt-click": "click-right",
             "interval": 1000,

@@ -1,6 +1,6 @@
 configuration {
-  display-drun: "  ";
-  font: "Fira Sans Condensed Medium 11.7";
+  display-drun: "   ";
+  font: "Roboto Bold 12";
   show-icons: true;
   width: 100px;
 }
@@ -32,9 +32,7 @@ configuration {
   selected-normal-foreground: @dark-3;
   selected-normal-background: @light-2;
   foreground: @light-1;
- 
   border-color: @dark-3;
-
   border: 0;
   margin: 0;
   padding: 0;
@@ -42,9 +40,18 @@ configuration {
 }
 
 element {
-  padding: 12;
+  margin: 5;
   orientation: horizontal;
   text-color: @sky-3;
+}
+
+element-icon {
+  size: 1.8em;
+}
+
+element-text {
+  margin: 5;
+  font: "Roboto Bold 12";
 }
 
 element selected {
@@ -53,8 +60,8 @@ element selected {
 }
 
 message {
-    padding: 5px;
-    border: 1px dash 0px 0px ;
+  padding: 5px;
+  border: 1px dash 0px 0px ;
 }
 
 entry {
@@ -86,12 +93,12 @@ prompt {
   margin: 0 0 10 0;
   enabled: true;
   font: "FontAwesome 12";
-  padding: 12 0 0 12;
+  padding: 12 0 0 25;
   text-color: @light-1;
 }
 
 window {
-width: 30%;
+  width: 30%;
   transparency: "real";
   padding:      5px 5px 5px 5px;
   margin:      0px 0px 0px 0px;
@@ -99,13 +106,13 @@ width: 30%;
 }
 
 listview {
-    fixed-height: 0;
-    padding:      0px 0px 0px 0px;
-    margin:       0px 0px 0px 0px;
-    scrollbar:    false;                  
-    lines:        8;
-    border-color: var(separatorcolor);
-    columns:      1;
-    border:       0px dash 0px 0px ;
-    spacing:      0px;
+  fixed-height: 0;
+  padding:      0px 0px 0px 0px;
+  margin:       0px 0px 0px 0px;
+  scrollbar:    false;
+  lines:        8;
+  border-color: var(separatorcolor);
+  columns:      1;
+  border:       0px dash 0px 0px ;
+  spacing:      0px;
 }
