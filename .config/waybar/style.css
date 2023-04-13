@@ -17,8 +17,8 @@
 
 * {
 	border: none;
-	font-family: Roboto,UbuntuMono Nerd Font,Weather Icons;
-	font-size: 13px;
+	font-family: Recursive Sans Linear Static,Symbols Nerd Font Mono,Weather Icons;
+	font-size: 14px;
 	font-weight: 600;
 	margin: 0px;
 	padding: 0px;
@@ -59,8 +59,8 @@ window#waybar {
 }
 
 tooltip {
-	font-family: FontAwesome, Fira Sans;
-	font-size: 15px;
+	font-family: 'Roboto';
+	font-size: 25px;
 	font-weight: 600;
 	border: 2px solid #C9CBFF;
 	background-color: #302D41;
@@ -90,7 +90,7 @@ tooltip {
 #custom-sep6 {
 	margin-bottom: -6px;
 	margin-top: -2px;
-	margin-right: -3px;
+	margin-right: -13px;
 	font-size: 30px;
 }
 
