@@ -52,7 +52,7 @@ input "4152:5929:SteelSeries_SteelSeries_Rival_110_Gaming_Mouse" {
 ### Key bindings
 #
 # Basics:
-#-
+#
 # Start a terminal
 bindsym $mod+Return exec $term
 
@@ -153,22 +153,22 @@ bindsym $mod+minus scratchpad show
 # Resizing containers:
 #
 mode "resize" {
-# left will shrink the containers width
-# right will grow the containers width
-# up will shrink the containers height
-# down will grow the containers height
+  # left will shrink the containers width
+  # right will grow the containers width
+  # up will shrink the containers height
+  # down will grow the containers height
   bindsym $left resize shrink width 10px
   bindsym $down resize grow height 10px
   bindsym $up resize shrink height 10px
   bindsym $right resize grow width 10px
 
-# Ditto, with arrow keys
+  # Ditto, with arrow keys
   bindsym Left resize shrink width 10px
   bindsym Down resize grow height 10px
   bindsym Up resize shrink height 10px
   bindsym Right resize grow width 10px
 
-# Return to default mode
+  # Return to default mode
   bindsym Return mode "default"
   bindsym Escape mode "default"
 }
@@ -191,11 +191,11 @@ bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5% && pactl get-sink
 bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5% && pactl get-sink-volume 0 | sed 's/.*[ \t][ \t]*\([0-9][0-9]*\)%.*/\1/' | head -1 > $WOBSOCK"
 bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle"
 bindsym XF86AudioMicMute exec "pactl set-source-mute 0 toggle"
-bindsym $mod+m exec "pactl set-sink-mute 0 toggle" 
+bindsym $mod+m exec "pactl set-sink-mute 0 toggle"
 
 # Applications
-bindsym $mod+x exec thunar 
-bindsym $mod+w exec firefox 
+bindsym $mod+x exec thunar
+bindsym $mod+w exec firefox
 
 bindsym $mod+Ctrl+Backspace exec wlogout -b 5 -p layer-shell
 bindsym $mod+Ctrl+c exec "wl-color-picker clipboard"
@@ -205,8 +205,8 @@ bindsym $mod+p exec_always "swaymsg output LVDS-1 toggle"
 
 # Screenshots
 bindsym $mod+s exec grim -g "$(slurp -b '#00000099' -c '#A131FFff' -w 1)" sc_$RANDOM.png
-bindsym $mod+Shift+s exec grim sc_$RANDOM.png
 bindsym $mod+Ctrl+s exec grim -g "$(slurp -b '#00000099' -c '#A131FFff' -w 1)" - | wl-copy
+bindsym $mod+Shift+s exec grim sc_$RANDOM.png
 #
 # Assign to workspace
 #
@@ -259,9 +259,8 @@ smart_borders on
 gaps inner 5
 
 exec_always "systemctl --user restart panel-shadow.service"
-exec "systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK"
 exec "hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK"
-exec_always "systemctl --user start sway-session.target"
+exec "systemctl --user import-environment {,WAYLAND_}DISPLAY SWAYSOCK; systemctl --user start sway-session.target"
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec wl-paste -t text --watch clipman store --no-persist
 

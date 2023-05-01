@@ -1,7 +1,6 @@
 @define-color	focusColor #D5BEF1;
 @define-color	poweroffColor #F77D7D;
 
-
 * {
   background-image: none;
 }
@@ -12,33 +11,20 @@ window {
 
 button {
   margin: 200px 5px 250px 5px;
-  font-family: "UbuntuMono Nerd Font";
+  font-family: "Exo2 Nerd Font";
   background-color: #16161E;
   color: #272736;
-  border-style: solid;
   font-size: 120px;
-  border-width: 2px;
+  box-shadow: none;
 }
 
-#lock {
-  padding: 5px 30px 5px 20px;
-}
-
-#suspend, #reboot {
-  padding: 5px 35px 5px 5px;
+#suspend, #reboot, #lock, #shutdown {
+  padding: 5px 20px 5px 20px;
 }
 
 #logout {
-  font-size: 110px;
-  padding: 5px 45px 5px 5px;
-}
-
-#shutdown {
-  padding: 5px 40px 5px 5px;
-}
-
-button:focus, button:hover {
-  outline-style: none;
+  font-size: 109px;
+  padding: 5px 20px 5px 20px;
 }
 
 button:focus#reboot, button:hover#reboot, 
@@ -46,17 +32,13 @@ button:focus#suspend, button:hover#suspend,
 button:focus#lock, button:hover#lock,
 button:focus#logout, button:hover#logout { 
   box-shadow:  0px 10px @focusColor; 
-  outline-style: solid;
-  outline-width: 3px;
-  outline-color: @focusColor;
+  border-color: @focusColor;
   color: @focusColor;
 }
 
 button:focus#shutdown, button:active#shutdown, button:hover#shutdown {
   box-shadow:  0px 10px @poweroffColor;
-  outline-style: none;
   outline-style: solid;
-  outline-width: 3px;
-  outline-color: @poweroffColor;
+  border-color: @poweroffColor;
   color: @poweroffColor; 
 } 

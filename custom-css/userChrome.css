@@ -215,10 +215,26 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 #nav-bar:not([tabs-hidden="true"]) {
-	box-shadow: 0 calc(-1 * var(--tabs-navbar-shadow-size)) 3px var(--lwt-tabs-border-color, rgba(0,0,0,.3)) !important;
+	box-shadow: none; 
 	position: relative;
 }
 
 input.fake-editable {
 	background-color: #21202e !important;
+}
+
+.tabbrowser-tab {
+	background-color: transparent;
+	border-radius: 5px !important;
+	border-width: 0px !important;
+	margin: 4px !important;
+	padding: 0 !important;
+	height: 27px !important;
+}
+
+#tabbrowser-tabs:not([movingtab]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-background[multiselected="true"], #tabbrowser-tabs:not([movingtab]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-background[selected="true"] {
+	box-shadow: 0 1px 2px #000000ab !important;
+}
+.tab-background {
+	border-radius: 5px !important;
 }

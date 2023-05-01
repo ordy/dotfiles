@@ -1,6 +1,6 @@
 configuration {
   display-drun: "   ";
-  font: "Roboto Bold 12";
+  font: "Exo2 Nerd Font SemiBold 12";
   show-icons: true;
   width: 100px;
 }
@@ -51,7 +51,7 @@ element-icon {
 
 element-text {
   margin: 5;
-  font: "Roboto Bold 12";
+  font: "Exo2 SemiBold 12";
 }
 
 element selected {

@@ -22,263 +22,253 @@ c8=${black}
 c9=${bgyellow}
 c10=${bgwhite}
 esc() {
-    case $1 in
-        CUU) e="${esc_c}[${2}A" ;; # cursor up
-        CUD) e="${esc_c}[${2}B" ;; # cursor down
-        CUF) e="${esc_c}[${2}C" ;; # cursor right
-        CUB) e="${esc_c}[${2}D" ;; # cursor left
-        SGR)
-            case ${PF_COLOR:=1} in
-                (1)
-                    e="${esc_c}[${2}m"
-                ;;
-                (0)
-                    e=
-                ;;
-            esac
-        ;;
-        DECAWM)
-            case $TERM in
-                (dumb | minix | cons25)
-                    e=
-                ;;
-                (*)
-                    e="${esc_c}[?7${2}"
-                ;;
-            esac
-        ;;
-    esac
+	case $1 in
+	CUU) e="${esc_c}[${2}A" ;; # cursor up
+	CUD) e="${esc_c}[${2}B" ;; # cursor down
+	CUF) e="${esc_c}[${2}C" ;; # cursor right
+	CUB) e="${esc_c}[${2}D" ;; # cursor left
+	SGR)
+		case ${PF_COLOR:=1} in
+		1)
+			e="${esc_c}[${2}m"
+			;;
+		0)
+			e=
+			;;
+		esac
+		;;
+	DECAWM)
+		case $TERM in
+		dumb | minix | cons25)
+			e=
+			;;
+		*)
+			e="${esc_c}[?7${2}"
+			;;
+		esac
+		;;
+	esac
 }
 esc_p() {
-    esc "$@"
-    printf '%s' "$e"
+	esc "$@"
+	printf '%s' "$e"
 }
 has() {
-    _cmd=$(command -v "$1") 2>/dev/null || return 1
-    [ -x "$_cmd" ] || return 1
+	_cmd=$(command -v "$1") 2>/dev/null || return 1
+	[ -x "$_cmd" ] || return 1
 }
 log() {
-    [ "$2" ] || return
-    name=$1
-    use_seperator=$3
-    {
-        set -f
-        set +f -- $2
-        info=$*
-    }
-    esc_p CUF "$ascii_width"
-    esc_p SGR "3${PF_COL1-4}";
-    esc_p SGR 1
-    printf '%s' "$name"
-    esc_p SGR 0
-    [ "$use_seperator" ] || printf %s "$PF_SEP"
-    esc_p CUB "${#name}"
-    esc_p CUF "${PF_ALIGN:-$info_length}"
-    esc_p SGR "3${PF_COL2-9}"
-    printf '%s' "$info"
-    esc_p SGR 0
-    printf '\n'
-    info_height=$((${info_height:-0} + 1))
+	[ "$2" ] || return
+	name=$1
+	use_seperator=$3
+	{
+		set -f
+		set +f -- $2
+		info=$*
+	}
+	esc_p CUF "$ascii_width"
+	esc_p SGR "3${PF_COL1}"
+	esc_p SGR 1
+	printf '%s' "$name"
+	esc_p SGR 0
+	[ "$use_seperator" ] || printf %s "$PF_SEP"
+	esc_p CUB "${#name}"
+	esc_p CUF 12
+	printf '%s' "$info"
+	esc_p SGR 0
+	printf '\n'
+	info_height=$((${info_height:-0} + 1))
 }
 get_title() {
-    user=${USER:-$(id -un)}
-    hostname=${HOSTNAME:-${hostname:-$(hostname)}}
-    [ "$hostname" ] || read -r hostname < /etc/hostname
-    esc SGR 1
-    user=$e$user
-    esc SGR "3${PF_COL3:-1}"
-    user=$e$user
-    esc SGR 1
-    user=$user$e
-    esc SGR 1
-    hostname=$e$hostname
-    esc SGR "3${PF_COL3:-1}"
-    hostname=$e$hostname
-    log "------- ${hostname}" " " " " >&6
+	user=${USER:-$(id -un)}
+	hostname=${HOSTNAME:-${hostname:-$(hostname)}}
+	[ "$hostname" ] || read -r hostname </etc/hostname
+	esc SGR 1
+	user=$e$user
+	esc SGR "3${PF_COL3:-1}"
+	user=$e$user
+	esc SGR 1
+	user=$user$e
+	esc SGR 1
+	hostname=$e$hostname
+	esc SGR "3${PF_COL3:-1}"
+	hostname=$e$hostname
+	log "╭────────── ${hostname}" " " >&6
 }
 get_os() {
-    [ "$distro" ] && {
-        log os "$distro" >&6
-        return
-    }
-    case $os in
-        (Linux*)
-            if has lsb_release; then
-                distro=$(lsb_release -sd)
-            elif [ -f /etc/os-release ]; then
-                while IFS='=' read -r key val; do
-                    case $key in
-                        (PRETTY_NAME)
-                            distro=$val
-                        ;;
-                    esac
-                done < /etc/os-release
-            fi
-            distro=${distro##[\"\']}
-            distro=${distro%%[\"\']}
-        ;;
-        (*)
-            distro="$os $kernel"
-        ;;
-    esac
+	[ "$distro" ] && {
+		log "│os" "$distro" >&6
+		return
+	}
+	case $os in
+	Linux*)
+		if has lsb_release; then
+			distro=$(lsb_release -sd)
+		elif [ -f /etc/os-release ]; then
+			while IFS='=' read -r key val; do
+				case $key in
+				PRETTY_NAME)
+					distro=$val
+					;;
+				esac
+			done </etc/os-release
+		fi
+		distro=${distro##[\"\']}
+		distro=${distro%%[\"\']}
+		;;
+	*)
+		distro="$os $kernel"
+		;;
+	esac
 }
 get_kernel() {
-    log kernel "$kernel" >&6
+	log "│kernel " "$kernel" >&6
 }
 get_pkgs() {
-    packages=$(pacman -Qq | wc -l)
-    packages=${packages#"${packages%%[![:space:]]*}"}
-    packages=${packages%"${packages##*[![:space:]]}"}
-    log pkgs "$packages" >&6
+	packages=$(pacman -Qq | wc -l)
+	packages=${packages#"${packages%%[![:space:]]*}"}
+	packages=${packages%"${packages##*[![:space:]]}"}
+	log "│pkgs" " $packages" >&6
 }
 get_wm() {
-    case $os in
-        (Darwin*)
-        ;;
-        (*)
-            [ "$DISPLAY" ] || return
-            has xprop && {
-                id=$(xprop -root -notype _NET_SUPPORTING_WM_CHECK)
-                id=${id##* }
-                wm=$(xprop -id "$id" -notype -len 25 -f _NET_WM_NAME 8t)
-            }
-            case $wm in
-                (*'_NET_WM_NAME = '*)
-                    wm=${wm##*_NET_WM_NAME = \"}
-                    wm=${wm%%\"*}
-                    if [ "$wm" = "wlroots wm" ]
-                    then
-                        wm=$(ps x | grep -m 1 -o "[s]way")
-                    fi
-                ;;
-                (*)
-                    while read -r ps_line; do
-                        case $ps_line in
-                            (*catwm*)     wm=catwm ;;
-                            (*fvwm*)      wm=fvwm ;;
-                            (*dwm*)       wm=dwm ;;
-                            (*2bwm*)      wm=2bwm ;;
-                            (*monsterwm*) wm=monsterwm ;;
-                            (*wmaker*)    wm='Window Maker' ;;
-                            (*sowm*)      wm=sowm ;;
-							              (*penrose*)   wm=penrose ;;
-                        esac
-                    done <<-EOF
-                        $(ps x)
-					EOF
-                ;;
-            esac
-        ;;
-    esac
-    log wm "$wm" >&6
+	case $os in
+	Darwin*) ;;
+	*)
+		[ "$DISPLAY" ] || return
+		has xprop && {
+			id=$(xprop -root -notype _NET_SUPPORTING_WM_CHECK)
+			id=${id##* }
+			wm=$(xprop -id "$id" -notype -len 25 -f _NET_WM_NAME 8t)
+		}
+		case $wm in
+		*'_NET_WM_NAME = '*)
+			wm=${wm##*_NET_WM_NAME = \"}
+			wm=${wm%%\"*}
+			if [ "$wm" = "wlroots wm" ]; then
+				wm=$(ps x | grep -m 1 -o "[s]way")
+			fi
+			;;
+		*)
+			while read -r ps_line; do
+				case $ps_line in
+				*catwm*) wm=catwm ;;
+				*fvwm*) wm=fvwm ;;
+				*dwm*) wm=dwm ;;
+				*2bwm*) wm=2bwm ;;
+				*monsterwm*) wm=monsterwm ;;
+				*wmaker*) wm='Window Maker' ;;
+				*sowm*) wm=sowm ;;
+				*penrose*) wm=penrose ;;
+				esac
+			done <<-EOF
+				                        $(ps x)
+			EOF
+			;;
+		esac
+		;;
+	esac
+	log "│wm" "$wm" >&6
 }
 get_de() {
-    log de "${XDG_CURRENT_DESKTOP:-$DESKTOP_SESSION}" >&6
+	log de "${XDG_CURRENT_DESKTOP:-$DESKTOP_SESSION}" >&6
 }
 get_shell() {
-    log shell "${SHELL##*/}" >&6
+	log "│shell" "${SHELL##*/}" >&6
 }
-get_editor() {
-    editor=${VISUAL:-"$EDITOR"}
-    log editor "${editor##*/}" >&6
+get_theme() {
+	log "│theme" "Rosé-Pine" >&6
 }
 get_palette() {
-    {
-        esc SGR 7
-        palette="$c1$c2 $c3 $c4 $c5 $c6 $c7  "
-        esc SGR 0
-        palette="$palette"
-    }
-    printf '\n' >&6
-    log "$palette
-        " " " " " >&6
+	palette="╰────────── $c1$c2 $c3 $c4 $c5 $c6 $c7  "
+	esc_p SGR "3${PF_COL1}"
+	esc_p "                  │\n" >&6
+	log "$palette" " " " " >&6
 }
 get_ascii() {
-    read_ascii() {
-        PF_COL1=${PF_COL1:-${1:-7}}
-        PF_COL3=${PF_COL3:-$((${1:-7}%8+1))}
-        while IFS= read -r line; do
-            ascii="$ascii$line
+	read_ascii() {
+		PF_COL1=${PF_COL1:-${1:-7}}
+		PF_COL3=${PF_COL3:-$((${1:-7} % 8 + 1))}
+		while IFS= read -r line; do
+			ascii="$ascii$line
 "
-        done
-    }
-            read_ascii 4 <<-EOF
-				${c6}       /\\
-				${c6}      /  \\
-				${c6}     /\\   \\
-				${c4}    /      \\
-				${c4}   /   ,,   \\
-				${c4}  /   |  |  -\\
-				${c4} /_-''    ''-_\\
-			EOF
-    
-    while read -r line; do
-        ascii_height=$((${ascii_height:-0} + 1))
-        [ "${#line}" -gt "${ascii_width:-0}" ] &&
-            ascii_width=${#line}
-    done <<-EOF
- 		$(printf %s "$ascii" | sed 's/\[3.m//g')
+		done
+	}
+	read_ascii 4 <<-EOF
+		${c6}       /\\
+		${c6}      /  \\
+		${c6}     /\\   \\
+		${c4}    /      \\
+		${c4}   /   ,,   \\
+		${c4}  /   |  |  -\\
+		${c4} /_-''    ''-_\\
 	EOF
-    ascii_width=$((ascii_width + 4))
-    {
-        esc_p SGR 1
-        printf '%s' "$ascii"
-        esc_p SGR 0
-        esc_p CUU "$ascii_height"
-    } >&6
+
+	while read -r line; do
+		ascii_height=$((${ascii_height:-0} + 1))
+		[ "${#line}" -gt "${ascii_width:-0}" ] &&
+			ascii_width=${#line}
+	done <<-EOF
+		   $(printf %s "$ascii" | sed 's/\[3.m//g')
+	EOF
+	ascii_width=$((ascii_width + 4))
+	{
+		esc_p SGR 1
+		printf '%s' "$ascii"
+		esc_p SGR 0
+		esc_p CUU "$ascii_height"
+	} >&6
 }
 main() {
-    case $* in
-        -v)
-            printf '%s 0.7.0\n' "${0##*/}"
-            return 0
-        ;;
-        -d)
-        ;;
-        '')
-            exec 2>/dev/null
-        ;;
-        *)
-            cat <<EOF
+	case $* in
+	-v)
+		printf '%s 0.7.0\n' "${0##*/}"
+		return 0
+		;;
+	-d) ;;
+	'')
+		exec 2>/dev/null
+		;;
+	*)
+		cat <<EOF
 ${0##*/}     show system information
 ${0##*/} -d  show stderr (debug mode)
 ${0##*/} -v  show version information
 EOF
-            return 0
-        ;;
-    esac
-    exec 6>&1 >/dev/null
-    esc_c=$(printf '\033')
-    ! [ -f "$PF_SOURCE" ] || . "$PF_SOURCE"
-    [ -w "${TMPDIR:-/tmp}" ] || export TMPDIR=~
-    for _c in c1 c2 c3 c4 c5 c6 c7 c8; do
-        esc SGR "3${_c#?}" 0
-        export "$_c=$e"
-    done
-    esc_p DECAWM l >&6
-    trap 'esc_p DECAWM h >&6' EXIT
-    read -r os kernel arch <<-EOF
+		return 0
+		;;
+	esac
+	exec 6>&1 >/dev/null
+	esc_c=$(printf '\033')
+	! [ -f "$PF_SOURCE" ] || . "$PF_SOURCE"
+	[ -w "${TMPDIR:-/tmp}" ] || export TMPDIR=~
+	for _c in c1 c2 c3 c4 c5 c6 c7 c8; do
+		esc SGR "3${_c#?}" 0
+		export "$_c=$e"
+	done
+	esc_p DECAWM l >&6
+	trap 'esc_p DECAWM h >&6' EXIT
+	read -r os kernel arch <<-EOF
 		$(uname -srm)
 	EOF
-    get_os
-    {
-        set -f
-        set +f -- ${PF_INFO-ascii title os kernel pkgs}
-        for info do
-            command -v "get_$info" >/dev/null || continue
-            [ "${#info}" -gt "${info_length:-0}" ] &&
-                info_length=${#info}
-        done
-        info_length=$((info_length + 1))
-        for info do
-            "get_$info"
-        done
-    }
-    [ "${info_height:-0}" -lt "${ascii_height:-0}" ] &&
-        cursor_pos=$((ascii_height - info_height))
-    while [ "${i:=0}" -le "${cursor_pos:-0}" ]; do
-        printf '\n'
-        i=$((i + 1))
-    done >&6
+	get_os
+	{
+		set -f
+		set +f -- ${PF_INFO-ascii title os kernel theme pkgs}
+		for info; do
+			command -v "get_$info" >/dev/null || continue
+			[ "${#info}" -gt "${info_length:-0}" ] &&
+				info_length=${#info}
+		done
+		info_length=$((info_length + 1))
+		for info; do
+			"get_$info"
+		done
+	}
+	[ "${info_height:-0}" -lt "${ascii_height:-0}" ] &&
+		cursor_pos=$((ascii_height - info_height))
+	while [ "${i:=0}" -le "${cursor_pos:-0}" ]; do
+		printf '\n'
+		i=$((i + 1))
+	done >&6
 }
 main "$@"
