@@ -3,12 +3,14 @@
 @define-color launcher #191724;
 @define-color workspaces #242236;
 @define-color mpd #232335;
+@define-color main_fg #D9E0EE;
+@define-color accent_fg #FFFFFF;
 
-@define-color cpu #ebbcba;
-@define-color memory #E0CEB7;
-@define-color temperature #9CD8CE;
-@define-color brightness #95BBF7;
-@define-color weather #BFB2FB;
+@define-color color1 #eb6f92;
+@define-color color2 #f6c177;
+@define-color color3 #ebbcba;
+@define-color color4 #9ccfd8;
+@define-color color5 #c4a7e7;
 
 @define-color volume #393656;
 @define-color network #2F2C47;
@@ -17,9 +19,9 @@
 
 * {
 	border: none;
-	font-family: Recursive Sans Linear Static,Symbols Nerd Font Mono,Weather Icons;
-	font-size: 14px;
-	font-weight: 600;
+	font-family: 'Exo 2 Nerd Font';
+	font-size: 13px;
+  font-weight: 700;
 	margin: 0px;
 	padding: 0px;
 	border-radius: 0;
@@ -27,7 +29,7 @@
 
 window#waybar {
 	background-color: @barcolor;
-	color: #D9E0EE;
+	color: @main_fg;
 	transition-property: background-color;
 	transition-duration: .5s;
 }
@@ -40,10 +42,9 @@ window#waybar {
 }
 
 #workspaces button {
-	padding: 0px 7px 0px 7px;
+	padding: 0px 2px 0px 2px;
 	margin: -2px 0px;
 	background-color: @workspaces;
-	color: #565D7B;
 }
 
 #workspaces button:hover {
@@ -51,18 +52,58 @@ window#waybar {
 }
 
 #workspaces button.focused {
-	color: #D9E0EE;
+	color: @main_fg;
 }
 
 #workspaces button.urgent {
 	color: #ADCEB1;
 }
 
+/* #workspaces button:nth-child(1).focused label, */
+/* #workspaces button:nth-child(2).focused label, */
+/* #workspaces button:nth-child(3).focused label, */
+/* #workspaces button:nth-child(4).focused label, */
+/* #workspaces button:nth-child(5).focused label { */
+/*   color: white; */
+/* } */
+
+#workspaces button#sway-workspace-1.persistent,
+#workspaces button#sway-workspace-2.persistent,
+#workspaces button#sway-workspace-3.persistent,
+#workspaces button#sway-workspace-4.persistent,
+#workspaces button#sway-workspace-5.persistent {
+  color: #6e6a86;
+}
+
+#workspaces button.focused label {
+  color: white;
+}
+
+#workspaces button#sway-workspace-1 {
+  color: @color1;
+}
+
+#workspaces button#sway-workspace-2 {
+  color: @color2;
+}
+
+#workspaces button#sway-workspace-3 {
+  color: @color3;
+}
+
+#workspaces button#sway-workspace-4 {
+  color: @color4;
+}
+
+#workspaces button#sway-workspace-5 {
+  color: @color5;
+}
+
 tooltip {
-	font-family: 'Roboto';
+	font-family: 'Exo 2';
 	font-size: 25px;
 	font-weight: 600;
-	border: 2px solid #C9CBFF;
+	border: 2px solid @accent_fg;
 	background-color: #302D41;
 }
 
@@ -88,9 +129,9 @@ tooltip {
 #custom-sep4,
 #custom-sep5,
 #custom-sep6 {
-	margin-bottom: -6px;
-	margin-top: -2px;
-	margin-right: -13px;
+	margin-bottom: -9px;
+	margin-top: -5px;
+	margin-right: -15px;
 	font-size: 30px;
 }
 
@@ -131,13 +172,13 @@ tooltip {
 
 #battery {
 	background-color: @tray;
-	color: #D9E0EE;
+	color: @main_fg;
 	padding-left: 4px;
 }
 
 #battery.charging,
 #battery.plugged {
-	color: #9CD8CE;
+	color: @main_fg;
 	background-color: @tray;
 	padding-left: 4px;
 }
@@ -145,13 +186,13 @@ tooltip {
 @keyframes blink {
 	to {
 		background-color: @tray;
-		color: #F89FA0;
+		color: @cpu;
 	}
 }
 
 #battery.critical:not(.charging) {
 	background-color: @tray;
-	color: #D9E0EE;
+	color: @main_fg;
 	animation-name: blink;
 	animation-duration: 0.5s;
 	animation-timing-function: linear;
@@ -172,18 +213,18 @@ button:disabled {
 
 #cpu {
 	background-color: transparent;
-	color: @cpu;
+	color: @color1;
 	margin-right: 10px;
 }
 
 #memory {
 	background-color: transparent;
-	color: @memory;
+	color: @color2;
 	margin-right: 10px;
 }
 
 #custom-launcher {
-	color: #C9CBFF;
+	color: @accent_fg;
 	padding-right: 15px;
 	padding-left: 10px;
 	background-color: @launcher;
@@ -191,30 +232,30 @@ button:disabled {
 
 #temperature {
 	background-color: transparent;
-	color: @temperature;
+	color: @color3;
 	margin-right: 10px;
 }
 
 #temperature.critical {
 	background-color: transparent;
-	color: @temperature;
+	color: @color3;
 }
 
 #backlight {
 	background-color: transparent;
-	color: @brightness;
+	color: @color4;
 	margin-right: 10px;
 }
 
 #custom-weather {
 	background-color: transparent;
 	padding-right: 10px;
-	color: @weather;
+	color: @color5;
 }
 
 #tray {
 	background-color: @tray;
-	padding-left: 4px;
+	padding-left: 1px;
 	padding-right: 7px;
 	margin-top: -6px;
 	margin-bottom: -3px;
@@ -240,19 +281,25 @@ button:disabled {
 
 #pulseaudio.muted {
 	background-color: @volume;
-	color: #F28FAD;
+	color: @cpu;
 }
 
 #custom-artist {
-	color: #C9CBFF;
+  font-family: 'Exo 2';
+  font-size: 13.5px;
+  font-weight: 700;
+	color: @accent_fg;
 	background-color: @barcolor;
 	margin-right: 0px;
 	padding-right: 5px;
 }
 
 #custom-title {
+  font-family: 'Exo 2';
 	background-color: @barcolor;
-	color: #D9E0EE;
+  font-size: 13.5px;
+  font-weight: 600;
+	color: @main_fg;
 	margin-left: 0px;
 	padding-left: 0px;
 }

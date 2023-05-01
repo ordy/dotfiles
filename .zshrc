@@ -35,6 +35,7 @@ alias swaytree='swaymsg -t get_tree | grep "\"app_id\"\|\"name\"\|\"shell\""'
 alias cls="clear"
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 alias xbindkeys=xbindkeys -f "$XDG_CONFIG_HOME"/xbindkeys/config
+alias unp='unp -U'
 
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
@@ -59,8 +60,7 @@ alias yta="yt-dlp -x -f bestaudio --audio-quality 0 --audio-format mp3"
 alias ytv="yt-dlp -f 302+bestaudio/247+bestaudio" #720p 60fps or 720p 30fps
 
 # pfetch
-export PF_INFO="ascii title os kernel pkgs shell wm palette"
-export PF_COL3=6
+export PF_INFO="ascii title os kernel pkgs shell wm theme palette"
 
 # nmtui colors
 export NEWT_COLORS='root=,color5 shadow=white,black title=black,white label=white,black actsellistbox=black,blue actlistbox=white,black button=black,blue'
