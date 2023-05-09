@@ -1,88 +1,73 @@
- /* vim:fileencoding=utf-8:ft=css */
+// vim:fileencoding=utf-8:ft=css
 
 configuration {
   display-drun: "   ";
   font: "Roboto Medium 12";
   show-icons: true;
-  width: 100px;
 }
 
 * {
-  dark-1: #1A1826;
-  dark-2: #1E1E2E;
-  dark-3: #302D41;
-  dark-4: #575268;
+  c-base: #191724;
+  c-surface: #1f1d2e;
+  c-overlay: #1f1d2e;
+  c-muted: #6e6a86;
+  c-subtle: #908caa;
+  c-text: #e0def4;
+  c-love: #eb6f92;
+  c-gold: #f6c177;
+  c-rose: #ebbcba;
+  c-pine: #31748f;
+  c-foam: #9ccfd8;
+  c-iris: #c4a7e7;
 
-  light-1: #F6F4FF;
-  light-2: #C9CBFF;
-  light-3: #D9E0EE;
-
-  sky-1: #89DCEB;
-  sky-2: #96CDFB;
-  sky-3: #B5E8E0;
-  sky-4: #ABE9B3;
-
-  flamingo-1: #F28FAD;
-  flamingo-2: #E8A2AF;
-  flamingo-3: #F5C2E7;
-  flamingo-4: #F2CDCD;
-  flamingo-5: #F5E0DC;
-
-  background-color: @dark-1;
-  background: @dark-1;
-  lightbg: @dark-1;
-  selected-normal-foreground: @dark-3;
-  selected-normal-background: @light-2;
-  foreground: @light-1;
-  border-color: @dark-3;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  spacing: 0;
+  background-color: @c-base;
+  background: @c-base;
+  lightbg: @c-base;
+  selected-normal-foreground: @c-iris;
+  selected-normal-background: @c-overlay;
+  foreground: @c-text;
+  border-color: @c-surface;
 }
 
 element {
-  margin: 5 2 5 2;
+  margin: 0;
   orientation: horizontal;
-  text-color: @sky-3;
+  text-color: @c-subtle;
 }
 
 element-icon {
-  size: 1.8em;
+  size: 1.2em;
+  padding: 7px 10px 7px 15px;
 }
 
 element-text {
-  margin: 7 0 0 13;
-  font: "Roboto Medium 13";
+  font: "Roboto 13";
+  padding: 7px 0px 7px 7px;
 }
 
 element selected {
-  text-color: @flamingo-3;
-  border-radius: 5 5 5 5;
+  border-radius: 10px;
 }
 
 message {
-  padding: 5px;
   border: 1px dash 0px 0px ;
 }
 
 entry {
-  background-color: @dark-2;
-  padding: 11 10 12 15;
-  margin: 0 0 10 0;
-  text-color: @light-1;
-  border-radius: 0 5 5 0;
-  placeholder-color: @light-2; 
-  placeholder:       "Search...";
+  background-color: rgba(10, 10, 10, 0.6);
+  padding: 11 0 12 15;
+  text-color: @c-text;
+  border-radius: 0 10 10 0;
+  placeholder-color: @c-subtle;
+  placeholder: "Search...";
 }
 
 inputbar {
   children: [prompt, entry];
-}
-
-listview {
-  columns: 1;
-  lines: 8;
+  border-radius: 10;
+  padding: 40px 10px;
+  margin: 0px 0px 0.5em 0px;
+  background-image: url("~/.config/rofi/images/bg.jpg", width);
 }
 
 mainbox {
@@ -90,31 +75,31 @@ mainbox {
 }
 
 prompt {
-  background-color: @dark-2;
-  border-radius: 5 0 0 5;
-  margin: 0 0 10 0;
+  background-color: rgba(10, 10, 10, 0.6);
+  border-radius: 10 0 0 10;
   enabled: true;
   font: "Symbols Nerd Font 12";
-  padding: 12 0 0 13;
-  text-color: @light-1;
+  padding: 13 0 0 13;
+  text-color: @c-text;
 }
 
 window {
   width: 30%;
-  transparency: "real";
-  padding:      5px 5px 5px 5px;
-  margin:      0px 0px 0px 0px;
+  location: center;
+  transparency: "true";
+  padding: 0.5em;
+  margin: 0px 0px 0px 0px;
   border: 2px;
+  border-radius: 10px;
 }
 
 listview {
   fixed-height: 0;
-  padding:      0px 0px 0px 0px;
-  margin:       0px 0px 0px 0px;
-  scrollbar:    false;
-  lines:        8;
-  border-color: var(separatorcolor);
-  columns:      1;
-  border:       0px dash 0px 0px ;
-  spacing:      0px;
+  padding: 0;
+  margin: 0px 0px 0px 0px;
+  scrollbar: false;
+  lines: 9;
+  columns: 1;
+  border: 0px dash 0px 0px ;
+  spacing: 0px;
 }

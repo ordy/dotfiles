@@ -20,7 +20,7 @@ set $menu rofi -modi drun -show drun -drun-display-format {name} | xargs swaymsg
 
 # Wayland Overlay Bar
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
-exec mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
+exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
 
 # Set the wallpaper 
 exec ~/.azotebg
@@ -184,8 +184,8 @@ bindsym XF86AudioNext exec mediactl next
 bindsym XF86AudioPrev exec mediactl previous
 bindsym XF86AudioPlay exec mediactl play-pause
 
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% && pactl get-sink-volume 0 | sed 's/.*[ \t][ \t]*\([0-9][0-9]*\)%.*/\1/' | head -1 > $WOBSOCK
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% && pactl get-sink-volume 0 | sed 's/.*[ \t][ \t]*\([0-9][0-9]*\)%.*/\1/' | head -1 > $WOBSOCK
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% && pactl get-sink-volume 0 | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' > $WOBSOCK
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% && pactl get-sink-volume 0 | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' > $WOBSOCK
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 bindsym XF86AudioMicMute exec pactl set-source-mute 0 toggle
 bindsym $mod+m exec pactl set-sink-mute 0 toggle
