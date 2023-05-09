@@ -9,28 +9,25 @@ set $down j
 set $up k
 set $right l
 
+# Monitors
+exec swaymsg focus output VGA-1
+
 # Terminal 
 set $term kitty
 
 # Application launcher
 set $menu rofi -modi drun -show drun -drun-display-format {name} | xargs swaymsg exec --
 
-exec "avizo-service"
-
 # Wayland Overlay Bar
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
-exec "mkfifo $WOBSOCK && tail -f $WOBSOCK | wob"
-
-exec_always {
-  gsettings set org.gnome.desktop.interface cursor-theme 'Qogir-dark'
-}
+exec mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
 
 # Set the wallpaper 
 exec ~/.azotebg
 output * bg #000000 solid_color
 
 # idle and sleep
-exec swayidle -w before-sleep 'swaylock -C $XDG_CONFIG_HOME/sway/swaylock/config'
+exec swayidle -w before-sleep swaylock -C $XDG_CONFIG_HOME/sway/swaylock/config
 
 ### Input configuration
 # You can get the names of your inputs by running: swaymsg -t get_inputs
@@ -187,21 +184,21 @@ bindsym XF86AudioNext exec mediactl next
 bindsym XF86AudioPrev exec mediactl previous
 bindsym XF86AudioPlay exec mediactl play-pause
 
-bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5% && pactl get-sink-volume 0 | sed 's/.*[ \t][ \t]*\([0-9][0-9]*\)%.*/\1/' | head -1 > $WOBSOCK"
-bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5% && pactl get-sink-volume 0 | sed 's/.*[ \t][ \t]*\([0-9][0-9]*\)%.*/\1/' | head -1 > $WOBSOCK"
-bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle"
-bindsym XF86AudioMicMute exec "pactl set-source-mute 0 toggle"
-bindsym $mod+m exec "pactl set-sink-mute 0 toggle"
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% && pactl get-sink-volume 0 | sed 's/.*[ \t][ \t]*\([0-9][0-9]*\)%.*/\1/' | head -1 > $WOBSOCK
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% && pactl get-sink-volume 0 | sed 's/.*[ \t][ \t]*\([0-9][0-9]*\)%.*/\1/' | head -1 > $WOBSOCK
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute 0 toggle
+bindsym $mod+m exec pactl set-sink-mute 0 toggle
 
 # Applications
 bindsym $mod+x exec thunar
 bindsym $mod+w exec firefox
 
 bindsym $mod+Ctrl+Backspace exec wlogout -b 5 -p layer-shell
-bindsym $mod+Ctrl+c exec "wl-color-picker clipboard"
+bindsym $mod+Ctrl+c exec wl-color-picker clipboard
 
 # Reload kanshi
-bindsym $mod+p exec_always "swaymsg output LVDS-1 toggle"
+bindsym $mod+p exec_always swaymsg output LVDS-1 toggle
 
 # Screenshots
 bindsym $mod+s exec grim -g "$(slurp -b '#00000099' -c '#A131FFff' -w 1)" sc_$RANDOM.png
@@ -258,10 +255,7 @@ smart_gaps on
 smart_borders on
 gaps inner 5
 
-exec_always "systemctl --user restart panel-shadow.service"
 exec "hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK"
 exec "systemctl --user import-environment {,WAYLAND_}DISPLAY SWAYSOCK; systemctl --user start sway-session.target"
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec_always "kanshictl reload; systemctl --user restart panel-shadow.service"
 exec wl-paste -t text --watch clipman store --no-persist
-
-include /etc/sway/config.d/*

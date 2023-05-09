@@ -1,6 +1,8 @@
+ /* vim:fileencoding=utf-8:ft=css */
+
 configuration {
   display-drun: "   ";
-  font: "Exo2 Nerd Font SemiBold 12";
+  font: "Roboto Medium 12";
   show-icons: true;
   width: 100px;
 }
@@ -40,7 +42,7 @@ configuration {
 }
 
 element {
-  margin: 5;
+  margin: 5 2 5 2;
   orientation: horizontal;
   text-color: @sky-3;
 }
@@ -50,8 +52,8 @@ element-icon {
 }
 
 element-text {
-  margin: 5;
-  font: "Exo2 SemiBold 12";
+  margin: 7 0 0 13;
+  font: "Roboto Medium 13";
 }
 
 element selected {
@@ -66,7 +68,7 @@ message {
 
 entry {
   background-color: @dark-2;
-  padding: 11 10 12 3;
+  padding: 11 10 12 15;
   margin: 0 0 10 0;
   text-color: @light-1;
   border-radius: 0 5 5 0;
@@ -92,8 +94,8 @@ prompt {
   border-radius: 5 0 0 5;
   margin: 0 0 10 0;
   enabled: true;
-  font: "FontAwesome 12";
-  padding: 12 0 0 25;
+  font: "Symbols Nerd Font 12";
+  padding: 12 0 0 13;
   text-color: @light-1;
 }
 
