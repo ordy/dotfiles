@@ -13,15 +13,15 @@
 @define-color color5 #c4a7e7;
 
 @define-color volume #393656;
-@define-color network #2F2C47;
+@define-color bat #2F2C47;
 @define-color tray #262336;
 @define-color clock #191724;
 
 * {
 	border: none;
-	font-family: 'Exo 2 Nerd Font';
-	font-size: 13px;
-  font-weight: 700;
+	font-family: 'SourceSans3VF','Symbols Nerd Font';
+	font-size: 14px;
+  font-weight: 600;
 	margin: 0px;
 	padding: 0px;
 	border-radius: 0;
@@ -59,14 +59,6 @@ window#waybar {
 	color: #ADCEB1;
 }
 
-/* #workspaces button:nth-child(1).focused label, */
-/* #workspaces button:nth-child(2).focused label, */
-/* #workspaces button:nth-child(3).focused label, */
-/* #workspaces button:nth-child(4).focused label, */
-/* #workspaces button:nth-child(5).focused label { */
-/*   color: white; */
-/* } */
-
 #workspaces button#sway-workspace-1.persistent,
 #workspaces button#sway-workspace-2.persistent,
 #workspaces button#sway-workspace-3.persistent,
@@ -100,7 +92,6 @@ window#waybar {
 }
 
 tooltip {
-	font-family: 'Exo 2';
 	font-size: 25px;
 	font-weight: 600;
 	border: 2px solid @accent_fg;
@@ -129,10 +120,10 @@ tooltip {
 #custom-sep4,
 #custom-sep5,
 #custom-sep6 {
-	margin-bottom: -9px;
-	margin-top: -5px;
-	margin-right: -15px;
-	font-size: 30px;
+	margin-top: -32px;
+	margin-bottom: -36px;
+	margin-right: -12px;
+	font-size: 28px;
 }
 
 #custom-sep0 {
@@ -151,13 +142,13 @@ tooltip {
 }
 
 #custom-sep4 {
-	color: @network;
+	color: @bat;
 	background-color: @volume;
 }
 
 #custom-sep5 {
 	color: @tray;
-	background-color: @network;
+	background-color: @bat;
 }
 
 #custom-sep6 {
@@ -171,7 +162,7 @@ tooltip {
 }
 
 #battery {
-	background-color: @tray;
+	background-color: @bat;
 	color: @main_fg;
 	padding-left: 4px;
 }
@@ -179,19 +170,19 @@ tooltip {
 #battery.charging,
 #battery.plugged {
 	color: @main_fg;
-	background-color: @tray;
+	background-color: @bat;
 	padding-left: 4px;
 }
 
 @keyframes blink {
 	to {
-		background-color: @tray;
+		background-color: @bat;
 		color: @cpu;
 	}
 }
 
 #battery.critical:not(.charging) {
-	background-color: @tray;
+	background-color: @bat;
 	color: @main_fg;
 	animation-name: blink;
 	animation-duration: 0.5s;
@@ -257,21 +248,24 @@ button:disabled {
 	background-color: @tray;
 	padding-left: 1px;
 	padding-right: 7px;
-	margin-top: -6px;
-	margin-bottom: -3px;
+	margin-top: -14px;
+	margin-bottom: -14px;
 }
 
 #network {
-	background-color: @network;
-	padding-left: 4px;
-	padding-right: 10px;
+	background-color: @tray;
+	padding-left: 7px;
+	padding-right: 7px;
+  margin-top: -5px;
+  margin-bottom: -5px;
 }
 
 #network.disconnected {
+  color: #474360;
 	background-color: @network;
 	margin: -10px 0px -10px 0px;
-	padding-left: 4px;
-	padding-right: 4px;
+	padding-left: 7px;
+	padding-right: 7px;
 }
 
 #pulseaudio {
@@ -285,22 +279,17 @@ button:disabled {
 }
 
 #custom-artist {
-  font-family: 'Exo 2';
-  font-size: 13.5px;
-  font-weight: 700;
-	color: @accent_fg;
+  font-size: 14px;
 	background-color: @barcolor;
-	margin-right: 0px;
+	color: @accent_fg;
+	margin: 0px;
 	padding-right: 5px;
 }
 
 #custom-title {
-  font-family: 'Exo 2';
+  font-size: 14px;
 	background-color: @barcolor;
-  font-size: 13.5px;
-  font-weight: 600;
-	color: @main_fg;
-	margin-left: 0px;
+	margin: 0px;
 	padding-left: 0px;
 }
 

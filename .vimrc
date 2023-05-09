@@ -71,7 +71,6 @@ autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed on disk. B
 
 set background=dark
 hi Normal guibg=NONE ctermbg=NONE
-colorscheme rosepine 
+colorscheme rose-pine-dark
 hi Comment gui=italic
 hi Comment cterm=italic
-

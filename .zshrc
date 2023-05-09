@@ -10,7 +10,8 @@ setopt PROMPT_SP
 export PROMPT_EOL_MARK=""
 
 # Path to your oh-my-zsh installation.
-ZSH="/home/sano/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
   git
@@ -70,14 +71,14 @@ _ls_colors=":ow=01;35"
 zstyle ':completion:*:default' list-colors "${(s.:.)_ls_colors}"
 LS_COLORS+=$_ls_colors
 
-# p10k
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/nvm/init-nvm.sh
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-    source /etc/profile.d/vte.sh
-fi
+# NVM
+# source /usr/share/nvm/init-nvm.sh
 
+# p10k
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+#     source /etc/profile.d/vte.sh
+# fi
 
 # Load Angular CLI autocompletion.
-source <(ng completion script)
+# source <(ng completion script)

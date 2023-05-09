@@ -1,0 +1,10 @@
+[Unit]
+Description=Display shadow under waybar
+BindsTo=sway-session.target
+
+[Service]
+Type=simple
+ExecStart=/home/sano/.config/waybar/shadow/panel-shadow.py
+
+[Install]
+WantedBy=sway-session.target

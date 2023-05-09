@@ -1,0 +1,13 @@
+[Unit]
+Description=Dynamic output configuration for Wayland WMs.
+Documentation=https://sr.ht/~emersion/kanshi
+BindsTo=sway-session.target
+After=panel-shadow.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/kanshi
+
+[Install]
+WantedBy=sway-session.target
+

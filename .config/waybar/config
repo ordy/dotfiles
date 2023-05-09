@@ -22,9 +22,9 @@
     "custom/sep3",
     "pulseaudio",
     "custom/sep4",
-    "network",
-    "custom/sep5",
     "battery",
+    "custom/sep5",
+    "network",
     "tray",
     "custom/sep6",
     "clock"
@@ -39,9 +39,9 @@
       "3": "<span font='11'></span>",
       "4": "<span font='11'></span>",
       "5": "<span font='11'></span>",
-      "default": "<span font='9' rise='3500'></span>",
-      "focused": "<span font='11'></span>",
-      "visible": "<span font='11'></span>"
+      "default": "",
+      "focused": "",
+      "visible": ""
     },
     "persistent_workspaces": {
       "1": [],
@@ -79,12 +79,13 @@
     "tooltip": false
   },
   "tray": {
+    "icon-size": 17,
     "spacing": 10
   },
   "clock": {
     "format": "{:%a, %d %b • <b>%H:%M</b>}",
     "timezone": "Europe/Brussels",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>"
   },
   "cpu": {
     "format": "{usage}%  "
@@ -94,13 +95,13 @@
   },
   "temperature": {
     "critical-threshold": 85,
-    "format": "<span rise='1100'>{temperatureC}°C</span><span font='12'>󰈸</span>"
+    "format": "{temperatureC}°C <span font='12'>󰈸</span>"
   },
   "backlight": {
     "on-scroll-up": "light -s sysfs/backlight/acpi_video0 -A 10",
     "on-scroll-down": "light -s sysfs/backlight/acpi_video0 -U 10",
     "device": "acpi_video0",
-    "format": "<span rise='1190'>{percent}%</span> <span font='11'></span>",
+    "format": "<span rise='1190'>{percent}%</span> <span font='10'></span>",
     "format-icons": [
       "",
       ""
@@ -113,24 +114,24 @@
       "critical": 15
     },
     "format": "{capacity}%   {icon}",
-    "format-charging": "{capacity}  {icon}",
-    "format-plugged": "{capacity} <span font='8' rise='1100'></span>",
+    "format-charging": "{capacity}%  {icon}",
+    "format-plugged": "{capacity}%<span font='8' rise='1100'>  </span>",
     "format-alt": "{time}   {icon}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
     "format-icons": [
-      "<span font='13'></span>",
-      "<span font='13'></span>",
-      "<span font='13'></span>",
-      "<span font='13'></span>",
-      "<span font='13'></span>"
+      "<span font='11'></span>",
+      "<span font='11'></span>",
+      "<span font='11'></span>",
+      "<span font='11'></span>",
+      "<span font='11'></span>"
     ]
   },
   "network": {
-    "format-wifi": " {signalStrength}%  <span font='10'></span>",
+    "format-wifi": "<span font='11'>󰖩</span>",
     "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "Disconnected ⚠",
+    "format-disconnected": "<span font='10'>󰖪</span>",
     "format-alt": "{ifname} on {essid}: {ipaddr}/{cidr}",
     "on-click-right": "kitty -e nmtui",
     "tooltip": false
@@ -141,10 +142,10 @@
     "format-bluetooth": "{volume}% {icon} {format_source}",
     "format-bluetooth-muted": "{icon} {format_source}",
     "format-muted": " {format_source}",
-    "format-source": "{volume}% <span font='10'></span>",
-    "format-source-muted": "<span font='10'></span>",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
     "format-icons": {
-      "headphone": "<span font='10.5'></span>",
+      "headphone": "󰋋",
       "hands-free": "",
       "headset": "",
       "phone": "",
@@ -189,7 +190,7 @@
     "exec": "~/.config/waybar/modules/mediaplayer_t.py 2> /dev/null" // Script in resources folder
   },
   "custom/launcher": {
-    "format": "<span font='11'>ﲅ</span>",
+    "format": "<span font='11'>󰞇</span>",
     "on-click": "rofi -modi drun -show drun -drun-display-format {name} | xargs swaymsg exec --",
     "on-click-right": "wlogout -b 5 -p layer-shell",
     "tooltip": false
