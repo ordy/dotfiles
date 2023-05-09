@@ -262,7 +262,7 @@ button:disabled {
 
 #network.disconnected {
   color: #474360;
-	background-color: @network;
+	background-color: @tray;
 	margin: -10px 0px -10px 0px;
 	padding-left: 7px;
 	padding-right: 7px;
