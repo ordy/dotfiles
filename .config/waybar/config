@@ -101,7 +101,7 @@
     "on-scroll-up": "light -s sysfs/backlight/acpi_video0 -A 10",
     "on-scroll-down": "light -s sysfs/backlight/acpi_video0 -U 10",
     "device": "acpi_video0",
-    "format": "<span rise='1190'>{percent}%</span> <span font='10'></span>",
+    "format": "{percent}% <span font='10'></span>",
     "format-icons": [
       "",
       ""
@@ -115,8 +115,8 @@
     },
     "format": "{capacity}%   {icon}",
     "format-charging": "{capacity}%  {icon}",
-    "format-plugged": "{capacity}%<span font='8' rise='1100'>  </span>",
-    "format-alt": "{time}   {icon}",
+    "format-plugged": "{icon}",
+    "tooltip-format": "{capacity}% {time}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
     "format-icons": [
@@ -134,7 +134,7 @@
     "format-disconnected": "<span font='10'>󰖪</span>",
     "format-alt": "{ifname} on {essid}: {ipaddr}/{cidr}",
     "on-click-right": "kitty -e nmtui",
-    "tooltip": false
+    "tooltip": true
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
@@ -162,7 +162,7 @@
     "on-scroll-down": "pactl set-sink-volume 0 -5% && pactl get-sink-volume 0 | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' > $XDG_RUNTIME_DIR/wob.sock"
   },
   "custom/weather": {
-    "format": "<span rise='1100'>{}</span> <span font='11'></span>",
+    "format": "{} <span font='14'> </span>",
     "format-alt": "{alt}",
     "format-alt-click": "click-right",
     "interval": 1000,

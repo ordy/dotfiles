@@ -37,6 +37,7 @@ alias cls="clear"
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 alias xbindkeys=xbindkeys -f "$XDG_CONFIG_HOME"/xbindkeys/config
 alias unp='unp -U'
+alias wifi-menu='sudo wifi-menu -o'
 
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
@@ -73,12 +74,8 @@ LS_COLORS+=$_ls_colors
 
 # NVM
 # source /usr/share/nvm/init-nvm.sh
+# Load Angular CLI autocompletion.
+# source <(ng completion script)
 
 # p10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-# if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-#     source /etc/profile.d/vte.sh
-# fi
-
-# Load Angular CLI autocompletion.
-# source <(ng completion script)

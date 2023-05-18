@@ -191,7 +191,7 @@ bindsym XF86AudioMicMute exec pactl set-source-mute 0 toggle
 bindsym $mod+m exec pactl set-sink-mute 0 toggle
 
 # Applications
-bindsym $mod+x exec thunar
+bindsym $mod+x exec nautilus
 bindsym $mod+w exec firefox
 
 bindsym $mod+Ctrl+Backspace exec wlogout -b 5 -p layer-shell
@@ -219,17 +219,15 @@ bindsym $alt+tab workspace back_and_forth
 bindsym --whole-window BTN_FORWARD exec ydotool key 29:1 17:1 17:0 29:0
 
 # Auto float apps
-for_window [app_id="org.gnome.Calculator"] floating enable
+for_window [app_id="qalculate-gtk"] floating enable
 for_window [app_id="^mpv$"] floating enable
 for_window [app_id="io.github.celluloid_player.Celluloid"] floating enable
+for_window [app_id="org.gnome.Nautilus"] floating enable
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="azote"] floating enable
 for_window [class="Lxappearance"] floating enable
-for_window [class="Genymotion"] floating enable
-for_window [class="Genymotion Player"] floating enable
 for_window [title="Slack Call Minipanel"] floating enable
-for_window [class="MEGAsync"] floating enable
-for_window [app_id="screenkey"] floating enable
+for_window [title="Viewnior"] floating enable
 
 # Status Bar:
 #

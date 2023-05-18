@@ -10,3 +10,10 @@ export XDG_STATE_HOME="$HOME"/.local/state
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export HISTFILE="$XDG_DATA_HOME"/zsh/history
+
+# variables
+export QT_STYLE_OVERRIDE=kvantum
+# export QT_QPA_PLATFORM=wayland
+export MOZ_ENABLE_WAYLAND=1
+export TERMINAL=kitty
+export EDITOR=nvim
