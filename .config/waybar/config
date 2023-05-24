@@ -88,10 +88,10 @@
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>"
   },
   "cpu": {
-    "format": "{usage}%  "
+    "format": "{usage}% "
   },
   "memory": {
-    "format": "{percentage}%  "
+    "format": "{percentage}% "
   },
   "temperature": {
     "critical-threshold": 85,
@@ -101,7 +101,7 @@
     "on-scroll-up": "light -s sysfs/backlight/acpi_video0 -A 10",
     "on-scroll-down": "light -s sysfs/backlight/acpi_video0 -U 10",
     "device": "acpi_video0",
-    "format": "{percent}% <span font='10'></span>",
+    "format": "{percent}% <span font='10' rise='-1100'></span>",
     "format-icons": [
       "",
       ""
@@ -113,10 +113,11 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{capacity}%   {icon}",
-    "format-charging": "{capacity}%  {icon}",
-    "format-plugged": "{icon}",
-    "tooltip-format": "{capacity}% {time}",
+    "format": "{icon}",
+    "format-alt": "{capacity} 󱐋 {icon}",
+    "format-charging": "{capacity} 󱐋 {icon}",
+    "format-plugged": "<span font='13'>󱎔</span>",
+    "tooltip-format": "{capacity}%",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
     "format-icons": [
@@ -125,25 +126,27 @@
       "<span font='11'></span>",
       "<span font='11'></span>",
       "<span font='11'></span>"
-    ]
+    ],
+    "on-click": "{alt}"
   },
   "network": {
     "format-wifi": "<span font='11'>󰖩</span>",
     "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span font='10'>󰖪</span>",
+    "format-disconnected": "<span font='11'>󰖪</span>",
     "format-alt": "{ifname} on {essid}: {ipaddr}/{cidr}",
     "on-click-right": "kitty -e nmtui",
     "tooltip": true
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
-    "format": "{volume}% {icon} {format_source}",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": "{icon} {format_source}",
+    "format": "{icon}",
+    "format-alt": "❪VOL {volume}%❫ {format_source}",
+    "format-bluetooth": "<span font='12' rise='-800'>󰂰</span>",
+    "format-bluetooth-muted": "<span font='12' rise='-800'>󰂰</span>",
     "format-muted": " {format_source}",
-    "format-source": "{volume}% ",
-    "format-source-muted": "",
+    "format-source": "❪MIC {volume}%❫",
+    "format-source-muted": "❪MIC Muted❫",
     "format-icons": {
       "headphone": "󰋋",
       "hands-free": "",
@@ -157,12 +160,13 @@
         "<span font='13' rise='-1600'>󰕾</span>"
       ]
     },
-    "on-click": "pavucontrol",
+    "on-click": "{alt}",
+    "on-click-right": "pavucontrol",
     "on-scroll-up": "pactl set-sink-volume 0 +5% && pactl get-sink-volume 0 | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' > $XDG_RUNTIME_DIR/wob.sock",
     "on-scroll-down": "pactl set-sink-volume 0 -5% && pactl get-sink-volume 0 | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' > $XDG_RUNTIME_DIR/wob.sock"
   },
   "custom/weather": {
-    "format": "{} <span font='14'> </span>",
+    "format": "{} <span font='14' rise='-800'> </span>",
     "format-alt": "{alt}",
     "format-alt-click": "click-right",
     "interval": 1000,
