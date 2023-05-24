@@ -98,21 +98,6 @@ tooltip {
 	background-color: #302D41;
 }
 
-#custom-launcher,
-#clock,
-#battery,
-#network,
-#pulseaudio,
-#custom-media,
-#mode,
-#idle_inhibitor,
-#custom-artist,
-#custom-title {
-	background-color: #252734;
-	margin: 0px;
-	padding: 0px 9px 0px 9px;
-}
-
 /***** Separators  *****/
 #custom-sep0,
 #custom-sep1,
@@ -164,14 +149,14 @@ tooltip {
 #battery {
 	background-color: @bat;
 	color: @main_fg;
-	padding-left: 4px;
+	padding-left: 7px;
 }
 
 #battery.charging,
 #battery.plugged {
 	color: @main_fg;
 	background-color: @bat;
-	padding-left: 4px;
+	padding-left: 7px;
 }
 
 @keyframes blink {
@@ -189,7 +174,6 @@ tooltip {
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
-	padding-left: 4px;
 }
 
 label:focus {
@@ -202,94 +186,101 @@ button:disabled {
 	min-width: 0;
 }
 
+#cpu,
+#memory,
+#temperature {
+	margin-right: 12px;
+}
+
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#custom-weather,
+#custom-artist,
+#custom-title {
+  background-color: transparent;
+}
+
+
 #cpu {
-	background-color: transparent;
 	color: @color1;
-	margin-right: 10px;
 }
 
 #memory {
-	background-color: transparent;
 	color: @color2;
-	margin-right: 10px;
 }
 
 #custom-launcher {
 	color: @accent_fg;
-	padding-right: 15px;
-	padding-left: 10px;
 	background-color: @launcher;
 }
 
 #temperature {
-	background-color: transparent;
 	color: @color3;
-	margin-right: 10px;
 }
 
 #temperature.critical {
-	background-color: transparent;
 	color: @color3;
 }
 
 #backlight {
-	background-color: transparent;
 	color: @color4;
 	margin-right: 10px;
 }
 
 #custom-weather {
-	background-color: transparent;
-	padding-right: 10px;
 	color: @color5;
 }
 
-#tray {
+#pulseaudio,
+#battery,
+#network,
+#clock,
+#custom-launcher {
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+#tray,
+#network {
 	background-color: @tray;
-	padding-left: 1px;
+}
+
+#tray {
 	padding-right: 7px;
 	margin-top: -14px;
 	margin-bottom: -14px;
 }
 
 #network {
-	background-color: @tray;
-	padding-left: 7px;
-	padding-right: 7px;
   margin-top: -5px;
   margin-bottom: -5px;
 }
 
 #network.disconnected {
   color: #474360;
-	background-color: @tray;
 	margin: -10px 0px -10px 0px;
-	padding-left: 7px;
-	padding-right: 7px;
 }
 
 #pulseaudio {
 	background-color: @volume;
-	padding-left: 4px;
+  color: @main_fg;
 }
 
 #pulseaudio.muted {
-	background-color: @volume;
-	color: @cpu;
+	color: #7A7797;
 }
 
 #custom-artist {
-  font-size: 14px;
-	background-color: @barcolor;
+  font-size: 15px;
 	color: @accent_fg;
 	margin: 0px;
-	padding-right: 5px;
+	padding-right: 7px;
 }
 
 #custom-title {
-  font-size: 14px;
-	background-color: @barcolor;
+  font-size: 15px;
 	margin: 0px;
-	padding-left: 0px;
 }
 
