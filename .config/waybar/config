@@ -113,11 +113,12 @@
       "warning": 30,
       "critical": 15
     },
+    "full-at": 80,
     "format": "{icon}",
-    "format-alt": "{capacity} 󱐋 {icon}",
-    "format-charging": "{capacity} 󱐋 {icon}",
+    "format-alt": "{capacity} <span font='11'>󱐋</span> {icon}",
+    "format-charging": "{capacity} <span font='11'>󱐋</span> {icon}",
     "format-plugged": "<span font='13'>󱎔</span>",
-    "tooltip-format": "{capacity}%",
+    "tooltip-format": "{power}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
     "format-icons": [
@@ -127,7 +128,8 @@
       "<span font='11'></span>",
       "<span font='11'></span>"
     ],
-    "on-click": "{alt}"
+    "on-click": "{alt}",
+    "tooltip": false
   },
   "network": {
     "format-wifi": "<span font='11'>󰖩</span>",
@@ -136,28 +138,26 @@
     "format-disconnected": "<span font='11'>󰖪</span>",
     "format-alt": "{ifname} on {essid}: {ipaddr}/{cidr}",
     "on-click-right": "kitty -e nmtui",
-    "tooltip": true
+    "tooltip": false
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
     "format": "{icon}",
-    "format-alt": "❪VOL {volume}%❫ {format_source}",
-    "format-bluetooth": "<span font='12' rise='-800'>󰂰</span>",
-    "format-bluetooth-muted": "<span font='12' rise='-800'>󰂰</span>",
+    "format-alt": "{format_source}   {volume}%  {icon}",
+    "format-bluetooth": "<span font='11' rise='-800'>󰂰</span>",
+    "format-bluetooth-muted": "<span font='11' rise='-800'>󰂰</span>",
     "format-muted": " {format_source}",
-    "format-source": "❪MIC {volume}%❫",
-    "format-source-muted": "❪MIC Muted❫",
+    "format-source": "{volume}%  <span font='11'>󰍰</span>",
+    "format-source-muted": "<span font='11'>󰍱</span>",
     "format-icons": {
-      "headphone": "󰋋",
+      "headphone": "<span font='11'>󰋋 </span>",
       "hands-free": "",
       "headset": "",
       "phone": "",
       "portable": "",
       "car": "",
       "default": [
-        "<span font='13' rise='-1600'>󰕿</span>",
-        "<span font='13' rise='-1600'>󰖀</span>",
-        "<span font='13' rise='-1600'>󰕾</span>"
+        "<span font='12'>󰜟</span>"
       ]
     },
     "on-click": "{alt}",
