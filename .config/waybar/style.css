@@ -1,21 +1,18 @@
-@define-color barcolor #191724;
+@define-color rp-base #191724;
+@define-color rp-overlay #26233a;
+@define-color rp-subtile #908caa;
+@define-color rp-text #e0def4;
+@define-color rp-white #FFFFFF;
+@define-color rp-love #eb6f92;
+@define-color rp-gold #f6c177;
+@define-color rp-rose #ebbcba;
+@define-color rp-pine #31748f;
+@define-color rp-foam #9ccfd8;
+@define-color rp-iris #c4a7e7;
 
-@define-color launcher #191724;
-@define-color workspaces #242236;
-@define-color mpd #232335;
-@define-color main_fg #D9E0EE;
-@define-color accent_fg #FFFFFF;
-
-@define-color color1 #eb6f92;
-@define-color color2 #f6c177;
-@define-color color3 #ebbcba;
-@define-color color4 #9ccfd8;
-@define-color color5 #c4a7e7;
-
+/* Shades */
 @define-color volume #393656;
 @define-color bat #2F2C47;
-@define-color tray #262336;
-@define-color clock #191724;
 
 * {
 	border: none;
@@ -28,8 +25,8 @@
 }
 
 window#waybar {
-	background-color: @barcolor;
-	color: @main_fg;
+	background-color: @rp-base;
+	color: @rp-text;
 	transition-property: background-color;
 	transition-duration: .5s;
 }
@@ -44,19 +41,19 @@ window#waybar {
 #workspaces button {
 	padding: 0px 2px 0px 2px;
 	margin: -2px 0px;
-	background-color: @workspaces;
+	background-color: @rp-overlay;
 }
 
-#workspaces button:hover {
-	background-color: #393A56;
+#workspaces button:hover label {
+	color: #B8B4CF;
 }
 
 #workspaces button.focused {
-	color: @main_fg;
+	color: @rp-text;
 }
 
 #workspaces button.urgent {
-	color: #ADCEB1;
+	color: @rp-foam;
 }
 
 #workspaces button#sway-workspace-1.persistent,
@@ -72,30 +69,28 @@ window#waybar {
 }
 
 #workspaces button#sway-workspace-1 {
-  color: @color1;
+  color: @rp-love;
 }
 
 #workspaces button#sway-workspace-2 {
-  color: @color2;
+  color: @rp-gold;
 }
 
 #workspaces button#sway-workspace-3 {
-  color: @color3;
+  color: @rp-rose;
 }
 
 #workspaces button#sway-workspace-4 {
-  color: @color4;
+  color: @rp-foam;
 }
 
 #workspaces button#sway-workspace-5 {
-  color: @color5;
+  color: @rp-iris;
 }
 
 tooltip {
-	font-size: 25px;
-	font-weight: 600;
-	border: 2px solid @accent_fg;
-	background-color: #302D41;
+	border: 2px solid @rp-text;
+	background-color: @rp-overlay;
 }
 
 /***** Separators  *****/
@@ -112,13 +107,13 @@ tooltip {
 }
 
 #custom-sep0 {
-	color: @workspaces;
+	color: @rp-overlay;
 	background-color: @launcher;
 }
 
 #custom-sep1 {
-	color: @barcolor;
-	background-color: @workspaces;
+	color: @rp-base;
+	background-color: @rp-overlay;
 }
 
 #custom-sep3 {
@@ -132,52 +127,47 @@ tooltip {
 }
 
 #custom-sep5 {
-	color: @tray;
+	color: @rp-overlay;
 	background-color: @bat;
 }
 
 #custom-sep6 {
-	color: @clock;
-	background-color: @tray;
+	color: @rp-base;
+	background-color: @rp-overlay;
 }
 /**************/
 
 #clock {
-	background-color: @clock;
+	background-color: @rp-base;
 }
 
 #battery {
 	background-color: @bat;
-	color: @main_fg;
+	color: @rp-text;
 	padding-left: 7px;
 }
 
 #battery.charging,
 #battery.plugged {
-	color: @main_fg;
+	color: @rp-text;
 	background-color: @bat;
 	padding-left: 7px;
 }
 
 @keyframes blink {
 	to {
-		background-color: @bat;
-		color: @cpu;
+		color: @rp-love;
 	}
 }
 
 #battery.critical:not(.charging) {
 	background-color: @bat;
-	color: @main_fg;
+	color: @rp-text;
 	animation-name: blink;
 	animation-duration: 0.5s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
-}
-
-label:focus {
-	background-color: #000000;
 }
 
 label:disabled,
@@ -202,35 +192,34 @@ button:disabled {
   background-color: transparent;
 }
 
-
 #cpu {
-	color: @color1;
+	color: @rp-love;
 }
 
 #memory {
-	color: @color2;
+	color: @rp-gold;
 }
 
 #custom-launcher {
-	color: @accent_fg;
+	color: @rp-white;
 	background-color: @launcher;
 }
 
 #temperature {
-	color: @color3;
+	color: @rp-rose;
 }
 
 #temperature.critical {
-	color: @color3;
+	color: @rp-rose;
 }
 
 #backlight {
-	color: @color4;
+	color: @rp-foam;
 	margin-right: 10px;
 }
 
 #custom-weather {
-	color: @color5;
+	color: @rp-iris;
 }
 
 #pulseaudio,
@@ -244,7 +233,7 @@ button:disabled {
 
 #tray,
 #network {
-	background-color: @tray;
+	background-color: @rp-overlay;
 }
 
 #tray {
@@ -253,7 +242,10 @@ button:disabled {
 	margin-bottom: -14px;
 }
 
-#network {
+#network,
+#battery,
+#pulseaudio,
+#custom-launcher {
   margin-top: -5px;
   margin-bottom: -5px;
 }
@@ -265,7 +257,7 @@ button:disabled {
 
 #pulseaudio {
 	background-color: @volume;
-  color: @main_fg;
+  color: @rp-text;
 }
 
 #pulseaudio.muted {
@@ -274,12 +266,13 @@ button:disabled {
 
 #custom-artist {
   font-size: 15px;
-	color: @accent_fg;
+	color: @rp-text;
 	margin: 0px;
 	padding-right: 7px;
 }
 
 #custom-title {
+  color: @rp-subtile;
   font-size: 15px;
 	margin: 0px;
 }
