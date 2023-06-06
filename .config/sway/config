@@ -12,6 +12,9 @@ set $right l
 # Monitors
 exec swaymsg focus output VGA-1
 
+# Alternate layout script
+exec --no-startup-id /home/sano/.config/sway/scripts/alternating_layouts.py
+
 # Terminal 
 set $term kitty
 
@@ -27,7 +30,7 @@ exec ~/.azotebg
 output * bg #000000 solid_color
 
 # idle and sleep
-exec swayidle -w before-sleep swaylock -C $XDG_CONFIG_HOME/sway/swaylock/config
+# exec swayidle -w before-sleep 'swaylock -C $XDG_CONFIG_HOME/sway/swaylock/config'
 
 ### Input configuration
 # You can get the names of your inputs by running: swaymsg -t get_inputs
@@ -236,15 +239,17 @@ bar {
 }
 
 #window colors
-set $active-bg-color    #585177
-set $active-fg-color    #DEDCF3
-set $inactive-bg-color  #0E0D14
+set $active-bg-color    #5C5682
+set $active-fg-color    #DAD6F1
+set $inactive-bg-color  #0D0C14
+set $focused_inactive-bg-color  #191725
 set $inactive-fg-color  #565D72
 
 # Border
 #client.<class> <border> <background> <text> [<indicator> [<child_border>]]
-client.focused $active-bg-color $active-bg-color $active-fg-color
+client.focused $active-bg-color $active-bg-color $active-fg-color $active-bg-color
 client.unfocused $inactive-bg-color $inactive-bg-color $inactive-fg-color
+client.focused_inactive $focused_inactive-bg-color $focused_inactive-bg-color $inactive-fg-color $focused_inactive-bg-color
 
 default_floating_border pixel 3
 default_border pixel 3
