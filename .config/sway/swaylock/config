@@ -1,4 +1,4 @@
-image=$XDG_CONFIG_HOME/sway/swaylock/lock_magi.jpg
+image=/home/sano/.config/sway/swaylock/lock_magi.jpg
 
 indicator-radius=185
 indicator-thickness=10

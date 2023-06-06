@@ -117,7 +117,7 @@
     "format": "{icon}",
     "format-alt": "{capacity} <span font='11'>󱐋</span> {icon}",
     "format-charging": "{capacity} <span font='11'>󱐋</span> {icon}",
-    "format-plugged": "<span font='13'>󱎔</span>",
+    "format-plugged": "<span font='10'></span>",
     "tooltip-format": "{power}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
@@ -194,7 +194,7 @@
     "exec": "~/.config/waybar/modules/mediaplayer_t.py 2> /dev/null" // Script in resources folder
   },
   "custom/launcher": {
-    "format": "<span font='11'>󰞇</span>",
+    "format": "<span font='15'>󰐅</span>",
     "on-click": "rofi -modi drun -show drun -drun-display-format {name} | xargs swaymsg exec --",
     "on-click-right": "wlogout -b 5 -p layer-shell",
     "tooltip": false

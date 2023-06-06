@@ -31,7 +31,7 @@ alias free='free -m'  # show sizes in MB
 alias more=less
 alias vim=$EDITOR
 alias svim=sudoedit
-alias sf="pfetch"
+alias sf="cls && pfetch"
 alias swaytree='swaymsg -t get_tree | grep "\"app_id\"\|\"name\"\|\"shell\""'
 alias cls="clear"
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
