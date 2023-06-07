@@ -1,88 +1,190 @@
-@-moz-document domain("reddit.com") {
 :root {
-    color: #eaeaea;
-    --cgreen: #5dff88;
-    --chighlight: #2fbbff;
-    --c1: #100928;
-    --c2: #e7e5f7;
-    --c3: #7080ff;
-    --c4: #70ed69;
-    --c5: #e1e1e1;
-    --c6: #955bff;
-    --bgc: #15141c;
+  color: var(--text);
+  --chighlight: #b7b3d4;
+  --subtle: #908caa;
+  --foam: #9ccfd8;
+  --pine: #31748f;
+  --iris: #c4a7e7;
+  --love: #eb6f92;
+  --rose: #ebbcba;
+  --gold: #f6c177;
+
+  --base: #191724;
+  --surface: #1f1d2e;
+  --overlay1: #26233a;
+  --overlay2: #3a3654;
+  --overlay3: #524e6e;
+  --gray0: #4b485b;
+  --gray1: #646078;
+  --gray2: #908bab;
+  --text: #e0def4;
 }
 
-body {
-    background-color: var(--bgc);
+.res-nightmode html.res-nightmode,
+.res-nightmode body,
+.res-nightmode body .content,
+.res-nightmode .modal-body,
+.res-nightmode .side,
+.res-nightmode .icon-menu a,
+.res-nightmode .side .leavemoderator,
+.res-nightmode .side .leavecontributor-button,
+.res-nightmode .side .titlebox,
+.res-nightmode .side .spacer .titlebox .redditname,
+.res-nightmode .side .titlebox .flairtoggle,
+.res-nightmode .side .usertext-body .md ol,
+.res-nightmode .side .usertext-body .md ol ol,
+.res-nightmode .side .usertext-body .md ol ol li,
+.res-nightmode .modactionlisting table *,
+.res-nightmode .side .recommend-box .rec-item,
+.res-nightmode .crosspost-preview,
+.res-nightmode .crosspost-thing-preview,
+.res-nightmode .admin_takedown,
+.res-nightmode .happening-now {
+  background-color: var(--base) !important;
+  border-color: var(--surface);
 }
 
-.flair, .linkflairlabel {
- 	color: #000 !important;
-	/*text-shadow: 0.06em 0 black, 0 0.06em black, -0.06em 0 black, 0 -0.06em black;*/
+.res-nightmode .flair,
+.res-nightmode .linkflairlabel {
+  color: var(--text) !important;
+  background-color: var(--base) !important;
+  border-color: var(--overlay3) !important;
 }
-    
+
+
+div.usertext-buttons > button {
+  color: var(--text) !important;
+  border: 1px solid #5a5873 !important;
+  background-color: #403d52 !important;
+  border-radius: 5px;
+  padding-inline: 10px;
+}
+
+#REScommentSubToggle,
+div.res-commentNavToggle,
+a.reddiquette {
+  display: none;
+}
+
+.tagline .author.moderator,
+.crosspost-preview-tagline .author.moderator {
+  color: var(--base) !important;
+}
 
 .content {
-    color: #e1e1e1;
-    background-color: var(--bgc);
-    padding: 20px 30px 20px 30px;
+  color: var(--text);
+  background-color: var(--base);
+  padding: 20px 30px 20px 30px;
 }
 
 .NERPageMarker {
-    color: #e3e3e3;
-    background-color: #17191f !important;
-    border: 1px solid #121214 !important;
+  color: var(--text);
+  background-color: var(--base) !important;
+  border: 1px solid var(--overlay1) !important;
 }
 
 .md {
-    color: var(--c5);
+  color: var(--text);
 }
 
 .md code {
-    font-size: 12.5px;
-    color: #d1ddef !important;
+  font-size: 12.5px;
+  color: var(--chighlight) !important;
 }
 
 tbody {
-    background-color: #101014;
+  background-color: var(--overlay2);
 }
 
 .link .usertext-body .md {
-    background-color: var(--bgc);
+  background-color: var(--base);
 }
 
 .res-hasNewComments .newComments {
-    color: #955bff !important;
+  color: var(--iris) !important;
+}
+.res-nightmode .morelink a {
+  color: var(--gray3) !important;
+}
+.res-nightmode .morelink:hover a {
+  filter: contrast(150%) !important; 
+}
+.hover a:hover {
+  filter: contrast(150%) !important; 
+}
+ul>li>a {
+  color: var(--foam) !important;
+}
+ul>li>a:hover {
+  filter: contrast(150%) !important; 
+}
+ul>li>strong>a {
+  color: var(--foam) !important;
+}
+ul>li>strong>a:hover {
+  filter: contrast(150%) !important; 
+}
+.click-gadget>div a {
+  color: var(--foam) !important;
+}
+.click-gadget>div a:hover {
+  filter: contrast(150%) !important; 
+}
+
+.pagename > a {
+  color: var(--gold) !important;
+}
+
+span.morecomments>a {
+  color: var(--gray1) !important;
 }
 
 a .RESShortcutsCurrentSub {
-    color: #955bff !important;
-    font-weight: bold;
+  color: var(--iris) !important;
+  font-weight: bold;
 }
 
-.entry .buttons li a {
-    color: var(--c5);
+.res-nightmode .nsfw-stamp {
+  color: var(--love) !important;
+}
+
+div.usertext-edit {
+  padding: 0 0 0 0.2em;
+}
+
+.expando-button.collapsed.selftext,
+.expando-button.collapsed.video,
+.expando-button.collapsed.image,
+.expando-button.collapsed.video-muted,
+.thumbnail.self,
+.thumbnail.default,
+.expando-button.expanded.video {
+  filter: brightness(85%) contrast(120%) hue-rotate(200deg) saturate(300%) sepia(52%) invert(89%);
+  opacity: 70%;
 }
 
 .entry.res-selected,
 .entry.res-selected .md-container {
-    background-color: #272a2f !important;
+  background-color: var(--base) !important;
 }
 
 .res-voteEnhancements-highlightScores span.score {
-    color: #61d09e !important;
+  color: var(--chighlight) !important;
 }
 
 .link {
-    border-bottom: 1px dashed #3b3957;
+  border-bottom: 1px solid var(--overlay1);
 }
 
-textarea {
-    background-color: #12131a !important
+.usertext-edit.md-container > div.md textarea {
+  color: var(--text);
+  border: 1px solid #565677;
+  background-color: var(--overlay1) !important;
+  border-radius: 5px;
 }
 
 .buttons .give-gold.gold-give-gold {
-    color: #958c78;
+  color: var(--gold);
 }
 
 .res .RES-keyNav-activeElement,
@@ -91,87 +193,93 @@ textarea {
 .res .keyHighlight,
 .res .commentarea .keyHighlight .md,
 .res .commentarea .keyHighlight.entry .noncollapsed {
-    outline: 0px solid !important;
-    background: none;
-    border-right: 3px solid #8854e3;
+  outline: 0px solid !important;
+  background: none;
+  border-right: 3px solid var(--iris);
 }
 
 .entry .unvoted .res-selected .RES-keyNav-activeElement {
-    background-color: black !important;
+  background-color: var(--base) !important;
 }
 
 .res-nightmode #RESSubredditGroupDropdown a,
 .res-nightmode .RESNotificationContent,
 .res-nightmode .RESNotificationFooter,
 .res-nightmode .sr-bar a {
-    color: var(--c2) !important;
-    font: bold 1.1em "Roboto";
+  color: var(--gray2) !important;
+  font: bold 1em "Roboto";
 }
 
 .res-filterline-filters,
 .res-filterline-preamble {
-    background-color: #111;
+  background-color: var(--overlay1);
 }
 
 .res-filterline-filter {
-    border-bottom: 0px solid #f2f;
-    padding-bottom: 4px;
-    color: #bbb;
+  border-bottom: 0px solid #2229ff;
+  padding-bottom: 4px;
+  color: #bbb;
 }
 
 .res-filterline-filter-hiding,
 .res-filterline-filter-hiding:before {
-    border-bottom: 2px solid #c79afb;
-    padding-bottom: 0;
-    color: #a985e8;
+  border-bottom: 2px solid var(--iris);
+  padding-bottom: 0;
+  color: #b6ff2e;
 }
 
 .res-filterline-toggle-powered:after {
-    color: rgba(90, 90, 200, .8);
+  color: var(--foam);
 }
 
 blockquote.twitter-tweet {
-    color: var(--c2);
-    border-left: 5px solid #695ade !important;
+  color: var(--gray2);
+  border-left: 5px solid var(--iris) !important;
 }
 
 .content .domain a {
-    color: var(--c4) !important;
+  color: var(--foam) !important;
 }
 
 .res-nightmode .tagline a {
-    color: var(--c4) !important;
+  color: var(--gray2) !important;
+  font-size: 1.14em;
 }
 
 .link {
-    margin-bottom: 10px
+  margin-bottom: 10px
 }
 
 #header {
-    border-bottom: 1px solid var(--chighlight);
+  border-bottom: 1px solid var(--overlay2);
 }
 .tabmenu li.selected a {
-    border: 1px solid var(--chighlight);
+  border: 1px solid var(--overlay3);
 }
 
 .res-nightmode .tabmenu li.selected a {
-    color: var(--chighlight) !important;
+  color: var(--iris) !important;
+  background-color: var(--overlay1) !important;
+}
+.res-nightmode .tabmenu li a {
+  color: var(--gray2) !important;
+  background-color: var(--overlay2) !important;
 }
 
-#sr-header-area a.RESShortcutsCurrentSub,
-#RESSubredditGroupDropdown .RESShortcutsCurrentSub a {
-    color: red !important;
+#sr-header-area {
+  font-size: 100% !important;
 }
 
 .res-nightmode #sr-header-area,
 #sr-more-link {
-    background-color: red !important;
-    border-color: #16101f !important;
+  color: var(--gray0) !important;
+  background-color: var(--base) !important;
+  border-color: var(--overlay2) !important;
 }
 
 .res-nightmode .entry.res-selected,
 .res-nightmode .entry.res-selected .md-container {
-    background-color: #0b0a10 !important;
+  background-color: #0000 !important;
 }
 
 .res-nightmode .login-form,
@@ -179,149 +287,300 @@ blockquote.twitter-tweet {
 .res-nightmode #header-bottom-right,
 .res-nightmode #srList,
 .res-nightmode .dropdown.lightdrop .drop-choices {
-    background-color: #2f284c !important;
-    bottom: 0px !important;
-}
-
-div #header-bottom-right {
-    background-color: #363B42;
-    font-size: 1.19em;
-    padding: 2px 5px 0px 5px;
-}
-
-div#RESShortcutsEditContainer,
-#RESShortcutsEditContainer > div {
-    background-color: #1F2125;
-    color: var(--c2);
+  background-color: var(--overlay1) !important;
+  bottom: 0px !important;
 }
 
 div#srList {
-    background-color: #1F2125;
+  background-color: var(--surface);
 }
 
 #srList tbody tr {
-    border-bottom: 1px solid #1a1b1c !important;
+  border-bottom: 1px solid var(--surface) !important;
 }
 
 #srList tbody tr:hover,
 #srList tbody tr:hover > td > a {
-    background-color: #526175 !important;
-    color: white;
+  background-color: var(--love) !important;
+  color: var(--text);
 }
 
 #srList input {
-    background-color: #2d2e31;
-    color: white;
-    border-color: #222324;
+  background-color: var(--overlay2);
+  color: var(--text);
+  border-color: var(--overlay1);
 }
 
 span.gearIcon::after {
-    content: "";
-    color: #75a4c1;
-    text-shadow: none !important;
+  color: var(--foam);
+  text-shadow: none !important;
 }
 
 .res-nightmode .link,
 .res-nightmode .helpcenter-form .section-content {
-    background-color: rgba(18, 17, 25, 1.0) !important;
+  background-color: var(--surface) !important;
 }
 
 .res-nightmode #header,
 .res-nightmode .liveupdate-home .content {
-    background-color: #2f284c !important;
+  background-color: var(--overlay1) !important;
 }
 
 #header-img.default-header,
 .trending-subreddits {
-    display: none;
-}
-
-.side {
-    display: none;
+  display: none;
 }
 
 .listing-chooser h3 {
-    text-align: left;
-    padding-left: 1.5em;
+  text-align: left;
+  padding-left: 1.5em;
 }
 
 .listing-chooser li.selected {
-    margin-right: 0px;
-    margin-top: 30px;
-    margin-bottom: 20px;
+  margin-right: 0px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .res-nightmode body.with-listing-chooser .listing-chooser,
 .res-nightmode body.with-listing-chooser.listing-chooser-collapsed .listing-chooser {
-    background-color: #0f0d14 !important;
+  background-color: #0f0d14 !important;
 }
 
 .res-nightmode .listing-chooser li,
 .res-nightmode .listing-chooser li.selected {
-    background-color: #1b1828 !important;
+  background-color: #1b1828 !important;
 }
 
 body.with-listing-chooser .listing-chooser {
-    top: 40px;
+  top: 40px;
 }
 
 .grippy {
-    background-color: #191928c2 !important;
+  background-color: #191928c2 !important;
 }
 
 .grippy::before {
-    background-color: #111114 !important;
-    border-right-color: #111114 !important;
+  background-color: #111114 !important;
+  border-right-color: #111114 !important;
 }
 .grippy::after {
-    background-color: #14121f !important;
-    border-right-color: #14121f !important;
+  background-color: #14121f !important;
+  border-right-color: #14121f !important;
 }
 
 .res-nightmode .listing-chooser .create button {
-    background-color: #0e0a14 !important;
-    border-color: #25252c;
+  background-color: #0e0a14 !important;
+  border-color: #25252c;
 }
 
 .listing-chooser li a,
 .res-nightmode .listing-chooser li.selected a {
-    color: var(--c2) !important;
+  color: var(--gray2) !important;
 }
 
 #header-bottom-right a {
-    color: var(--c2) !important;
+  color: var(--gray2) !important;
 }
 
 .crosspost-preview {
-    overflow: hidden;
-    background: #15131a;
-    border: 1px solid #20222b;
-    border-radius: 4px;
-    max-width: 600px;
-}
-
-.res-commentBoxes.res-commentHoverBorder .content .comment:hover {
-    border-color: #414955 !important;
+  overflow: hidden;
+  background: var(--base);
+  border: 1px solid var(--overlay2);
+  border-radius: 4px;
+  max-width: 600px;
 }
 
 .thing.stickied.link a.title {
-    font-weight: bold;
-    color: #77cbdd;
+  font-weight: bold;
+  color: #1be1b1;
 }
 
 .link .title {
-    font-size: medium !important;
+  font-size: medium !important;
 }
 
 .tagline {
-    font-size: 1.2em !important;
+  font-size: 1.2em !important;
 }
 
 .link .flat-list {
-    font-size: 1.2em !important;
+  font-size: 1.2em !important;
 }
 
 #sr-header-area .width-clip {
-    font-size: 1.25em;
+  font-size: 1.25em;
 }
+
+#RESShortcuts {
+  font-size: 1.15em !important;
+}
+
+div#RESShortcutsEditContainer,
+div#RESShortcutsSort,
+div#RESShortcutsAdd,
+div#RESShortcutsLeft,
+div#RESShortcutsRight {
+  background-color: var(--base) !important;
+}
+
+span.pagename a {
+  color: var(--iris);
+}
+
+.res-nightmode.res-commentBoxes .thing.comment {
+  border-color: var(--overlay1) !important;
+  display: inline-block;
+  box-shadow: 0px 0px 2px #0e0d15 !important;
+  border: none !important;
+}
+
+div.thing.comment.comment {
+  background-color: var(--surface) !important;
+}
+
+.RES-keyNav-activeElement,
+.commentarea .RES-keyNav-activeElement .md,
+.commentarea .RES-keyNav-activeElement.entry .noncollapsed {
+  background-color: var(--overlay2) !important;
+}
+.RES-keyNav-activeElement,
+.RES-keyNav-activeElement .md-container {
+  background-color: var(--surface) !important
+}
+.res-commentBoxes .thing.comment {
+  background: none !important;
+  border-color: var(--gray1) !important;
+  border-radius: 4px
+}
+
+.res-commentBoxes .thing.comment .thing.comment {
+  margin-right: 2em !important;
+  background: var(--base) !important
+}
+.res-commentBoxes .thing.comment .thing.comment .thing.comment {
+  background: var(--surface) !important
+}
+.res-commentBoxes .thing.comment .thing.comment .thing.comment .thing.comment {
+  background: var(--base) !important
+}
+.res-commentBoxes .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment {
+  background: var(--surface) !important
+}
+.res-commentBoxes .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment {
+  background: var(--base) !important
+}
+.res-commentBoxes .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment {
+  background: var(--surface) !important
+}
+.res-commentBoxes .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment {
+  background: var(--base) !important
+}
+.res-commentBoxes .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment {
+  background: var(--surface) !important
+}
+.res-commentBoxes .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment {
+  background: var(--base) !important
+}
+
+.res-nightmode .flairrichtext[style*="color"] {
+  color: var(--text) !important;
+  background-color: var(--overlay1) !important;
+  border-color: var(--overlay3) !important;
+}
+div > div:nth-child(5) > div:nth-child(1) > p:nth-child(1) > span:nth-child(2) {
+  background-color: var(--base) !important;
+}
+div.side > div.spacer > a {
+  display: none !important;
+}
+div.side > div.spacer > .sidebox.submit.submit-text {
+  display: none;
+}
+
+.side {
+  border: 10px solid var(--base) !important;
+}
+
+.res-nightmode .spoiler-stamp {
+  color: var(--gold) !important;
+}
+
+.res-nightmode .sidebox .spacer,
+.res-nightmode .side .linkinfo {
+  background-color: var(--overlay2) !important;
+}
+
+.res-nightmode .morelink {
+  background: var(--overlay2) !important;
+  border-color: var(--overlay3) !important;
+}
+
+.res-nightmode #searchexpando,
+.res-nightmode .post-sharing {
+  background: var(--overlay2) !important;
+  border-color: var(--overlay3) !important;
+}
+
+.res-nightmode #search select,
+.res-nightmode #search option {
+  color: var(--text) !important;
+  background-color: var(--base) !important;
+  border: 1px solid var(--overlay2) !important;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 2px;
+}
+
+#search input[type="text"] {
+  border: 1px solid var(--overlay3) !important;
+}
+.res-nightmode input[type="number"],
+.res-nightmode input[type="text"],
+.res-nightmode input[type="password"],
+.res-nightmode .c-form-control {
+  background-color: var(--overlay2) !important;
+}
+
+span.multi-count,
+.res-fancy-toggle-button {
+  border: 1px solid var(--text) !important;
+  background-color: var(--pine) !important;
+}
+
+.res-nightmode .side .titlebox form.flairtoggle,
+.res-nightmode .trophy-area .content,
+.res-nightmode .side .md ol,
+.res-nightmode .side .md ul {
+  background-color: var(--surface) !important;
+}
+.sidebox.create {
+  display: none;
+}
+
+.res-nightmode .link .rank {
+  color: var(--gray1);
+}
+.res-nightmode .midcol .score,
+.res-nightmode .moduleButton:not(.enabled) {
+  color: var(--gray1);
+}
+
+.entry .buttons li a {
+  color: var(--subtle) !important;
+}
+
+.sitetable {
+  list-style-type: none;
+  max-width: calc(93vw - 300px);
+}
+
+@media (max-width: 1350px) {
+  .side {
+    display: none !important;
+  }
+  .sitetable {
+    list-style-type: none;
+    max-width: 95vw;
+  }
 }
