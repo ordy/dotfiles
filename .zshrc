@@ -79,3 +79,6 @@ LS_COLORS+=$_ls_colors
 
 # p10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Created by `pipx` on 2023-06-07 10:44:46
+export PATH="$PATH:/home/sano/.local/bin"
