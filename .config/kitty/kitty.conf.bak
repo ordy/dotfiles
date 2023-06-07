@@ -1,30 +1,31 @@
-vim:fileencoding=utf-8:ft=conf:foldmethod=marker
+# vim:fileencoding=utf-8:ft=config:foldmethod=marker
 
 #: Fonts {{{
-  font_family      FuraMono Nerd Font
-    bold_font        auto 
-    italic_font     auto 
-    bold_italic_font auto 
+font_family      Rec Mono Custom
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
 
-    font_size 10.5
-    force_ltr yes
+symbol_map U+23FB-U+23FE,U+2665,U+26A1,U+2B58,U+E000-U+E00A,U+E0A0-U+E0A3,U+E0B0-U+E0D4,U+E200-U+E2A9,U+E300-U+E3E3,U+E5FA-U+E6AA,U+E700-U+E7C5,U+EA60-U+EBEB,U+F000-U+F2E0,U+F300-U+F32F,U+F400-U+F4A9,U+F500-U+F8FF,U+F0001-U+F1AF0 Symbols Nerd Font
 
-    disable_ligatures never
-    box_drawing_scale 0.001, 1, 1.5, 2
+font_size 10.5
+
+disable_ligatures never
+box_drawing_scale 0.001, 1, 1.5, 2
 #: }}}
 
 #: Cursor customization {{{
 # cursor #cccccc
 # cursor_text_color #111111
-  cursor_shape underline
-    cursor_underline_thickness 1.0
-    cursor_blink_interval -1
-    cursor_stop_blinking_after 15.0
+cursor_shape underline
+cursor_underline_thickness 1.0
+cursor_blink_interval -1
+cursor_stop_blinking_after 15.0
 #: }}}
 
 #: Scrollback {{{
 
-  scrollback_lines 2000
+scrollback_lines 2000
 
 #: Number of lines of history to keep in memory for scrolling back.
 #: Memory is allocated on demand. Negative numbers are (effectively)
@@ -35,7 +36,7 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: is changed it will only affect newly created windows, not existing
 #: ones.
 
-    scrollback_pager less --chop-long-lines --RAW-CONTROL-CHARS +INPUT_LINE_NUMBER
+scrollback_pager less --chop-long-lines --RAW-CONTROL-CHARS +INPUT_LINE_NUMBER
 
 #: Program with which to view scrollback in a new window. The
 #: scrollback buffer is passed as STDIN to this program. If you change
@@ -45,7 +46,7 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: should be at the top of the screen. Similarly CURSOR_LINE and
 #: CURSOR_COLUMN will be replaced by the current cursor position.
 
-    scrollback_pager_history_size 0
+scrollback_pager_history_size 0
 
 #: Separate scrollback history size, used only for browsing the
 #: scrollback buffer (in MB). This separate buffer is not available
@@ -58,19 +59,19 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: is changed it will only affect newly created windows, not existing
 #: ones.
 
-    scrollback_fill_enlarged_window no
+scrollback_fill_enlarged_window no
 
 #: Fill new space with lines from the scrollback buffer after
 #: enlarging a window.
 
-    wheel_scroll_multiplier 5.0
+wheel_scroll_multiplier 5.0
 
 #: Modify the amount scrolled by the mouse wheel. Note this is only
 #: used for low precision scrolling devices, not for high precision
 #: scrolling on platforms such as macOS and Wayland. Use negative
 #: numbers to change scroll direction.
 
-    touch_scroll_multiplier 1.0
+touch_scroll_multiplier 1.0
 
 #: Modify the amount scrolled by a touchpad. Note this is only used
 #: for high precision scrolling devices on platforms such as macOS and
@@ -80,7 +81,7 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 
 #: Mouse {{{
 
-  mouse_hide_wait 3.0
+mouse_hide_wait 3.0
 
 #: Hide mouse cursor after the specified number of seconds of the
 #: mouse not being used. Set to zero to disable mouse cursor hiding.
@@ -89,29 +90,29 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: robustly with the ever-changing sea of bugs that is Cocoa is too
 #: much effort.
 # url_color #0087bd
-    url_style curly
+url_style curly
 
 #: The color and style for highlighting URLs on mouse-over. url_style
 #: can be one of: none, single, double, curly
 
-    open_url_with default
+open_url_with default
 
 #: The program with which to open URLs that are clicked on. The
 #: special value default means to use the operating system's default
 #: URL handler.
 
-    url_prefixes http https file ftp gemini irc gopher mailto news git
+url_prefixes http https file ftp gemini irc gopher mailto news git
 
 #: The set of URL prefixes to look for when detecting a URL under the
 #: mouse cursor.
 
-    detect_urls yes
+detect_urls yes
 
 #: Detect URLs under the mouse. Detected URLs are highlighted with an
 #: underline and the mouse cursor becomes a hand over them. Even if
 #: this option is disabled, URLs are still clickable.
 
-    copy_on_select no
+copy_on_select no
 
 #: Copy to clipboard or a private buffer on select. With this set to
 #: clipboard, simply selecting text with the mouse will cause the text
@@ -127,40 +128,40 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: programs, including websites open in your browser can read the
 #: contents of the system clipboard.
 
-    strip_trailing_spaces never
+strip_trailing_spaces never
 
 #: Remove spaces at the end of lines when copying to clipboard. A
 #: value of smart will do it when using normal selections, but not
 #: rectangle selections. always will always do it.
 
-    select_by_word_characters @-./_~?&=%+#
+select_by_word_characters @-./_~?&=%+#
 
 #: Characters considered part of a word when double clicking. In
 #: addition to these characters any character that is marked as an
 #: alphanumeric character in the unicode database will be matched.
 
-    click_interval -1.0
+click_interval -1.0
 
 #: The interval between successive clicks to detect double/triple
 #: clicks (in seconds). Negative numbers will use the system default
 #: instead, if available, or fallback to 0.5.
 
-    focus_follows_mouse no
+focus_follows_mouse no
 
 #: Set the active window to the window under the mouse when moving the
 #: mouse around
 
-    pointer_shape_when_grabbed arrow
+pointer_shape_when_grabbed arrow
 
 #: The shape of the mouse pointer when the program running in the
 #: terminal grabs the mouse. Valid values are: arrow, beam and hand
 
-    default_pointer_shape beam
+default_pointer_shape beam
 
 #: The default shape of the mouse pointer. Valid values are: arrow,
 #: beam and hand
 
-    pointer_shape_when_dragging beam
+pointer_shape_when_dragging beam
 
 #: The default shape of the mouse pointer when dragging across text.
 #: Valid values are: arrow, beam and hand
@@ -198,53 +199,53 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #:     Once a selection is started, releasing the button that started it will
 #:     automatically end it and no release event will be dispatched.
 
-  mouse_map left            click ungrabbed mouse_click_url_or_select
-    mouse_map shift+left      click grabbed,ungrabbed mouse_click_url_or_select
-    mouse_map ctrl+shift+left release grabbed,ungrabbed mouse_click_url
+mouse_map left            click ungrabbed mouse_click_url_or_select
+mouse_map shift+left      click grabbed,ungrabbed mouse_click_url_or_select
+mouse_map ctrl+shift+left release grabbed,ungrabbed mouse_click_url
 
 #: Variant with ctrl+shift is present because the simple click based
 #: version has an unavoidable delay of click_interval, to disambiguate
 #: clicks from double clicks.
 
-    mouse_map ctrl+shift+left press grabbed mouse_discard_event
+mouse_map ctrl+shift+left press grabbed mouse_discard_event
 
 #: Prevent this press event from being sent to the program that has
 #: grabbed the mouse, as the corresponding release event is used to
 #: open a URL.
 
-    mouse_map middle        release ungrabbed paste_selection
-    mouse_map left          press ungrabbed mouse_selection normal
-    mouse_map ctrl+alt+left press ungrabbed mouse_selection rectangle
-    mouse_map left          doublepress ungrabbed mouse_selection word
-    mouse_map left          triplepress ungrabbed mouse_selection line
+mouse_map middle        release ungrabbed paste_selection
+mouse_map left          press ungrabbed mouse_selection normal
+mouse_map ctrl+alt+left press ungrabbed mouse_selection rectangle
+mouse_map left          doublepress ungrabbed mouse_selection word
+mouse_map left          triplepress ungrabbed mouse_selection line
 
 #: Select the entire line
 
-    mouse_map ctrl+alt+left triplepress ungrabbed mouse_selection line_from_point
+mouse_map ctrl+alt+left triplepress ungrabbed mouse_selection line_from_point
 
 #: Select from the clicked point to the end of the line
 
-    mouse_map right               press ungrabbed mouse_selection extend
-    mouse_map shift+middle        release ungrabbed,grabbed paste_selection
-    mouse_map shift+left          press ungrabbed,grabbed mouse_selection normal
-    mouse_map shift+ctrl+alt+left press ungrabbed,grabbed mouse_selection rectangle
-    mouse_map shift+left          doublepress ungrabbed,grabbed mouse_selection word
-    mouse_map shift+left          triplepress ungrabbed,grabbed mouse_selection line
+mouse_map right               press ungrabbed mouse_selection extend
+mouse_map shift+middle        release ungrabbed,grabbed paste_selection
+mouse_map shift+left          press ungrabbed,grabbed mouse_selection normal
+mouse_map shift+ctrl+alt+left press ungrabbed,grabbed mouse_selection rectangle
+mouse_map shift+left          doublepress ungrabbed,grabbed mouse_selection word
+mouse_map shift+left          triplepress ungrabbed,grabbed mouse_selection line
 
 #: Select the entire line
 
-    mouse_map shift+ctrl+alt+left triplepress ungrabbed,grabbed mouse_selection line_from_point
+mouse_map shift+ctrl+alt+left triplepress ungrabbed,grabbed mouse_selection line_from_point
 
 #: Select from the clicked point to the end of the line
 
-    mouse_map shift+right press ungrabbed,grabbed mouse_selection extend
+mouse_map shift+right press ungrabbed,grabbed mouse_selection extend
 #: }}}
 
 #: }}}
 
 #: Performance tuning {{{
 
-  repaint_delay 10
+repaint_delay 10
 
 #: Delay (in milliseconds) between screen updates. Decreasing it,
 #: increases frames-per-second (FPS) at the cost of more CPU usage.
@@ -254,7 +255,7 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: rate. Also, to minimize latency when there is pending input to be
 #: processed, repaint_delay is ignored.
 
-    input_delay 3
+input_delay 3
 
 #: Delay (in milliseconds) before input from the program running in
 #: the terminal is processed. Note that decreasing it will increase
@@ -262,7 +263,7 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: in full screen programs that redraw the entire screen on each loop,
 #: because kitty is so fast that partial screen updates will be drawn.
 
-    sync_to_monitor yes
+sync_to_monitor yes
 
 #: Sync screen updates to the refresh rate of the monitor. This
 #: prevents tearing (https://en.wikipedia.org/wiki/Screen_tearing)
@@ -275,19 +276,19 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 
 #: Terminal bell {{{
 
-  enable_audio_bell no
-    visual_bell_duration 0.0
-    window_alert_on_bell yes
-    bell_on_tab yes
-    command_on_bell none
+enable_audio_bell no
+visual_bell_duration 0.0
+window_alert_on_bell yes
+bell_on_tab yes
+command_on_bell none
 
 #: }}}
 
 #: Window layout {{{
 
-  remember_window_size  yes
-    initial_window_width  640
-    initial_window_height 400
+remember_window_size  yes
+initial_window_width  640
+initial_window_height 400
 
 #: If enabled, the window size will be remembered so that new
 #: instances of kitty will have the same size as the previous
@@ -296,7 +297,7 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: suffix of "c" on the width/height values to have them interpreted
 #: as number of cells instead of pixels.
 
-    enabled_layouts *
+enabled_layouts *
 
 #: The enabled window layouts. A comma separated list of layout names.
 #: The special value all means all layouts. The first listed layout
@@ -304,14 +305,14 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: layouts in alphabetical order. For a list of available layouts, see
 #: the https://sw.kovidgoyal.net/kitty/index.html#layouts.
 
-    window_resize_step_cells 2
-    window_resize_step_lines 2
+window_resize_step_cells 2
+window_resize_step_lines 2
 
 #: The step size (in units of cell width/cell height) to use when
 #: resizing windows. The cells value is used for horizontal resizing
 #: and the lines value for vertical resizing.
 
-    window_border_width 0.5pt
+window_border_width 0.5pt
 
 #: The width of window borders. Can be either in pixels (px) or pts
 #: (pt). Values in pts will be rounded to the nearest number of pixels
@@ -319,7 +320,7 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: be pts. Note that borders are displayed only when more than one
 #: window is visible. They are meant to separate multiple windows.
 
-    draw_minimal_borders yes
+draw_minimal_borders yes
 
 #: Draw only the minimum borders needed. This means that only the
 #: minimum needed borders for inactive windows are drawn. That is only
@@ -327,14 +328,14 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: that setting a non-zero window margin overrides this and causes all
 #: borders to be drawn.
 
-    window_margin_width 0
+window_margin_width 0
 
 #: The window margin (in pts) (blank area outside the border). A
 #: single value sets all four sides. Two values set the vertical and
 #: horizontal sides. Three values set top, horizontal and bottom. Four
 #: values set top, right, bottom and left.
 
-    single_window_margin_width -1
+single_window_margin_width -1
 
 #: The window margin (in pts) to use when only a single window is
 #: visible. Negative values will cause the value of
@@ -343,14 +344,14 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: values set top, horizontal and bottom. Four values set top, right,
 #: bottom and left.
 
-    window_padding_width 3
+window_padding_width 3
 
 #: The window padding (in pts) (blank area between the text and the
-#: window border). A single value sets all four sides. Two values set
-#: the vertical and horizontal sides. Three values set top, horizontal
-#: and bottom. Four values set top, right, bottom and left.
+                       #: window border). A single value sets all four sides. Two values set
+                       #: the vertical and horizontal sides. Three values set top, horizontal
+                       #: and bottom. Four values set top, right, bottom and left.
 
-    placement_strategy center
+                       placement_strategy center
 
 #: When the window size is not an exact multiple of the cell size, the
 #: cell area of the terminal window will have some extra padding on
@@ -370,12 +371,12 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: The color for the border of inactive windows in which a bell has
 #: occurred
 
-    inactive_text_alpha 1.0
+inactive_text_alpha 1.0
 
 #: Fade the text in inactive windows by the specified amount (a number
-#: between zero and one, with zero being fully faded).
+                                                              #: between zero and one, with zero being fully faded).
 
-    hide_window_decorations no
+                                                              hide_window_decorations no
 
 #: Hide the window decorations (title-bar and window borders) with
 #: yes. On macOS, titlebar-only can be used to only hide the titlebar.
@@ -383,14 +384,14 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: window manager/operating system. Note that the effects of changing
 #: this setting when reloading config are undefined.
 
-    resize_debounce_time 0.1
+resize_debounce_time 0.1
 
 #: The time (in seconds) to wait before redrawing the screen when a
 #: resize event is received. On platforms such as macOS, where the
 #: operating system sends events corresponding to the start and end of
 #: a resize, this number is ignored.
 
-    resize_draw_strategy static
+resize_draw_strategy static
 
 #: Choose how kitty draws a window while a resize is in progress. A
 #: value of static means draw the current window contents, mostly
@@ -398,7 +399,7 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: scaled. A value of blank means draw a blank window. A value of size
 #: means show the window size in cells.
 
-    resize_in_steps no
+resize_in_steps no
 
 #: Resize the OS window in steps as large as the cells, instead of
 #: with the usual pixel accuracy. Combined with an
@@ -407,7 +408,7 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: when resizing the OS window. Note that this does not currently work
 #: on Wayland.
 
-    confirm_os_window_close 0
+confirm_os_window_close 0
 
 #: Ask for confirmation when closing an OS window or a tab that has at
 #: least this number of kitty windows in it. A value of zero disables
@@ -418,22 +419,22 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 
 #: Tab bar {{{
 
-  tab_bar_edge bottom
+tab_bar_edge bottom
 
 #: Which edge to show the tab bar on, top or bottom
 
-    tab_bar_margin_width 0.0
+tab_bar_margin_width 0.0
 
 #: The margin to the left and right of the tab bar (in pts)
 
-    tab_bar_margin_height 0.0 0.0
+tab_bar_margin_height 0.0 0.0
 
 #: The margin above and below the tab bar (in pts). The first number
 #: is the margin between the edge of the OS Window and the tab bar and
 #: the second number is the margin between the tab bar and the
 #: contents of the current tab.
 
-    tab_bar_style fade
+tab_bar_style fade
 
 #: The tab bar style, can be one of: fade, separator, powerline, or
 #: hidden. In the fade style, each tab's edges fade into the
@@ -443,12 +444,12 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: create a mapping for the select_tab action which presents you with
 #: a list of tabs and allows for easy switching to a tab.
 
-    tab_bar_min_tabs 2
+tab_bar_min_tabs 2
 
 #: The minimum number of tabs that must exist before the tab bar is
 #: shown
 
-    tab_switch_strategy previous
+tab_switch_strategy previous
 
 #: The algorithm to use when switching to a tab when the current tab
 #: is closed. The default of previous will switch to the last used
@@ -456,7 +457,7 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: closed tab. A value of right will switch to the tab to the right of
 #: the closed tab. A value of last will switch to the right-most tab.
 
-    tab_fade 0.25 0.5 0.75 1
+tab_fade 0.25 0.5 0.75 1
 
 #: Control how each tab fades into the background when using fade for
 #: the tab_bar_style. Each number is an alpha (between zero and one)
@@ -465,23 +466,23 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: can change the number of cells used by adding/removing entries to
 #: this list.
 
-    tab_separator " ┇"
+tab_separator " ┇"
 
 #: The separator between tabs in the tab bar when using separator as
 #: the tab_bar_style.
 
-    tab_powerline_style angled
+tab_powerline_style angled
 
 #: The powerline separator style between tabs in the tab bar when
 #: using powerline as the tab_bar_style, can be one of: angled,
 #: slanted, or round.
 
-    tab_activity_symbol none
+tab_activity_symbol none
 
 #: Some text or a unicode symbol to show on the tab if a window in the
 #: tab that does not have focus has some activity.
 
-    tab_title_template "{title}"
+tab_title_template "{title}"
 
 #: A template to render the tab title. The default just renders the
 #: title. If you wish to include the tab-index as well, use something
@@ -496,16 +497,16 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: bg{fmt.bg.normal}. Similarly, for bold and italic:
 #: {fmt.bold}bold{fmt.nobold}normal{fmt.italic}italic{fmt.noitalic}.
 
-    active_tab_title_template none
+active_tab_title_template none
 
 #: Template to use for active tabs, if not specified falls back to
 #: tab_title_template.
 # active_tab_foreground   #000
 # active_tab_background   #eee
-    active_tab_font_style   bold-italic
+active_tab_font_style   bold-italic
 # inactive_tab_foreground #444
 # inactive_tab_background #999
-    inactive_tab_font_style normal
+inactive_tab_font_style normal
 
 #: Tab bar colors and styles
 # tab_bar_background none
@@ -517,8 +518,8 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 
 #: Color scheme {{{
 
-  background_opacity 0.98
-    dim_opacity 0.75
+background_opacity 0.98
+dim_opacity 0.75
 # selection_background #3C404E
 # selection_foreground #9DA2B4
 # cursor #d2d4de
@@ -552,16 +553,16 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: }}}
 
 #: Advanced {{{
-  shell .
-    editor .
-    close_on_child_death no
-    allow_remote_control no
-    listen_on none
-    update_check_interval 48
-    startup_session none
-    clipboard_control write-clipboard write-primary
-    allow_hyperlinks yes
-    term xterm-kitty
+shell .
+editor .
+close_on_child_death no
+allow_remote_control no
+listen_on none
+update_check_interval 48
+startup_session none
+clipboard_control write-clipboard write-primary
+allow_hyperlinks yes
+term xterm-kitty
 #: }}}
 
 #: OS specific tweaks {{{
@@ -573,11 +574,11 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 
 #: Keys are identified simply by their lowercase unicode characters.
 #: For example: ``a`` for the A key, ``[`` for the left square bracket
-#: key, etc. For functional keys, such as ``Enter or Escape`` the
-#: names are present at https://sw.kovidgoyal.net/kitty/keyboard-
-#: protocol.html#functional-key-definitions. For a list of modifier
-#: names, see: GLFW mods
-#: <https://www.glfw.org/docs/latest/group__mods.html>
+                                        #: key, etc. For functional keys, such as ``Enter or Escape`` the
+                                        #: names are present at https://sw.kovidgoyal.net/kitty/keyboard-
+                                        #: protocol.html#functional-key-definitions. For a list of modifier
+                                        #: names, see: GLFW mods
+                                        #: <https://www.glfw.org/docs/latest/group__mods.html>
 
 #: On Linux you can also use XKB key names to bind keys that are not
 #: supported by GLFW. See XKB keys
@@ -628,13 +629,13 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 
 #:     map ctrl+f>2 set_font_size 20
 
-  kitty_mod ctrl+shift
+kitty_mod ctrl+shift
 
 #: The value of kitty_mod is used as the modifier for all default
 #: shortcuts, you can change it in your kitty.conf to change the
 #: modifiers for all the default shortcuts.
 
-    clear_all_shortcuts no
+clear_all_shortcuts no
 
 #: You can have kitty remove all shortcut definition seen up to this
 #: point. Useful, for instance, to remove the default shortcuts.
@@ -650,7 +651,7 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 
 #: Clipboard {{{
 
-  map kitty_mod+c copy_to_clipboard
+map kitty_mod+c copy_to_clipboard
 
 #: There is also a copy_or_interrupt action that can be optionally
 #: mapped to Ctrl+c. It will copy only if there is a selection and
@@ -658,9 +659,9 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: will copy and clear the selection or send an interrupt if there is
 #: no selection.
 
-    map kitty_mod+v paste_from_clipboard
-    map kitty_mod+s paste_from_selection
-    map kitty_mod+o pass_selection_to_program
+map kitty_mod+v paste_from_clipboard
+map kitty_mod+s paste_from_selection
+map kitty_mod+o pass_selection_to_program
 
 #: You can also pass the contents of the current selection to any
 #: program using pass_selection_to_program. By default, the system's
@@ -679,13 +680,13 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 
 #: Scrolling {{{
 
-  map kitty_mod+up        scroll_line_up
-    map kitty_mod+down      scroll_line_down
-    map kitty_mod+page_up   scroll_page_up
-    map kitty_mod+page_down scroll_page_down
-    map kitty_mod+home      scroll_home
-    map kitty_mod+end       scroll_end
-    map kitty_mod+h         show_scrollback
+map kitty_mod+up        scroll_line_up
+map kitty_mod+down      scroll_line_down
+map kitty_mod+page_up   scroll_page_up
+map kitty_mod+page_down scroll_page_down
+map kitty_mod+home      scroll_home
+map kitty_mod+end       scroll_end
+map kitty_mod+h         show_scrollback
 
 #: You can pipe the contents of the current screen + history buffer as
 #: STDIN to an arbitrary program using the ``launch`` function. For
@@ -701,7 +702,7 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 
 #: Window management {{{
 
-  map kitty_mod+enter new_window
+map kitty_mod+enter new_window
 
 #: You can open a new window running an arbitrary program, for
 #: example::
@@ -728,41 +729,41 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 
 #: For more details, see launch.
 
-    map kitty_mod+n new_os_window
+map kitty_mod+n new_os_window
 
 #: Works like new_window above, except that it opens a top level OS
 #: kitty window. In particular you can use new_os_window_with_cwd to
 #: open a window with the current working directory.
 
-    map kitty_mod+w close_window
-    map kitty_mod+] next_window
-    map kitty_mod+[ previous_window
-    map kitty_mod+f move_window_forward
-    map kitty_mod+b move_window_backward
-    map kitty_mod+` move_window_to_top
-    map kitty_mod+r start_resizing_window
-    map kitty_mod+1 first_window
-    map kitty_mod+2 second_window
-    map kitty_mod+3 third_window
-    map kitty_mod+4 fourth_window
-    map kitty_mod+5 fifth_window
-    map kitty_mod+6 sixth_window
-    map kitty_mod+7 seventh_window
-    map kitty_mod+8 eighth_window
-    map kitty_mod+9 ninth_window
-    map kitty_mod+0 tenth_window
-#: }}}
+map kitty_mod+w close_window
+map kitty_mod+] next_window
+map kitty_mod+[ previous_window
+               map kitty_mod+f move_window_forward
+               map kitty_mod+b move_window_backward
+               map kitty_mod+` move_window_to_top
+               map kitty_mod+r start_resizing_window
+               map kitty_mod+1 first_window
+               map kitty_mod+2 second_window
+               map kitty_mod+3 third_window
+               map kitty_mod+4 fourth_window
+               map kitty_mod+5 fifth_window
+               map kitty_mod+6 sixth_window
+               map kitty_mod+7 seventh_window
+               map kitty_mod+8 eighth_window
+               map kitty_mod+9 ninth_window
+               map kitty_mod+0 tenth_window
+               #: }}}
 
 #: Tab management {{{
 
-  map kitty_mod+right next_tab
-    map kitty_mod+left  previous_tab
-    map kitty_mod+t     new_tab
-    map kitty_mod+q     close_tab
-    map shift+cmd+w     close_os_window
-    map kitty_mod+.     move_tab_forward
-    map kitty_mod+,     move_tab_backward
-    map kitty_mod+alt+t set_tab_title
+map kitty_mod+right next_tab
+map kitty_mod+left  previous_tab
+map kitty_mod+t     new_tab
+map kitty_mod+q     close_tab
+map shift+cmd+w     close_os_window
+map kitty_mod+.     move_tab_forward
+map kitty_mod+,     move_tab_backward
+map kitty_mod+alt+t set_tab_title
 
 #: You can also create shortcuts to go to specific tabs, with 1 being
 #: the first tab, 2 the second tab and -1 being the previously active
@@ -781,7 +782,7 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 
 #: Layout management {{{
 
-  map kitty_mod+l next_layout
+map kitty_mod+l next_layout
 
 #: You can also create shortcuts to switch to specific layouts::
 
@@ -798,9 +799,9 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: You can change the font size for all top-level kitty OS windows at
 #: a time or only the current one.
 
-  map kitty_mod+equal     change_font_size all +2.0
-    map kitty_mod+minus     change_font_size all -2.0
-    map kitty_mod+backspace change_font_size all 0
+map kitty_mod+equal     change_font_size all +2.0
+map kitty_mod+minus     change_font_size all -2.0
+map kitty_mod+backspace change_font_size all 0
 
 #: To setup shortcuts for specific font sizes::
 
@@ -818,45 +819,45 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: external program or insert it into the terminal or copy it to the
 #: clipboard.
 
-  map kitty_mod+e kitten hints
+map kitty_mod+e kitten hints
 
 #: Open a currently visible URL using the keyboard. The program used
 #: to open the URL is specified in open_url_with.
 
-    map kitty_mod+p>f kitten hints --type path --program -
+map kitty_mod+p>f kitten hints --type path --program -
 
 #: Select a path/filename and insert it into the terminal. Useful, for
 #: instance to run git commands on a filename output from a previous
 #: git command.
 
-    map kitty_mod+p>shift+f kitten hints --type path
+map kitty_mod+p>shift+f kitten hints --type path
 
 #: Select a path/filename and open it with the default open program.
 
-    map kitty_mod+p>l kitten hints --type line --program -
+map kitty_mod+p>l kitten hints --type line --program -
 
 #: Select a line of text and insert it into the terminal. Use for the
 #: output of things like: ls -1
 
-    map kitty_mod+p>w kitten hints --type word --program -
+map kitty_mod+p>w kitten hints --type word --program -
 
 #: Select words and insert into terminal.
 
-    map kitty_mod+p>h kitten hints --type hash --program -
+map kitty_mod+p>h kitten hints --type hash --program -
 
 #: Select something that looks like a hash and insert it into the
 #: terminal. Useful with git, which uses sha1 hashes to identify
 #: commits
 
-    map kitty_mod+p>n kitten hints --type linenum
+map kitty_mod+p>n kitten hints --type linenum
 
 #: Select something that looks like filename:linenum and open it in
 #: vim at the specified line number.
 
-    map kitty_mod+p>y kitten hints --type hyperlink
+map kitty_mod+p>y kitten hints --type hyperlink
 
 #: Select a hyperlink (i.e. a URL that has been marked as such by the
-#: terminal program, for example, by ls --hyperlink=auto).
+                       #: terminal program, for example, by ls --hyperlink=auto).
 
 
 #: The hints kitten has many more modes of operation that you can map
@@ -865,20 +866,20 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 
 #: Miscellaneous {{{
 
-  map kitty_mod+f11    toggle_fullscreen
-    map kitty_mod+f10    toggle_maximized
-    map kitty_mod+u      kitten unicode_input
-    map kitty_mod+f2     edit_config_file
-    map kitty_mod+escape kitty_shell window
+map kitty_mod+f11    toggle_fullscreen
+map kitty_mod+f10    toggle_maximized
+map kitty_mod+u      kitten unicode_input
+map kitty_mod+f2     edit_config_file
+map kitty_mod+escape kitty_shell window
 
 #: Open the kitty shell in a new window/tab/overlay/os_window to
 #: control kitty using commands.
 
-    map kitty_mod+a>m    set_background_opacity +0.1
-    map kitty_mod+a>l    set_background_opacity -0.1
-    map kitty_mod+a>1    set_background_opacity 1
-    map kitty_mod+a>d    set_background_opacity default
-    map kitty_mod+delete clear_terminal reset active
+map kitty_mod+a>m    set_background_opacity +0.1
+map kitty_mod+a>l    set_background_opacity -0.1
+map kitty_mod+a>1    set_background_opacity 1
+map kitty_mod+a>d    set_background_opacity default
+map kitty_mod+delete clear_terminal reset active
 
 #: You can create shortcuts to clear/reset the terminal. For example::
 
@@ -908,7 +909,7 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #:     zle -N scroll-and-clear-screen
 #:     bindkey '^l' scroll-and-clear-screen
 
-    map kitty_mod+f5 load_config_file
+map kitty_mod+f5 load_config_file
 
 #: Reload kitty.conf, applying any changes since the last time it was
 #: loaded. Note that a handful of settings cannot be dynamically
@@ -920,7 +921,7 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: Note that all setting from the original kitty.conf are discarded,
 #: in other words the new conf settings *replace* the old ones.
 
-    map kitty_mod+f6 debug_config
+map kitty_mod+f6 debug_config
 
 #: Show details about exactly what configuration kitty is running with
 #: and its host environment. Useful for debugging issues.
@@ -935,19 +936,19 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 #: combination.  The text to be sent is a python string literal so you
 #: can use escapes like \x1b to send control codes or \u21fb to send
 #: unicode characters (or you can just input the unicode characters
-#: directly as UTF-8 text). The first argument to send_text is the
-#: keyboard modes in which to activate the shortcut. The possible
-#: values are normal or application or kitty or a comma separated
-#: combination of them.  The special keyword all means all modes. The
-#: modes normal and application refer to the DECCKM cursor key mode
-#: for terminals, and kitty refers to the special kitty extended
-#: keyboard protocol.
+                       #: directly as UTF-8 text). The first argument to send_text is the
+                       #: keyboard modes in which to activate the shortcut. The possible
+                       #: values are normal or application or kitty or a comma separated
+                       #: combination of them.  The special keyword all means all modes. The
+                       #: modes normal and application refer to the DECCKM cursor key mode
+                       #: for terminals, and kitty refers to the special kitty extended
+                       #: keyboard protocol.
 
 #: Another example, that outputs a word and then moves the cursor to
 #: the start of the line (same as pressing the Home key)::
 
 #:     map ctrl+alt+a send_text normal Word\x1b[H
-#:     map ctrl+alt+a send_text application Word\x1bOH
+                                                #:     map ctrl+alt+a send_text application Word\x1bOH
 
 #: }}}
 
@@ -956,6 +957,6 @@ vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 
 
 # BEGIN_KITTY_THEME
-# Night Owl
+# Atelier Sulphurpool
 include current-theme.conf
 # END_KITTY_THEME

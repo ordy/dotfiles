@@ -176,7 +176,8 @@ get_shell() {
 	log "shell" "${SHELL##*/}" >&6
 }
 get_theme() {
-	log "theme" "Rosé-Pine" >&6
+	theme=$(tail -3 $XDG_CONFIG_HOME/kitty/kitty.conf | head -1 | sed 's/^.*\#\ //')
+	log "theme" "$theme" >&6
 }
 get_palette() {
 	palette="palette     $c1$c2 $c3 $c4 $c5 $c6 $c7  "

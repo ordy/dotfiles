@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-        "action" : "swaylock -f -c 0e071f",
+        "action" : "swaylock -C $XDG_CONFIG_HOME/sway/swaylock/config",
         "text" : "",
         "keybind" : "l",
 }
