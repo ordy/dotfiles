@@ -205,6 +205,10 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   display: none !important;
 }
 
+#context-navigation + menuseparator {
+  display: none !important;
+}
+
 /* Remove active tab outline */
 #TabsToolbar #firefox-view-button[open]:not(:focus-visible) > .toolbarbutton-icon:-moz-lwtheme, .tab-background[selected]:not([multiselected="true"]):-moz-lwtheme {
   outline: none !important;

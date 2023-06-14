@@ -54,7 +54,7 @@ alias paci="pacman -Qi"
 alias pacr="pacman -Rns"
 alias pacro="pacman -Qtdq | pacman -Rns -"
 alias pacu="pacman -Syu"
-alias pacmu="sudo reflector --verbose -c be,nl,fr,de --latest 10 --sort rate --save /etc/pacman.d/mirrorlist"
+alias pacmu="sudo reflector --verbose -c be,nl,lu,fr,de --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
 alias yas="yay -S --noconfirm"
 
 alias ytl="yt-dlp -F"
