@@ -1,31 +1,31 @@
 :root {
     --blurple-replace: #7289da;
     --spotify-header: #699378;
-    --background-primary: #1e1e2d;
-    --background-secondary: #171723;
-    --background-secondary-alt: #171723;
-    --background-tertiary: #14131c;
-    --background-accent: #59499c;
-    --background-floating: #15141e;
+    --background-primary: #191824;
+    --background-secondary: #15141e;
+    --background-secondary-alt: #15141e;
+    --background-tertiary: #13121a;
+    --background-accent: #c4a7e7;
+    --background-floating: #131018;
     --userarea-background: var(--background-tertiary);
-    --header-primary: #73d7c9;
+    --header-primary: #f6c177;
     --header-secondary: #cbcffc;
     --elevation-low: 0 1px 0 rgba(4, 4, 5, 0.2), 0 1.5px 0 rgba(6, 6, 7, 0.05), 0 2px 0 rgba(4, 4, 5, 0.05);
     --elevation-high: 0 8px 16px rgba(0, 0, 0, 0.24);
-    --channels-default: #656b8b;
+    --channels-default: #908caa;
     --channeltextarea-background: var(--background-tertiary);
-    --guild-header-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    --guild-header-text-shadow: 0 1px 1px rgb(0 0 0 / 28%);
     --activity-card-background: #202225;
     --interactive-normal: #b9bbbe;
-    --interactive-hover: #9b6ff2;
+    --interactive-hover: #c4a7e7;
     --interactive-active: #fff;
-    --interactive-muted: #333a47;
+    --interactive-muted: #393647;
     --background-modifier-hover: rgba(60, 58, 94, 0.1);
     --background-modifier-active: rgba(60, 58, 94, 0.3);
     --background-modifier-selected: rgba(60, 58, 94, 0.4);
     --background-modifier-accent: hsla(0, 0%, 100%, 0.06);
-    --text-link: #00b0f4;
-    --text-normal: #cfcfd3;
+    --text-link: #31748f;
+    --text-normal: #e3e1f2;
     --text-muted: #656b8b;
     --deprecated-panel-background: #292b2f;
     --deprecated-card-bg: rgba(0, 0, 0, 0.2);
@@ -43,32 +43,6 @@
     --background-floating-2: rgba(21, 20, 30, 0.2);
 }
 
-.form-3gdLxP {
-    position: relative;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-top: -8px;
-    background-color: #100f15;
+.theme-dark .themed-Hp1KC_ {
+    background: #191824;
 }
-
-.scrollableContainer-15eg7h {
-    overflow-x: hidden;
-    overflow-y: scroll;
-    background-color: var(--channeltextarea-background);
-    max-height: 50vh;
-    border-radius: 0px;
-    scrollbar-width: none;
-}
-
-.markup-eYLPri code {
-    font-family: Cascadia Code,Andale Mono WT,Andale Mono,Lucida Console,Lucida Sans Typewriter,DejaVu Sans Mono,Bitstream Vera Sans Mono,Liberation Mono,Nimbus Mono L,Monaco,Courier New,Courier,monospace;
-    font-size: 0.766rem;
-}
-
-.theme-dark {
-    --scrollbar-auto-thumb: #14131c;
-    --scrollbar-auto-track: #252531b0;
-}
-
