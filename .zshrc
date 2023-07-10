@@ -73,7 +73,7 @@ zstyle ':completion:*:default' list-colors "${(s.:.)_ls_colors}"
 LS_COLORS+=$_ls_colors
 
 # NVM
-# source /usr/share/nvm/init-nvm.sh
+source /usr/share/nvm/init-nvm.sh
 # Load Angular CLI autocompletion.
 # source <(ng completion script)
 

@@ -20,6 +20,10 @@ by Miguel Avila
   }
 }
 
+menuitem#context-selectall + menuseparator {
+  display: none !important;
+}
+
 .fake-editable {
 	background-color: #21202e !important;
 }

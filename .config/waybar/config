@@ -133,7 +133,7 @@
   },
   "network": {
     "format-wifi": "<span font='11'>󰖩</span>",
-    "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+    "format-ethernet": "{ifname}: {ipaddr}/{cidr} asdasd",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "<span font='11'>󰖪</span>",
     "format-alt": "{ifname} on {essid}: {ipaddr}/{cidr}",

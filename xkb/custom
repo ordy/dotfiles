@@ -14,7 +14,7 @@ xkb_symbols "basic" {
     key  <AE01>  {[  1,             exclam                                   ]};                        
     key  <AE02>  {[  2,             at                                       ]};                        
     key  <AE03>  {[  3,             numbersign                               ]};                        
-    key  <AE04>  {[  4,             dollar,       Eurosign                   ]};       
+    key  <AE04>  {[  4,             dollar,       EuroSign                   ]};       
     key  <AE05>  {[  5,             percent                                  ]};                        
     key  <AE06>  {[  6,             asciicircum,  dead_circumflex            ]};       
     key  <AE07>  {[  7,             ampersand                                ]};                        
