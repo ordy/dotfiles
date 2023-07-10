@@ -1,10 +1,10 @@
 	font = "/home/sano/.local/share/fonts/TTF/RecursiveSansCslSt-Med.ttf"
-	font-size = 20
+	font-size = 18
 	hint-font = false
 	text-color = #e0def4
 	selection-color = #f6c177
-	width = 580
-	height = 520
+	width = 450
+	height = 500
 	background-color = #1f1d2e
 	outline-width = 4
 	outline-color = #191724
@@ -18,3 +18,4 @@
 	drun-launch = false
 	late-keyboard-init = true
 	ascii-input = true
+  history = false

@@ -206,7 +206,7 @@ bindsym $mod+p exec_always swaymsg output LVDS-1 toggle
 # Screenshots
 bindsym $mod+s exec grim -g "$(slurp -b '#00000099' -c '#A131FFff' -w 1)" sc_$RANDOM.png
 bindsym $mod+Ctrl+s exec grim -g "$(slurp -b '#00000099' -c '#A131FFff' -w 1)" - | wl-copy
-bindsym $mod+Shift+s exec grim sc_$RANDOM.png
+bindsym $mod+Shift+s exec grim $HOME/Pictures/sc_$RANDOM.png
 #
 # Assign to workspace
 #
