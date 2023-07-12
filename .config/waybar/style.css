@@ -1,18 +1,17 @@
-@define-color rp-base #191724;
-@define-color rp-overlay #26233a;
-@define-color rp-subtile #908caa;
-@define-color rp-text #e0def4;
-@define-color rp-white #FFFFFF;
-@define-color rp-love #eb6f92;
-@define-color rp-gold #f6c177;
-@define-color rp-rose #ebbcba;
-@define-color rp-pine #31748f;
-@define-color rp-foam #9ccfd8;
-@define-color rp-iris #c4a7e7;
+@define-color gh-base #1B1F23;
+@define-color gh-overlay #2F363D;
+@define-color gh-subtile #444D56;
+@define-color gh-text #FAFBFC;
+@define-color gh-white #FFFFFF;
+@define-color gh-red #F98E99;
+@define-color gh-pink #F9B3DD;
+@define-color gh-purple #D1BCF9;
+@define-color gh-blue #C8E1FF;
+@define-color gh-green #BEF5CB;
 
 /* Shades */
-@define-color volume #393656;
-@define-color bat #2F2C47;
+@define-color volume #586069;
+@define-color bat #444D56;
 
 * {
 	border: none;
@@ -25,8 +24,8 @@
 }
 
 window#waybar {
-	background-color: @rp-base;
-	color: @rp-text;
+	background-color: @gh-base;
+	color: @gh-text;
 	transition-property: background-color;
 	transition-duration: .5s;
 }
@@ -41,19 +40,19 @@ window#waybar {
 #workspaces button {
 	padding: 0px 2px 0px 2px;
 	margin: -2px 0px;
-	background-color: @rp-overlay;
+	background-color: @gh-overlay;
 }
 
 #workspaces button:hover label {
-	color: #B8B4CF;
+	color: #959DA5;
 }
 
 #workspaces button.focused {
-	color: @rp-text;
+	color: @gh-text;
 }
 
 #workspaces button.urgent {
-	color: @rp-foam;
+	color: @gh-blue;
 }
 
 #workspaces button#sway-workspace-1.persistent,
@@ -61,7 +60,7 @@ window#waybar {
 #workspaces button#sway-workspace-3.persistent,
 #workspaces button#sway-workspace-4.persistent,
 #workspaces button#sway-workspace-5.persistent {
-  color: #6e6a86;
+  color: #586069;
 }
 
 #workspaces button.focused label {
@@ -69,28 +68,28 @@ window#waybar {
 }
 
 #workspaces button#sway-workspace-1 {
-  color: @rp-love;
+  color: @gh-red;
 }
 
 #workspaces button#sway-workspace-2 {
-  color: @rp-gold;
+  color: @gh-pink;
 }
 
 #workspaces button#sway-workspace-3 {
-  color: @rp-rose;
+  color: @gh-purple;
 }
 
 #workspaces button#sway-workspace-4 {
-  color: @rp-foam;
+  color: @gh-blue;
 }
 
 #workspaces button#sway-workspace-5 {
-  color: @rp-iris;
+  color: @gh-green;
 }
 
 tooltip {
-	border: 2px solid @rp-text;
-	background-color: @rp-overlay;
+	border: 2px solid @gh-text;
+	background-color: @gh-overlay;
 }
 
 /***** Separators  *****/
@@ -107,12 +106,12 @@ tooltip {
 }
 
 #custom-sep0 {
-	color: @rp-overlay;
+	color: @gh-overlay;
 	background-color: transparent;
 }
 #custom-sep1 {
-	color: @rp-base;
-	background-color: @rp-overlay;
+	color: @gh-base;
+	background-color: @gh-overlay;
 }
 
 #custom-sep3 {
@@ -126,42 +125,42 @@ tooltip {
 }
 
 #custom-sep5 {
-	color: @rp-overlay;
+	color: @gh-overlay;
 	background-color: @bat;
 }
 
 #custom-sep6 {
-	color: @rp-base;
-	background-color: @rp-overlay;
+	color: @gh-base;
+	background-color: @gh-overlay;
 }
 /**************/
 
 #clock {
-	background-color: @rp-base;
+	background-color: @gh-base;
 }
 
 #battery {
 	background-color: @bat;
-	color: @rp-text;
+	color: @gh-text;
 	padding-left: 7px;
 }
 
 #battery.charging,
 #battery.plugged {
-	color: @rp-text;
+	color: @gh-text;
 	background-color: @bat;
 	padding-left: 7px;
 }
 
 @keyframes blink {
 	to {
-		color: @rp-love;
+		color: @gh-red;
 	}
 }
 
 #battery.critical:not(.charging) {
 	background-color: @bat;
-	color: @rp-text;
+	color: @gh-text;
 	animation-name: blink;
 	animation-duration: 0.5s;
 	animation-timing-function: linear;
@@ -192,33 +191,33 @@ button:disabled {
 }
 
 #cpu {
-	color: @rp-love;
+	color: @gh-red;
 }
 
 #memory {
-	color: @rp-gold;
+	color: @gh-pink;
 }
 
 #custom-launcher {
-	color: @rp-text;
+	color: @gh-text;
 	background-color: transparent;
 }
 
 #temperature {
-	color: @rp-rose;
+	color: @gh-purple;
 }
 
 #temperature.critical {
-	color: @rp-rose;
+	color: @gh-purple;
 }
 
 #backlight {
-	color: @rp-foam;
+	color: @gh-blue;
 	margin-right: 10px;
 }
 
 #custom-weather {
-	color: @rp-iris;
+	color: @gh-green;
 }
 
 #pulseaudio,
@@ -236,7 +235,7 @@ button:disabled {
 
 #tray,
 #network {
-	background-color: @rp-overlay;
+	background-color: @gh-overlay;
 }
 
 #tray {
@@ -260,7 +259,7 @@ button:disabled {
 
 #pulseaudio {
 	background-color: @volume;
-  color: @rp-text;
+  color: @gh-text;
 }
 
 #pulseaudio.muted {

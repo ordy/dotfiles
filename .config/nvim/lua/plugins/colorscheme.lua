@@ -1,10 +1,9 @@
 return {
-  { "rose-pine/neovim", name = "rose-pine" },
-  -- Configure LazyVim to load gruvbox
+  { "projekt0n/github-nvim-theme" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "rose-pine",
+      colorscheme = "github_dark_dimmed",
     },
   },
 }
