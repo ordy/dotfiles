@@ -1,32 +1,36 @@
 :root {
-    --blurple-replace: #7289da;
+    --blurple-replace: #7ce88c;
     --spotify-header: #699378;
-    --background-primary: #191824;
-    --background-secondary: #15141e;
-    --background-secondary-alt: #15141e;
-    --background-tertiary: #13121a;
+    --background-primary: #2E353C;
+    --background-secondary: #23282D;
+    --background-secondary-alt: #171b20;
+    --background-tertiary: #1A1E22;
     --background-accent: #c4a7e7;
-    --background-floating: #131018;
+    --background-floating: #2f373e;
     --userarea-background: var(--background-tertiary);
-    --header-primary: #f6c177;
+    --header-primary: #78b7fe;
     --header-secondary: #cbcffc;
-    --elevation-low: 0 1px 0 rgba(4, 4, 5, 0.2), 0 1.5px 0 rgba(6, 6, 7, 0.05), 0 2px 0 rgba(4, 4, 5, 0.05);
-    --elevation-high: 0 8px 16px rgba(0, 0, 0, 0.24);
-    --channels-default: #908caa;
-    --channeltextarea-background: var(--background-tertiary);
-    --guild-header-text-shadow: 0 1px 1px rgb(0 0 0 / 28%);
-    --activity-card-background: #202225;
+    --elevation-low: 0 1px 0
+    rgba(4, 4, 5, 0.2), 0 1.5px 0 rgba(6, 6, 7, 0.05), 0 2px 0 rgba(4, 4, 5, 0.05);
+    --elevation-high: 0 8px 16px
+    rgba(0, 0, 0, 0.24);
+    --channels-default: #949ca4;
+    --channeltextarea-background: #3b434b;
+    --channel-text-area-placeholder: #6e767d;
+    --guild-header-text-shadow: 0 1px 1px
+    rgb(0 0 0 / 28%);
+    --activity-card-background: #434c55;
     --interactive-normal: #b9bbbe;
-    --interactive-hover: #c4a7e7;
+    --interactive-hover: #DAECFE;
     --interactive-active: #fff;
-    --interactive-muted: #393647;
-    --background-modifier-hover: rgba(60, 58, 94, 0.1);
+    --interactive-muted: #3a3f43;
+    --background-modifier-hover: rgb(78 86 102 / 13%);
     --background-modifier-active: rgba(60, 58, 94, 0.3);
-    --background-modifier-selected: rgba(60, 58, 94, 0.4);
+    --background-modifier-selected: rgb(65 70 82 / 47%);
     --background-modifier-accent: hsla(0, 0%, 100%, 0.06);
-    --text-link: #31748f;
-    --text-normal: #e3e1f2;
-    --text-muted: #656b8b;
+    --text-link: #78b7fe;
+    --text-normal: #f5f7f9;
+    --text-muted: #949ca4;
     --deprecated-panel-background: #292b2f;
     --deprecated-card-bg: rgba(0, 0, 0, 0.2);
     --deprecated-card-editable-bg: rgba(0, 0, 0, 0.1);
@@ -38,11 +42,12 @@
     --deprecated-text-input-border-hover: #040405;
     --deprecated-text-input-border-disabled: var(--background-tertiary);
     --deprecated-text-input-prefix: #dcddde;
-    --background-accent-1: rgb(64, 62, 101, 0.1);
-    --background-accent-3: rgb(64, 62, 101, 0.3);
-    --background-floating-2: rgba(21, 20, 30, 0.2);
+    --background-accent-1: rgb(62 85 101 / 21%);
+    --background-accent-3: rgb(62 80 101 / 30%);
+    --background-floating-2: rgb(20 24 30 / 20%);
+    --__header-bar-background: #12161b;
 }
 
 .theme-dark .themed-Hp1KC_ {
-    background: #191824;
+    background: #2E353C;
 }
