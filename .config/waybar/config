@@ -40,7 +40,7 @@
       "4": "<span font='11'></span>",
       "5": "<span font='11'></span>",
       "default": "",
-      "focused": "",
+      "focused": "<span font='11'></span>",
       "visible": ""
     },
     "persistent_workspaces": {
