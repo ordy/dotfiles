@@ -255,7 +255,7 @@ button:disabled {
 }
 
 #network.disconnected {
-  color: #474360;
+  color: #656F7A;
 	margin: -10px 0px -10px 0px;
 }
 
@@ -265,7 +265,7 @@ button:disabled {
 }
 
 #pulseaudio.muted {
-	color: #7A7797;
+	color: #8F9BAA;
 }
 
 #custom-artist {
