@@ -239,10 +239,10 @@ bar {
 }
 
 #window colors
-set $active-bg-color    #5C5682
-set $active-fg-color    #DAD6F1
-set $inactive-bg-color  #0D0C14
-set $focused_inactive-bg-color  #191725
+set $active-bg-color    #60666E
+set $active-fg-color    #333A42
+set $inactive-bg-color  #1A1E25
+set $focused_inactive-bg-color  #1C1F25
 set $inactive-fg-color  #565D72
 
 # Border

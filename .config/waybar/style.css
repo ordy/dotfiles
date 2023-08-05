@@ -64,7 +64,7 @@ window#waybar {
 }
 
 #workspaces button.focused label {
-  color: white;
+  color: @gh-white;
 }
 
 #workspaces button#sway-workspace-1 {
@@ -270,14 +270,14 @@ button:disabled {
 
 #custom-artist {
   font-size: 15px;
-	color: white;
+	color: @gh-text;
 	margin: 0px;
 	padding-right: 4px;
   padding-left: 5px;
 }
 
 #custom-title {
-  color: #C1BED6;
+  color: #A6ACB7;
   font-size: 15px;
 	margin: 0px;
 }
