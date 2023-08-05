@@ -1,4 +1,6 @@
-	font = "/home/sano/.local/share/fonts/TTF/RecursiveSansCslSt-Med.ttf"
+# vim:ft=conf
+
+  font = "/home/sano/.local/share/fonts/TTF/RecursiveSansCslSt-Med.ttf"
 	font-size = 18
 	hint-font = false
 	text-color = #EDF9EF
