@@ -85,7 +85,25 @@
   "clock": {
     "format": "{:%a, %d %b • <b>%H:%M</b>}",
     "timezone": "Europe/Brussels",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>"
+    "smooth-scrolling-threshold": 4,
+    "calendar": {
+      "mode-mon-col": 6,
+      "weeks-pos": "left",
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#b6e3ff'><b>{}</b></span>",
+        "weeks": "<span color='#ecd8ff'><b>{}</b></span>",
+        "weekdays": "<span color='#80ccff'><b>{}</b></span>",
+        "today": "<span color='#ffb77c' background='#363D46'><b>{}</b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    },
+    "tooltip-format": "<tt>{calendar}</tt>"
   },
   "cpu": {
     "format": "{usage}% "
@@ -95,7 +113,8 @@
   },
   "temperature": {
     "critical-threshold": 85,
-    "format": "{temperatureC}°C <span font='12'>󰈸</span>"
+    "format": "{temperatureC}°C <span font='12'>󰈸</span>",
+    "tooltip": false
   },
   "backlight": {
     "on-scroll-up": "light -s sysfs/backlight/acpi_video0 -A 10",
@@ -105,7 +124,8 @@
     "format-icons": [
       "",
       ""
-    ]
+    ],
+    "tooltip": false
   },
   "battery": {
     "states": {
