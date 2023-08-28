@@ -219,7 +219,8 @@ for_window [class="Spotify"] move workspace 5
 bindsym $alt+tab workspace back_and_forth
 
 # Close tab
-bindsym --whole-window BTN_FORWARD exec ydotool key 29:1 17:1 17:0 29:0
+exec_always "dotoold &"
+bindsym --whole-window BTN_FORWARD exec echo key ctrl+w | dotoolc 
 
 # Auto float apps
 for_window [app_id="qalculate-gtk"] floating enable
