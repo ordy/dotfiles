@@ -19,8 +19,8 @@ by Miguel Avila
 */
 
 :root {
-	--sfwindow: #22272E;
-	--sfsecondary: #2D3339;
+	--sfwindow: #FAFAFA;
+	--sfsecondary: #EBEBEB;
 }
 
 /* Urlbar View */
@@ -131,7 +131,8 @@ by Miguel Avila
 
 /* Url Bar  */
 #urlbar-input-container {
-	background-color: var(--sfsecondary) !important;
+	background-color: #D8D8D8 !important;
+  border-radius: 5px !important;
 	border: 1px solid rgba(0, 0, 0, 0) !important;
 }
 
@@ -141,6 +142,7 @@ by Miguel Avila
 
 #urlbar[focused="true"] > #urlbar-background {
 	box-shadow: none !important;
+  outline: none !important;
 }
 
 #navigator-toolbox {
@@ -171,7 +173,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 .urlbarView-url {
-	color: #dedede !important;
+	color: #161313 !important;
 }
 
 /* Disable elements  */
@@ -211,7 +213,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 /* Remove active tab outline */
 #TabsToolbar #firefox-view-button[open]:not(:focus-visible) > .toolbarbutton-icon:-moz-lwtheme,
 .tab-background[selected]:not([multiselected="true"]):-moz-lwtheme {
-	outline: none !important;
+	/* outline: none !important; */
 }
 
 #alltabs-button {
@@ -246,7 +248,8 @@ input.fake-editable {
 	> .tabbrowser-tab
 	> .tab-stack
 	> .tab-background[selected="true"] {
-	box-shadow: 0 2px 2px #000000ab !important;
+	box-shadow: 0 2px 2px #4A4A4Aab !important;
+  background-color: #12121211 !important;
 }
 .tab-background {
 	border-radius: 5px !important;

@@ -15,6 +15,7 @@
     "cpu",
     "memory",
     "temperature",
+    "custom/pacman",
     "backlight",
     "custom/weather"
   ],
@@ -194,6 +195,16 @@
     "tooltip": true,
     "exec": "~/.config/waybar/modules/weather.sh",
     "exec-if": "ping wttr.in -c1"
+  },
+  "custom/pacman": {
+    "format": "{} {icon}",
+    "return-type": "json",
+    "format-icons": {
+      "pending-updates": "pkg <span font='10' rise='100'>󰮯 </span>",
+      "updated": "00  <span font='10' rise='100'>󰮯 </span>"
+    },
+    "exec-if": "which waybar-updates",
+    "exec": "waybar-updates"
   },
   "custom/artist": {
     "format": "{}",
