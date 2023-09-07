@@ -8,6 +8,7 @@
 @define-color gh-purple #D1BCF9;
 @define-color gh-blue #C8E1FF;
 @define-color gh-green #BEF5CB;
+@define-color gh-yellow #F2DBC0;
 
 /* Shades */
 @define-color volume #586069;
@@ -175,9 +176,12 @@ button:disabled {
 }
 
 #cpu,
-#memory,
-#temperature {
+#memory {
 	margin-right: 12px;
+}
+
+#temperature {
+	margin-right: 7px;
 }
 
 #cpu,
@@ -185,6 +189,7 @@ button:disabled {
 #temperature,
 #backlight,
 #custom-weather,
+#custom-pacman,
 #custom-artist,
 #custom-title {
   background-color: transparent;
@@ -212,12 +217,19 @@ button:disabled {
 }
 
 #backlight {
-	color: @gh-blue;
+	color: @gh-green;
 	margin-right: 10px;
 }
 
 #custom-weather {
-	color: @gh-green;
+	color: @gh-yellow;
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+
+#custom-pacman {
+  color: @gh-blue;
+  margin-right: 5px;
   margin-top: -5px;
   margin-bottom: -5px;
 }
