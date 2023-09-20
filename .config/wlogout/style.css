@@ -10,11 +10,11 @@ window {
 }
 
 button {
-  margin-top: 300px;
-  margin-bottom: 650px;
   font-family: "Symbols Nerd Font";
   background-color: #16191D;
-  color: #333B44;
+  color: #232930;
+  margin-top: 200px;
+  margin-bottom: 300px;
   font-size: 120px;
   font-weight: 600;
   box-shadow: none;

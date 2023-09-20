@@ -43,10 +43,13 @@ alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
 
-alias ls='exa --icons'
-alias ll='exa -alghF --octal-permissions --group-directories-first --icons'
-alias la='exa -a --group-directories-first --icons'
-alias l='exa -F --group-directories-first --icons'
+alias ls='eza --icons'
+alias ll='eza -alghF --octal-permissions --group-directories-first --icons'
+alias la='eza -a --group-directories-first --icons'
+alias l='eza -F --group-directories-first --icons'
+alias lss='eza -lr --sort=size'
+alias lsm='eza -lr --sort=mod'
+alias lst='eza --tree --level=2'
 
 alias pacman="sudo pacman"
 alias pacs="pacman -S"
