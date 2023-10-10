@@ -26,7 +26,7 @@ set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
 
 # Set the wallpaper 
-exec ~/.azotebg
+exec ./scripts/set-wallpaper
 output * bg #000000 solid_color
 
 # idle and sleep

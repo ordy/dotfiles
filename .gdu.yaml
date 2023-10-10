@@ -31,8 +31,8 @@ use-si-prefix: false
 no-prefix: false
 style:
     selected-row:
-        text-color: ""
-        background-color: ""
+        text-color: "black"
+        background-color: "blue"
     progress-modal:
         current-item-path-max-len: 0
 sorting:
