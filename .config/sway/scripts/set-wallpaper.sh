@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 if [ -z "$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS"]; then
 	FILENAME=$(<"$HOME/.current-wallpaper")
@@ -8,7 +8,6 @@ else
 fi
 
 pkill swaybg
-swaybg -o 'VGA-1' -i $FILENAME -m fill &
-swaybg -o 'LVDS-1' -i $FILENAME -m fill &
+swaybg -o '*' -i $FILENAME -m fill &
 
 exit 0

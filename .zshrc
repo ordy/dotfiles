@@ -20,6 +20,7 @@ plugins=(
   colored-man-pages
   zsh-autosuggestions
   zsh-syntax-highlighting
+  zsh-autocomplete
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -43,19 +44,21 @@ alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
 
-alias ls='eza --icons'
-alias ll='eza -alghF --octal-permissions --group-directories-first --icons'
-alias la='eza -a --group-directories-first --icons'
-alias l='eza -F --group-directories-first --icons'
+alias ls='eza --icons=auto'
+alias ll='eza -alghF --octal-permissions --group-directories-first --icons=auto'
+alias la='eza -a --group-directories-first --icons=auto'
+alias l='eza -F --group-directories-first --icons=auto'
 alias lss='eza -lr --sort=size'
 alias lsm='eza -lr --sort=mod'
 alias lst='eza --tree --level=2'
 
 alias pacman="sudo pacman"
-alias pacs="pacman -S"
+alias pacs="sudo pacman -S"
 alias paci="pacman -Qi"
 alias pacr="pacman -Rns"
 alias pacro="pacman -Qtdq | pacman -Rns -"
+# list unrequierd, not in base (run pacman first for sudo password)
+alias pacru="comm -23 <(pacman -Qqt | sort) <(pacman -Qqg base | sort)"
 alias pacu="pacman -Syu"
 alias pacmu="sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
 alias yas="yay -S --noconfirm"
@@ -63,6 +66,8 @@ alias yas="yay -S --noconfirm"
 alias ytl="yt-dlp -F"
 alias yta="yt-dlp -x -f bestaudio --audio-quality 0 --audio-format mp3"
 alias ytv="yt-dlp -f 302+bestaudio/247+bestaudio" #720p 60fps or 720p 30fps
+
+# bindkey '\t' autosuggest-accept
 
 # pfetch
 export PF_INFO="ascii title os kernel pkgs shell wm theme palette"
