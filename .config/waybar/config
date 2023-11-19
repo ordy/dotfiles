@@ -21,6 +21,7 @@
   ],
   "modules-right": [
     "custom/sep3",
+    "group/pulse-group",
     "pulseaudio",
     "custom/sep4",
     "battery",
@@ -126,6 +127,7 @@
       "",
       ""
     ],
+    "smooth-scrolling-threshold": 2.5,
     "tooltip": false
   },
   "battery": {
@@ -161,6 +163,18 @@
     "on-click-right": "kitty -e nmtui",
     "tooltip": false
   },
+  "group/pulse-group": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "pulseaudio",
+      "pulseaudio/slider"
+    ]
+  },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
     "format": "{icon}",
@@ -181,10 +195,16 @@
         "<span font='12'>󰜟</span>"
       ]
     },
+    "smooth-scrolling-threshold": 0.8,
     "on-click": "{alt}",
     "on-click-right": "pavucontrol",
-    "on-scroll-up": "pactl set-sink-volume 0 +5% && pactl get-sink-volume 0 | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' > $XDG_RUNTIME_DIR/wob.sock",
-    "on-scroll-down": "pactl set-sink-volume 0 -5% && pactl get-sink-volume 0 | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' > $XDG_RUNTIME_DIR/wob.sock"
+    "on-scroll-up": "pactl set-sink-volume 0 +5%",
+    "on-scroll-down": "pactl set-sink-volume 0 -5%"
+  },
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
   },
   "custom/weather": {
     "format": "{} <span font='14' rise='-800'> </span>",

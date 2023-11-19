@@ -10,13 +10,13 @@ set $up k
 set $right l
 
 # Monitors
-exec swaymsg focus output VGA-1
+# exec swaymsg focus output VGA-1
 
 # Alternate layout script
 exec --no-startup-id /home/sano/.config/sway/scripts/alternating_layouts.py
 
 # Terminal 
-set $term kitty
+set $term kitty 
 
 # Application launcher
 set $menu tofi-drun | xargs swaymsg exec --
@@ -26,8 +26,8 @@ set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
 
 # Set the wallpaper 
-exec ./scripts/set-wallpaper
-output * bg #000000 solid_color
+# output * bg #000000 solid_color
+output * bg `cat /home/sano/.current-wallpaper` fill
 
 # idle and sleep
 # exec swayidle -w before-sleep 'swaylock -C $XDG_CONFIG_HOME/sway/swaylock/config'

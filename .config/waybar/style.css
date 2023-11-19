@@ -293,4 +293,35 @@ button:disabled {
   font-size: 15px;
 	margin: 0px;
 }
+slider {
+    min-height: 0px;
+    min-width: 0px;
+    margin-left: 5px;
+    padding-right: 5px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
 
+trough {
+    min-height: 8px;
+    min-width: 90px;
+    border-radius: 5px;
+}
+
+highlight {
+    min-height: 8px;
+    border-radius: 5px;
+}
+
+#pulseaudio-slider {
+  background-color: @volume;
+}
+
+#pulseaudio-slider trough {
+    background-color: @gh-base;
+}
+#pulseaudio-slider highlight {
+    background-color: @gh-white;
+}

@@ -1,7 +1,7 @@
 # vim:ft=conf
 
-  font = "/home/sano/.local/share/fonts/TTF/RecursiveSansCslSt-Med.ttf"
-	font-size = 18
+  font = "/home/sano/.local/share/fonts/TTF/Titillium_Web/TitilliumWeb-SemiBold.ttf"
+	font-size = 20
 	hint-font = false
 	text-color = #EDF9EF
 	selection-color = #80AEF7
