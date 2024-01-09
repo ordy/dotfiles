@@ -67,8 +67,6 @@ alias ytl="yt-dlp -F"
 alias yta="yt-dlp -x -f bestaudio --audio-quality 0 --audio-format mp3"
 alias ytv="yt-dlp -f 302+bestaudio/247+bestaudio" #720p 60fps or 720p 30fps
 
-# bindkey '\t' autosuggest-accept
-
 # pfetch
 export PF_INFO="ascii title os kernel pkgs shell wm theme palette"
 
@@ -90,3 +88,4 @@ source /usr/share/nvm/init-nvm.sh
 
 # Created by `pipx` on 2023-06-07 10:44:46
 export PATH="$PATH:/home/sano/.local/bin"
+

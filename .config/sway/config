@@ -199,6 +199,8 @@ bindsym $mod+w exec firefox
 
 bindsym $mod+Ctrl+Backspace exec 'wlogout -b 5 -p layer-shell'
 bindsym $mod+Ctrl+c exec wl-color-picker clipboard
+set $screenrecorder `bash $HOME/.config/sway/scripts/toggle-screen-recorder.sh`
+bindsym --to-code $mod+V exec $screenrecorder
 
 # Reload kanshi
 bindsym $mod+p exec_always swaymsg output LVDS-1 toggle
