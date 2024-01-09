@@ -41,6 +41,7 @@ window#waybar {
 #workspaces button {
 	padding: 0px 2px 0px 2px;
 	margin: -2px 0px;
+  min-width: 15px;
 	background-color: @gh-overlay;
 }
 
@@ -324,4 +325,10 @@ highlight {
 }
 #pulseaudio-slider highlight {
     background-color: @gh-white;
+}
+
+#custom-recorder {
+	font-size: 15px;
+	margin: 2px 7px 0px 7px;
+	color: @gh-red;
 }

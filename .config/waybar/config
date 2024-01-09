@@ -20,9 +20,9 @@
     "custom/weather"
   ],
   "modules-right": [
+    "custom/recorder",
     "custom/sep3",
     "group/pulse-group",
-    "pulseaudio",
     "custom/sep4",
     "battery",
     "custom/sep5",
@@ -167,7 +167,7 @@
     "orientation": "inherit",
     "drawer": {
       "transition-duration": 300,
-      "children-class": "",
+      "children-class": "drawer-child",
       "transition-left-to-right": false
     },
     "modules": [
@@ -176,7 +176,6 @@
     ]
   },
   "pulseaudio": {
-    // "scroll-step": 1, // %, can be a float
     "format": "{icon}",
     "format-alt": "{format_source}   {volume}%  {icon}",
     "format-bluetooth": "<span font='11' rise='-800'>󰂰</span>",
@@ -196,7 +195,7 @@
       ]
     },
     "smooth-scrolling-threshold": 0.8,
-    "on-click": "{alt}",
+    "tooltip": false,
     "on-click-right": "pavucontrol",
     "on-scroll-up": "pactl set-sink-volume 0 +5%",
     "on-scroll-down": "pactl set-sink-volume 0 -5%"
@@ -249,5 +248,12 @@
     "on-click": "tofi-drun | xargs swaymsg exec --",
     "on-click-right": "wlogout -b 5 -p layer-shell",
     "tooltip": false
+  },
+  "custom/recorder": {
+    "format": "",
+    "return-type": "json",
+    "interval": 1,
+    "exec": "echo '{\"class\": \"recording\"}'",
+    "exec-if": "pgrep wf-recorder"
   }
 }
