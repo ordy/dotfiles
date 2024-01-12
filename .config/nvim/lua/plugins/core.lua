@@ -1,14 +1,6 @@
 return {
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "github_dark_dimmed",
-    },
-  },
-  {
-    "rcarriga/nvim-notify",
-    opts = {
-      timeout = 1500,
-    },
+  "rcarriga/nvim-notify",
+  opts = {
+    timeout = 1500,
   },
 }

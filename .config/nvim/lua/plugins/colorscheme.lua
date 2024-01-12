@@ -1,9 +1,9 @@
 return {
-  { "projekt0n/github-nvim-theme" },
+  { "rebelot/kanagawa.nvim", name = "kanagawa", lazy = false, priority = 1000 },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "github_dark_dimmed",
+      colorscheme = "kanagawa",
     },
   },
 }
