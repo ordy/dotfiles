@@ -78,6 +78,8 @@ _ls_colors=":ow=01;35"
 zstyle ':completion:*:default' list-colors "${(s.:.)_ls_colors}"
 LS_COLORS+=$_ls_colors
 
+bindkey -M menuselect '\r' .accept-line
+
 # NVM
 source /usr/share/nvm/init-nvm.sh
 # Load Angular CLI autocompletion.

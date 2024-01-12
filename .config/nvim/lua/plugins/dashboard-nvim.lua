@@ -1,7 +1,7 @@
 return {
-  "goolord/alpha-nvim",
+  "nvimdev/dashboard-nvim",
+  event = "VimEnter",
   opts = function()
-    local dashboard = require("alpha.themes.dashboard")
     local logo = [[
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢄⢄⢄⢄⢄⢄⢄⢄⢄⢄⢄⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢔⢕⢕⢕⢕⢕⢕⢕⢕⢕⢕⢕⢕⢕⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -26,34 +26,49 @@ return {
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠪⡪⡂⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠂⠀⠀⠀⠀⠀⠀
     ]]
-    dashboard.section.header.val = vim.split(logo, "\n")
-    dashboard.section.buttons.val = {
-      dashboard.button("  n  ", "    " .. "New file", ":ene <BAR> startinsert <CR>"),
-      dashboard.button("  e  ", " 󰱼   " .. "Find file", ":Telescope find_files <CR>"),
-      dashboard.button("  r  ", " 󰔛   " .. "Recent files", ":Telescope oldfiles <CR>"),
-      dashboard.button("  v  ", "    " .. "Quit", ":qa<CR>"),
-    }
-    for _, button in ipairs(dashboard.section.buttons.val) do
-      button.opts.hl = "SpecialComment"
-      button.opts.hl_shortcut = "lualine_b_visual"
-    end
-    dashboard.section.footer.opts.hl = "Error"
-    dashboard.section.header.opts.hl = "Error"
-    dashboard.section.buttons.opts.hl = "markdownH2"
-    dashboard.opts.layout[1].val = 2
-    return dashboard
-  end,
-  config = function(_, dashboard)
-    require("alpha").setup(dashboard.opts)
 
-    vim.api.nvim_create_autocmd("User", {
-      pattern = "LazyVimStarted",
-      callback = function()
-        local stats = require("lazy").stats()
-        local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
-        dashboard.section.footer.val = "マギシステムは" .. ms .. "msで完了"
-        pcall(vim.cmd.AlphaRedraw)
-      end,
-    })
+    logo = string.rep("\n", 5) .. logo .. "\n\n"
+
+    local opts = {
+      theme = "doom",
+      hide = {
+        -- this is taken care of by lualine
+        -- enabling this messes up the actual laststatus setting after loading a file
+        statusline = false,
+      },
+      config = {
+        header = vim.split(logo, "\n"),
+        -- stylua: ignore
+        center = {
+          { action = "ene | startinsert",                                        desc = " New file",      icon_hl = "Error",  icon = " ", key = "n" },
+          { action = "Telescope oldfiles",                                       desc = " Recent files",  icon_hl = "Error",  icon = " ", key = "r" },
+          { action = [[lua require("lazyvim.util").telescope.config_files()()]], desc = " Config",        icon_hl = "Error",  icon = " ", key = "c" },
+          { action = "qa",                                                       desc = " Quit",          icon_hl = "Error",  icon = " ", key = "q" },
+        },
+        footer = function()
+          local stats = require("lazy").stats()
+          local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
+          return { "マギシステムは" .. ms .. "msで完了" }
+        end,
+      },
+    }
+
+    for _, button in ipairs(opts.config.center) do
+      button.desc = button.desc .. string.rep(" ", 43 - #button.desc)
+      button.key_format = "  %s"
+    end
+
+    -- close Lazy and re-open when the dashboard is ready
+    if vim.o.filetype == "lazy" then
+      vim.cmd.close()
+      vim.api.nvim_create_autocmd("User", {
+        pattern = "DashboardLoaded",
+        callback = function()
+          require("lazy").show()
+        end,
+      })
+    end
+
+    return opts
   end,
 }
