@@ -206,8 +206,8 @@ bindsym --to-code $mod+V exec $screenrecorder
 bindsym $mod+p exec_always swaymsg output LVDS-1 toggle
 
 # Screenshots
-bindsym $mod+s exec grim -g "$(slurp -b '#00000099' -c '#A131FFff' -w 1)" sc_$RANDOM.png
-bindsym $mod+Ctrl+s exec grim -g "$(slurp -b '#00000099' -c '#A131FFff' -w 1)" - | wl-copy
+bindsym $mod+s exec grim -g "$(slurp -b '#00000099' -c '#FFA066ff' -w 1)" $HOME/Pictures/sc_$RANDOM.png
+bindsym $mod+Ctrl+s exec grim -g "$(slurp -b '#00000099' -c '#FFA066ff' -w 1)" - | wl-copy
 bindsym $mod+Shift+s exec grim $HOME/Pictures/sc_$RANDOM.png
 #
 # Assign to workspace
@@ -242,10 +242,10 @@ bar {
 }
 
 #window colors
-set $active-bg-color    #60666E
+set $active-bg-color    #b0ada0
 set $active-fg-color    #333A42
-set $inactive-bg-color  #1A1E25
-set $focused_inactive-bg-color  #1C1F25
+set $inactive-bg-color  #0f101a
+set $focused_inactive-bg-color  #0f101a
 set $inactive-fg-color  #565D72
 
 # Border

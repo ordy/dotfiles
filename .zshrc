@@ -81,7 +81,7 @@ LS_COLORS+=$_ls_colors
 bindkey -M menuselect '\r' .accept-line
 
 # NVM
-source /usr/share/nvm/init-nvm.sh
+# source /usr/share/nvm/init-nvm.sh
 # Load Angular CLI autocompletion.
 # source <(ng completion script)
 
