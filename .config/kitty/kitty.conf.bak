@@ -344,7 +344,7 @@ single_window_margin_width -1
 #: values set top, horizontal and bottom. Four values set top, right,
 #: bottom and left.
 
-window_padding_width 3
+window_padding_width 0
 
 #: The window padding (in pts) (blank area between the text and the
                        #: window border). A single value sets all four sides. Two values set
@@ -957,6 +957,6 @@ map kitty_mod+f6 debug_config
 
 
 # BEGIN_KITTY_THEME
-# Nightfly
-include current-theme.conf
+# kanagawa
+include kanagawa.conf
 # END_KITTY_THEME

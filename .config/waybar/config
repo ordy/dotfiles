@@ -89,7 +89,7 @@
     "timezone": "Europe/Brussels",
     "smooth-scrolling-threshold": 4,
     "calendar": {
-      "mode-mon-col": 6,
+      "mode-mon-col": 2,
       "weeks-pos": "left",
       "on-scroll": 1,
       "on-click-right": "mode",

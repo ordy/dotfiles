@@ -25,7 +25,7 @@ menuitem#context-selectall + menuseparator {
 }
 
 .fake-editable {
-  background-color: #404756 !important;
+  /* background-color: #404756 !important; */
 }
 
 .search-wrapper.fake-focus:not(.search.disabled) .search-handoff-button {
@@ -34,11 +34,11 @@ menuitem#context-selectall + menuseparator {
 }
 
 .search-wrapper .search-handoff-button, .search-wrapper input {
-  background: #404756 var(--newtab-search-icon) 16px center no-repeat !important;
+  /* background: #404756 var(--newtab-search-icon) 16px center no-repeat !important; */
 }
 
 @-moz-document url-prefix(about:home), url-prefix(about:newtab) {
   body {
-    background-color: #252931 !important;
+    /* background-color: #252931 !important; */
   }
 }
