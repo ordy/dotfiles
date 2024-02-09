@@ -119,8 +119,8 @@
     "tooltip": false
   },
   "backlight": {
-    "on-scroll-up": "light -s sysfs/backlight/acpi_video0 -A 10",
-    "on-scroll-down": "light -s sysfs/backlight/acpi_video0 -U 10",
+    "on-scroll-up": "backlightcmd up",
+    "on-scroll-down": "backlightcmd down",
     "device": "intel_backlight",
     "format": "{percent}% <span font='10' rise='-1100'></span>",
     "format-icons": [
