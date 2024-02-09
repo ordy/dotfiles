@@ -5,6 +5,9 @@
 BACKUP=$(dirname $(readlink -f $0))
 ISODATE=$(date --iso)
 
+echo $BACKUP
+echo $ISODATE
+
 git -C $BACKUP add .
 git -C $BACKUP commit -m "$ISODATE Update"
 git -C $BACKUP push --progress

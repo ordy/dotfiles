@@ -1,0 +1,28 @@
+# stow . --targer=/home/sano/ --> link dotfiles to home
+
+\.svn
+_darcs
+\.hg
+
+\.git
+\.gitignore
+
+# Directories and files that require manual linking
+\.stow-global-ignore
+sync-dotfiles.sh
+\.config
+udev
+custom-css
+xkb
+systemd
+mpd
+# X11 and unused files
+picom.conf
+xbindkeys
+rofi
+X11
+\.alacritty.yml
+
+^/README.*
+^/LICENSE.*
+^/COPYING
