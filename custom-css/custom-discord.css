@@ -1,53 +1,69 @@
 :root {
-    --blurple-replace: #7ce88c;
-    --spotify-header: #699378;
-    --background-primary: #2E353C;
-    --background-secondary: #23282D;
-    --background-secondary-alt: #171b20;
-    --background-tertiary: #1A1E22;
-    --background-accent: #c4a7e7;
-    --background-floating: #2f373e;
-    --userarea-background: var(--background-tertiary);
-    --header-primary: #78b7fe;
-    --header-secondary: #cbcffc;
-    --elevation-low: 0 1px 0
-    rgba(4, 4, 5, 0.2), 0 1.5px 0 rgba(6, 6, 7, 0.05), 0 2px 0 rgba(4, 4, 5, 0.05);
-    --elevation-high: 0 8px 16px
-    rgba(0, 0, 0, 0.24);
-    --channels-default: #949ca4;
-    --channeltextarea-background: #3b434b;
-    --channel-text-area-placeholder: #6e767d;
-    --guild-header-text-shadow: 0 1px 1px
-    rgb(0 0 0 / 28%);
-    --activity-card-background: #434c55;
-    --interactive-normal: #b9bbbe;
-    --interactive-hover: #DAECFE;
-    --interactive-active: #fff;
-    --interactive-muted: #3a3f43;
-    --background-modifier-hover: rgb(78 86 102 / 13%);
-    --background-modifier-active: rgba(60, 58, 94, 0.3);
-    --background-modifier-selected: rgb(65 70 82 / 47%);
-    --background-modifier-accent: hsla(0, 0%, 100%, 0.06);
-    --text-link: #78b7fe;
-    --text-normal: #f5f7f9;
-    --text-muted: #949ca4;
-    --deprecated-panel-background: #292b2f;
-    --deprecated-card-bg: rgba(0, 0, 0, 0.2);
-    --deprecated-card-editable-bg: rgba(0, 0, 0, 0.1);
-    --deprecated-store-bg: #36393f;
-    --deprecated-quickswitcher-input-background: #72767d;
-    --deprecated-quickswitcher-input-placeholder: hsla(0, 0%, 100%, 0.3);
-    --deprecated-text-input-bg: rgba(0, 0, 0, 0.1);
-    --deprecated-text-input-border: rgba(0, 0, 0, 0.3);
-    --deprecated-text-input-border-hover: #040405;
-    --deprecated-text-input-border-disabled: var(--background-tertiary);
-    --deprecated-text-input-prefix: #dcddde;
-    --background-accent-1: rgb(62 85 101 / 21%);
-    --background-accent-3: rgb(62 80 101 / 30%);
-    --background-floating-2: rgb(20 24 30 / 20%);
-    --__header-bar-background: #12161b;
+  --blurple-replace: #7ce88c;
+  --spotify-header: #699378;
+  --background-primary: #151824;
+  --background-secondary: #13151f;
+  --background-secondary-alt: #0f1019;
+  --background-tertiary: #11121b;
+  --background-accent: #a7e7b8;
+  --background-floating: #1e2333;
+  --userarea-background: var(--background-tertiary);
+  --header-primary: #E6C384;
+  --header-secondary: #7c7f9f;
+  --elevation-low: 0 1px 0
+  rgba(4, 4, 5, 0.2), 0 1.5px 0 rgba(6, 6, 7, 0.05), 0 2px 0 rgba(4, 4, 5, 0.05);
+  --elevation-high: 0 8px 16px
+  rgba(0, 0, 0, 0.24);
+  --channels-default: #5f627a;
+  --channeltextarea-background: #1e2333;
+  --channel-text-area-placeholder: #535a70;
+  --guild-header-text-shadow: 0 1px 1px
+  rgb(0 0 0 / 28%);
+  --activity-card-background: #434c55;
+  --interactive-normal: #bac6dc;
+  --interactive-hover: #d1d6df;
+  --interactive-active: #fff;
+  --interactive-muted: #2f3141;
+  --background-modifier-hover: rgb(59 63 92 / 16%);
+  --background-modifier-active: rgb(111 107 174 / 35%);
+  --background-modifier-selected: rgb(67 79 108 / 40%);
+  --background-modifier-accent: hsla(0, 0%, 100%, 0.06);
+  --text-link: #7E9CD8;
+  --text-normal: #bac6dc;
+  --text-muted: #5e6178;
+  --deprecated-panel-background: #292b2f;
+  --deprecated-card-bg: rgba(0, 0, 0, 0.2);
+  --deprecated-card-editable-bg: rgba(0, 0, 0, 0.1);
+  --deprecated-store-bg: #36393f;
+  --deprecated-quickswitcher-input-background: #72767d;
+  --deprecated-quickswitcher-input-placeholder: hsla(0, 0%, 100%, 0.3);
+  --deprecated-text-input-bg: rgba(0, 0, 0, 0.1);
+  --deprecated-text-input-border: rgba(0, 0, 0, 0.3);
+  --deprecated-text-input-border-hover: #040405;
+  --deprecated-text-input-border-disabled: var(--background-tertiary);
+  --deprecated-text-input-prefix: #dcddde;
+  --background-accent-1: rgb(62 85 101 / 21%);
+  --background-accent-3: rgb(62 80 101 / 30%);
+  --background-floating-2: rgb(20 24 30 / 20%);
+  --__header-bar-background: #12161b;
+  --brand-500-hsl: 166
+  calc(var(--saturation-factor, 1) * 17.6%) 26.7%;
+  --brand-560-hsl: 166
+  calc(var(--saturation-factor, 1) * 17.6%) 41.7%;
 }
 
-.theme-dark .themed-Hp1KC_ {
-    background: #2E353C;
+article {
+  border-color: hsla(-148, calc(var(--saturation-factor, 1) * 35%), 39.4%, 22) !important;
+}
+
+.theme-dark .children__32014:after {
+  background: linear-gradient(to right,rgb(11 15 25 / 8%)0%,rgb(14 15 23 / 76%)100%);
+}
+
+.topPill__0cdf1 .themed_b957e8.selected__5711d.item__48dda, .side_b4b3f6 .themed_b957e8.selected__5711d.item__48dda {
+  background-color: #36394a;
+}
+
+.theme-dark .themed_b152d4 {
+  background-color: #13151f;
 }
