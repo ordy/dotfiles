@@ -136,7 +136,7 @@
       "warning": 30,
       "critical": 15
     },
-    "full-at": 80,
+    "full-at": 100,
     "format": "{icon}",
     "format-alt": "{capacity} <span font='11'>󱐋</span> {icon}",
     "format-charging": "{capacity} <span font='11'>󱐋</span> {icon}",
@@ -160,7 +160,7 @@
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "<span font='11'>󰖪</span>",
     "format-alt": "{ifname} on {essid}: {ipaddr}/{cidr}",
-    "on-click-right": "kitty -e nmtui",
+    "on-click-right": "iwgtk",
     "tooltip": false
   },
   "group/pulse-group": {

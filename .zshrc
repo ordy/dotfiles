@@ -3,6 +3,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 HISTSIZE=1000
 SAVEHIST=1000
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
 
 # Removing '%' from partial line
 setopt PROMPT_CR
@@ -70,18 +76,15 @@ alias ytv="yt-dlp -f 302+bestaudio/247+bestaudio" #720p 60fps or 720p 30fps
 # pfetch
 export PF_INFO="ascii title os kernel pkgs shell wm theme palette"
 
-# nmtui colors
-export NEWT_COLORS='root=,color5 shadow=white,black title=black,white label=white,black actsellistbox=black,blue actlistbox=white,black button=black,blue'
-
 # removing ls completion highlight color
-_ls_colors=":ow=01;35" 
+_ls_colors=":ow=01;35"
 zstyle ':completion:*:default' list-colors "${(s.:.)_ls_colors}"
 LS_COLORS+=$_ls_colors
 
 bindkey -M menuselect '\r' .accept-line
 
 # NVM
-# source /usr/share/nvm/init-nvm.sh
+source /usr/share/nvm/init-nvm.sh
 # Load Angular CLI autocompletion.
 # source <(ng completion script)
 

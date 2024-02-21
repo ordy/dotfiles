@@ -1,44 +1,12 @@
-/* 
-┌─┐┬┌┬┐┌─┐┬  ┌─┐
-└─┐││││├─┘│  ├┤ 
-└─┘┴┴ ┴┴  ┴─┘└─┘
-┌─┐┌─┐─┐ ┬      
-├┤ │ │┌┴┬┘      
-└  └─┘┴ └─
-
-by Miguel Avila
-
- */
-
-:root {
-  /* scrollbar-width: none !important; */
-}
-
-@-moz-document url(about:privatebrowsing) {
-  :root {
-    /* scrollbar-width: none !important; */
-  }
-}
-
 menuitem#context-selectall + menuseparator {
   display: none !important;
 }
 
-.fake-editable {
-  /* background-color: #404756 !important; */
-}
-
 .search-wrapper.fake-focus:not(.search.disabled) .search-handoff-button {
-  border: 1px solid #62A0EA !important;
-  box-shadow: 0 0 0 1px #1A5FB4 !important;
+  border: 1px solid #7E8EBC !important;
+  box-shadow: 0 0 0 1px #3A4BB2 !important;
 }
 
 .search-wrapper .search-handoff-button, .search-wrapper input {
-  /* background: #404756 var(--newtab-search-icon) 16px center no-repeat !important; */
-}
-
-@-moz-document url-prefix(about:home), url-prefix(about:newtab) {
-  body {
-    /* background-color: #252931 !important; */
-  }
+  background: #272C3B var(--newtab-search-icon) 16px center no-repeat !important;
 }
