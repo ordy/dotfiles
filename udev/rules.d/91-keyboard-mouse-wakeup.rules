@@ -1,0 +1,1 @@
+# SUBSYSTEM=="usb", ATTRS{idVendor}=="1038", ATTRS{idProduct}=="1729" RUN+="/bin/sh -c 'echo enabled > /sys$env{DEVPATH}/../power/wakeup;'"

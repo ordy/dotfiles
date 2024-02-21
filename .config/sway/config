@@ -229,10 +229,10 @@ bindsym --whole-window BTN_FORWARD exec echo key ctrl+w | dotoolc
 # Auto float apps
 for_window [app_id="qalculate-gtk"] floating enable
 for_window [app_id="^mpv$"] floating enable
-for_window [app_id="io.github.celluloid_player.Celluloid"] floating enable
 for_window [app_id="org.gnome.Nautilus"] floating enable
 for_window [app_id="pavucontrol"] floating enable
-for_window [app_id="azote"] floating enable
+for_window [app_id="org.twosheds.iwgtk"] floating enable
+for_window [app_id="iwgtk"] floating enable
 for_window [class="Lxappearance"] floating enable
 for_window [title="Slack Call Minipanel"] floating enable
 for_window [title="Viewnior"] floating enable
@@ -244,7 +244,7 @@ bar {
 }
 
 #window colors
-set $active-bg-color    #b0ada0
+set $active-bg-color    #7E9CD8
 set $active-fg-color    #333A42
 set $inactive-bg-color  #0f101a
 set $focused_inactive-bg-color  #0f101a
