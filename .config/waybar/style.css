@@ -229,7 +229,8 @@ button:disabled {
 }
 
 #custom-pacman {
-	color: @kana-blue;
+  font-size: 16px;
+	color: @kana-text;
 	margin-right: 7px;
 	margin-top: -5px;
 	margin-bottom: -5px;
