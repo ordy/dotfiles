@@ -15,12 +15,12 @@
     "cpu",
     "memory",
     "temperature",
-    "custom/pacman",
     "backlight",
     "custom/weather"
   ],
   "modules-right": [
     "custom/recorder",
+    "custom/pacman",
     "custom/sep3",
     "group/pulse-group",
     "custom/sep4",
@@ -216,11 +216,11 @@
     "exec-if": "ping wttr.in -c1"
   },
   "custom/pacman": {
-    "format": "{} {icon}",
+    "format": "{}{icon}",
     "return-type": "json",
     "format-icons": {
-      "pending-updates": "pkg <span font='10' rise='100'>󰮯 </span>",
-      "updated": "00  <span font='10' rise='100'>󰮯 </span>"
+      "pending-updates": "x  <span font='11'></span>",
+      "updated": ""
     },
     "exec-if": "which waybar-updates",
     "exec": "waybar-updates"
