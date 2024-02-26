@@ -31,8 +31,8 @@ EXA_COLORS+=":gr=1;35:gw=1;34:gx=1;36"
 EXA_COLORS+=":tr=1;35:tw=1;34:tx=1;36:uu=1;36:gu=1;34"
 export EXA_COLORS
 
-LS_COLORS+=":ow=01;35"
-export LS_COLORS
+# LS_COLORS+=":ow=01;32"
+LS_COLORS+=":ow=01;34:di=01;34"
 
 # pfetch
 export PF_INFO="ascii title os kernel pkgs shell wm theme palette"

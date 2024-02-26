@@ -1,0 +1,11 @@
+#!/bin/bash
+# place the script in /usr/lib/udev/
+
+user=$(who | head -n 1 | awk '{print $1}')
+uid=$(id -u $user)
+
+if [ $1 == 'AC' ]; then
+	sudo -u $user DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$uid/bus /usr/bin/notify-send "ACPI $1" "<span weight='bold'>POWER CABLE IS OUT</span>"
+elif [ $1 == 'BAT0' ]; then
+	sudo -u $user DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$uid/bus /usr/bin/notify-send -u critical "ACPI $1" "<span weight='bold' color='#FF5D62'>BATTERY LEVEL UNDER 20%</span>" -i /usr/share/icons/battery-020.png
+fi

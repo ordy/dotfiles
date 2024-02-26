@@ -1,0 +1,1 @@
+KERNEL=="BAT0", SUBSYSTEM=="power_supply", ATTR{capacity}=="[0-19]", RUN+="battery-notify '%k'"

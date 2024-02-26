@@ -28,29 +28,27 @@ source ~/.aliases.zsh
 # Load Angular CLI autocompletion.
 # source <(ng completion script)
 
-# Plugins
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-source ~/.zsh/key-bindings.zsh
-source ~/.zsh/completion.zsh
-
 # zcompdump
 autoload -Uz compinit
-typeset -i updated_at=$(date +'%j' -r ~/.cache/zsh/.zcompdump 2>/dev/null || stat -f '%Sm' -t '%j' ~/.cache/zsh/.zcompdump 2>/dev/null)
+typeset -i updated_at=$(date +'%j' -r ~/.cache/zsh/compdump/zcompdump-${ZSH_VERSION} 2>/dev/null || stat -f '%Sm' -t '%j' ~/.cache/zsh/compdump/zcompdump-${ZSH_VERSION} 2>/dev/null)
 if [ $(date +'%j') != $updated_at ]; then
-  compinit -i
+  compinit -i -d ~/.cache/zsh/compdump/zcompdump-${ZSH_VERSION}
 else
-  compinit -C -i
+  compinit -C -i -d ~/.cache/zsh/compdump/zcompdump-${ZSH_VERSION}
 fi
+
+# Plugins
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source ~/.zsh/key-bindings.zsh
+source ~/.zsh/completion.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # autocompletion menu
 zmodload -i zsh/complist
 bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
 bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
-bindkey -M menuselect '\r' .accept-line
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-
