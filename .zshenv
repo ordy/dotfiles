@@ -1,4 +1,3 @@
-export PATH="${PATH}:${HOME}/.bin:${HOME}/.cargo/bin"
 export PATH="$PATH:/home/sano/.local/bin"
 
 # XDG

@@ -1,18 +1,17 @@
-@define-color kana-base #0F101A;
+@define-color kana-base    #0F101A;
 @define-color kana-overlay #1E2031;
 @define-color kana-subtile #3D415A;
-@define-color kana-text #D8DADF;
-@define-color kana-white #FFFFFF;
-@define-color kana-red #FF5D62;
-@define-color kana-pink #FFA066;
-@define-color kana-purple #E6C384;
-@define-color kana-blue #9CAE75;
-@define-color kana-green #7AA89F;
-@define-color kana-yellow #A7D7DE;
-
+@define-color kana-text    #D8DADF;
+@define-color kana-white   #FFFFFF;
+@define-color kana-red     #FF5D62;
+@define-color kana-orange  #FFA066;
+@define-color kana-purple  #E6C384;
+@define-color kana-yellow  #D6E684;
+@define-color kana-green    #C3F084;
+@define-color kana-blue   #7CB97D;
 /* Shades */
-@define-color volume #393E5B;
-@define-color bat #2B2E49;
+@define-color volume       #393E5B;
+@define-color bat          #2B2E49;
 
 * {
 	border: none;
@@ -74,7 +73,7 @@ window#waybar {
 }
 
 #workspaces button#sway-workspace-2 {
-	color: @kana-pink;
+	color: @kana-orange;
 }
 
 #workspaces button#sway-workspace-3 {
@@ -201,7 +200,7 @@ button:disabled {
 }
 
 #memory {
-	color: @kana-pink;
+	color: @kana-orange;
 }
 
 #custom-launcher {
