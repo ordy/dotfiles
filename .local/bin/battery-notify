@@ -1,0 +1,23 @@
+#!/bin/bash
+
+battery="BAT0"
+
+tmpFile="/tmp/battery-notification-sent"
+
+currentCharge=$(cat /sys/class/power_supply/${battery}/capacity)
+fullCharge=$(cat /sys/class/power_supply/${battery}/charge_stop_threshold)
+
+function batteryNotify() {
+	if [ ! -e "$tmpFile" ]; then
+		notify-send --urgency="$1" --icon=battery "Battery" "$2"
+		touch "$tmpFile"
+	fi
+}
+
+if [ $currentCharge -ge $fullCharge ]; then
+	batteryNotify "normal" "Battery charged"
+elif [ $currentCharge -le 20 ]; then
+	batteryNotify "critical" "Battery level under ${currentCharge}%"
+elif [ -e "$tmpFile" ]; then
+	rm "$tmpFile"
+fi

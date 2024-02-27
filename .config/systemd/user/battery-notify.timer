@@ -1,0 +1,10 @@
+[Unit]
+Description=Notify when battery charge crosses a threshold
+
+[Timer]
+AccuracySec=1sec
+OnStartupSec=30sec
+OnUnitActiveSec=2min
+
+[Install]
+WantedBy=timers.target
