@@ -9,15 +9,15 @@ fullCharge=$(cat /sys/class/power_supply/${battery}/charge_stop_threshold)
 
 function batteryNotify() {
 	if [ ! -e "$tmpFile" ]; then
-		notify-send --urgency="$1" --icon=battery "Battery" "$2"
+		notify-send --urgency="$1" "${battery}" "$2" -i $3
 		touch "$tmpFile"
 	fi
 }
 
 if [ $currentCharge -ge $fullCharge ]; then
-	batteryNotify "normal" "Battery charged"
+	batteryNotify "normal" "Battery charged to ${currentCharge}%" /usr/share/icons/battery-full.png
 elif [ $currentCharge -le 20 ]; then
-	batteryNotify "critical" "Battery level under ${currentCharge}%"
+	batteryNotify "critical" "<span weight='bold' color='#FF5D62'>BATTERY LEVEL UNDER ${currentCharge}%</span>" /usr/share/icons/battery-020.png
 elif [ -e "$tmpFile" ]; then
 	rm "$tmpFile"
 fi

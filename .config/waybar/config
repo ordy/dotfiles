@@ -115,14 +115,14 @@
 	},
 	"temperature": {
 		"critical-threshold": 85,
-		"format": "{temperatureC}°C <span font='12'>󰈸</span>",
+		"format": "{temperatureC}°C <span font='14' rise='-800'>󰈸</span>",
 		"tooltip": false
 	},
 	"backlight": {
 		"on-scroll-up": "backlightcmd up",
 		"on-scroll-down": "backlightcmd down",
 		"device": "intel_backlight",
-		"format": "{percent}% <span font='10'></span>",
+		"format": "{percent}% <span font='10' rise='-800'></span>",
 		"format-icons": [
 			"",
 			""
@@ -184,7 +184,7 @@
 		"format-source": "{volume}%  <span font='11'>󰍰</span>",
 		"format-source-muted": "<span font='11'>󰍱</span>",
 		"format-icons": {
-			"headphone": "<span font='11'>󰋋 </span>",
+			"headphone": "<span font='11'>󰋋</span>",
 			"hands-free": "",
 			"headset": "",
 			"phone": "",
@@ -206,10 +206,10 @@
 		"orientation": "horizontal"
 	},
 	"custom/weather": {
-		"format": "{} <span font='14'> </span>",
+		"format": "{} <span font='16' rise='-1900'></span>",
 		"format-alt": "{alt}",
 		"format-alt-click": "click-right",
-		"interval": 1000,
+		"interval": 3600,
 		"return-type": "json",
 		"tooltip": true,
 		"exec": "~/.config/waybar/modules/weather.sh",

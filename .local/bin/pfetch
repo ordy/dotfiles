@@ -271,7 +271,7 @@ EOF
 	}
 	[ "${info_height:-0}" -lt "${ascii_height:-0}" ] &&
 		cursor_pos=$((ascii_height - info_height))
-	while [ "${i:=1}" -le "${cursor_pos:-0}" ]; do
+	while [ "${i:=0}" -le "${cursor_pos:-0}" ]; do
 		printf '\n'
 		i=$((i + 1))
 	done >&6
