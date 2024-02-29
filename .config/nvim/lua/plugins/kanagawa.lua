@@ -56,6 +56,7 @@ return {
       return {
         LineNr = { fg = colors.palette.fujiGray, bg = "NONE" },
         CursorLineNr = { fg = "#7D86AA", bg = "NONE", bold = false },
+        IblIndent = { fg = colors.palette.sumiInk4 },
       }
     end,
   }),

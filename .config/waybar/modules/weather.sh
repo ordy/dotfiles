@@ -2,7 +2,7 @@
 
 # Set up caching to avoid tons of reqs to wttr
 cachedir=~/.cache/rbn
-cachefile=${0##*/}
+cachefile=weather_cache
 # Manually set location for wttr
 wttrdir=~/.config/wttr
 

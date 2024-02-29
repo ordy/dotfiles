@@ -6,7 +6,7 @@ RuntimeDirectory=battery-notify
 RuntimeDirectoryPreserve=yes
 WorkingDirectory=%t/battery-notify
 Type=oneshot
-ExecStart=battery-notify
+ExecStart=/home/sano/.local/bin/battery-notify
 
 [Install]
 WantedBy=battery_notify.timer

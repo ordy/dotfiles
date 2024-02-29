@@ -3,12 +3,12 @@
 @define-color kana-subtile #3D415A;
 @define-color kana-text    #D8DADF;
 @define-color kana-white   #FFFFFF;
-@define-color kana-red     #FF5D62;
-@define-color kana-orange  #FFA066;
-@define-color kana-purple  #E6C384;
-@define-color kana-yellow  #D6E684;
-@define-color kana-green    #C3F084;
-@define-color kana-blue   #7CB97D;
+@define-color kana-sky     #8FAEC2;
+@define-color kana-forest  #88B9A6;
+@define-color kana-silver  #BFBA9D;
+@define-color kana-gold  #E1BC88;
+@define-color kana-copper    #EBA283;
+@define-color kana-red   #BA4347;
 /* Shades */
 @define-color volume       #393E5B;
 @define-color bat          #2B2E49;
@@ -69,15 +69,15 @@ window#waybar {
 }
 
 #workspaces button#sway-workspace-1 {
-	color: @kana-red;
+	color: @kana-sky;
 }
 
 #workspaces button#sway-workspace-2 {
-	color: @kana-orange;
+	color: @kana-forest;
 }
 
 #workspaces button#sway-workspace-3 {
-	color: @kana-purple;
+	color: @kana-silver;
 }
 
 #workspaces button#sway-workspace-4 {
@@ -85,7 +85,7 @@ window#waybar {
 }
 
 #workspaces button#sway-workspace-5 {
-	color: @kana-green;
+	color: @kana-copper;
 }
 
 tooltip {
@@ -176,11 +176,9 @@ button:disabled {
 }
 
 #cpu,
-#memory {
-	margin-right: 12px;
-}
-
-#temperature {
+#memory,
+#temperature,
+#custom-weather {
 	margin-right: 12px;
 }
 
@@ -196,11 +194,11 @@ button:disabled {
 }
 
 #cpu {
-	color: @kana-red;
+	color: @kana-sky;
 }
 
 #memory {
-	color: @kana-orange;
+	color: @kana-forest;
 }
 
 #custom-launcher {
@@ -209,20 +207,21 @@ button:disabled {
 }
 
 #temperature {
-	color: @kana-purple;
+	color: @kana-silver;
 }
 
 #temperature.critical {
-	color: @kana-purple;
+	color: @kana-silver;
 }
 
 #backlight {
-	color: @kana-green;
-	margin-right: 10px;
+	margin-top: -5px;
+	margin-bottom: -5px;
+	color: @kana-copper;
 }
 
 #custom-weather {
-	color: @kana-yellow;
+	color: @kana-gold;
 	margin-top: -5px;
 	margin-bottom: -5px;
 }

@@ -23,10 +23,29 @@ export PROMPT_EOL_MARK=""
 # Aliases
 source ~/.aliases.zsh
 
-# NVM
-# source /usr/share/nvm/init-nvm.sh
+# Lazy load nvm
+lazy_load_nvm() {
+  unset -f npm node nvm
+	export NVM_DIR=~/.nvm
+  [[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
 # Load Angular CLI autocompletion.
-# source <(ng completion script)
+	source <(ng completion script)
+}
+
+npm() {
+	lazy_load_nvm
+	npm $@
+}
+
+node() {
+  lazy_load_nvm
+  node $@
+}
+
+nvm() {
+  lazy_load_nvm
+  nvm $@
+}
 
 # zcompdump
 autoload -Uz compinit
