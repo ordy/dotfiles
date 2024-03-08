@@ -9,4 +9,4 @@ Type=oneshot
 ExecStart=/home/sano/.local/bin/battery-notify
 
 [Install]
-WantedBy=battery_notify.timer
+WantedBy=battery-notify.timer
