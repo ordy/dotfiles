@@ -49,11 +49,12 @@ nvm() {
 
 # zcompdump
 autoload -Uz compinit
-typeset -i updated_at=$(date +'%j' -r ~/.cache/zsh/compdump/zcompdump-${ZSH_VERSION} 2>/dev/null || stat -f '%Sm' -t '%j' ~/.cache/zsh/compdump/zcompdump-${ZSH_VERSION} 2>/dev/null)
-if [ $(date +'%j') != $updated_at ]; then
-  compinit -i -d ~/.cache/zsh/compdump/zcompdump-${ZSH_VERSION}
+zcomp=$XDG_CACHE_HOME/zsh/compdump/zcompdump
+
+if [[ -s $zcomp(#qN.mh+24) && (! -s "$zcomp.zwc" || "$zcomp" -nt "$zcomp.zwc") ]]; then
+	compinit -i -d $zcomp
 else
-  compinit -C -i -d ~/.cache/zsh/compdump/zcompdump-${ZSH_VERSION}
+	compinit -C -d $zcomp
 fi
 
 # Plugins

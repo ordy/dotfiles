@@ -10,6 +10,11 @@ if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
   source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
 
+if [ -z "$XDG_CURRENT_DESKTOP" ]; then
+	export XDG_CURRENT_DESKTOP=sway
+	export XDG_SESSION_DESKTOP=sway
+fi
+
 if [[ -z $DISPLAY && $(tty) == /dev/tty1 && $XDG_SESSION_TYPE == tty ]]; then
   exec sway
 fi

@@ -6,21 +6,21 @@
 @define-color kana-sky     #8FAEC2;
 @define-color kana-forest  #88B9A6;
 @define-color kana-silver  #BFBA9D;
-@define-color kana-gold  #E1BC88;
-@define-color kana-copper    #EBA283;
-@define-color kana-red   #BA4347;
+@define-color kana-gold    #E1BC88;
+@define-color kana-copper  #EBA283;
+@define-color kana-red     #BA4347;
 /* Shades */
 @define-color volume       #393E5B;
 @define-color bat          #2B2E49;
 
 * {
 	border: none;
-	font-family: "SourceSans3VF", "Symbols Nerd Font";
-	font-size: 14px;
+	font-family: "Roboto Flex";
+	font-size: 13px;
 	font-weight: 600;
 	margin: 0px;
 	padding: 0px;
-	border-radius: 0;
+	border-radius: 0px;
 }
 
 window#waybar {
@@ -143,14 +143,14 @@ tooltip {
 #battery {
 	background-color: @bat;
 	color: @kana-text;
-	padding-left: 7px;
+	padding-right: 12px;
+	padding-left: 4px;
 }
 
 #battery.charging,
 #battery.plugged {
 	color: @kana-text;
 	background-color: @bat;
-	padding-left: 7px;
 }
 
 @keyframes blink {
@@ -163,7 +163,7 @@ tooltip {
 	background-color: @bat;
 	color: @kana-text;
 	animation-name: blink;
-	animation-duration: 0.5s;
+	animation-duration: 0.3s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
@@ -177,9 +177,12 @@ button:disabled {
 
 #cpu,
 #memory,
-#temperature,
+#backlight,
 #custom-weather {
 	margin-right: 12px;
+}
+#temperature {
+	margin-right: 10px;
 }
 
 #cpu,
@@ -191,6 +194,15 @@ button:disabled {
 #custom-artist,
 #custom-title {
 	background-color: transparent;
+}
+
+#cpu,
+#memory,
+#temperature,
+#custom-weather,
+#backlight {
+	font-family: "Roboto Condensed";
+	font-size: 14;
 }
 
 #cpu {
@@ -234,7 +246,6 @@ button:disabled {
 }
 
 #pulseaudio,
-#battery,
 #network,
 #clock {
 	padding-left: 7px;
@@ -280,17 +291,13 @@ button:disabled {
 }
 
 #custom-artist {
-	font-size: 15px;
 	color: @kana-text;
-	margin: 0px;
 	padding-right: 4px;
 	padding-left: 5px;
 }
 
 #custom-title {
 	color: #8E939B;
-	font-size: 15px;
-	margin: 0px;
 }
 slider {
 	min-height: 0px;
@@ -325,8 +332,19 @@ highlight {
 	background-color: @kana-text;
 }
 
+@keyframes recording {
+	to {
+		color: @kana-base;
+	}
+}
+
 #custom-recorder {
 	font-size: 15px;
-	margin: 2px 7px 0px 7px;
+	margin: 0px 7px 0px 7px;
 	color: @kana-red;
+	animation-name: recording;
+	animation-duration: 0.8s;
+	animation-timing-function: ease-in;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
 }

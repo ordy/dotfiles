@@ -85,7 +85,7 @@
 		"spacing": 10
 	},
 	"clock": {
-		"format": "{:%a, %d %b • <b>%H:%M</b>}",
+		"format": "{:%a, %d %b • <span color='#EAEDF7' font-weight='800'>%H:%M</span>}",
 		"timezone": "Europe/Brussels",
 		"smooth-scrolling-threshold": 4,
 		"calendar": {
@@ -94,10 +94,10 @@
 			"on-scroll": 1,
 			"on-click-right": "mode",
 			"format": {
-				"months": "<span color='#b6e3ff'><b>{}</b></span>",
-				"weeks": "<span color='#ecd8ff'><b>{}</b></span>",
-				"weekdays": "<span color='#80ccff'><b>{}</b></span>",
-				"today": "<span color='#ffb77c' background='#363D46'><b>{}</b></span>"
+				"months": "<span color='#88B9A6'><b>{}</b></span>",
+				"weeks": "<span color='#E1BC88'><b>{}</b></span>",
+				"weekdays": "<span color='#8FAEC2'><b>{}</b></span>",
+				"today": "<span color='#CAA1FF' background='#353854'><b>{}</b></span>"
 			}
 		},
 		"actions": {
@@ -108,24 +108,36 @@
 		"tooltip-format": "<tt>{calendar}</tt>"
 	},
 	"cpu": {
-		"format": "{usage}% "
+		"format": "{usage}% <span font='12' rise='-1600'>󱤓</span>"
 	},
 	"memory": {
-		"format": "{percentage}% "
+		"format": "{percentage}% <span font='12' rise='-1600'>󰗉</span>"
 	},
 	"temperature": {
 		"critical-threshold": 85,
-		"format": "{temperatureC}°C <span font='14' rise='-800'>󰈸</span>",
+		"format": "{temperatureC}°C  <span font='12' rise='-1900'>󱩅</span>",
 		"tooltip": false
+	},
+	"custom/weather": {
+		"format": "{} <span font='10' rise='-300'></span>",
+		"format-alt": "{alt}",
+		"format-alt-click": "click-right",
+		"interval": 3600,
+		"return-type": "json",
+		"tooltip": true,
+		"exec": "~/.config/waybar/modules/weather.sh",
+		"exec-if": "ping wttr.in -c1"
 	},
 	"backlight": {
 		"on-scroll-up": "backlightcmd up",
 		"on-scroll-down": "backlightcmd down",
 		"device": "intel_backlight",
-		"format": "{percent}% <span font='10' rise='-800'></span>",
+		"format": "{percent}% {icon}",
 		"format-icons": [
-			"",
-			""
+			"<span font='10' rise='-300'>󰃝</span>",
+			"<span font='10' rise='-300'>>󰃟</span>",
+			"<span font='10' rise='-300'>>󰃞</span>",
+			"<span font='10' rise='-300'>>󰃠</span>"
 		],
 		"smooth-scrolling-threshold": 2.5,
 		"tooltip": false
@@ -138,8 +150,8 @@
 		},
 		"full-at": 100,
 		"format": "{icon}",
-		"format-alt": "{capacity} <span font='11'>󱐋</span> {icon}",
-		"format-charging": "{capacity} <span font='11'>󱐋</span> {icon}",
+		"format-alt": "<span rise='800'>{capacity}</span><span font='11'>󱐋</span>{icon}",
+		"format-charging": "{capacity}󱐋{icon}",
 		"format-plugged": "<span font='10'></span>",
 		"tooltip-format": "{capacity}",
 		// "format-good": "", // An empty format will hide the module
@@ -205,21 +217,11 @@
 		"max": 100,
 		"orientation": "horizontal"
 	},
-	"custom/weather": {
-		"format": "{} <span font='16' rise='-1900'></span>",
-		"format-alt": "{alt}",
-		"format-alt-click": "click-right",
-		"interval": 3600,
-		"return-type": "json",
-		"tooltip": true,
-		"exec": "~/.config/waybar/modules/weather.sh",
-		"exec-if": "ping wttr.in -c1"
-	},
 	"custom/pacman": {
-		"format": "{}{icon}",
+		"format": "{icon} {}",
 		"return-type": "json",
 		"format-icons": {
-			"pending-updates": "x  <span font='11'></span>",
+			"pending-updates": "<span font='12' rise='-2200'>󰮯<span font='7' rise='800'> • •</span></span>",
 			"updated": ""
 		},
 		"exec-if": "which waybar-updates",
@@ -250,7 +252,7 @@
 		"tooltip": false
 	},
 	"custom/recorder": {
-		"format": "",
+		"format": "",
 		"return-type": "json",
 		"interval": 1,
 		"exec": "echo '{\"class\": \"recording\"}'",
