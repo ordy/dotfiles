@@ -246,7 +246,7 @@
 		"exec": "~/.config/waybar/modules/mediaplayer_t.py 2> /dev/null" // Script in resources folder
 	},
 	"custom/launcher": {
-		"format": "<span font='15' rise='-15800'>󰐅</span>",
+		"format": "<span font='15'>󰐅</span>",
 		"on-click": "tofi-drun | xargs swaymsg exec --",
 		"on-click-right": "wlogout -b 5 -p layer-shell",
 		"tooltip": false
