@@ -202,7 +202,7 @@ button:disabled {
 #custom-weather,
 #backlight {
 	font-family: "Roboto Condensed";
-	font-size: 14;
+	font-size: 14px;
 }
 
 #cpu {
@@ -288,6 +288,12 @@ button:disabled {
 
 #pulseaudio.muted {
 	color: #8f9baa;
+}
+
+#custom-artist,
+#custom-title {
+	font-family: "SourceSans3VF";
+	font-size: 15px;
 }
 
 #custom-artist {

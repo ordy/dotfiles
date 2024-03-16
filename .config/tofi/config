@@ -1,8 +1,8 @@
 # vim:ft=conf
 
-  font = "/home/sano/.local/share/fonts/TTF/Roboto/Roboto-Medium.ttf"
-	font-size = 17
-	hint-font = false
+  font = "/home/sano/.local/share/fonts/TTF/Saira_Condensed/SairaCondensed-SemiBold.ttf"
+	font-size = 20
+	hint-font = true
 	text-color = #F4F1E0
 	selection-color = #D6B379
 	width = 450
@@ -13,9 +13,9 @@
 	border-width = 10
 	border-color = #202437
 	corner-radius = 10
-	padding-top = 20
-	padding-bottom = 20
-	padding-left = 30
+	padding-top = 40
+	padding-bottom = 40
+	padding-left = 40
 	padding-right = 40
 	drun-launch = false
 	late-keyboard-init = true
