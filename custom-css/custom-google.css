@@ -139,7 +139,7 @@ a:visited {
 .appbar, .sfbg, .yg51vc, body, body.srp {
 	background-color: var(--surface1)!important
 }
-.GKS7s:hover, .SvoXfb:hover, .Lj9fsd.DU1Mzb, .RpqMib:hover, .BaegVc:hover, g-menu:first-child, .pD4qTd .yMAEcf, .DJbVFb .xAmryf, .W6pGoe, .o6juZc, .Lj9fsd.DU1Mzb, .RNNXgb:hover, .sbfc .RNNXgb, .emcav .RNNXgb, .minidiv .RNNXgb, .aajZCb {
+.GKS7s:hover, .SvoXfb:hover, .Lj9fsd.DU1Mzb, .RpqMib:hover, .BaegVc:hover, g-menu:first-child, .pD4qTd .yMAEcf, .DJbVFb .xAmryf, .W6pGoe, .o6juZc, .Lj9fsd.DU1Mzb, .RNNXgb:hover, .sbfc .RNNXgb, .emcav .RNNXgb, .minidiv .RNNXgb, .aajZCb, .RNNXgb {
 	background-color: var(--surface2)
 }
 .minidiv .sfbg, g-raised-button {
@@ -182,7 +182,7 @@ a:visited {
 .W6pGoe, .o6juZc, .RNNXgb:hover, .sbfc .RNNXgb, .emcav .RNNXgb, .minidiv .RNNXgb:hover {
 	border-color: transparent
 }
-.gbqfba, .lJ9FBc input[type="submit"], .RNNXgb {
+.gbqfba, .lJ9FBc input[type="submit"] {
 	border-color: var(--surface2)
 }
 #rhs .MXl0lf, .MXl0lf, .cv2VAd, g-inner-card {
