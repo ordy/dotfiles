@@ -45,7 +45,7 @@
 			"focused": "<span font='11'></span>",
 			"visible": ""
 		},
-		"persistent_workspaces": {
+		"persistent-workspaces": {
 			"1": [],
 			"2": [],
 			"3": [],
