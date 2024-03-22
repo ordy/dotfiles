@@ -1,0 +1,27 @@
+diff --git a/src/screens/sort_playlist.cpp b/src/screens/sort_playlist.cpp
+index 39a8eb15..ebe731d2 100644
+--- a/src/screens/sort_playlist.cpp
++++ b/src/screens/sort_playlist.cpp
+@@ -50,6 +50,12 @@ SortPlaylistDialog::SortPlaylistDialog()
+ 	w.addItem(Entry(std::make_pair("Artist", &MPD::Song::getArtist),
+ 		std::bind(&Self::moveSortOrderHint, this)
+ 	));
++	w.addItem(Entry(std::make_pair("Title", &MPD::Song::getTitle),
++		std::bind(&Self::moveSortOrderHint, this)
++	));
++	w.addItem(Entry(std::make_pair("Comment", &MPD::Song::getComment),
++		std::bind(&Self::moveSortOrderHint, this)
++	));
+ 	w.addItem(Entry(std::make_pair("Album artist", &MPD::Song::getAlbumArtist),
+ 		std::bind(&Self::moveSortOrderHint, this)
+ 	));
+@@ -74,9 +80,6 @@ SortPlaylistDialog::SortPlaylistDialog()
+ 	w.addItem(Entry(std::make_pair("Performer", &MPD::Song::getPerformer),
+ 		std::bind(&Self::moveSortOrderHint, this)
+ 	));
+-	w.addItem(Entry(std::make_pair("Title", &MPD::Song::getTitle),
+-		std::bind(&Self::moveSortOrderHint, this)
+-	));
+ 	w.addItem(Entry(std::make_pair("Filename", &MPD::Song::getURI),
+ 		std::bind(&Self::moveSortOrderHint, this)
+ 	));
