@@ -163,7 +163,6 @@
 			"<span font='11'></span>",
 			"<span font='11'></span>"
 		],
-		"on-click": "{alt}",
 		"tooltip": true
 	},
 	"network": {
