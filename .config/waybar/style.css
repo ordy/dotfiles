@@ -14,13 +14,11 @@
 @define-color bat          #2B2E49;
 
 * {
+	all: unset;
 	border: none;
 	font-family: "Roboto Flex";
 	font-size: 13px;
 	font-weight: 600;
-	margin: 0px;
-	padding: 0px;
-	border-radius: 0px;
 }
 
 window#waybar {
@@ -46,10 +44,6 @@ window#waybar {
 
 #workspaces button:hover label {
 	color: #959da5;
-}
-
-#workspaces button.focused {
-	color: @kana-text;
 }
 
 #workspaces button.urgent {
@@ -181,6 +175,7 @@ button:disabled {
 #custom-weather {
 	margin-right: 12px;
 }
+
 #temperature {
 	margin-right: 10px;
 }
@@ -305,6 +300,7 @@ button:disabled {
 #custom-title {
 	color: #8E939B;
 }
+
 slider {
 	min-height: 0px;
 	min-width: 0px;
@@ -334,6 +330,7 @@ highlight {
 #pulseaudio-slider trough {
 	background-color: @kana-base;
 }
+
 #pulseaudio-slider highlight {
 	background-color: @kana-text;
 }
@@ -354,3 +351,4 @@ highlight {
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
+
