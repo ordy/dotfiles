@@ -48,15 +48,13 @@
 	--deprecated-text-input-border-hover: #040405;
 	--deprecated-text-input-border-disabled: var(--background-tertiary);
 	--deprecated-text-input-prefix: #dcddde;
-	--background-accent-1: rgb(62 85 101 / 21%);
+--background-accent-1: rgb(62 85 101 / 21%);
 	--background-accent-3: rgb(62 80 101 / 30%);
 	--background-floating-2: rgb(20 24 30 / 20%);
 	--__header-bar-background: #12161b;
-	--brand-500-hsl: 166;
-	--saturation-factor: 10 !important;
-	calc(var(--saturation-factor, 1) * 17.6%) 26.7%;
-	--brand-560-hsl: 266
-	calc(var(--saturation-factor, 1) * 17.6%) 41.7%;
+	/* --brand-500-hsl: 166; */
+	/* --saturation-factor: 10 !important; */
+	/* --brand-560-hsl: 266; */
 	--modal-background: var(--background-secondary);
 	--modal-footer-background: var(--background-secondary-alt);
 	--scrollbar-auto-track: hsl(235deg 20.55% 15.03%);
