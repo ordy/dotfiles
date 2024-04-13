@@ -24,9 +24,10 @@ offset = -3
 
 GtkLayerShell.init_for_window(layer)
 GtkLayerShell.set_monitor(layer, monitor)
-GtkLayerShell.set_layer(layer, GtkLayerShell.Layer.BOTTOM)
+GtkLayerShell.set_layer(layer, GtkLayerShell.Layer.BACKGROUND)
 GtkLayerShell.set_margin(layer, GtkLayerShell.Edge.TOP, offset)
 GtkLayerShell.set_anchor(layer, GtkLayerShell.Edge.TOP, 1)
+GtkLayerShell.set_namespace(layer, 'panel-shadow')
 
 layer.show_all()
 layer.connect('destroy', Gtk.main_quit)
