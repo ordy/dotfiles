@@ -26,7 +26,7 @@ return {
               hint = icons.diagnostics.Hint,
             },
           },
-          { "filename", path = 0, symbols = { modified = "  ", readonly = "", unnamed = "" } },
+          { "filename", path = 3, symbols = { modified = "  ", readonly = "", unnamed = "" } },
           -- stylua: ignore
           {
             function() return require("nvim-navic").get_location() end,

@@ -6,13 +6,13 @@
 }
 
 window {
-  background-color: rgba(10, 10, 16, 0.98);
+  background-color: rgba(10, 10, 16, 0.95);
 }
 
 button {
   font-family: "Symbols Nerd Font";
   background-color: #0f101a;
-  color: #161827;
+  color: #1C1E30;
   margin-top: 200px;
   margin-bottom: 300px;
   font-size: 120px;

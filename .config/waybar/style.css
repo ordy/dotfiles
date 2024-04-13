@@ -42,44 +42,40 @@ window#waybar {
 	background-color: @kana-overlay;
 }
 
+#workspaces button.empty label {
+	color: @kana-subtile;
+}
+
+#workspaces button.urgent label {
+	color: @kana-red;
+}
+
 #workspaces button:hover label {
 	color: #959da5;
 }
 
-#workspaces button.urgent {
-	color: @kana-blue;
-}
-
-#workspaces button#sway-workspace-1.persistent,
-#workspaces button#sway-workspace-2.persistent,
-#workspaces button#sway-workspace-3.persistent,
-#workspaces button#sway-workspace-4.persistent,
-#workspaces button#sway-workspace-5.persistent {
-	color: @kana-subtile;
-}
-
-#workspaces button.focused label {
-	color: @kana-white;
-}
-
-#workspaces button#sway-workspace-1 {
+#workspaces button:nth-child(1):not(.empty):not(.active) label {
 	color: @kana-sky;
 }
 
-#workspaces button#sway-workspace-2 {
+#workspaces button:nth-child(2):not(.empty):not(.active) label {
 	color: @kana-forest;
 }
 
-#workspaces button#sway-workspace-3 {
+#workspaces button:nth-child(3):not(.empty):not(.active) label {
 	color: @kana-silver;
 }
 
-#workspaces button#sway-workspace-4 {
+#workspaces button:nth-child(4):not(.empty):not(.active) label {
 	color: @kana-gold;
 }
 
-#workspaces button#sway-workspace-5 {
+#workspaces button:nth-child(5):not(.empty):not(.active) label {
 	color: @kana-copper;
+}
+
+#workspaces button.active label {
+	color: @kana-white;
 }
 
 tooltip {

@@ -1,10 +1,10 @@
 #!/bin/bash
 
-IN=$(xrandr | grep -E "\bconnected\b" | grep -ohP "LVDS-\d")
-EXT=$(xrandr | grep -E "\bconnected\b" | grep -ohP "VGA-\d")
+IN='LVDS-1'
+DISABLED=$(hyprctl monitors all | grep '0 0 0 0')
 
-if [[ -n $EXT ]]; then
-    xrandr --output $IN --off --output $EXT --primary --auto
+if [[ -z $DISABLED ]]; then
+	hyprctl keyword monitor $IN,disable >/dev/null 2>&1
 else
-    xrandr --output $EXT --off --output $IN --primary --auto
+	hyprctl keyword monitor $IN,preferred,1680x150,1 >/dev/null 2>&1
 fi
