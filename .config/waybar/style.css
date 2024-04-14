@@ -16,7 +16,7 @@
 * {
 	all: unset;
 	border: none;
-	font-family: "Roboto Flex";
+	font-family: "Roboto Flex, Symbols Nerd Font";
 	font-size: 13px;
 	font-weight: 600;
 }
@@ -90,10 +90,10 @@ tooltip {
 #custom-sep4,
 #custom-sep5,
 #custom-sep6 {
-	margin-top: -32px;
+	margin-top: -31px;
 	margin-bottom: -36px;
 	margin-right: -12px;
-	font-size: 28px;
+	font-size: 30px;
 }
 
 #custom-sep0 {
@@ -133,8 +133,8 @@ tooltip {
 #battery {
 	background-color: @bat;
 	color: @kana-text;
-	padding-right: 12px;
-	padding-left: 4px;
+	padding-right: 9px;
+	padding-left: 5px;
 }
 
 #battery.charging,
@@ -205,8 +205,11 @@ button:disabled {
 }
 
 #custom-launcher {
+	font-size: 22px;
 	color: @kana-white;
 	background-color: transparent;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 #temperature {
@@ -236,16 +239,24 @@ button:disabled {
 	margin-bottom: -5px;
 }
 
-#pulseaudio,
-#network,
 #clock {
-	padding-left: 7px;
-	padding-right: 7px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-right: 10px;
+	padding-left: 5px;
 }
 
-#custom-launcher {
-	padding-left: 10px;
-	padding-right: 10px;
+#network {
+	padding-right: 0px;
+	padding-left: 3px;
+}
+#battery {
+	margin-top: -10px;
+	margin-bottom: -30px;
+}
+#pulseaudio {
+	padding-right: 8px;
+	padding-left: 4px;
 }
 
 #tray,
@@ -255,16 +266,15 @@ button:disabled {
 
 #tray {
 	padding-right: 7px;
-	margin-top: -14px;
-	margin-bottom: -14px;
 }
 
 #network,
 #battery,
 #pulseaudio,
+#tray,
 #custom-launcher {
-	margin-top: -5px;
-	margin-bottom: -5px;
+	margin-top: -50px;
+	margin-bottom: -50px;
 }
 
 #network.disconnected {
@@ -320,6 +330,8 @@ highlight {
 }
 
 #pulseaudio-slider {
+	padding-right: 7px;
+	padding-left: 5px;
 	background-color: @volume;
 }
 

@@ -123,41 +123,31 @@
 		"format": "{percent}% {icon}",
 		"format-icons": [
 			"<span font='10' rise='-300'>󰃝</span>",
-			"<span font='10' rise='-300'>>󰃟</span>",
-			"<span font='10' rise='-300'>>󰃞</span>",
-			"<span font='10' rise='-300'>>󰃠</span>"
+			"<span font='10' rise='-300'>󰃟</span>",
+			"<span font='10' rise='-300'>󰃞</span>",
+			"<span font='10' rise='-300'>󰃠</span>"
 		],
 		"smooth-scrolling-threshold": 2.5,
 		"tooltip": false
 	},
 	"battery": {
 		"states": {
-			// "good": 95,
 			"warning": 30,
 			"critical": 15
 		},
 		"full-at": 100,
-		"format": "{icon}",
-		"format-alt": "<span rise='800'>{capacity}</span><span font='11'>󱐋</span>{icon}",
-		"format-charging": "{capacity}󱐋{icon}",
-		"format-plugged": "<span font='10'></span>",
+		"format": "<span font='10' rise='-700'></span>",
+		"format-alt": "<span rise='-1500'>{capacity} </span>  <span font='10' rise='-700'></span>",
+		"format-charging": "<span rise='-1800'>{capacity}</span> <span font='10' rise='-700'></span>",
+		"format-plugged": "<span font='10' rise='-700'></span>",
 		"tooltip-format": "{capacity}",
-		// "format-good": "", // An empty format will hide the module
-		// "format-full": "",
-		"format-icons": [
-			"<span font='11'></span>",
-			"<span font='11'></span>",
-			"<span font='11'></span>",
-			"<span font='11'></span>",
-			"<span font='11'></span>"
-		],
 		"tooltip": true
 	},
 	"network": {
-		"format-wifi": "<span font='11'>󰖩</span>",
-		"format-ethernet": "{ifname}: {ipaddr}/{cidr} asdasd",
+		"format-wifi": "<span font='10' rise='900'></span>",
+		"format-ethernet": "{ifname}: {ipaddr}/{cidr}",
 		"format-linked": "{ifname} (No IP) ",
-		"format-disconnected": "<span font='11'>󰖪</span>",
+		"format-disconnected": "",
 		"format-alt": "{ifname} on {essid}: {ipaddr}/{cidr}",
 		"on-click-right": "iwgtk",
 		"tooltip": false
@@ -176,21 +166,16 @@
 	},
 	"pulseaudio": {
 		"format": "{icon}",
-		"format-alt": "{format_source}   {volume}%  {icon}",
-		"format-bluetooth": "<span font='11' rise='-800'>󰂰</span>",
-		"format-bluetooth-muted": "<span font='11' rise='-800'>󰂰</span>",
+		"format-alt": "{format_source}    <span rise='-800'>{volume}%</span>  {icon}",
+		"format-bluetooth": "󰂰",
+		"format-bluetooth-muted": "󰂰",
 		"format-muted": " {format_source}",
-		"format-source": "{volume}%  <span font='11'>󰍰</span>",
-		"format-source-muted": "<span font='11'>󰍱</span>",
+		"format-source": "<span rise='-800'>{volume}%</span>  <span font='11' rise='-400'></span>",
+		"format-source-muted": "󰍱",
 		"format-icons": {
-			"headphone": "<span font='11'>󰋋</span>",
-			"hands-free": "",
-			"headset": "",
-			"phone": "",
-			"portable": "",
-			"car": "",
+			"headphone": "<span font='12'>󰋋</span>",
 			"default": [
-				"<span font='12'>󰜟</span>"
+				"󰜟"
 			]
 		},
 		"smooth-scrolling-threshold": 0.8,
@@ -205,10 +190,10 @@
 		"orientation": "horizontal"
 	},
 	"custom/pacman": {
-		"format": "{icon} {}",
+		"format": "{icon} <span rise='-700'>{}</span>",
 		"return-type": "json",
 		"format-icons": {
-			"pending-updates": "<span font='12' rise='-2200'>󰮯<span font='7' rise='800'> • •</span></span>",
+			"pending-updates": "<span font='13' rise='-2000'>󰮯<span font='7' rise='100'> • •</span></span>",
 			"updated": ""
 		},
 		"exec-if": "which waybar-updates",
@@ -233,7 +218,7 @@
 		"exec": "~/.config/waybar/modules/mediaplayer_t.py 2> /dev/null" // Script in resources folder
 	},
 	"custom/launcher": {
-		"format": "<span font='15'>󰐅</span>",
+		"format": "󰐅",
 		"on-click": "tofi-drun | xargs swaymsg exec --",
 		"on-click-right": "wlogout -b 5 -p layer-shell",
 		"tooltip": false
