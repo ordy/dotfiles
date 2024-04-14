@@ -20,6 +20,7 @@
 	],
 	"modules-right": [
 		"custom/recorder",
+		"tray",
 		"custom/pacman",
 		"custom/sep3",
 		"group/pulse-group",
@@ -27,7 +28,6 @@
 		"battery",
 		"custom/sep5",
 		"network",
-		"tray",
 		"custom/sep6",
 		"clock"
 	],
@@ -69,7 +69,7 @@
 		"tooltip": false
 	},
 	"tray": {
-		"icon-size": 17,
+		"icon-size": 18,
 		"spacing": 5
 	},
 	"clock": {
