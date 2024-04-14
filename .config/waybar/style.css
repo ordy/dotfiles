@@ -1,3 +1,4 @@
+/* Colors */
 @define-color kana-base    #0F101A;
 @define-color kana-overlay #1E2031;
 @define-color kana-subtile #3D415A;
@@ -9,10 +10,10 @@
 @define-color kana-gold    #E1BC88;
 @define-color kana-copper  #EBA283;
 @define-color kana-red     #BA4347;
-/* Shades */
 @define-color volume       #393E5B;
 @define-color bat          #2B2E49;
 
+/* Bar */
 * {
 	all: unset;
 	border: none;
@@ -21,11 +22,95 @@
 	font-weight: 600;
 }
 
+label:disabled,
+button:disabled {
+	min-width: 0;
+	min-height: 0;
+}
+
 window#waybar {
 	background-color: @kana-base;
 	color: @kana-text;
-	transition-property: background-color;
-	transition-duration: 0.5s;
+}
+
+tooltip {
+	border: 2px solid @kana-text;
+	background-color: @kana-overlay;
+}
+
+slider {
+	min-height: 0px;
+	min-width: 0px;
+	margin-left: 5px;
+	padding-right: 5px;
+	opacity: 0;
+	background-image: none;
+	border: none;
+	box-shadow: none;
+}
+
+trough {
+	min-height: 8px;
+	min-width: 90px;
+	border-radius: 5px;
+}
+
+highlight {
+	min-height: 8px;
+	border-radius: 5px;
+}
+
+/* Separators */
+#custom-sep0,
+#custom-sep1,
+#custom-sep3,
+#custom-sep4,
+#custom-sep5,
+#custom-sep6 {
+	margin-top: -31px;
+	margin-bottom: -36px;
+	margin-right: -12px;
+	font-size: 30px;
+}
+
+#custom-sep0 {
+	color: @kana-overlay;
+	background-color: transparent;
+}
+#custom-sep1 {
+	color: @kana-base;
+	background-color: @kana-overlay;
+}
+
+#custom-sep3 {
+	color: @volume;
+	background-color: transparent;
+}
+
+#custom-sep4 {
+	color: @bat;
+	background-color: @volume;
+}
+
+#custom-sep5 {
+	color: @kana-overlay;
+	background-color: @bat;
+}
+
+#custom-sep6 {
+	color: @kana-base;
+	background-color: @kana-overlay;
+}
+
+/* Modules Left */
+#custom-launcher {
+	font-size: 22px;
+	color: @kana-white;
+	background-color: transparent;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: -50px;
+	margin-bottom: -50px;
 }
 
 #workspaces > button:last-child {
@@ -78,56 +163,143 @@ window#waybar {
 	color: @kana-white;
 }
 
-tooltip {
-	border: 2px solid @kana-text;
-	background-color: @kana-overlay;
-}
-
-/***** Separators  *****/
-#custom-sep0,
-#custom-sep1,
-#custom-sep3,
-#custom-sep4,
-#custom-sep5,
-#custom-sep6 {
-	margin-top: -31px;
-	margin-bottom: -36px;
-	margin-right: -12px;
-	font-size: 30px;
-}
-
-#custom-sep0 {
-	color: @kana-overlay;
+#custom-artist,
+#custom-title {
 	background-color: transparent;
-}
-#custom-sep1 {
-	color: @kana-base;
-	background-color: @kana-overlay;
+	font-family: "SourceSans3VF";
+	font-size: 15px;
 }
 
-#custom-sep3 {
-	color: @volume;
+#custom-artist {
+	color: @kana-text;
+	padding-right: 4px;
+	padding-left: 5px;
+}
+
+#custom-title {
+	color: #8E939B;
+}
+
+/* Modules Center */
+#cpu,
+#memory,
+#backlight,
+#custom-weather {
+	margin-right: 12px;
+}
+
+#cpu,
+#memory,
+#backlight,
+#temperature,
+#custom-weather {
 	background-color: transparent;
+	font-family: "Roboto Condensed";
+	font-size: 14px;
 }
 
-#custom-sep4 {
-	color: @bat;
+#cpu {
+	color: @kana-sky;
+}
+
+#memory {
+	color: @kana-forest;
+}
+
+#temperature {
+	color: @kana-silver;
+	margin-right: 10px;
+}
+
+#temperature.critical {
+	color: @kana-silver;
+}
+
+#backlight {
+	color: @kana-copper;
+}
+
+#custom-weather {
+	color: @kana-gold;
+}
+
+/* Modules Right */
+#network,
+#battery,
+#pulseaudio,
+#tray {
+	margin-top: -50px;
+	margin-bottom: -50px;
+}
+
+#tray {
+	padding-right: 7px;
+	padding-left: 7px;
+}
+
+#tray menu {
+	background-color: #1C1E31;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: 1px solid @kana-subtile;
+}
+
+#tray menu menuitem:hover {
+	background-color: #3F415E;
+}
+
+#tray menu menuitem {
+	padding-bottom: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+@keyframes recording {
+	to {
+		color: @kana-base;
+	}
+}
+
+#custom-recorder {
+	font-size: 15px;
+	margin: 0px 7px 0px 7px;
+	color: @kana-red;
+	animation-name: recording;
+	animation-duration: 0.8s;
+	animation-timing-function: ease-in;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#custom-pacman {
+	color: @kana-text;
+	background-color: transparent;
+	margin-right: 7px;
+}
+
+#pulseaudio {
+	background-color: @volume;
+	color: @kana-text;
+	padding-right: 8px;
+	padding-left: 4px;
+}
+
+#pulseaudio.muted {
+	color: #8f9baa;
+}
+
+#pulseaudio-slider {
+	padding-right: 7px;
+	padding-left: 5px;
 	background-color: @volume;
 }
 
-#custom-sep5 {
-	color: @kana-overlay;
-	background-color: @bat;
-}
-
-#custom-sep6 {
-	color: @kana-base;
-	background-color: @kana-overlay;
-}
-/**************/
-
-#clock {
+#pulseaudio-slider trough {
 	background-color: @kana-base;
+}
+
+#pulseaudio-slider highlight {
+	background-color: @kana-text;
 }
 
 #battery {
@@ -159,204 +331,20 @@ tooltip {
 	animation-direction: alternate;
 }
 
-label:disabled,
-button:disabled {
-	all: unset;
-	min-width: 0;
+#network {
+	background-color: @kana-overlay;
+	padding-right: 7px;
+	padding-left: 3px;
 }
 
-#cpu,
-#memory,
-#backlight,
-#custom-weather {
-	margin-right: 12px;
-}
-
-#temperature {
-	margin-right: 10px;
-}
-
-#cpu,
-#memory,
-#temperature,
-#backlight,
-#custom-weather,
-#custom-pacman,
-#custom-artist,
-#custom-title {
-	background-color: transparent;
-}
-
-#cpu,
-#memory,
-#temperature,
-#custom-weather,
-#backlight {
-	font-family: "Roboto Condensed";
-	font-size: 14px;
-}
-
-#cpu {
-	color: @kana-sky;
-}
-
-#memory {
-	color: @kana-forest;
-}
-
-#custom-launcher {
-	font-size: 22px;
-	color: @kana-white;
-	background-color: transparent;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-#temperature {
-	color: @kana-silver;
-}
-
-#temperature.critical {
-	color: @kana-silver;
-}
-
-#backlight {
-	margin-top: -5px;
-	margin-bottom: -5px;
-	color: @kana-copper;
-}
-
-#custom-weather {
-	color: @kana-gold;
-	margin-top: -5px;
-	margin-bottom: -5px;
-}
-
-#custom-pacman {
-	color: @kana-text;
-	margin-right: 7px;
-	margin-top: -5px;
-	margin-bottom: -5px;
+#network.disconnected {
+	color: #656f7a;
 }
 
 #clock {
+	background-color: @kana-base;
 	padding-top: 0px;
 	padding-bottom: 0px;
 	padding-right: 10px;
 	padding-left: 5px;
 }
-
-#network {
-	padding-right: 0px;
-	padding-left: 3px;
-}
-#battery {
-	margin-top: -10px;
-	margin-bottom: -30px;
-}
-#pulseaudio {
-	padding-right: 8px;
-	padding-left: 4px;
-}
-
-#tray,
-#network {
-	background-color: @kana-overlay;
-}
-
-#tray {
-	padding-right: 7px;
-}
-
-#network,
-#battery,
-#pulseaudio,
-#tray,
-#custom-launcher {
-	margin-top: -50px;
-	margin-bottom: -50px;
-}
-
-#network.disconnected {
-	color: #656f7a;
-	margin: -10px 0px -10px 0px;
-}
-
-#pulseaudio {
-	background-color: @volume;
-	color: @kana-text;
-}
-
-#pulseaudio.muted {
-	color: #8f9baa;
-}
-
-#custom-artist,
-#custom-title {
-	font-family: "SourceSans3VF";
-	font-size: 15px;
-}
-
-#custom-artist {
-	color: @kana-text;
-	padding-right: 4px;
-	padding-left: 5px;
-}
-
-#custom-title {
-	color: #8E939B;
-}
-
-slider {
-	min-height: 0px;
-	min-width: 0px;
-	margin-left: 5px;
-	padding-right: 5px;
-	opacity: 0;
-	background-image: none;
-	border: none;
-	box-shadow: none;
-}
-
-trough {
-	min-height: 8px;
-	min-width: 90px;
-	border-radius: 5px;
-}
-
-highlight {
-	min-height: 8px;
-	border-radius: 5px;
-}
-
-#pulseaudio-slider {
-	padding-right: 7px;
-	padding-left: 5px;
-	background-color: @volume;
-}
-
-#pulseaudio-slider trough {
-	background-color: @kana-base;
-}
-
-#pulseaudio-slider highlight {
-	background-color: @kana-text;
-}
-
-@keyframes recording {
-	to {
-		color: @kana-base;
-	}
-}
-
-#custom-recorder {
-	font-size: 15px;
-	margin: 0px 7px 0px 7px;
-	color: @kana-red;
-	animation-name: recording;
-	animation-duration: 0.8s;
-	animation-timing-function: ease-in;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
