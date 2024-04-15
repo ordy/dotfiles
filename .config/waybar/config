@@ -1,233 +1,232 @@
-//# vi: ft=jsonc
 {
-	"layer": "top",
-	"position": "top",
-	"reload_style_on_change": true,
-	"modules-left": [
-		"custom/launcher",
-		"custom/sep0",
-		"hyprland/workspaces",
-		"custom/sep1",
-		"custom/artist",
-		"custom/title"
-	],
-	"modules-center": [
-		"cpu",
-		"memory",
-		"temperature",
-		"custom/weather",
-		"backlight"
-	],
-	"modules-right": [
-		"custom/recorder",
-		"tray",
-		"custom/pacman",
-		"custom/sep3",
-		"group/pulse-group",
-		"custom/sep4",
-		"battery",
-		"custom/sep5",
-		"network",
-		"custom/sep6",
-		"clock"
-	],
-	"hyprland/workspaces": {
-		"format": "{icon}",
-		"move-to-monitor": true,
-		"format-icons": {
-			"1": "<span font='11'></span>",
-			"2": "<span font='11'></span>",
-			"3": "<span font='11'></span>",
-			"4": "<span font='11'></span>",
-			"5": "<span font='11'></span>",
-			"active": "<span font='11'></span>",
-			"default": ""
-		}
-	},
-	"custom/sep0": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/sep1": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/sep3": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/sep4": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/sep5": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/sep6": {
-		"format": "",
-		"tooltip": false
-	},
-	"tray": {
-		"icon-size": 18,
-		"spacing": 5
-	},
-	"clock": {
-		"format": "{:%a, %d %b • <span color='#EAEDF7' font-weight='800'>%H:%M</span>}",
-		"timezone": "Europe/Brussels",
-		"smooth-scrolling-threshold": 4,
-		"calendar": {
-			"mode-mon-col": 2,
-			"weeks-pos": "left",
-			"on-scroll": 1,
-			"on-click-right": "mode",
-			"format": {
-				"months": "<span color='#88B9A6'><b>{}</b></span>",
-				"weeks": "<span color='#E1BC88'><b>{}</b></span>",
-				"weekdays": "<span color='#8FAEC2'><b>{}</b></span>",
-				"today": "<span color='#CAA1FF' background='#353854'><b>{}</b></span>"
-			}
-		},
-		"actions": {
-			"on-click-right": "mode",
-			"on-scroll-up": "shift_up",
-			"on-scroll-down": "shift_down"
-		},
-		"tooltip-format": "<tt>{calendar}</tt>"
-	},
-	"cpu": {
-		"format": "{usage}% <span font='12' rise='-1600'>󱤓</span>"
-	},
-	"memory": {
-		"format": "{percentage}% <span font='12' rise='-1600'>󰗉</span>"
-	},
-	"temperature": {
-		"critical-threshold": 85,
-		"format": "{temperatureC}°C  <span font='12' rise='-1900'>󱩅</span>",
-		"tooltip": false
-	},
-	"custom/weather": {
-		"format": "{} <span font='10' rise='-300'></span>",
-		"format-alt": "{alt}",
-		"format-alt-click": "click-right",
-		"interval": 3600,
-		"return-type": "json",
-		"tooltip": true,
-		"exec": "~/.config/waybar/modules/weather.sh",
-		"exec-if": "ping wttr.in -c1"
-	},
-	"backlight": {
-		"on-scroll-up": "backlightcmd up",
-		"on-scroll-down": "backlightcmd down",
-		"device": "intel_backlight",
-		"format": "{percent}% {icon}",
-		"format-icons": [
-			"<span font='10' rise='-300'>󰃝</span>",
-			"<span font='10' rise='-300'>󰃟</span>",
-			"<span font='10' rise='-300'>󰃞</span>",
-			"<span font='10' rise='-300'>󰃠</span>"
-		],
-		"smooth-scrolling-threshold": 2.5,
-		"tooltip": false
-	},
-	"battery": {
-		"states": {
-			"warning": 30,
-			"critical": 15
-		},
-		"full-at": 100,
-		"format": "<span font='10' rise='-700'></span>",
-		"format-alt": "<span rise='-1500'>{capacity} </span>  <span font='10' rise='-700'></span>",
-		"format-charging": "<span rise='-1800'>{capacity}</span> <span font='10' rise='-700'></span>",
-		"format-plugged": "<span font='10' rise='-700'></span>",
-		"tooltip-format": "{capacity}",
-		"tooltip": true
-	},
-	"network": {
-		"format-wifi": "<span font='10' rise='900'></span>",
-		"format-ethernet": "{ifname}: {ipaddr}/{cidr}",
-		"format-linked": "{ifname} (No IP) ",
-		"format-disconnected": "",
-		"format-alt": "{ifname} on {essid}: {ipaddr}/{cidr}",
-		"on-click-right": "iwgtk",
-		"tooltip": false
-	},
-	"group/pulse-group": {
-		"orientation": "inherit",
-		"drawer": {
-			"transition-duration": 300,
-			"children-class": "drawer-child",
-			"transition-left-to-right": false
-		},
-		"modules": [
-			"pulseaudio",
-			"pulseaudio/slider"
-		]
-	},
-	"pulseaudio": {
-		"format": "{icon}",
-		"format-alt": "{format_source}    <span rise='-800'>{volume}%</span>  {icon}",
-		"format-bluetooth": "󰂰",
-		"format-bluetooth-muted": "󰂰",
-		"format-muted": " {format_source}",
-		"format-source": "<span rise='-800'>{volume}%</span>  <span font='11' rise='-400'></span>",
-		"format-source-muted": "󰍱",
-		"format-icons": {
-			"headphone": "<span font='12'>󰋋</span>",
-			"default": [
-				"󰜟"
-			]
-		},
-		"smooth-scrolling-threshold": 0.8,
-		"tooltip": false,
-		"on-click-right": "pavucontrol",
-		"on-scroll-up": "pactl set-sink-volume 0 +5%",
-		"on-scroll-down": "pactl set-sink-volume 0 -5%"
-	},
-	"pulseaudio/slider": {
-		"min": 0,
-		"max": 100,
-		"orientation": "horizontal"
-	},
-	"custom/pacman": {
-		"format": "{icon} <span rise='-700'>{}</span>",
-		"return-type": "json",
-		"format-icons": {
-			"pending-updates": "<span font='13' rise='-2000'>󰮯<span font='7' rise='100'> • •</span></span>",
-			"updated": ""
-		},
-		"exec-if": "which waybar-updates",
-		"exec": "waybar-updates"
-	},
-	"custom/artist": {
-		"format": "{}",
-		"return-type": "json",
-		"max-length": 28,
-		"escape": true,
-		"on-click": "mediactl previous",
-		"on-click-right": "mediactl next",
-		"exec": "~/.config/waybar/modules/mediaplayer_a.py 2> /dev/null" // Script in resources folder
-	},
-	"custom/title": {
-		"format": "{}",
-		"return-type": "json",
-		"max-length": 35,
-		"escape": true,
-		"on-click": "mediactl previous",
-		"on-click-right": "mediactl next",
-		"exec": "~/.config/waybar/modules/mediaplayer_t.py 2> /dev/null" // Script in resources folder
-	},
-	"custom/launcher": {
-		"format": "󰐅",
-		"on-click": "tofi-drun | xargs swaymsg exec --",
-		"on-click-right": "wlogout -b 5 -p layer-shell",
-		"tooltip": false
-	},
-	"custom/recorder": {
-		"format": "",
-		"return-type": "json",
-		"interval": 1,
-		"exec": "echo '{\"class\": \"recording\"}'",
-		"exec-if": "pgrep wf-recorder"
-	}
+  "layer": "top",
+  "position": "top",
+  "reload_style_on_change": true,
+  "modules-left": [
+    "custom/launcher",
+    "custom/sep0",
+    "hyprland/workspaces",
+    "custom/sep1",
+    "custom/artist",
+    "custom/title"
+  ],
+  "modules-center": [
+    "cpu",
+    "memory",
+    "temperature",
+    "custom/weather",
+    "backlight"
+  ],
+  "modules-right": [
+    "custom/recorder",
+    "tray",
+    "custom/pacman",
+    "custom/sep3",
+    "group/pulse-group",
+    "custom/sep4",
+    "battery",
+    "custom/sep5",
+    "network",
+    "custom/sep6",
+    "clock"
+  ],
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "move-to-monitor": true,
+    "format-icons": {
+      "1": "<span font='11'></span>",
+      "2": "<span font='11'></span>",
+      "3": "<span font='11'></span>",
+      "4": "<span font='11'></span>",
+      "5": "<span font='11'></span>",
+      "active": "<span font='11'></span>",
+      "default": ""
+    }
+  },
+  "custom/sep0": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/sep1": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/sep3": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/sep4": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/sep5": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/sep6": {
+    "format": "",
+    "tooltip": false
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 5
+  },
+  "clock": {
+    "format": "{:%a, %d %b • <span color='#EAEDF7' font-weight='800'>%H:%M</span>}",
+    "timezone": "Europe/Brussels",
+    "smooth-scrolling-threshold": 4,
+    "calendar": {
+      "mode-mon-col": 2,
+      "weeks-pos": "left",
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#88B9A6'><b>{}</b></span>",
+        "weeks": "<span color='#E1BC88'><b>{}</b></span>",
+        "weekdays": "<span color='#8FAEC2'><b>{}</b></span>",
+        "today": "<span color='#CAA1FF' background='#353854'><b>{}</b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    },
+    "tooltip-format": "<tt>{calendar}</tt>"
+  },
+  "cpu": {
+    "format": "{usage}% <span font='12' rise='-1600'>󱤓</span>"
+  },
+  "memory": {
+    "format": "{percentage}% <span font='12' rise='-1600'>󰗉</span>"
+  },
+  "temperature": {
+    "critical-threshold": 85,
+    "format": "{temperatureC}°C  <span font='12' rise='-1900'>󱩅</span>",
+    "tooltip": false
+  },
+  "custom/weather": {
+    "format": "{} <span font='10' rise='-300'></span>",
+    "format-alt": "{alt}",
+    "format-alt-click": "click-right",
+    "interval": 3600,
+    "return-type": "json",
+    "tooltip": true,
+    "exec": "~/.config/waybar/modules/weather.sh",
+    "exec-if": "ping wttr.in -c1"
+  },
+  "backlight": {
+    "on-scroll-up": "backlightcmd up",
+    "on-scroll-down": "backlightcmd down",
+    "device": "intel_backlight",
+    "format": "{percent}% {icon}",
+    "format-icons": [
+      "<span font='10' rise='-300'>󰃝</span>",
+      "<span font='10' rise='-300'>󰃟</span>",
+      "<span font='10' rise='-300'>󰃞</span>",
+      "<span font='10' rise='-300'>󰃠</span>"
+    ],
+    "smooth-scrolling-threshold": 2.5,
+    "tooltip": false
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "full-at": 100,
+    "format": "<span font='10' rise='-700'></span>",
+    "format-alt": "<span rise='-1500'>{capacity} </span>  <span font='10' rise='-700'></span>",
+    "format-charging": "<span rise='-1800'>{capacity}</span> <span font='10' rise='-700'></span>",
+    "format-plugged": "<span font='10' rise='-700'></span>",
+    "tooltip-format": "{capacity}",
+    "tooltip": true
+  },
+  "network": {
+    "format-wifi": "<span font='10' rise='900'></span>",
+    "format-ethernet": "{ifname}: {ipaddr}/{cidr}",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "",
+    "format-alt": "{ifname} on {essid}: {ipaddr}/{cidr}",
+    "on-click-right": "iwgtk",
+    "tooltip": false
+  },
+  "group/pulse-group": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "drawer-child",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "pulseaudio",
+      "pulseaudio/slider"
+    ]
+  },
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-alt": "{format_source}    <span rise='-800'>{volume}%</span>  {icon}",
+    "format-bluetooth": "<span font='13'>󰂰</span>",
+    "format-bluetooth-muted": "<span font='13'>󰂰</span>",
+    "format-muted": " {format_source}",
+    "format-source": "<span rise='-800'>{volume}%</span>  <span font='11' rise='-400'></span>",
+    "format-source-muted": "<span font='11' color='#8f9baa' rise='-400'>󰍭</span>",
+    "format-icons": {
+      "headphone": "<span font='12'>󰋋</span>",
+      "default": [
+        "<span font='12' rise='-400'>󰜟</span>"
+      ]
+    },
+    "smooth-scrolling-threshold": 0.8,
+    "tooltip": false,
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "pactl set-sink-volume 0 +5%",
+    "on-scroll-down": "pactl set-sink-volume 0 -5%"
+  },
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
+  },
+  "custom/pacman": {
+    "format": "{icon} <span rise='-700'>{}</span>",
+    "return-type": "json",
+    "format-icons": {
+      "pending-updates": "<span font='13' rise='-2000'>󰮯<span font='7' rise='100'> • •</span></span>",
+      "updated": ""
+    },
+    "exec-if": "which waybar-updates",
+    "exec": "waybar-updates"
+  },
+  "custom/artist": {
+    "format": "{}",
+    "return-type": "json",
+    "max-length": 28,
+    "escape": true,
+    "on-click": "mediactl previous",
+    "on-click-right": "mediactl next",
+    "exec": "~/.config/waybar/modules/mediaplayer_a.py 2> /dev/null" // Script in resources folder
+  },
+  "custom/title": {
+    "format": "{}",
+    "return-type": "json",
+    "max-length": 35,
+    "escape": true,
+    "on-click": "mediactl previous",
+    "on-click-right": "mediactl next",
+    "exec": "~/.config/waybar/modules/mediaplayer_t.py 2> /dev/null" // Script in resources folder
+  },
+  "custom/launcher": {
+    "format": "󰐅",
+    "on-click": "tofi-drun | xargs swaymsg exec --",
+    "on-click-right": "wlogout -b 5 -p layer-shell",
+    "tooltip": false
+  },
+  "custom/recorder": {
+    "format": "",
+    "return-type": "json",
+    "interval": 1,
+    "exec": "echo '{\"class\": \"recording\"}'",
+    "exec-if": "pgrep wf-recorder"
+  }
 }
