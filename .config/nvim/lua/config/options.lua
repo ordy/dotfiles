@@ -3,4 +3,4 @@
 -- Add any additional options here
 local opt = vim.opt
 
-opt.expandtab = false
+opt.tabstop = 2
