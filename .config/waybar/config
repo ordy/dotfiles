@@ -7,8 +7,7 @@
     "custom/sep0",
     "hyprland/workspaces",
     "custom/sep1",
-    "custom/artist",
-    "custom/title"
+    "custom/mediaplayer"
   ],
   "modules-center": [
     "cpu",
@@ -198,23 +197,14 @@
     "exec-if": "which waybar-updates",
     "exec": "waybar-updates"
   },
-  "custom/artist": {
-    "format": "{}",
+  "custom/mediaplayer": {
+    "format": "{} <span color='#8f9baa'>{alt}</span>",
     "return-type": "json",
-    "max-length": 28,
+    "max-length": 60,
     "escape": true,
     "on-click": "mediactl previous",
     "on-click-right": "mediactl next",
-    "exec": "~/.config/waybar/modules/mediaplayer_a.py 2> /dev/null" // Script in resources folder
-  },
-  "custom/title": {
-    "format": "{}",
-    "return-type": "json",
-    "max-length": 35,
-    "escape": true,
-    "on-click": "mediactl previous",
-    "on-click-right": "mediactl next",
-    "exec": "~/.config/waybar/modules/mediaplayer_t.py 2> /dev/null" // Script in resources folder
+    "exec": "$XDG_CONFIG_HOME/waybar/modules/mediaplayer.py --players spotify,mpd 2> /dev/null" // Script in resources folder
   },
   "custom/launcher": {
     "format": "󰐅",
