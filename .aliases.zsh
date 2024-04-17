@@ -32,7 +32,7 @@ alias pacru='comm -23 <(pacman -Qqt | sort) <(pacman -Qqg base | sort)'
 alias pacu='pacman -Syu'
 alias pacmu='sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 alias yas='yay -S --noconfirm'
-alias yau='yay -Syu'
+alias yau='yay -Syu --noconfirm'
 
 alias ytl='yt-dlp -F'
 alias yta='yt-dlp -x -f bestaudio --audio-quality 0 --audio-format mp3'

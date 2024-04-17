@@ -1,6 +1,7 @@
 /* Colors */
 @define-color kana-base    #0F101A;
 @define-color kana-overlay #1E2031;
+@define-color kana-hover   #464965;
 @define-color kana-subtile #3D415A;
 @define-color kana-text    #D8DADF;
 @define-color kana-white   #FFFFFF;
@@ -34,7 +35,8 @@ window#waybar {
 }
 
 tooltip {
-	border: 2px solid @kana-text;
+	border: 1px solid @kana-subtile;
+  border-radius: 3px;
 	background-color: @kana-overlay;
 }
 
@@ -163,21 +165,13 @@ highlight {
 	color: @kana-white;
 }
 
-#custom-artist,
-#custom-title {
+#custom-mediaplayer {
 	background-color: transparent;
 	font-family: "SourceSans3VF";
-	font-size: 15px;
-}
-
-#custom-artist {
-	color: @kana-text;
+  color: @kana-text;
 	padding-right: 4px;
 	padding-left: 5px;
-}
-
-#custom-title {
-	color: #8E939B;
+	font-size: 15px;
 }
 
 /* Modules Center */
@@ -238,14 +232,15 @@ highlight {
 }
 
 #tray menu {
-	background-color: #1C1E31;
+	background-color: @kana-overlay;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border: 1px solid @kana-subtile;
+  border-radius: 3px;
 }
 
 #tray menu menuitem:hover {
-	background-color: #3F415E;
+  background-color: @kana-hover;
 }
 
 #tray menu menuitem {
