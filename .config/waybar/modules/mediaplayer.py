@@ -6,9 +6,7 @@ from gi.repository.Playerctl import Player
 import argparse
 import sys
 import signal
-import gi
 import json
-import os
 from typing import List
 
 def signal_handler(sig, frame):
@@ -16,7 +14,6 @@ def signal_handler(sig, frame):
     sys.stdout.flush()
     # loop.quit()
     sys.exit(0)
-
 
 class PlayerManager:
     def __init__(self, selected_players=[]):
@@ -31,14 +28,11 @@ class PlayerManager:
         signal.signal(signal.SIGTERM, signal_handler)
         signal.signal(signal.SIGPIPE, signal.SIG_DFL)
         self.selected_players = selected_players.split(',') if selected_players else []
-        print(self.selected_players)
         self.init_players()
 
     def init_players(self):
         for player in self.manager.props.player_names:
-            print(player.name + ' in loop')
             if player.name in self.selected_players:
-                print(player.name + ' is in the list initing')
                 self.init_player(player)
             else:
                 continue
@@ -78,7 +72,7 @@ class PlayerManager:
             # if any are playing, show the first one that is playing
             # reverse order, so that the most recently added ones are preferred
             for player in players[::-1]:
-                if player.props.status == "Playing":
+                if player.props.status == "Playing" and player.props.player_name in self.selected_players:
                     return player
             # if none are playing, show the first one
             return players[0]
@@ -110,7 +104,7 @@ class PlayerManager:
 
         if track_info:
             if player.props.status != "Playing":
-                track_info = "mpd"
+                track_info = "music"
                 track_title = ""
         # only print output if no other player is playing
         current_playing = self.get_first_playing_player()
@@ -118,7 +112,7 @@ class PlayerManager:
             self.write_output(track_info, track_title, player)
 
     def on_player_appeared(self, _, player):
-        if player is not None and (player in self.selected_players):
+        if player is not None and (player.name in self.selected_players):
             self.init_player(player)
 
     def on_player_vanished(self, _, player):
