@@ -5,8 +5,9 @@
   "modules-left": [
     "custom/launcher",
     "custom/sep0",
-    "hyprland/workspaces",
+    "sway/workspaces",
     "custom/sep1",
+    "sway/mode",
     "custom/mediaplayer"
   ],
   "modules-center": [
@@ -29,18 +30,36 @@
     "custom/sep6",
     "clock"
   ],
-  "hyprland/workspaces": {
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
     "format": "{icon}",
-    "move-to-monitor": true,
     "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
-      "active": "",
+      "1": "<span font='11'></span>",
+      "2": "<span font='11'></span>",
+      "3": "<span font='11'></span>",
+      "4": "<span font='11'></span>",
+      "5": "<span font='11'></span>",
+      "high-priority-named": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "focused": "<span font='11'></span>",
       "default": ""
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
     }
+  },
+  "sway/mode": {
+    "format": "{}"
   },
   "custom/sep0": {
     "format": "",
