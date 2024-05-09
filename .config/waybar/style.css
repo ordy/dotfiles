@@ -164,6 +164,10 @@ highlight {
 #workspaces button.active label {
 	color: @kana-white;
 }
+#workspaces button.active label,
+#workspaces button.persistent label {
+  font-size: 16px;
+}
 
 #custom-mediaplayer {
 	background-color: transparent;

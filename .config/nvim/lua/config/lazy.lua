@@ -9,7 +9,7 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 vim.filetype.add({
   pattern = {
     [".*/hypr/.*%.conf"] = "hyprlang",
-    [".*/waybar/config"] = "jsonc",
+    [".*/waybar/config.*"] = "jsonc",
   },
 })
 
