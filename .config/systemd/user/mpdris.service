@@ -1,0 +1,10 @@
+[Unit]
+Description=mpd monitor
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/mpDris2
+
+[Install]
+WantedBy=sway-session.target

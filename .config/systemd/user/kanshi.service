@@ -1,7 +1,7 @@
 [Unit]
 Description=Dynamic output configuration for Wayland WMs.
 Documentation=https://sr.ht/~emersion/kanshi
-BindsTo=hyprland-session.target
+BindsTo=sway-session.target
 After=panel-shadow.service
 
 [Service]
@@ -9,5 +9,4 @@ Type=simple
 ExecStart=/usr/bin/kanshi
 
 [Install]
-WantedBy=hyprland-session.target
-
+WantedBy=sway-session.target
