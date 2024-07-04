@@ -125,10 +125,12 @@ highlight {
 #workspaces button {
 	padding: 0px 2px 0px 2px;
 	margin: -2px 0px;
-	min-width: 15px;
+	min-width: 16px;
 	background-color: @kana-overlay;
 }
-
+#workspaces button label {
+  font-size: 16px;
+}
 #workspaces button.empty label {
 	color: @kana-subtile;
 }
@@ -141,32 +143,36 @@ highlight {
 	color: #959da5;
 }
 
-#workspaces button:nth-child(1):not(.empty):not(.active) label {
+#workspaces button#sway-workspace-1.persistent,
+#workspaces button#sway-workspace-2.persistent,
+#workspaces button#sway-workspace-3.persistent,
+#workspaces button#sway-workspace-4.persistent,
+#workspaces button#sway-workspace-5.persistent {
+	color: @kana-subtile;
+}
+
+#workspaces button.focused label {
+	color: @kana-white;
+}
+
+#workspaces button#sway-workspace-1 {
 	color: @kana-sky;
 }
 
-#workspaces button:nth-child(2):not(.empty):not(.active) label {
+#workspaces button#sway-workspace-2 {
 	color: @kana-forest;
 }
 
-#workspaces button:nth-child(3):not(.empty):not(.active) label {
+#workspaces button#sway-workspace-3 {
 	color: @kana-silver;
 }
 
-#workspaces button:nth-child(4):not(.empty):not(.active) label {
+#workspaces button#sway-workspace-4 {
 	color: @kana-gold;
 }
 
-#workspaces button:nth-child(5):not(.empty):not(.active) label {
+#workspaces button#sway-workspace-5 {
 	color: @kana-copper;
-}
-
-#workspaces button.active label {
-	color: @kana-white;
-}
-#workspaces button.active label,
-#workspaces button.persistent label {
-  font-size: 16px;
 }
 
 #custom-mediaplayer {

@@ -208,7 +208,7 @@ bindsym --to-code $mod+V exec $screenrecorder
 bindsym $mod+p exec_always swaymsg output LVDS-1 toggle
 
 # Screenshots
-bindsym $mod+s exec grim -g "$(slurp -b '#00000099' -c '#FFA066ff' -w 1)" $HOME/Pictures/sc_$RANDOM.png
+bindsym $mod+s exec pgrep -x slurp || grim -g "$(slurp -b '#00000099' -c '#FFA066ff' -w 1)" $HOME/Pictures/sc_$RANDOM.png
 bindsym $mod+Ctrl+s exec grim -g "$(slurp -b '#00000099' -c '#FFA066ff' -w 1)" - | wl-copy
 bindsym $mod+Shift+s exec grim $HOME/Pictures/sc_$RANDOM.png
 #
@@ -222,8 +222,7 @@ for_window [title="[Ss]potify.*"] move workspace 5
 bindsym $alt+tab workspace back_and_forth
 
 # Close tab
-exec_always "dotoold &"
-bindsym --whole-window BTN_FORWARD exec echo key ctrl+w | dotoolc
+bindsym --whole-window BTN_FORWARD exec wtype -M ctrl w -m ctrl
 
 # Auto float apps
 for_window [app_id="qalculate-gtk"] floating enable
@@ -264,5 +263,6 @@ gaps inner 5
 
 exec "hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK"
 exec "systemctl --user import-environment {,WAYLAND_}DISPLAY SWAYSOCK; systemctl --user start sway-session.target"
+exec swaymsg -t subscribe '["shutdown"]' && systemctl --user stop sway-session.target
 exec_always "kanshictl reload; systemctl --user restart panel-shadow.service"
 exec wl-paste -t text --watch clipman store --no-persist

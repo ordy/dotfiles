@@ -5,7 +5,7 @@
   "modules-left": [
     "custom/launcher",
     "custom/sep0",
-    "hyprland/workspaces",
+    "sway/workspaces",
     "custom/sep1",
     "custom/mediaplayer"
   ],
@@ -29,17 +29,23 @@
     "custom/sep6",
     "clock"
   ],
-  "hyprland/workspaces": {
+  "sway/workspaces": {
     "format": "{icon}",
-    "move-to-monitor": true,
     "format-icons": {
       "1": "",
       "2": "",
       "3": "",
       "4": "",
       "5": "",
-      "active": "",
+      "focused": "",
       "default": ""
+    },
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
     }
   },
   "custom/sep0": {

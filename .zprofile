@@ -11,13 +11,13 @@ if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
 fi
 
 if [ -z "$XDG_CURRENT_DESKTOP" ]; then
-	export XDG_CURRENT_DESKTOP=Hyprland
-	export XDG_SESSION_DESKTOP=Hyprland
+	export XDG_CURRENT_DESKTOP=sway
+	export XDG_SESSION_DESKTOP=sway
 fi
 
 if [[ -z $DISPLAY && $(tty) == /dev/tty1 && $XDG_SESSION_TYPE == tty ]]; then
-	exec Hyprland &> /dev/null
-	# exec sway --config $HOME/.config/sway/config-sway
+	# exec Hyprland &> /dev/null
+	exec sway
 fi
 
 # Created by `pipx` on 2023-06-07 10:44:46
