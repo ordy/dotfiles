@@ -104,9 +104,6 @@
 #urlbar[breakout] {
   position: absolute !important;
 }
-#urlbar-container[breakout] {
-  top: 4px !important;
-}
 hbox#urlbar {
   --urlbar-toolbar-height: 26.00px !important;
 }

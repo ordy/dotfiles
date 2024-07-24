@@ -1,0 +1,1 @@
+/home/sano/.config/sway/scripts/set-wallpaper.sh
