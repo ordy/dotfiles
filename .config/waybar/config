@@ -40,7 +40,7 @@
       "focused": "",
       "default": ""
     },
-    "persistent_workspaces": {
+    "persistent-workspaces": {
       "1": [],
       "2": [],
       "3": [],
@@ -194,10 +194,10 @@
     "orientation": "horizontal"
   },
   "custom/pacman": {
-    "format": "{icon} <span rise='-700'>{}</span>",
+    "format": "<span rise='-700'>{}</span> {icon}",
     "return-type": "json",
     "format-icons": {
-      "pending-updates": "<span font='13' rise='-2000'>󰮯<span font='7' rise='100'> • •</span></span>",
+      "pending-updates": "updates",
       "updated": ""
     },
     "exec-if": "which waybar-updates",
