@@ -310,7 +310,7 @@ playlist_display_mode = columns
 #
 #incremental_seeking = yes
 #
-#seek_time = 1
+seek_time = 10
 #
 volume_change_step = 5 
 #
