@@ -37,8 +37,8 @@ abbr --add yas 'yay -S --noconfirm'
 abbr --add yau 'yay -Syu --noconfirm'
 
 abbr --add ytl 'yt-dlp -F'
-abbr --add yta 'yt-dlp -x -f bestaudio --audio-quality 0 --audio-format mp3'
-abbr --add ytv 'yt-dlp -f 302+bestaudio/247+bestaudio' #720p 60fps or 720p 30fps
+abbr --add yta 'yt-dlp -x -f ba --audio-quality 0 --audio-format mp3'
+abbr --add ytv 'yt-dlp -f "bv*[height<=720]+ba"' #720p 60fps or 720p 30fps
 
 abbr --add public-ip 'curl ifconfig.me'
 abbr --add private-ip 'ip a show wlan0 | awk '\''{print $2}'\'' | sed -n '\''3p'\'''
