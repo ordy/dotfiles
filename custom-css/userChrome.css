@@ -107,11 +107,11 @@
 hbox#urlbar {
   --urlbar-toolbar-height: 26.00px !important;
 }
-#urlbar[breakout][breakout-extend] {
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-}
+/* #urlbar[breakout][breakout-extend] { */
+/*   top: 0 !important; */
+/*   left: 0 !important; */
+/*   width: 100% !important; */
+/* } */
 
 #urlbar[breakout][breakout-extend] > #urlbar-input-container {
   padding-block: 1px !important;
