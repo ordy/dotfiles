@@ -926,6 +926,6 @@ map kitty_mod+f6 debug_config
 #: }}}
 
 # BEGIN_KITTY_THEME
-# duckbones
-include kanagawa.conf
+# Dark Pride
+include current-theme.conf
 # END_KITTY_THEME

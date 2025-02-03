@@ -216,7 +216,7 @@ bindsym $mod+Shift+s exec grim $HOME/Pictures/sc_$RANDOM.png
 #
 assign [app_id="firefox"] workspace 1
 for_window [app_id="vesktop"] move workspace 4
-for_window [title="[Ss]potify.*"] move workspace 5
+for_window [app_id="spotify"] move workspace 5
 
 # Alt tab
 bindsym $alt+tab workspace back_and_forth
@@ -242,7 +242,7 @@ bar {
 }
 
 #window colors
-set $active-bg-color    #7E9CD8
+set $active-bg-color    #A898C8
 set $active-fg-color    #333A42
 set $inactive-bg-color  #0f101a
 set $focused_inactive-bg-color  #0f101a

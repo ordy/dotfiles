@@ -7,6 +7,6 @@ menuitem#context-selectall + menuseparator {
   box-shadow: 0 0 0 1px #3A4BB2 !important;
 }
 
-.search-wrapper .search-handoff-button, .search-wrapper input {
+.search-wrapper .search-handoff-button {
   background: #272C3B var(--newtab-search-icon) 16px center no-repeat !important;
 }

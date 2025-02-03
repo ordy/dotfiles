@@ -213,13 +213,13 @@
     "exec": "$XDG_CONFIG_HOME/waybar/modules/mediaplayer.py --players spotify,mpd 2> /dev/null" // Script in resources folder
   },
   "custom/launcher": {
-    "format": "󰐅",
+    "format": "",
     "on-click": "tofi-drun | xargs swaymsg exec --",
     "on-click-right": "wlogout -b 5 -p layer-shell",
     "tooltip": false
   },
   "custom/recorder": {
-    "format": "",
+    "format": "󰈈",
     "return-type": "json",
     "interval": 1,
     "exec": "echo '{\"class\": \"recording\"}'",

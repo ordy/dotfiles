@@ -6,6 +6,8 @@ set -qU XDG_DATA_HOME; or set -Ux XDG_DATA_HOME $HOME/.local/share
 set -Ux GNUPGHOME $XDG_DATA_HOME/gnupg
 set -Ux GTK2_RC_FILES $XDG_CONFIG_HOME/gtk-2.0/gtkrc
 
+set -Ux LIBVA_DRIVER_NAME i965
+
 # set -Ux QT_STYLE_OVERRIDE kvantun
 set -Ux QT_QPA_PLATFORMTHEME qt6ct
 set -Ux MOZ_ENABLE_WAYLAND 1
