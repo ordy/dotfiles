@@ -29,7 +29,7 @@ lazy_load_nvm() {
 	export NVM_DIR=~/.nvm
   [[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
 # Load Angular CLI autocompletion.
-	source <(ng completion script)
+#	source <(ng completion script)
 }
 
 npm() {
@@ -51,18 +51,18 @@ nvm() {
 autoload -Uz compinit
 zcomp=$XDG_CACHE_HOME/zsh/compdump/zcompdump
 
-if [[ -s $zcomp(#qN.mh+24) && (! -s "$zcomp.zwc" || "$zcomp" -nt "$zcomp.zwc") ]]; then
-	compinit -i -d $zcomp
-else
-	compinit -C -d $zcomp
-fi
+# if [[ -s $zcomp(#qN.mh+24) && (! -s "$zcomp.zwc" || "$zcomp" -nt "$zcomp.zwc") ]]; then
+# 	compinit -i -d $zcomp
+# else
+# 	compinit -C -d $zcomp
+# fi
 
 # Plugins
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh/key-bindings.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # autocompletion menu
 zmodload -i zsh/complist
