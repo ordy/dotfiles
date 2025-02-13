@@ -231,9 +231,9 @@ for_window [app_id="org.gnome.Nautilus"] floating enable
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="org.twosheds.iwgtk"] floating enable
 for_window [app_id="iwgtk"] floating enable
+for_window [app_id="viewnior"] floating enable
 for_window [class="Lxappearance"] floating enable
 for_window [title="Slack Call Minipanel"] floating enable
-for_window [title="Viewnior"] floating enable
 
 # Status Bar:
 #
@@ -242,17 +242,19 @@ bar {
 }
 
 #window colors
-set $active-bg-color    #A898C8
-set $active-fg-color    #333A42
-set $inactive-bg-color  #0f101a
+set $active-bg-color            #A898C8
+set $active-fg-color            #333A42
+set $inactive-bg-color          #0f101a
 set $focused_inactive-bg-color  #0f101a
-set $inactive-fg-color  #565D72
+set $inactive-fg-color          #565D72
+set $urgent-bg-color            #F2AD9F
 
 # Border
 #client.<class> <border> <background> <text> [<indicator> [<child_border>]]
 client.focused $active-bg-color $active-bg-color $active-fg-color $active-bg-color
 client.unfocused $inactive-bg-color $inactive-bg-color $inactive-fg-color
 client.focused_inactive $focused_inactive-bg-color $focused_inactive-bg-color $inactive-fg-color $focused_inactive-bg-color
+client.urgent $urgent-bg-color $urgent-bg-color $active-fg-color $urgent-bg-color
 
 default_floating_border pixel 3
 default_border pixel 3
