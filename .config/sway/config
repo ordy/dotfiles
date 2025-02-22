@@ -211,6 +211,7 @@ bindsym $mod+p exec_always swaymsg output LVDS-1 toggle
 bindsym $mod+s exec pgrep -x slurp || grim -g "$(slurp -b '#00000099' -c '#FFA066ff' -w 1)" $HOME/Pictures/sc_$RANDOM.png
 bindsym $mod+Ctrl+s exec grim -g "$(slurp -b '#00000099' -c '#FFA066ff' -w 1)" - | wl-copy
 bindsym $mod+Shift+s exec grim $HOME/Pictures/sc_$RANDOM.png
+bindsym $mod+Ctrl+q exec firefox $(grim -g "$(slurp)" - | zbarimg PNG:- -q --raw)
 #
 # Assign to workspace
 #
@@ -225,13 +226,13 @@ bindsym $alt+tab workspace back_and_forth
 bindsym --whole-window BTN_FORWARD exec wtype -M ctrl w -m ctrl
 
 # Auto float apps
-for_window [app_id="qalculate-gtk"] floating enable
+for_window [app_id="org.gnome.Calculator"] floating enable
 for_window [app_id="^mpv$"] floating enable
 for_window [app_id="org.gnome.Nautilus"] floating enable
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="org.twosheds.iwgtk"] floating enable
 for_window [app_id="iwgtk"] floating enable
-for_window [app_id="viewnior"] floating enable
+for_window [app_id="org.gnome.Loupe"] floating enable
 for_window [class="Lxappearance"] floating enable
 for_window [title="Slack Call Minipanel"] floating enable
 
