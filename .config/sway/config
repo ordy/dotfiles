@@ -48,6 +48,9 @@ input "4152:5929:SteelSeries_SteelSeries_Rival_110_Gaming_Mouse" {
   accel_profile flat
   scroll_factor 1.3
 }
+input "2:10:TPPS/2_IBM_TrackPoint" {
+  events disabled
+}
 
 focus_follows_mouse always
 
