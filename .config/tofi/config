@@ -1,7 +1,7 @@
 # vim:ft=conf
 
-  font = "/home/sano/.local/share/fonts/TTF/Saira_Condensed/SairaCondensed-SemiBold.ttf"
-	font-size = 20
+  font = "~/.local/share/fonts/TTF/Saira_Condensed/SairaCondensed-SemiBold.ttf"
+	font-size = 22
 	hint-font = true
 	text-color = #F4F1E0
 	selection-color = #D6B379

@@ -49,7 +49,9 @@ input "4152:5929:SteelSeries_SteelSeries_Rival_110_Gaming_Mouse" {
   scroll_factor 1.3
 }
 input "2:10:TPPS/2_IBM_TrackPoint" {
-  events disabled
+  pointer_accel -0.2
+  scroll_factor 0.4
+  accel_profile flat
 }
 
 focus_follows_mouse always
@@ -200,7 +202,7 @@ bindsym $mod+m exec pactl set-sink-mute 0 toggle
 
 # Applications
 bindsym $mod+x exec nautilus
-bindsym $mod+w exec firefox
+bindsym $mod+w exec librewolf
 
 bindsym $mod+Ctrl+Backspace exec 'wlogout -b 5 -p layer-shell'
 bindsym $mod+Ctrl+c exec hyprpicker -a
@@ -219,6 +221,7 @@ bindsym $mod+Ctrl+q exec firefox $(grim -g "$(slurp)" - | zbarimg PNG:- -q --raw
 # Assign to workspace
 #
 assign [app_id="firefox"] workspace 1
+assign [app_id="Librewolf"] workspace 1
 for_window [app_id="vesktop"] move workspace 4
 for_window [app_id="spotify"] move workspace 5
 

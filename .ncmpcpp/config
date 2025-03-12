@@ -201,20 +201,20 @@ message_delay_time = 3
 ##
 #
 #song_list_format = {%a - }{%t}|{$8%f$9}$R{$3(%l)$9}
-song_list_format = $6%a $5//$8 %t 
+song_list_format = $6%a $4//$5 %t 
 #
 song_status_format = $5%a $4⟫$3⟫ $8%t $4⟫$3⟫ $5%b
 #
 song_library_format = {%n - }{%t}|{%f}
 #
 #
-alternative_header_first_line_format = $b$7$aqqu$/a$9 {%t}|{%f} $7$atqq$/a$9$/b
+alternative_header_first_line_format = $b$(146)❰❰❰❰❰$/a$9$6 {%a} $9$(146)❱❱❱❱❱$/a$9$/b
 #
-alternative_header_second_line_format = {{$7%a$9}}|{%D}
+alternative_header_second_line_format = {{$(147)%t$9}}|{%D}
 #
-now_playing_prefix = "$b$7 ♪"
+now_playing_prefix = "$b$6♪"
 #
-now_playing_suffix = $8$/b
+now_playing_suffix = $6$/b
 #
 browser_playlist_prefix = "$2 ♥ $0 "
 #
@@ -277,7 +277,7 @@ song_window_title_format = {%a - }{%t}|{%f}
 ##   not available.
 ##
 #
-song_columns_list_format = (5)[]{} (36)[cyan]{a} (55)[yellow]{t|f} (4)[white]{l:r}
+song_columns_list_format = (5)[]{} (36)[magenta]{a} (55)[147]{t|f} (4)[white]{l:r}
 #
 ##### various settings #####
 #
@@ -494,32 +494,32 @@ enable_window_title = yes
 #
 colors_enabled = yes
 #
-empty_tag_color = red
+empty_tag_color = black
 #
-header_window_color = white
+header_window_color = 180
 #
-#volume_color = default
+volume_color = 180
 #
-state_line_color = white
+state_line_color = yellow
 #
-state_flags_color = cyan
+state_flags_color = white
 #
-main_window_color = green
+main_window_color = 250
 #
 color1 = white
 color2 = blue
 #
-current_item_prefix = "$(cyan)$r"
+current_item_prefix = "$(magenta)$r"
 #
 current_item_suffix = "$/r$(end)"
 #
 progressbar_color = black
 #
-progressbar_elapsed_color = white 
+progressbar_elapsed_color = yellow
 #
 statusbar_color = white
 #
-alternative_ui_separator_color = white
+alternative_ui_separator_color = yellow
 #
 #active_column_color = red
 #
