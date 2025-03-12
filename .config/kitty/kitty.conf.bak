@@ -518,7 +518,7 @@ inactive_tab_font_style normal
 
 #: Color scheme {{{
 
-background_opacity 0.94
+background_opacity 0.96
 dim_opacity 0.75
 
 #: }}}
@@ -926,6 +926,6 @@ map kitty_mod+f6 debug_config
 #: }}}
 
 # BEGIN_KITTY_THEME
-# Dark Pride
-include current-theme.conf
+# kanagawa
+include kanagawa.conf
 # END_KITTY_THEME
