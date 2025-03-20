@@ -2,6 +2,8 @@
   --sfwindow: #171A24;
   --sfsecondary: #1F232F;
 
+  --newtab-primary-action-background: light-dark(#44389A, #8278F4) !important;
+
   &[uidensity="compact"] {
     --tab-min-height: 26px;
   }
