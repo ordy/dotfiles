@@ -10,3 +10,22 @@ menuitem#context-selectall + menuseparator {
 .search-wrapper .search-handoff-button {
   background: #272C3B var(--newtab-search-icon) 16px center no-repeat !important;
 }
+
+.search-wrapper .logo-and-wordmark .wordmark {
+  background: url("floorp.svg") no-repeat center center !important;
+  background-size: 250px !important;
+}
+
+.search-wrapper .search-handoff-button, .search-wrapper input {
+  background-color: #1d202f !important;
+  font-family: "Roboto Flex" !important;
+}
+
+.contentSearchHeader, .contentSearchSuggestionEntry {
+  font-size: 90% !important;
+  font-family: "Roboto Flex" !important;
+}
+
+.contentSearchSuggestionsContainer {
+  background: rgb(225, 124, 14) !important;
+}

@@ -496,9 +496,9 @@ colors_enabled = yes
 #
 empty_tag_color = black
 #
-header_window_color = 180
+header_window_color = 16
 #
-volume_color = 180
+volume_color = 16
 #
 state_line_color = yellow
 #
