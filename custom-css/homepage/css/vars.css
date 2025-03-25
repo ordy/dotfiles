@@ -1,0 +1,30 @@
+:root {
+	--color-black-hsl: #181924;
+	--color-black: var(--color-black-hsl);
+	--color-white-hsl: 60 100% 99%;
+	--color-white: hsl(var(--color-white-hsl));
+
+	/* Font-families */
+	--font-monospace: monospace;
+	--font-sans-serif: sans-serif;
+
+	/* Font-sizing */
+	--font-size-body: 1rem;
+
+	/* Spacing */
+	--spacing-xs: 0.25rem;
+	--spacing-s: 0.5rem;
+	--spacing-m: 1rem;
+	--spacing-l: 2rem;
+	--spacing-xl: 4rem;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--primary-background-color: var(--color-black);
+		--primary-font-color: var(--color-white);
+		--primary-link-color: hsl(var(--color-white-hsl) / 0.5);
+		--primary-link-hover-color: var(--color-white);
+	}
+}

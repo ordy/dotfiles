@@ -1,0 +1,152 @@
+body {
+	background-color: var(--primary-background-color);
+	color: var(--primary-font-color);
+	font-family: var(--font-monospace);
+	font-size: var(--font-size-body);
+}
+
+main {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+#homepage {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+	justify-content: center;
+	padding: var(--spacing-l) var(--spacing-m) var(--spacing-m) var(--spacing-m);
+	row-gap: var(--spacing-l);
+	width: 20rem;
+}
+
+header {
+	animation: fade 1s ease-in;
+	display: none;
+	flex: 0 1 auto;
+	flex-direction: row;
+	justify-content: center;
+	padding: var(--spacing-m) var(--spacing-m) 0 var(--spacing-m);
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+#date-time {
+	flex: 1 1 auto;
+}
+
+#date {
+	color: var(--primary-link-hover-color);
+	font-weight: 700;
+}
+
+#time {
+	color: var(--primary-link-color);
+	text-transform: capitalize;
+}
+
+aside {
+	display: flex;
+	justify-content: space-around;
+}
+
+aside img,
+aside svg {
+	height: 8rem;
+}
+
+@media (prefers-color-scheme: dark) {
+	#bookmarks a:focus,
+	#bookmarks a:hover {
+		background-color: hsl(var(--color-white-hsl) / 0.05);
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	#bookmarks a:focus,
+	#bookmarks a:hover {
+		background-color: hsl(var(--color-black-hsl) / 0.05);
+	}
+}
+
+#bookmarks {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#bookmarks-container {
+	display: flex;
+	flex-direction: column;
+}
+
+#bookmarks ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#bookmarks li {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	line-height: 1;
+	margin-bottom: var(--spacing-xs);
+}
+
+.favicon {
+	margin-right: var(--spacing-s);
+	height: 1rem;
+}
+
+#bookmarks a {
+	align-items: center;
+	border-radius: 0.25rem;
+	display: flex;
+	color: var(--primary-link-color);
+	padding: var(--spacing-s);
+	text-decoration: none;
+}
+
+#SVG-layer-1 {
+	filter: drop-shadow(-10px 20px 10px #0d0d11d1);
+}
+
+#bookmarks a:focus,
+#bookmarks a:hover {
+	color: var(--primary-link-hover-color);
+	outline: none;
+}
+
+/* Responsive Media Queries */
+@media screen and (min-width: 48em) {
+	header {
+		display: flex;
+	}
+
+	#homepage {
+		padding: 0;
+		width: 45rem; /* 720px */
+	}
+
+	aside img,
+	aside svg {
+		height: 12rem;
+	}
+	#bookmarks {
+		flex-direction: row;
+	}
+	#bookmarks-container {
+		flex-direction: row;
+		justify-content: space-around;
+		width: 100%;
+	}
+}

@@ -5,6 +5,7 @@ set -qU XDG_DATA_HOME; or set -Ux XDG_DATA_HOME $HOME/.local/share
 
 set -Ux GNUPGHOME $XDG_DATA_HOME/gnupg
 set -Ux GTK2_RC_FILES $XDG_CONFIG_HOME/gtk-2.0/gtkrc
+set -Ux SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
 
 set -Ux LIBVA_DRIVER_NAME i915
 
