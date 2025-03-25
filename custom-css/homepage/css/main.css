@@ -1,0 +1,7 @@
+@import url('reset.css');
+/* Variables */
+@import url('vars.css');
+/* Animations */
+@import url('animations.css');
+/* Main Styles */
+@import url('styles.css');
