@@ -4,75 +4,140 @@
  * @description dark variant of kanagawa
  * @author sano
  */
+
+
+/* import theme modules */
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+
+body {
+    /* font, change to '' for default discord font */
+    --font: '';
+
+    /* sizes */
+    --gap: 5px; /* spacing between panels */
+    --divider-thickness: 2px; /* thickness of unread messages divider and highlighted message borders */
+
+    /* animation/transition options */
+    --animations: off; /* turn off to disable all midnight animations/transitions */
+    --list-item-transition: 0.2s ease; /* transition for list items */
+    --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
+
+    /* top bar options */
+    --move-top-bar-buttons: on; /* turn on to move inbox button to the server list (recommend setting top bar height to 24px) */
+    --custom-app-top-bar-height: 22px; /* height of the titlebar/top bar (default is 36px)*/
+
+    /* window controls */
+    --custom-window-controls: on; /* turn off to use discord default window controls */
+    --window-control-size: 14px; /* size of custom window controls */
+
+    /* dms button icon options */
+    --dms-icon: on; /* set to default to use discord icon, on to use custom icon, off to disable completely */
+    --dms-icon-svg-url: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBMaWNlbnNlOiBNSVQuIE1hZGUgYnkgdGVlbnlpY29uczogaHR0cHM6Ly9naXRodWIuY29tL3RlZW55aWNvbnMvdGVlbnlpY29ucyAtLT4KPHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgLTEgMTcgMTciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik03LjAwMDEyIDcuNUM3LjAwMDEyIDYuNjcxNTcgNy42NzE2OSA2IDguNTAwMTIgNkM5LjMyODU1IDYgMTAuMDAwMSA2LjY3MTU3IDEwLjAwMDEgNy41QzEwLjAwMDEgOC4zMjg0MyA5LjMyODU1IDkgOC41MDAxMiA5QzcuNjcxNjkgOSA3LjAwMDEyIDguMzI4NDMgNy4wMDAxMiA3LjVaIiBmaWxsPSIjMDAwMDAwIi8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTUuNTAwMSA3LjQ5OTk4QzE1Ljk2NDMgNy4zMTQzIDE1Ljk2NDIgNy4zMTQwOSAxNS45NjQxIDcuMzEzODVMMTUuOTYzMyA3LjMxMTgyTDE1Ljk2MTYgNy4zMDc1MkwxNS45NTU4IDcuMjkzNTZDMTUuOTUxIDcuMjgxOTIgMTUuOTQ0MSA3LjI2NTY0IDE1LjkzNTIgNy4yNDUwNEMxNS45MTczIDcuMjAzODUgMTUuODkxMiA3LjE0NTMzIDE1Ljg1NjYgNy4wNzE5NUMxNS43ODc1IDYuOTI1MjYgMTUuNjg0MSA2LjcxODcxIDE1LjU0NDQgNi40NzIyNEMxNS4yNjU3IDUuOTgwMjkgMTQuODM5MSA1LjMyMzc1IDE0LjI0NjcgNC42NjU1MkMxMy4wNjEyIDMuMzQ4MjcgMTEuMTg2IDIgOC41MDAwNSAyQzUuODE0MDYgMiAzLjkzODkzIDMuMzQ4MjcgMi43NTM0MSA0LjY2NTUyQzIuMTYxIDUuMzIzNzUgMS43MzQ0NSA1Ljk4MDI5IDEuNDU1NjcgNi40NzIyNEMxLjMxNjAxIDYuNzE4NzIgMS4yMTI2NiA2LjkyNTI2IDEuMTQzNSA3LjA3MTk1QzEuMTA4OTEgNy4xNDUzMyAxLjA4MjgyIDcuMjAzODYgMS4wNjQ5NyA3LjI0NTA1QzEuMDU2MDQgNy4yNjU2NCAxLjA0OTE3IDcuMjgxOTIgMS4wNDQzMyA3LjI5MzU2TDEuMDM4NTcgNy4zMDc1MkwxLjAzNjgyIDcuMzExODJMMS4wMzYyMyA3LjMxMzI5QzEuMDM2MTQgNy4zMTM1MyAxLjAzNTgyIDcuMzE0MzEgMS41MDAwNiA3LjVMMS4wMzU4MiA3LjMxNDMxTDAuOTYxNTQ4IDcuNUwxLjAzNTgyIDcuNjg1NjlMMS41MDAwNiA3LjVDMS4wMzU4MiA3LjY4NTY5IDEuMDM1NzMgNy42ODU0NiAxLjAzNTgyIDcuNjg1NjlMMS4wMzYyMyA3LjY4NjcxTDEuMDM2ODIgNy42ODgxOEwxLjAzODU3IDcuNjkyNDhMMS4wNDQzMyA3LjcwNjQ0QzEuMDQ5MTcgNy43MTgwOCAxLjA1NjA0IDcuNzM0MzYgMS4wNjQ5NyA3Ljc1NDk1QzEuMDgyODIgNy43OTYxNCAxLjEwODkxIDcuODU0NjcgMS4xNDM1IDcuOTI4MDVDMS4yMTI2NiA4LjA3NDc0IDEuMzE2MDEgOC4yODEyOCAxLjQ1NTY3IDguNTI3NzZDMS43MzQ0NSA5LjAxOTcxIDIuMTYxIDkuNjc2MjUgMi43NTM0MSAxMC4zMzQ1QzMuOTM4OTMgMTEuNjUxNyA1LjgxNDA2IDEzIDguNTAwMDUgMTNDMTEuMTg2IDEzIDEzLjA2MTIgMTEuNjUxNyAxNC4yNDY3IDEwLjMzNDVDMTQuODM5MSA5LjY3NjI1IDE1LjI2NTcgOS4wMTk3MSAxNS41NDQ0IDguNTI3NzZDMTUuNjg0MSA4LjI4MTI5IDE1Ljc4NzUgOC4wNzQ3NCAxNS44NTY2IDcuOTI4MDVDMTUuODkxMiA3Ljg1NDY3IDE1LjkxNzMgNy43OTYxNSAxNS45MzUyIDcuNzU0OTZDMTUuOTQ0MSA3LjczNDM2IDE1Ljk1MSA3LjcxODA4IDE1Ljk1NTggNy43MDY0NEwxNS45NjE2IDcuNjkyNDhMMTUuOTYzMyA3LjY4ODE4TDE1Ljk2MzkgNy42ODY3MUMxNS45NjQgNy42ODY0NyAxNS45NjQzIDcuNjg1NjYgMTUuNTAwMSA3LjQ5OTk4TDE1Ljk2NDMgNy42ODU3TDE2LjAzODYgNy41TDE1Ljk2NDEgNy4zMTM4NUwxNS41MDAxIDcuNDk5OThaTTguNTAwMTIgNUM3LjExOTQxIDUgNi4wMDAxMiA2LjExOTI5IDYuMDAwMTIgNy41QzYuMDAwMTIgOC44ODA3MSA3LjExOTQxIDEwIDguNTAwMTIgMTBDOS44ODA4MyAxMCAxMS4wMDAxIDguODgwNzEgMTEuMDAwMSA3LjVDMTEuMDAwMSA2LjExOTI5IDkuODgwODMgNSA4LjUwMDEyIDVaIiBmaWxsPSIjMDAwMDAwIi8+Cjwvc3ZnPg==');
+    --dms-icon-svg-size: 90%; /* size of the svg (css mask-size) */
+    --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
+    --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
+
+    /* dms button background options */
+    --dms-background: off; /* off to disable, image to use a background image, color to use a custom color/gradient */
+    --dms-background-image-url: url(''); /* url of the background image */
+    --dms-background-image-size: cover; /* size of the background image (css background-size) */
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background) */
+
+    /* background image options */
+    --background-image: off; /* turn on to use a background image */
+    --background-image-url: url(''); /* url of the background image */
+
+    /* transparency/blur options */
+    /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(235, 15%, 10%, 0.7); */
+    --transparency-tweaks: off; /* turn on to remove some elements for better transparency */
+    --remove-bg-layer: off; /* turn on to remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
+    --panel-blur: off; /* turn on to blur the background of panels */
+    --blur-amount: 12px; /* amount of blur */
+    --bg-floating: var(--bg-3); /* you can set this to a more opaque color if floating panels look too transparent */
+
+    /* chatbar options */
+    --flipped-chatbar: on; /* turn on to make the chatbar look nicer */
+    --chatbar-height: 47px; /* height of the chatbar (52px by default, 47px to align it with the user panel) */
+    --chatbar-padding: 5px; /* padding of the chatbar */
+
+    /* other options */
+    --small-user-panel: off; /* turn on to make the user panel smaller like in old discord */
+}
+
+/* color options */
 :root {
-	--blurple-replace: #7ce88c;
-	--spotify-header: #699378;
-	--background-primary: #151824;
-	--background-secondary: #13151f;
-	--background-secondary-alt: #0f1019;
-	--background-tertiary: #11121b;
-	--background-accent: #364d48;
-	--background-floating: #1e2333;
-	--userarea-background: var(--background-tertiary);
-	--header-primary: #e6c384;
-	--header-secondary: #7c7f9f;
-	--elevation-low: 0 1px 0 rgba(4, 4, 5, 0.2), 0 1.5px 0 rgba(6, 6, 7, 0.05), 0 2px 0 rgba(4, 4, 5, 0.05);
-	--elevation-high: 0 8px 16px rgba(0, 0, 0, 0.24);
-	--channels-default: #5f627a;
-	--channeltextarea-background: #1e2333;
-	--channel-text-area-placeholder: #535a70;
-	--guild-header-text-shadow: 0 1px 1px rgb(0 0 0 / 28%);
-	--activity-card-background: #434c55;
-	--interactive-normal: #bac6dc;
-	--interactive-hover: #d1d6df;
-	--interactive-active: #fff;
-	--interactive-muted: #2f3141;
-	--background-modifier-hover: rgb(59 63 92 / 16%);
-	--background-modifier-active: rgba(55, 60, 77, 0.35);
-	--background-modifier-selected: rgb(67 79 108 / 40%);
-	--background-modifier-accent: hsla(0, 0%, 100%, 0.06);
-  --primary-600-hsl: 235 calc(var(--saturation-factor, 1) * 15.7%) 20.6%;
-	--text-link: #7e9cd8;
-	--text-normal: #bac6dc;
-	--text-muted: #5e6178;
-	--deprecated-panel-background: #292b2f;
-	--deprecated-card-bg: rgba(0, 0, 0, 0.2);
-	--deprecated-card-editable-bg: rgba(0, 0, 0, 0.1);
-	--deprecated-store-bg: #36393f;
-	--deprecated-quickswitcher-input-background: #72767d;
-	--deprecated-quickswitcher-input-placeholder: hsla(0, 0%, 100%, 0.3);
-	--deprecated-text-input-bg: rgba(0, 0, 0, 0.1);
-	--deprecated-text-input-border: rgba(0, 0, 0, 0.3);
-	--deprecated-text-input-border-hover: #040405;
-	--deprecated-text-input-border-disabled: var(--background-tertiary);
-	--deprecated-text-input-prefix: #dcddde;
-	--background-accent-1: rgb(62 85 101 / 21%);
-	--background-accent-3: rgb(62 80 101 / 30%);
-	--background-floating-2: rgb(20 24 30 / 20%);
-	--__header-bar-background: #12161b;
-	/* --brand-500-hsl: 166; */
-	/* --saturation-factor: 10 !important; */
-	/* --brand-560-hsl: 266; */
-	--modal-background: var(--background-secondary);
-	--modal-footer-background: var(--background-secondary-alt);
-	--scrollbar-auto-track: hsl(235deg 20.55% 15.03%);
-	--scrollbar-auto-thumb: #30344a;
-	--primary-630-hsl: 235 27% 17%;
-}
+    --colors: on; /* turn off to use discord default colors */
 
-article {
-	border-color: hsla(-148, calc(var(--saturation-factor, 1) * 35%), 39.4%, 22) !important;
-}
+    /* text colors */
+    --text-0: var(--bg-4); /* text on colored elements */
+    --text-1: hsl(235, 25%, 95%); /* other normally white text */
+    --text-2: hsl(235, 25%, 70%); /* headings and important text */
+    --text-3: hsl(235, 15%, 68%); /* normal text */
+    --text-4: hsl(235, 15%, 40%); /* icon buttons and channels */
+    --text-5: hsl(235, 15%, 25%); /* muted channels/chats and timestamps */
 
-.theme-dark .children__32014:after {
-	background: linear-gradient(to right, rgb(11 15 25 / 8%) 0%, rgb(14 15 23 / 76%) 100%);
-}
+    /* background and dark colors */
+    --bg-1: hsl(235 26.8% 15%); /* dark buttons when clicked */
+    --bg-2: hsl(235 26.8% 12%); /* dark buttons */
+    --bg-3: hsl(235 26.8% 10%); /* spacing, secondary elements */
+    --bg-4: hsl(235 26.8% 7%); /* main background color */
+    --hover: hsla(235, 19%, 40%, 0.1); /* channels and buttons when hovered */
+    --active: hsla(235, 19%, 40%, 0.2); /* channels and buttons when clicked or selected */
+    --active-2: hsla(235, 19%, 40%, 0.3); /* extra state for transparent buttons */
+    --message-hover: hsla(30, 0%, 0%, 0.1); /* messages when hovered */
 
-.topPill__0cdf1 .themed_b957e8.selected__5711d.item__48dda,
-.side_b4b3f6 .themed_b957e8.selected__5711d.item__48dda {
-	background-color: #36394a;
-}
+    /* accent colors */
+    --accent-1: var(--purple-4); /* links and other accent text */
+    --accent-2: var(--purple-2); /* small accent elements */
+    --accent-3: var(--purple-3); /* accent buttons */
+    --accent-4: var(--purple-4); /* accent buttons when hovered */
+    --accent-5: var(--purple-5); /* accent buttons when clicked */
+    --accent-new: var(--accent-2); /* stuff that's normally red like mute/deafen buttons */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
 
-.theme-dark .themed_b152d4 {
-	background-color: #13151f;
+    /* status indicator colors */
+    --online: var(--green-2); /* change to #43a25a for default */
+    --dnd: var(--red-2); /* change to #d83a42 for default */
+    --idle: var(--yellow-2); /* change to #ca9654 for default */
+    --streaming: var(--purple-2); /* change to #593695 for default */
+    --offline: var(--text-4); /* change to #83838b for default offline color */
+
+    /* border colors */
+    --border-light: hsl(230, 20%, 40%, 0.1); /* light border color */
+    --border: hsl(235 26.8% 14%); /* normal border color */
+    --button-border: hsl(0, 0%, 100%, 0.1); /* neutral border color of buttons */
+
+    /* base colors */
+    --red-1: oklch(76% 0.12 0);
+    --red-2: oklch(70% 0.12 0);
+    --red-3: oklch(64% 0.12 0);
+    --red-4: oklch(58% 0.12 0);
+    --red-5: oklch(52% 0.12 0);
+
+    --green-1: oklch(76% 0.11 170);
+    --green-2: oklch(70% 0.11 170);
+    --green-3: oklch(64% 0.11 170);
+    --green-4: oklch(58% 0.11 170);
+    --green-5: oklch(52% 0.11 160);
+
+    --blue-1: oklch(76% 0.1 215);
+    --blue-2: oklch(70% 0.1 215);
+    --blue-3: oklch(64% 0.1 215);
+    --blue-4: oklch(58% 0.1 215);
+    --blue-5: oklch(52% 0.1 215);
+
+    --yellow-1: oklch(80% 0.11 90);
+    --yellow-2: oklch(74% 0.11 90);
+    --yellow-3: oklch(68% 0.11 90);
+    --yellow-4: oklch(62% 0.11 90);
+    --yellow-5: oklch(56% 0.11 90);
+
+    --purple-1: oklch(76% 0.11 293);
+    --purple-2: oklch(70% 0.11 293);
+    --purple-3: oklch(64% 0.11 293);
+    --purple-4: oklch(58% 0.11 293);
+    --purple-5: oklch(52% 0.11 293);
 }
