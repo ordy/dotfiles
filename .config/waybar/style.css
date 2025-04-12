@@ -1,8 +1,8 @@
 /* Colors */
-@define-color kana-base    #0F101A;
-@define-color kana-overlay #1E2031;
-@define-color kana-hover   #464965;
-@define-color kana-subtile #3D415A;
+@define-color kana-base    #171717;
+@define-color kana-overlay #2B2B2B;
+@define-color kana-hover   #656565;
+@define-color kana-subtile #5A5A5A;
 @define-color kana-text    #D8DADF;
 @define-color kana-white   #FFFFFF;
 @define-color kana-sky     #7A619C;
@@ -11,8 +11,8 @@
 @define-color kana-gold    #FFD6BA;
 @define-color kana-copper  #F9B2A2;
 @define-color kana-red     #BA4347;
-@define-color volume       #393E5B;
-@define-color bat          #2B2E49;
+@define-color volume       #56575B;
+@define-color bat          #474749;
 
 /* Bar */
 * {
@@ -177,11 +177,11 @@ highlight {
 
 #custom-mediaplayer {
 	background-color: transparent;
-	font-family: "SourceSans3VF";
+	font-family: "Adwaita Sans";
   color: @kana-text;
 	padding-right: 4px;
 	padding-left: 5px;
-	font-size: 15px;
+	font-size: 13px;
 }
 
 /* Modules Center */
@@ -290,7 +290,7 @@ highlight {
 }
 
 #pulseaudio.muted {
-	color: #8f9baa;
+	color: #989898;
 }
 
 #pulseaudio-slider {
@@ -343,7 +343,7 @@ highlight {
 }
 
 #network.disconnected {
-	color: #656f7a;
+	color: #7F7F7F;
 }
 
 #clock {

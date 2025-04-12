@@ -1,7 +1,6 @@
 :root {
-  --sfwindow: #171A24;
-  --sfsecondary: #1F232F;
-
+  --sfwindow: #242424;
+  --sfsecondary: #333333;
   --newtab-primary-action-background: light-dark(#44389A, #8278F4) !important;
 
   &[uidensity="compact"] {
@@ -91,16 +90,16 @@
   outline: none !important;
 }
 #urlbar:is([focused="true"], [open]) > #urlbar-background, #searchbar:focus-within {
-  background-color: #272C3B !important;
+  background-color: #3B3B3C !important;
 }
 
 #urlbar[open] > #urlbar-background {
-  border-color: rgb(47, 52, 68) !important;
+  border-color: rgb(68, 68, 68) !important;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.63) !important;
 }
 
 #urlbar-input-container {
-  background-color: #272c3b !important;
+  background-color: #3B3B3C !important;
 }
 
 #urlbar[breakout] {
@@ -199,7 +198,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 input.fake-editable {
-  background-color: #21202e !important;
+  background-color: #2D2D2E !important;
 }
 
 .tabbrowser-tab {
@@ -222,12 +221,12 @@ input.fake-editable {
 > .tab-stack
 > .tab-background[selected="true"] {
   box-shadow: 0 2px 2px #000000ab !important;
-  background-color: #404756 !important;
+  background-color: #545555 !important;
 }
 .tab-background {
   border-radius: 5px !important;
   min-height: 0px !important;
 }
 .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected], [multiselected]) {
-  background-color: color-mix(in srgb, currentColor 15%, #161c2dcc) !important;
+  background-color: color-mix(in srgb, currentColor 15%, #1c1c1ccc) !important;
 }

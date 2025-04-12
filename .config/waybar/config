@@ -175,7 +175,7 @@
     "format-bluetooth-muted": "<span font='13'>󰂰</span>",
     "format-muted": " {format_source}",
     "format-source": "<span rise='-800'>{volume}%</span>  <span font='11' rise='-400'></span>",
-    "format-source-muted": "<span font='11' color='#8f9baa' rise='-400'>󰍭</span>",
+    "format-source-muted": "<span font='11' color='#A2A2A2' rise='-400'>󰍭</span>",
     "format-icons": {
       "headphone": "<span font='12'>󰋋</span>",
       "default": [
@@ -204,7 +204,7 @@
     "exec": "waybar-updates"
   },
   "custom/mediaplayer": {
-    "format": "{} <span color='#8f9baa'>{alt}</span>",
+    "format": "{} <span color='#909091'>{alt}</span>",
     "return-type": "json",
     "max-length": 60,
     "escape": true,

@@ -1,9 +1,12 @@
 return {
-  { "rebelot/kanagawa.nvim", name = "kanagawa", lazy = false, priority = 1000 },
+  -- add gruvbox
+  { "rebelot/kanagawa.nvim" },
+
+  -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanagawa",
+      colorscheme = "kanagawa-dragon",
     },
   },
 }

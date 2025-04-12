@@ -1,10 +1,10 @@
 #!/bin/sh
 
-if [ -z "$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS"]; then
-	FILENAME=$(<"$HOME/.current-wallpaper")
+if [ -z $1]; then
+  FILENAME=$(<"$HOME/.current-wallpaper")
 else
-	FILENAME=$(echo $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS | sed -e 's/\r//g')
-	echo $FILENAME >$HOME/.current-wallpaper
+  FILENAME=$(echo $1 | sed -e 's/\r//g')
+  echo $FILENAME >$HOME/.current-wallpaper
 fi
 
 pkill swaybg
