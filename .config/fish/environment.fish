@@ -12,12 +12,12 @@ set -Ux LIBVA_DRIVER_NAME i915
 set -Ux XDG_CURRENT_DESKTOP sway
 set -Ux XDG_SESSION_DESKTOP sway
 
-# set -Ux QT_STYLE_OVERRIDE kvantun
 set -Ux QT_QPA_PLATFORMTHEME qt6ct
 set -Ux MOZ_ENABLE_WAYLAND 1
 
 # Global variables
 set -gx EDITOR nvim
+set -gx XCURSOR_THEME shiori-novella
 
 set -g EXA_COLORS "ur=1;35:uw=1;34:ux=1;36:ue=1;36"
 # group permissions

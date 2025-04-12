@@ -1,63 +1,61 @@
 return {
+  -- Default options:
   require("kanagawa").setup({
-
-    colors = {
-      palette = {
-        -- Bg Shades
-        sumiInk0 = "#191A2A",
-        sumiInk1 = "#303247",
-        sumiInk2 = "#2F374C",
-        sumiInk3 = "#0f101a",
-        sumiInk4 = "#222438",
-        sumiInk5 = "#23253A",
-        sumiInk6 = "#868697", --fg
-        -- Popup and Floats
-        waveBlue1 = "#223249",
-        waveBlue2 = "#2D4F67",
-
-        -- Diff and Git
-        winterGreen = "#2B3328",
-        winterYellow = "#49443C",
-        winterRed = "#43242B",
-        winterBlue = "#252535",
-        autumnGreen = "#76946A",
-        autumnRed = "#C34043",
-        autumnYellow = "#DCA561",
-
-        -- Diag
-        samuraiRed = "#E82424",
-        roninYellow = "#FF9E3B",
-        waveAqua1 = "#6A9589",
-        dragonBlue = "#658594",
-
-        -- Fg and Comments
-        oldWhite = "#C8C093",
-        fujiWhite = "#D9DEE6",
-        fujiGray = "#565773",
-
-        oniViolet = "#957FB8",
-        oniViolet2 = "#b8b4d0",
-        crystalBlue = "#7E9CD8",
-        springViolet1 = "#938AA9",
-        springViolet2 = "#9CABCA",
-        springBlue = "#7FB4CA",
-        lightBlue = "#A3D4D5", -- unused yet
-        waveAqua2 = "#7AA89F", -- improve lightness: desaturated
-      },
-      theme = {
-        all = {
-          ui = {
-            bg_gutter = "none",
-          },
-        },
-      },
+    compile = false, -- enable compiling the colorscheme
+    undercurl = true, -- enable undercurls
+    commentStyle = { italic = true },
+    functionStyle = {},
+    keywordStyle = { italic = true },
+    statementStyle = { bold = true },
+    typeStyle = {},
+    transparent = false, -- do not set background color
+    dimInactive = false, -- dim inactive window `:h hl-NormalNC`
+    terminalColors = true, -- define vim.g.terminal_color_{0,17}
+    colors = { -- add/modify theme and palette colors
+      palette = {},
+      theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
     },
-    overrides = function(colors)
+    overrides = function(colors) -- add/modify highlights
+      local theme = colors.theme
+      local makeDiagnosticColor = function(color)
+        local c = require("kanagawa.lib.color")
+        return { fg = color, bg = c(color):blend(theme.ui.bg, 0.95):to_hex() }
+      end
       return {
-        LineNr = { fg = colors.palette.fujiGray, bg = "NONE" },
-        CursorLineNr = { fg = "#7D86AA", bg = "NONE", bold = false },
-        IblIndent = { fg = colors.palette.sumiInk4 },
+        NormalFloat = { bg = "none" },
+        FloatBorder = { bg = "none" },
+        FloatTitle = { bg = "none" },
+        Comment = { fg = "#53565B", italic = true },
+        -- Save an hlgroup with dark background and dimmed foreground
+        -- so that you can use it where your still want darker windows.
+        -- E.g.: autocmd TermOpen * setlocal winhighlight=Normal:NormalDark
+        NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
+
+        -- Popular plugins that open floats will link to NormalFloat by default;
+        -- set their background accordingly if you wish to keep them dark and borderless
+        LazyNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
+        MasonNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
+        TelescopeTitle = { fg = theme.ui.special, bold = true },
+        TelescopePromptNormal = { bg = theme.ui.bg_p1 },
+        TelescopePromptBorder = { fg = theme.ui.bg_p1, bg = theme.ui.bg_p1 },
+        TelescopeResultsNormal = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m1 },
+        TelescopeResultsBorder = { fg = theme.ui.bg_m1, bg = theme.ui.bg_m1 },
+        TelescopePreviewNormal = { bg = theme.ui.bg_dim },
+        TelescopePreviewBorder = { bg = theme.ui.bg_dim, fg = theme.ui.bg_dim },
+        Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 }, -- add `blend = vim.o.pumblend` to enable transparency
+        PmenuSel = { fg = "NONE", bg = theme.ui.bg_p2 },
+        PmenuSbar = { bg = theme.ui.bg_m1 },
+        PmenuThumb = { bg = theme.ui.bg_p2 },
+        DiagnosticVirtualTextHint = makeDiagnosticColor(theme.diag.hint),
+        DiagnosticVirtualTextInfo = makeDiagnosticColor(theme.diag.info),
+        DiagnosticVirtualTextWarn = makeDiagnosticColor(theme.diag.warning),
+        DiagnosticVirtualTextError = makeDiagnosticColor(theme.diag.error),
       }
     end,
+    theme = "dragon", -- Load "wave" theme
+    background = { -- map the value of 'background' option to a theme
+      dark = "dragon", -- try "dragon" !
+      light = "lotus",
+    },
   }),
 }

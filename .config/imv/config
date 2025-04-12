@@ -1,0 +1,4 @@
+[binds]
+
+# Delete and then close an open image by pressing 'X'
+x = exec trash-put "$imv_current_file"; close
