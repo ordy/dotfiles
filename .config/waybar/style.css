@@ -1,16 +1,16 @@
 /* Colors */
-@define-color kana-base    #171717;
-@define-color kana-overlay #2B2B2B;
-@define-color kana-hover   #656565;
-@define-color kana-subtile #5A5A5A;
-@define-color kana-text    #D8DADF;
-@define-color kana-white   #FFFFFF;
-@define-color kana-sky     #7A619C;
-@define-color kana-forest  #AB96BF;
-@define-color kana-silver  #D4CB94;
-@define-color kana-gold    #FFD6BA;
-@define-color kana-copper  #F9B2A2;
-@define-color kana-red     #BA4347;
+@define-color rose-base    #171717;
+@define-color rose-overlay #2B2B2B;
+@define-color rose-hover   #656565;
+@define-color rose-subtile #5A5A5A;
+@define-color rose-text    #D8DADF;
+@define-color rose-white   #FFFFFF;
+@define-color rose-pine    #448FAD;
+@define-color rose-foam    #9ccfd8;
+@define-color rose-iris    #A98DCE;
+@define-color rose-gold    #EBBC79;
+@define-color rose-rose    #F2B3B0;
+@define-color rose-love    #eb6f92;
 @define-color volume       #56575B;
 @define-color bat          #474749;
 
@@ -30,14 +30,14 @@ button:disabled {
 }
 
 window#waybar {
-	background-color: @kana-base;
-	color: @kana-text;
+	background-color: @rose-base;
+	color: @rose-text;
 }
 
 tooltip {
-	border: 1px solid @kana-subtile;
+	border: 1px solid @rose-subtile;
   border-radius: 3px;
-	background-color: @kana-overlay;
+	background-color: @rose-overlay;
 }
 
 slider {
@@ -76,12 +76,12 @@ highlight {
 }
 
 #custom-sep0 {
-	color: @kana-overlay;
+	color: @rose-overlay;
 	background-color: transparent;
 }
 #custom-sep1 {
-	color: @kana-base;
-	background-color: @kana-overlay;
+	color: @rose-base;
+	background-color: @rose-overlay;
 }
 
 #custom-sep3 {
@@ -95,19 +95,19 @@ highlight {
 }
 
 #custom-sep5 {
-	color: @kana-overlay;
+	color: @rose-overlay;
 	background-color: @bat;
 }
 
 #custom-sep6 {
-	color: @kana-base;
-	background-color: @kana-overlay;
+	color: @rose-base;
+	background-color: @rose-overlay;
 }
 
 /* Modules Left */
 #custom-launcher {
 	font-size: 18px;
-	color: @kana-white;
+	color: @rose-white;
 	background-color: transparent;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -126,17 +126,17 @@ highlight {
 	padding: 0px 2px 0px 2px;
 	margin: -2px 0px;
 	min-width: 16px;
-	background-color: @kana-overlay;
+	background-color: @rose-overlay;
 }
 #workspaces button label {
   font-size: 16px;
 }
 #workspaces button.empty label {
-	color: @kana-subtile;
+	color: @rose-subtile;
 }
 
 #workspaces button.urgent label {
-	color: @kana-red;
+	color: @rose-love;
 }
 
 #workspaces button:hover label {
@@ -148,37 +148,37 @@ highlight {
 #workspaces button#sway-workspace-3.persistent,
 #workspaces button#sway-workspace-4.persistent,
 #workspaces button#sway-workspace-5.persistent {
-	color: @kana-subtile;
+	color: @rose-subtile;
 }
 
 #workspaces button.focused label {
-	color: @kana-white;
+	color: @rose-white;
 }
 
 #workspaces button#sway-workspace-1 {
-	color: @kana-sky;
+	color: @rose-pine;
 }
 
 #workspaces button#sway-workspace-2 {
-	color: @kana-forest;
+	color: @rose-foam;
 }
 
 #workspaces button#sway-workspace-3 {
-	color: @kana-silver;
+	color: @rose-rose;
 }
 
 #workspaces button#sway-workspace-4 {
-	color: @kana-gold;
+	color: @rose-gold;
 }
 
 #workspaces button#sway-workspace-5 {
-	color: @kana-copper;
+	color: @rose-iris;
 }
 
 #custom-mediaplayer {
 	background-color: transparent;
 	font-family: "Adwaita Sans";
-  color: @kana-text;
+  color: @rose-text;
 	padding-right: 4px;
 	padding-left: 5px;
 	font-size: 13px;
@@ -203,28 +203,28 @@ highlight {
 }
 
 #cpu {
-	color: @kana-sky;
+	color: @rose-pine;
 }
 
 #memory {
-	color: @kana-forest;
+	color: @rose-foam;
 }
 
 #temperature {
-	color: @kana-silver;
+	color: @rose-rose;
 	margin-right: 10px;
 }
 
 #temperature.critical {
-	color: @kana-silver;
-}
-
-#backlight {
-	color: @kana-copper;
+	color: @rose-love;
 }
 
 #custom-weather {
-	color: @kana-gold;
+	color: @rose-gold;
+}
+
+#backlight {
+	color: @rose-iris;
 }
 
 /* Modules Right */
@@ -242,15 +242,15 @@ highlight {
 }
 
 #tray menu {
-	background-color: @kana-overlay;
+	background-color: @rose-overlay;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	border: 1px solid @kana-subtile;
+	border: 1px solid @rose-subtile;
   border-radius: 3px;
 }
 
 #tray menu menuitem:hover {
-  background-color: @kana-hover;
+  background-color: @rose-hover;
 }
 
 #tray menu menuitem {
@@ -261,14 +261,14 @@ highlight {
 
 @keyframes recording {
 	to {
-		color: @kana-base;
+		color: @rose-base;
 	}
 }
 
 #custom-recorder {
 	font-size: 15px;
 	margin: 0px 7px 0px 7px;
-	color: @kana-red;
+	color: @rose-love;
 	animation-name: recording;
 	animation-duration: 0.8s;
 	animation-timing-function: ease-in;
@@ -277,14 +277,14 @@ highlight {
 }
 
 #custom-pacman {
-	color: @kana-text;
+	color: @rose-text;
 	background-color: transparent;
 	margin-right: 7px;
 }
 
 #pulseaudio {
 	background-color: @volume;
-	color: @kana-text;
+	color: @rose-text;
 	padding-right: 8px;
 	padding-left: 4px;
 }
@@ -300,35 +300,35 @@ highlight {
 }
 
 #pulseaudio-slider trough {
-	background-color: @kana-base;
+	background-color: @rose-base;
 }
 
 #pulseaudio-slider highlight {
-	background-color: @kana-text;
+	background-color: @rose-text;
 }
 
 #battery {
 	background-color: @bat;
-	color: @kana-text;
+	color: @rose-text;
 	padding-right: 9px;
 	padding-left: 5px;
 }
 
 #battery.charging,
 #battery.plugged {
-	color: @kana-text;
+	color: @rose-text;
 	background-color: @bat;
 }
 
 @keyframes blink {
 	to {
-		color: @kana-red;
+		color: @rose-love;
 	}
 }
 
 #battery.critical:not(.charging) {
 	background-color: @bat;
-	color: @kana-text;
+	color: @rose-text;
 	animation-name: blink;
 	animation-duration: 0.3s;
 	animation-timing-function: linear;
@@ -337,7 +337,7 @@ highlight {
 }
 
 #network {
-	background-color: @kana-overlay;
+	background-color: @rose-overlay;
 	padding-right: 7px;
 	padding-left: 3px;
 }
@@ -347,7 +347,7 @@ highlight {
 }
 
 #clock {
-	background-color: @kana-base;
+	background-color: @rose-base;
 	padding-top: 0px;
 	padding-bottom: 0px;
 	padding-right: 10px;

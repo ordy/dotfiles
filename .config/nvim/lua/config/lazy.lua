@@ -47,6 +47,7 @@ require("lazy").setup({
         "tutor",
         "zipPlugin",
         "nvim-notify",
+        "kanagawa",
       },
     },
   },

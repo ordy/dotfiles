@@ -1,5 +1,5 @@
-@define-color	focusColor #B5AF87;
-@define-color	poweroffColor #F05959;
+@define-color	focusColor #CBB08A;
+@define-color	poweroffColor #D67E97;
 
 * {
   background-image: none;
@@ -11,8 +11,8 @@ window {
 
 button {
   font-family: "Symbols Nerd Font";
-  background-color: #1A1A1A;
-  color: #303030;
+  background-color: #1A1A1C;
+  color: #29292B;
   margin-top: 200px;
   margin-bottom: 300px;
   font-size: 120px;

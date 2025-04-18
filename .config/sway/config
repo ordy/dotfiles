@@ -249,10 +249,10 @@ bar {
 }
 
 #window colors
-set $active-bg-color            #A898C8
+set $active-bg-color            #C8C8C8
 set $active-fg-color            #333A42
-set $inactive-bg-color          #0f101a
-set $focused_inactive-bg-color  #0f101a
+set $inactive-bg-color          #1A1A1A
+set $focused_inactive-bg-color  #1A1A1A
 set $inactive-fg-color          #565D72
 set $urgent-bg-color            #F2AD9F
 

@@ -18,7 +18,7 @@ return {
 
     local opts = {
       options = {
-        theme = "gruvbox-material",
+        theme = "rose-pine",
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
         globalstatus = vim.o.laststatus == 3,
