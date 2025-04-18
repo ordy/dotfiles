@@ -1,12 +1,9 @@
 return {
-  -- add gruvbox
-  { "rebelot/kanagawa.nvim" },
-
-  -- Configure LazyVim to load gruvbox
+  { "rose-pine/neovim", name = "rose-pine" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanagawa-dragon",
+      colorscheme = "rose-pine",
     },
   },
 }

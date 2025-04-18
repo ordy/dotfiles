@@ -1,4 +1,3 @@
--- disable pairs
 return {
   {
     "echasnovski/mini.pairs",

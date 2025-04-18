@@ -1,5 +1,5 @@
 :root {
-  --bg: #1E1E1E;
+  --bg: #161616;
   --currentline: #3F3F40;
   --fg: #d9e0ee;
   --comment: #646367;
@@ -27,7 +27,7 @@
   --tridactyl-of-fg: var(--fg);
   --tridactyl-of-bg: var(--currentline);
   --tridactyl-cmdl-fg: var(--fg);
-  --tridactyl-cmdl-bg: #070707;
+  --tridactyl-cmdl-bg: #232323;
   --tridactyl-cmdl-font-family: var(--font);
   --tridactyl-cmplt-font-family: var(--font);
   --tridactyl-hintspan-font-family: var(--font);
@@ -42,5 +42,5 @@
   --tridactyl-hint-outline: none;
 }
 #completions .sectionHeader {
-	background: #070707;
+	background: #3F3F3F;
 }
