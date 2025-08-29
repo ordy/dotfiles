@@ -1,3 +1,6 @@
+/* symlink does not work on this file if the profile is moved to RAM */
+/* has to be copied to the chome directory */
+
 menuitem#context-selectall + menuseparator {
   display: none !important;
 }

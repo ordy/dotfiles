@@ -179,7 +179,7 @@
     "format-icons": {
       "headphone": "<span font='12'>󰋋</span>",
       "default": [
-        "<span font='12' rise='-400'>󰜟</span>"
+        "<span font='12' rise='-800'>󰜟</span>"
       ]
     },
     "smooth-scrolling-threshold": 0.8,

@@ -29,7 +29,7 @@ abbr --add pacr 'sudo pacman -Rns'
 abbr --add pacro 'sudo pacman -Qtdq | sudo pacman -Rns -'
 
 # list unrequierd, not in base (run pacman first for sudo password)
-abbr --add pacru 'comm -23 <(pacman -Qqt | sort) <(pacman -Qqg base | sort)'
+abbr --add pacru 'comm -23 (pacman -Qqt | sort | psub) (expac -l \'\n\' \'%E\' base | sort | psub)'
 
 abbr --add pacu 'sudo pacman -Syu'
 abbr --add pacmu 'sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'

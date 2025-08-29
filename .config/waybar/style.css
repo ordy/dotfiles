@@ -18,7 +18,7 @@
 * {
 	all: unset;
 	border: none;
-	font-family: "Roboto Flex, Symbols Nerd Font";
+	font-family: "Play, Symbols Nerd Font";
 	font-size: 13px;
 	font-weight: 600;
 }
@@ -177,7 +177,7 @@ highlight {
 
 #custom-mediaplayer {
 	background-color: transparent;
-	font-family: "Adwaita Sans";
+	font-family: "Play";
   color: @rose-text;
 	padding-right: 4px;
 	padding-left: 5px;
@@ -286,6 +286,7 @@ highlight {
 	background-color: @volume;
 	color: @rose-text;
 	padding-right: 8px;
+  padding-top: 1px;
 	padding-left: 4px;
 }
 
