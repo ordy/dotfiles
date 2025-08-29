@@ -220,7 +220,6 @@ bindsym $mod+Ctrl+q exec firefox $(grim -g "$(slurp)" - | zbarimg PNG:- -q --raw
 #
 # Assign to workspace
 #
-assign [app_id="firefox"] workspace 1
 assign [app_id="Librewolf"] workspace 1
 for_window [app_id="vesktop"] move workspace 4
 for_window [app_id="spotify"] move workspace 5
@@ -232,7 +231,7 @@ bindsym $alt+tab workspace back_and_forth
 bindsym --whole-window BTN_FORWARD exec wtype -M ctrl w -m ctrl
 
 # Auto float apps
-for_window [app_id="org.gnome.Calculator"] floating enable
+for_window [app_id="qalculate-gtk"] floating enable
 for_window [app_id="^mpv$"] floating enable
 for_window [app_id="thunar"] floating enable
 for_window [app_id="pavucontrol"] floating enable
