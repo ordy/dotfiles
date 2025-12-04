@@ -3,5 +3,6 @@
 
 if status is-login
     set TTY1 (tty)
+    # [ "$TTY1" = /dev/tty1 ] && exec sway &>~/.Wsession.errors
     [ "$TTY1" = /dev/tty1 ] && exec sway &>~/.Wsession.errors
 end
