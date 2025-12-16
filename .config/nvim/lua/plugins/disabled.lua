@@ -1,10 +1,10 @@
 return {
   {
-    "echasnovski/mini.pairs",
+    "nvim-mini/mini.pairs",
     enabled = false,
   },
   {
-    "echasnovski/mini.comment",
+    "nvim-mini/mini.comment",
     enabled = false,
   },
 }

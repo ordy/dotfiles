@@ -9,3 +9,5 @@ set --global tide_character_color FFFFFF
 set --global tide_git_color_branch 76946A
 set --global tide_git_color_dirty DCA561
 set --global tide_git_color_untracked 7E9CD8
+
+fish_add_path /home/sano/.spicetify

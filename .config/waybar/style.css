@@ -212,7 +212,7 @@ highlight {
 
 #temperature {
 	color: @rose-rose;
-	margin-right: 10px;
+	margin-right: 12px;
 }
 
 #temperature.critical {
