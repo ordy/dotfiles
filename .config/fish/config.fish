@@ -1,6 +1,8 @@
 source $__fish_config_dir/environment.fish
 source $__fish_config_dir/alias.fish
 
+set -U fish_key_bindings fish_default_key_bindings
+
 set --global tide_pwd_color_dirs 8FAEC2
 set --global tide_pwd_color_anchors A7C4D6
 set --global tide_left_prompt_prefix ' '

@@ -235,11 +235,9 @@ for_window [app_id="qalculate-gtk"] floating enable
 for_window [app_id="^mpv$"] floating enable
 for_window [app_id="thunar"] floating enable
 for_window [app_id="pavucontrol"] floating enable
-for_window [app_id="org.twosheds.iwgtk"] floating enable
 for_window [app_id="iwgtk"] floating enable
-for_window [app_id="org.gnome.Loupe"] floating enable
+for_window [app_id="qimgv"] floating enable
 for_window [class="Lxappearance"] floating enable
-for_window [title="Slack Call Minipanel"] floating enable
 
 # Status Bar:
 #
