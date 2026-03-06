@@ -13,8 +13,8 @@
     "cpu",
     "memory",
     "temperature",
-    "custom/weather",
-    "backlight"
+    "custom/weather"
+    // "backlight"
   ],
   "modules-right": [
     "custom/recorder",
@@ -23,8 +23,8 @@
     "custom/sep3",
     "group/pulse-group",
     "custom/sep4",
-    "battery",
-    "custom/sep5",
+    // "battery",
+    // "custom/sep5",
     "network",
     "custom/sep6",
     "clock"

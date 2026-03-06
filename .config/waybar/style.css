@@ -90,7 +90,7 @@ highlight {
 }
 
 #custom-sep4 {
-	color: @bat;
+	color: @rose-overlay;
 	background-color: @volume;
 }
 

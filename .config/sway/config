@@ -185,11 +185,11 @@ bindsym $mod+d mode "resize"
 # Custom key bindings
 #
 # media controls
-bindsym $alt+bracketright exec mediactl next
-bindsym $altgr+bracketright exec mediactl next
-bindsym $alt+bracketleft exec mediactl previous
-bindsym $altgr+bracketleft exec mediactl previous
-bindsym $mod+$alt+space exec mediactl play-pause
+bindcode $alt+35 exec mediactl next
+bindcode $altgr+35 exec mediactl next
+bindcode $alt+34 exec mediactl previous
+bindcode $altgr+34 exec mediactl previous
+bindcode $mod+$alt+65 exec mediactl play-pause
 bindsym XF86AudioNext exec mediactl next
 bindsym XF86AudioPrev exec mediactl previous
 bindsym XF86AudioPlay exec mediactl play-pause
@@ -201,7 +201,7 @@ bindsym XF86AudioMicMute exec pactl set-source-mute 0 toggle
 bindsym $mod+m exec pactl set-sink-mute 0 toggle
 
 # Applications
-bindsym $mod+x exec thunar 
+bindsym $mod+x exec thunar
 bindsym $mod+w exec librewolf
 
 bindsym $mod+Ctrl+Backspace exec 'wlogout -b 5 -p layer-shell'
