@@ -53,7 +53,7 @@ return {
         base = "#222225",
         surface = "#252529",
         overlay = "#323136",
-        muted = "#414148",
+        muted = "#424252",
         subtle = "#6D6C77",
         pine = "#4399BC",
       },

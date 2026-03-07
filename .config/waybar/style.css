@@ -12,7 +12,6 @@
 @define-color rose-rose    #F2B3B0;
 @define-color rose-love    #eb6f92;
 @define-color volume       #56575B;
-@define-color bat          #474749;
 
 /* Bar */
 * {
@@ -67,8 +66,7 @@ highlight {
 #custom-sep1,
 #custom-sep3,
 #custom-sep4,
-#custom-sep5,
-#custom-sep6 {
+#custom-sep5 {
 	margin-top: -31px;
 	margin-bottom: -36px;
 	margin-right: -12px;
@@ -95,11 +93,6 @@ highlight {
 }
 
 #custom-sep5 {
-	color: @rose-overlay;
-	background-color: @bat;
-}
-
-#custom-sep6 {
 	color: @rose-base;
 	background-color: @rose-overlay;
 }
@@ -187,14 +180,12 @@ highlight {
 /* Modules Center */
 #cpu,
 #memory,
-#backlight,
 #custom-weather {
 	margin-right: 12px;
 }
 
 #cpu,
 #memory,
-#backlight,
 #temperature,
 #custom-weather {
 	background-color: transparent;
@@ -223,13 +214,8 @@ highlight {
 	color: @rose-gold;
 }
 
-#backlight {
-	color: @rose-iris;
-}
-
 /* Modules Right */
 #network,
-#battery,
 #pulseaudio,
 #tray {
 	margin-top: -50px;
@@ -308,33 +294,10 @@ highlight {
 	background-color: @rose-text;
 }
 
-#battery {
-	background-color: @bat;
-	color: @rose-text;
-	padding-right: 9px;
-	padding-left: 5px;
-}
-
-#battery.charging,
-#battery.plugged {
-	color: @rose-text;
-	background-color: @bat;
-}
-
 @keyframes blink {
 	to {
 		color: @rose-love;
 	}
-}
-
-#battery.critical:not(.charging) {
-	background-color: @bat;
-	color: @rose-text;
-	animation-name: blink;
-	animation-duration: 0.3s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
 }
 
 #network {

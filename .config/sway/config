@@ -9,9 +9,6 @@ set $down j
 set $up k
 set $right l
 
-# Monitors
-# exec swaymsg focus output VGA-1
-
 # Alternate layout script
 exec --no-startup-id /home/sano/.config/sway/scripts/alternating_layouts.py
 
@@ -21,28 +18,17 @@ set $term kitty
 # Application launcher
 set $menu tofi-drun | xargs swaymsg exec --
 
-# Wayland Overlay Bar
-set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
-exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
-
 # Set the wallpaper
 # output * bg #000000 solid_color
 output * bg `cat /home/sano/.current-wallpaper` fill
 
 # idle and sleep
-#exec swayidle -w before-sleep 'swaylock -C $XDG_CONFIG_HOME/sway/swaylock/config'
+exec swayidle -w before-sleep 'swaylock -C $XDG_CONFIG_HOME/sway/swaylock/config'
 
 ### Input configuration
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 input * {
   xkb_layout "custom"
-}
-
-input "2:7:SynPS/2_Synaptics_TouchPad" {
-  accel_profile flat
-  tap enabled
-  pointer_accel 0.8
-  tap_button_map lmr
 }
 input "4152:5929:SteelSeries_SteelSeries_Rival_110_Gaming_Mouse" {
   accel_profile flat
@@ -190,14 +176,7 @@ bindcode $altgr+35 exec mediactl next
 bindcode $alt+34 exec mediactl previous
 bindcode $altgr+34 exec mediactl previous
 bindcode $mod+$alt+65 exec mediactl play-pause
-bindsym XF86AudioNext exec mediactl next
-bindsym XF86AudioPrev exec mediactl previous
-bindsym XF86AudioPlay exec mediactl play-pause
 
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% && pactl get-sink-volume 0 | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' > $WOBSOCK
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% && pactl get-sink-volume 0 | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' > $WOBSOCK
-bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
-bindsym XF86AudioMicMute exec pactl set-source-mute 0 toggle
 bindsym $mod+m exec pactl set-sink-mute 0 toggle
 
 # Applications
@@ -208,9 +187,6 @@ bindsym $mod+Ctrl+Backspace exec 'wlogout -b 5 -p layer-shell'
 bindsym $mod+Ctrl+c exec hyprpicker -a
 set $screenrecorder `bash $HOME/.config/sway/scripts/toggle-screen-recorder.sh`
 bindsym --to-code $mod+V exec $screenrecorder
-
-# Reload kanshi
-# bindsym $mod+p exec_always swaymsg output LVDS-1 toggle
 
 # Screenshots
 bindsym $mod+s exec pgrep -x slurp || grim -g "$(slurp -b '#00000099' -c '#FFA066ff' -w 1)" $HOME/Pictures/sc_$RANDOM.png
@@ -270,6 +246,5 @@ gaps inner 5
 exec "hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK"
 exec "systemctl --user import-environment {,WAYLAND_}DISPLAY SWAYSOCK; systemctl --user start sway-session.target"
 exec swaymsg -t subscribe '["shutdown"]' && systemctl --user stop sway-session.target
-#exec_always "kanshictl reload"
 exec_always "systemctl --user restart panel-shadow.service"
 exec wl-paste -t text --watch clipman store --no-persist

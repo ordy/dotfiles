@@ -14,7 +14,6 @@
     "memory",
     "temperature",
     "custom/weather"
-    // "backlight"
   ],
   "modules-right": [
     "custom/recorder",
@@ -23,10 +22,8 @@
     "custom/sep3",
     "group/pulse-group",
     "custom/sep4",
-    // "battery",
-    // "custom/sep5",
     "network",
-    "custom/sep6",
+    "custom/sep5",
     "clock"
   ],
   "sway/workspaces": {
@@ -65,10 +62,6 @@
     "tooltip": false
   },
   "custom/sep5": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/sep6": {
     "format": "",
     "tooltip": false
   },
@@ -119,33 +112,6 @@
     "tooltip": true,
     "exec": "~/.config/waybar/modules/weather.sh",
     "exec-if": "ping wttr.in -c1"
-  },
-  "backlight": {
-    "on-scroll-up": "backlightcmd up",
-    "on-scroll-down": "backlightcmd down",
-    "device": "intel_backlight",
-    "format": "{percent}% {icon}",
-    "format-icons": [
-      "<span font='10' rise='-300'>󰃝</span>",
-      "<span font='10' rise='-300'>󰃟</span>",
-      "<span font='10' rise='-300'>󰃞</span>",
-      "<span font='10' rise='-300'>󰃠</span>"
-    ],
-    "smooth-scrolling-threshold": 2.5,
-    "tooltip": false
-  },
-  "battery": {
-    "states": {
-      "warning": 30,
-      "critical": 15
-    },
-    "full-at": 100,
-    "format": "<span font='10' rise='-700'></span>",
-    "format-alt": "<span rise='-1500'>{capacity} </span>  <span font='10' rise='-700'></span>",
-    "format-charging": "<span rise='-1800'>{capacity}</span> <span font='10' rise='-700'></span>",
-    "format-plugged": "<span font='10' rise='-700'></span>",
-    "tooltip-format": "{capacity}",
-    "tooltip": true
   },
   "network": {
     "format-wifi": "<span font='10' rise='900'></span>",
