@@ -86,10 +86,10 @@
       "on-scroll": 1,
       "on-click-right": "mode",
       "format": {
-        "months": "<span color='#88B9A6'><b>{}</b></span>",
-        "weeks": "<span color='#E1BC88'><b>{}</b></span>",
-        "weekdays": "<span color='#8FAEC2'><b>{}</b></span>",
-        "today": "<span color='#CAA1FF' background='#353854'><b>{}</b></span>"
+        "months": "<span color='#b6e3ff'><b>{}</b></span>",
+        "weeks": "<span color='#ecd8ff'><b>{}</b></span>",
+        "weekdays": "<span color='#80ccff'><b>{}</b></span>",
+        "today": "<span color='#ffb77c' background='#363D46'><b>{}</b></span>"
       }
     },
     "actions": {
@@ -111,7 +111,7 @@
     "tooltip": false
   },
   "custom/weather": {
-    "format": "{} <span font='10' rise='-300'></span>",
+    "format": "{} <span font='14' rise='-800'></span>",
     "format-alt": "{alt}",
     "format-alt-click": "click-right",
     "interval": 3600,
@@ -204,7 +204,7 @@
     "exec": "waybar-updates"
   },
   "custom/mediaplayer": {
-    "format": "{} <span color='#909091'>{alt}</span>",
+    "format": "{}<span color='#6e6d8e'>{alt}</span>",
     "return-type": "json",
     "max-length": 60,
     "escape": true,

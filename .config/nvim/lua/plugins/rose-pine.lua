@@ -50,11 +50,11 @@ return {
 
     palette = {
       main = {
-        base = "#222225",
-        surface = "#252529",
-        overlay = "#323136",
-        muted = "#414148",
-        subtle = "#6D6C77",
+        base = "#14121b",
+        surface = "#1f1d2e",
+        overlay = "#26233a",
+        muted = "#6e6a86",
+        subtle = "#908caa",
         pine = "#4399BC",
       },
     },
@@ -62,8 +62,8 @@ return {
     -- NOTE: Highlight groups are extended (merged) by default. Disable this
     -- per group via `inherit = false`
     highlight_groups = {
-      Normal = { bg = "#161618" },
-      Comment = { fg = "#525263" },
+      Normal = { bg = "#14121b" },
+      Comment = { fg = "#6e6a86" },
       -- StatusLine = { fg = "love", bg = "love", blend = 15 },
       -- VertSplit = { fg = "muted", bg = "muted" },
       -- Visual = { fg = "base", bg = "text", inherit = false },

@@ -9,9 +9,6 @@ set $down j
 set $up k
 set $right l
 
-# Monitors
-# exec swaymsg focus output VGA-1
-
 # Alternate layout script
 exec --no-startup-id /home/sano/.config/sway/scripts/alternating_layouts.py
 
@@ -185,11 +182,11 @@ bindsym $mod+d mode "resize"
 # Custom key bindings
 #
 # media controls
-bindsym $alt+bracketright exec mediactl next
-bindsym $altgr+bracketright exec mediactl next
-bindsym $alt+bracketleft exec mediactl previous
-bindsym $altgr+bracketleft exec mediactl previous
-bindsym $mod+$alt+space exec mediactl play-pause
+bindcode $alt+35 exec mediactl next
+bindcode $altgr+35 exec mediactl next
+bindcode $alt+34 exec mediactl previous
+bindcode $altgr+34 exec mediactl previous
+bindcode $mod+$alt+65 exec mediactl play-pause
 bindsym XF86AudioNext exec mediactl next
 bindsym XF86AudioPrev exec mediactl previous
 bindsym XF86AudioPlay exec mediactl play-pause
@@ -201,16 +198,13 @@ bindsym XF86AudioMicMute exec pactl set-source-mute 0 toggle
 bindsym $mod+m exec pactl set-sink-mute 0 toggle
 
 # Applications
-bindsym $mod+x exec thunar 
+bindsym $mod+x exec thunar
 bindsym $mod+w exec librewolf
 
 bindsym $mod+Ctrl+Backspace exec 'wlogout -b 5 -p layer-shell'
 bindsym $mod+Ctrl+c exec hyprpicker -a
 set $screenrecorder `bash $HOME/.config/sway/scripts/toggle-screen-recorder.sh`
 bindsym --to-code $mod+V exec $screenrecorder
-
-# Reload kanshi
-# bindsym $mod+p exec_always swaymsg output LVDS-1 toggle
 
 # Screenshots
 bindsym $mod+s exec pgrep -x slurp || grim -g "$(slurp -b '#00000099' -c '#FFA066ff' -w 1)" $HOME/Pictures/sc_$RANDOM.png
@@ -237,7 +231,9 @@ for_window [app_id="thunar"] floating enable
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="iwgtk"] floating enable
 for_window [app_id="qimgv"] floating enable
+for_window [app_id="zenity"] floating enable
 for_window [class="Lxappearance"] floating enable
+for_window [title="Oklch Color Picker"] floating enable
 
 # Status Bar:
 #
@@ -246,11 +242,13 @@ bar {
 }
 
 #window colors
-set $active-bg-color            #C8C8C8
-set $active-fg-color            #333A42
-set $inactive-bg-color          #1A1A1A
-set $focused_inactive-bg-color  #1A1A1A
-set $inactive-fg-color          #565D72
+font pango:Inter Bold 10
+
+set $active-bg-color            #e0def4
+set $active-fg-color            #36335b
+set $inactive-bg-color          #1f1d27
+set $focused_inactive-bg-color  #1f1d27
+set $inactive-fg-color          #625582
 set $urgent-bg-color            #F2AD9F
 
 # Border
@@ -270,6 +268,5 @@ gaps inner 5
 exec "hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK"
 exec "systemctl --user import-environment {,WAYLAND_}DISPLAY SWAYSOCK; systemctl --user start sway-session.target"
 exec swaymsg -t subscribe '["shutdown"]' && systemctl --user stop sway-session.target
-#exec_always "kanshictl reload"
 exec_always "systemctl --user restart panel-shadow.service"
 exec wl-paste -t text --watch clipman store --no-persist
