@@ -213,7 +213,9 @@ for_window [app_id="thunar"] floating enable
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="iwgtk"] floating enable
 for_window [app_id="qimgv"] floating enable
+for_window [app_id="zenity"] floating enable
 for_window [class="Lxappearance"] floating enable
+for_window [title="Oklch Color Picker"] floating enable
 
 # Status Bar:
 #
@@ -222,11 +224,13 @@ bar {
 }
 
 #window colors
-set $active-bg-color            #C8C8C8
-set $active-fg-color            #333A42
-set $inactive-bg-color          #1A1A1A
-set $focused_inactive-bg-color  #1A1A1A
-set $inactive-fg-color          #565D72
+font pango:Inter Bold 10
+
+set $active-bg-color            #e0def4
+set $active-fg-color            #36335b
+set $inactive-bg-color          #1f1d27
+set $focused_inactive-bg-color  #1f1d27
+set $inactive-fg-color          #625582
 set $urgent-bg-color            #F2AD9F
 
 # Border

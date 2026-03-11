@@ -1,25 +1,26 @@
 /* Colors */
-@define-color rose-base    #171717;
-@define-color rose-overlay #2B2B2B;
-@define-color rose-hover   #656565;
-@define-color rose-subtile #5A5A5A;
-@define-color rose-text    #D8DADF;
+@define-color rose-base    #14121B;
+@define-color rose-overlay #232033;
+@define-color rose-surface #35354D;
+@define-color rose-hover   #B8B4CF;
+@define-color rose-subtile #908CAA;
+@define-color rose-text    #E0DEF4;
 @define-color rose-white   #FFFFFF;
-@define-color rose-pine    #448FAD;
+@define-color rose-pine    #31748F;
 @define-color rose-foam    #9ccfd8;
-@define-color rose-iris    #A98DCE;
-@define-color rose-gold    #EBBC79;
-@define-color rose-rose    #F2B3B0;
-@define-color rose-love    #eb6f92;
-@define-color volume       #56575B;
+@define-color rose-iris    #C4A7E7;
+@define-color rose-gold    #F6C177;
+@define-color rose-rose    #EBBCBA;
+@define-color rose-love    #EB6F92;
+@define-color volume       #393656;
 
 /* Bar */
 * {
 	all: unset;
 	border: none;
-	font-family: "Play, Symbols Nerd Font";
+	font-family: "Fira Sans, Symbols Nerd Font";
 	font-size: 13px;
-	font-weight: 600;
+	font-weight: 500;
 }
 
 label:disabled,
@@ -89,7 +90,7 @@ highlight {
 
 #custom-sep4 {
 	color: @rose-overlay;
-	background-color: @volume;
+	background-color: @rose-surface;
 }
 
 #custom-sep5 {
@@ -125,7 +126,7 @@ highlight {
   font-size: 16px;
 }
 #workspaces button.empty label {
-	color: @rose-subtile;
+	color: @rose-surface;
 }
 
 #workspaces button.urgent label {
@@ -133,7 +134,7 @@ highlight {
 }
 
 #workspaces button:hover label {
-	color: #959da5;
+	color: @rose-hover;
 }
 
 #workspaces button#sway-workspace-1.persistent,
@@ -170,17 +171,16 @@ highlight {
 
 #custom-mediaplayer {
 	background-color: transparent;
-	font-family: "Play";
   color: @rose-text;
 	padding-right: 4px;
 	padding-left: 5px;
-	font-size: 13px;
 }
 
 /* Modules Center */
 #cpu,
 #memory,
-#custom-weather {
+#custom-weather,
+#temperature {
 	margin-right: 12px;
 }
 
@@ -189,8 +189,6 @@ highlight {
 #temperature,
 #custom-weather {
 	background-color: transparent;
-	font-family: "Roboto Condensed";
-	font-size: 14px;
 }
 
 #cpu {
@@ -203,7 +201,6 @@ highlight {
 
 #temperature {
 	color: @rose-rose;
-	margin-right: 12px;
 }
 
 #temperature.critical {
@@ -277,7 +274,7 @@ highlight {
 }
 
 #pulseaudio.muted {
-	color: #989898;
+	color: #7A7797;
 }
 
 #pulseaudio-slider {
@@ -307,7 +304,7 @@ highlight {
 }
 
 #network.disconnected {
-	color: #7F7F7F;
+  color: #474360;
 }
 
 #clock {

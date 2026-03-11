@@ -1,14 +1,14 @@
 # vim:fileencoding=utf-8:ft=config:foldmethod=marker
 
 #: Fonts {{{
-font_family      Rec Mono Custom
+font_family      "Rec Mono Custom"
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
 
 symbol_map U+e000-U+e00a,U+ea60-U+ebeb,U+e0a0-U+e0c8,U+e0ca,U+e0cc-U+e0d4,U+e200-U+e2a9,U+e300-U+e3e3,U+e5fa-U+e6b1,U+e700-U+e7c5,U+f000-U+f2e0,U+f300-U+f372,U+f400-U+f532,U+f0001-U+f1af0 Symbols Nerd Font
 
-font_size 10
+font_size 10.5
 
 disable_ligatures never
 box_drawing_scale 0.001, 1, 1.5, 2
@@ -263,7 +263,7 @@ input_delay 3
 #: in full screen programs that redraw the entire screen on each loop,
 #: because kitty is so fast that partial screen updates will be drawn.
 
-sync_to_monitor yes
+sync_to_monitor no
 
 #: Sync screen updates to the refresh rate of the monitor. This
 #: prevents tearing (https://en.wikipedia.org/wiki/Screen_tearing)
@@ -770,8 +770,8 @@ map kitty_mod+l next_layout
 #: You can change the font size for all top-level kitty OS windows at
 #: a time or only the current one.
 
-map kitty_mod+equal     change_font_size all +1.0
-map kitty_mod+minus     change_font_size all -1.0
+map kitty_mod+equal     change_font_size all +2.0
+map kitty_mod+minus     change_font_size all -2.0
 map kitty_mod+backspace change_font_size all 0
 
 #: To setup shortcuts for specific font sizes::
