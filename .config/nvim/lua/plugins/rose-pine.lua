@@ -64,6 +64,8 @@ return {
     highlight_groups = {
       Normal = { bg = "#14121b" },
       Comment = { fg = "#6e6a86" },
+      NeoTreeDotfile = { fg = "muted" },
+      NeoTreeMessage = { fg = "muted" },
       -- StatusLine = { fg = "love", bg = "love", blend = 15 },
       -- VertSplit = { fg = "muted", bg = "muted" },
       -- Visual = { fg = "base", bg = "text", inherit = false },

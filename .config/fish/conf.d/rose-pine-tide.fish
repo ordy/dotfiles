@@ -23,15 +23,14 @@ function _rose_pine_tide_base --on-variable fish_color_base
     # set -gx tide_git_color_untracked $base
     # set -gx tide_git_color_upstream $base
     set -gx tide_status_color $base
-    set -gx tide_status_color_failure $base
-    set -gx tide_cmd_duration_color $base
-    set -gx tide_time_color $base
+    # set -gx tide_status_color_failure $base
+    # set -gx tide_cmd_duration_color $base
+    # set -gx tide_time_color $base
     set -gx tide_context_color_default $base
     set -gx tide_context_color_root $base
     set -gx tide_context_color_ssh $base
     set -gx tide_jobs_color $base
     set -gx tide_node_color $base
-    set -gx tide_python_color $base
     set -gx tide_go_color $base
     set -gx tide_rustc_color $base
     set -gx tide_ruby_color $base
@@ -63,13 +62,13 @@ end
 function _rose_pine_tide_iris --on-variable fish_color_iris
     set -q fish_color_iris[1]; or return 0
     set -l iris $fish_color_iris[1]
-    set -gx tide_os_bg_color $iris
-    set -gx tide_cmd_duration_bg_color $iris
-    set -gx tide_time_bg_color $iris
+    set -gx tide_cmd_duration_color $iris
+    set -gx tide_time_color $iris
     set -gx tide_context_bg_color $iris
     set -gx tide_vi_mode_bg_color_visual $iris
     set -gx tide_git_color_dirty $iris
-    set -gx tide_character_color $iris
+    set -gx tide_python_color $iris
+    set -gx tide_os_bg_color $iris
 end
 
 function _rose_pine_tide_foam --on-variable fish_color_foam
@@ -79,8 +78,7 @@ function _rose_pine_tide_foam --on-variable fish_color_foam
     set -gx tide_direnv_bg_color $foam
     set -gx tide_nix_shell_bg_color $foam
     set -gx tide_vi_mode_bg_color_insert $foam
-    set -gx tide_pwd_color_anchors $foam
-    set -gx tide_pwd_color_dirs $foam
+    set -gx tide_git_color_branch $foam
 end
 
 function _rose_pine_tide_love --on-variable fish_color_love
@@ -88,7 +86,7 @@ function _rose_pine_tide_love --on-variable fish_color_love
     set -l love $fish_color_love[1]
     set -gx tide_git_bg_color_urgent $love
     set -gx tide_character_color_failure $love
-    set -gx tide_status_bg_color_failure $love
+    set -gx tide_status_color_failure $love
     set -gx tide_direnv_bg_color_denied $love
     set -gx tide_private_mode_bg_color $love
 end
@@ -99,14 +97,12 @@ function _rose_pine_tide_gold --on-variable fish_color_gold
     set -gx tide_git_color_unstable $gold
     set -gx tide_jobs_bg_color $gold
     set -gx tide_shlvl_bg_color $gold
-    set -gx tide_git_color_branch $gold
 end
 
 function _rose_pine_tide_pine --on-variable fish_color_pine
     set -q fish_color_pine[1]; or return 0
     set -l pine $fish_color_pine[1]
     set -gx tide_node_bg_color $pine
-    set -gx tide_python_bg_color $pine
     set -gx tide_go_bg_color $pine
     set -gx tide_rustc_bg_color $pine
     set -gx tide_ruby_bg_color $pine
@@ -126,10 +122,12 @@ function _rose_pine_tide_pine --on-variable fish_color_pine
     set -gx tide_toolbox_bg_color $pine
     set -gx tide_vi_mode_bg_color_default $pine
     set -gx tide_git_color_untracked $pine
+    set -gx tide_character_color $pine
 end
 
 function _rose_pine_tide_rose --on-variable fish_color_rose
     set -q fish_color_rose[1]; or return 0
+    set -l rose $fish_color_rose[1]
     set -gx tide_vi_mode_bg_color_replace $fish_color_rose[1]
 end
 
@@ -138,6 +136,13 @@ function _rose_pine_tide_subtle --on-variable fish_color_subtle
     set -l subtle $fish_color_subtle[1]
     set -gx tide_prompt_color_frame_and_connection $subtle
     set -gx tide_prompt_color_separator_same_color $subtle
+end
+
+function _rose_pine_tide_text --on-variable fish_color_text
+    set -q fish_color_text[1]; or return 0
+    set -l subtle $fish_color_text[1]
+    set -gx tide_pwd_color_dirs $text
+    set -gx tide_pwd_color_anchors $text
 end
 
 # Apply on load
@@ -149,3 +154,4 @@ _rose_pine_tide_gold
 _rose_pine_tide_pine
 _rose_pine_tide_rose
 _rose_pine_tide_subtle
+_rose_pine_tide_text
