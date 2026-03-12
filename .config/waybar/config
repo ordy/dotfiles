@@ -101,6 +101,7 @@
   "temperature": {
     "critical-threshold": 85,
     "format": "{temperatureC}°C  <span font='12' rise='-1900'>󱩅</span>",
+    "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
     "tooltip": false
   },
   "custom/weather": {
