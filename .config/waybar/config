@@ -13,8 +13,8 @@
     "cpu",
     "memory",
     "temperature",
-    "custom/weather",
-    "backlight"
+    "backlight",
+    "custom/weather"
   ],
   "modules-right": [
     "custom/recorder",

@@ -13,6 +13,7 @@
 @define-color rose-rose    #EBBCBA;
 @define-color rose-love    #EB6F92;
 @define-color volume       #393656;
+@define-color bat          #2e2c44;
 
 /* Bar */
 * {
@@ -90,8 +91,8 @@ highlight {
 }
 
 #custom-sep4 {
-	color: @rose-overlay;
-	background-color: @rose-surface;
+	color: @bat;
+	background-color: @volume;
 }
 
 #custom-sep5 {
@@ -186,6 +187,7 @@ highlight {
 #cpu,
 #memory,
 #backlight,
+#temperature,
 #custom-weather {
 	margin-right: 12px;
 }
