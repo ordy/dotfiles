@@ -16,7 +16,7 @@ exec --no-startup-id /home/sano/.config/sway/scripts/alternating_layouts.py
 set $term kitty
 
 # Application launcher
-set $menu tofi-drun | xargs swaymsg exec --
+set $menu fuzzel
 
 # Set the wallpaper
 # output * bg #000000 solid_color

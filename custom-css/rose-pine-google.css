@@ -1,0 +1,276 @@
+/* ==UserStyle==
+@name           Rosé-Pine Google
+@namespace      github.com/ordy
+@version        1.0.0
+@description    Rosé-Pine theme for Google Search 
+@author         Sano
+@license        GPLv3 see <https://www.gnu.org/licenses/>
+==/UserStyle== */
+@-moz-document regexp("https:\\/\\/www\\.google\\..+\\/*") {
+    :root {
+        color: var(--text);
+        --base: #191724;
+        --chighlight: #b7b3d4;
+        --gray1: #4b485b;
+        --gray2: #646078;
+        --gray3: #908bab;
+        --gray4: #a8a4be;
+        --foam: #9ccfd8;
+        --pine: #31748f;
+        --iris: #c4a7e7;
+        --love: #eb6f92;
+        --rose: #ebbcba;
+        --gold: #f6c177;
+        --overlay1: #26233a;
+        --overlay2: #3a3654;
+        --overlay3: #524e6e;
+        --surface1: #1f1d2e;
+        --surface2: #29283b;
+        --surface3: #302f46;
+        --text: #e0def4;
+    }
+    .c93Gbe, div[id^="eob_"], .XDyW0e {
+        display: none
+    }
+    .dG2XIf, .irf0hb {
+        box-shadow: none
+    }
+    .VQ1yJb {
+        display: none!important
+    }
+    .BaegVc {
+        cursor: pointer;
+    }
+    .minidiv .RNNXgb:hover {
+        box-shadow: 0 1px 4px 0 var(--base);
+    }
+    .RNNXgb:hover {
+        box-shadow: 0 1px 6px 0 var(--base);
+    }
+    .sbfc .RNNXgb {
+        box-shadow: 0 2px 8px 0 var(--base) !important;
+    }
+    .aajZCb {
+        box-shadow: 0 3px 2px 0 #16162a
+    }
+    .minidiv .aajZCb {
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+    div>g-right-button>g-fab {
+        box-shadow: 0 2px 5px #000c!important
+    }
+    .p0tlze {
+        outline: 20px solid var(--surface1)
+    }
+    .zqrO0 .niO4u {
+        outline: 1px solid var(--gray1)
+    }
+    .emcav .RNNXgb {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .Lj9fsd.DU1Mzb {
+        box-shadow: 0 2px 4px #15141de6
+    }
+    .o6juZc:hover {
+        box-shadow: 0 2px 4px #16141fe6
+    }
+    .Lj9fsd.DU1Mzb .o6juZc:hover {
+        box-shadow: 0 2px 4px #16151be6
+    }
+    .GKS7s {
+        box-shadow: inset 0 0 0 1px var(--surface3);
+    }
+    .nQ8Joc {
+        filter: invert(83%) sepia(75%) saturate(197%) hue-rotate(187deg) brightness(74%) contrast(110%)
+    }
+    .cG5GOd {
+        background-image: linear-gradient(to right, #1f202000 0, #23232400 0)!important
+    }
+    .language_list_languages.tw-ll-top::after {
+        background: linear-gradient(to bottom, #0f111a00, #252626);
+    }
+    .tb_c {
+        box-shadow: 0 1px 3px 0 var(--surface1)
+    }
+    .ZFiwCf {
+        border: 0
+    }
+    .DJbVFb .vYOkbe {
+        border-radius: 22px;
+        margin: 20px 0 20px 18px
+    }
+    g-fab.CNf3nf.OvQkSb.LhCR5d {
+        color: var(--text)!important
+    }
+    .NDTw3e.K7R36c, .b0KoTc, .fbar a, .fbar p, .knowledge-finance-wholepage-chart__fw-uch .uch-svg {
+        color: var(--gray4)
+    }
+    .wSGdUc, .ExCKkf, .J6UZg .goog-date-picker-other-month {
+        color: var(--gray2)
+    }
+    .LHJvCe, .ss6qqb .reBFM, .J6UZg td.goog-date-picker-date:hover, .b3puKe .w8qArf.w8qArf {
+        color: var(--gray3)
+    }
+    .SW5pqf, .ynAwRc, a {
+        color: var(--foam)
+    }
+    a:visited {
+        color: var(--rose)
+    }
+    .pdpvld {
+        color: var(--pine)
+    }
+    .e8Ck0d>div {
+        color: var(--surface1)!important
+    }
+    .F9Idpe {
+        background: linear-gradient(to right, transparent 0, var(--surface1) 60%, var(--surface))
+    }
+    .F9Idpe.Iy1nvd {
+        background: linear-gradient(to left, transparent 0, var(--surface1) 60%, var(--surface))
+    }
+    .Ffrp4e {
+        background: linear-gradient(to right, var(--surface1), #34343500)
+    }
+    .frDyzc {
+        background: linear-gradient(to left, var(--surface1), #36363700)
+    }
+    .GVLmE {
+        background: linear-gradient(to right, #1e1d2e0d, var(--surface1) 60%, #1c1b24)
+    }
+    .GVLmE.e2UC7d {
+        background: linear-gradient(to left, #2c2c2d0d, var(--surface1) 60%, var(--surface))
+    }
+    .RDmXvc {
+	background-image: linear-gradient(transparent 0px,rgba(30, 28, 44, .9) 52px, #1f1d2e 80px);
+}
+    .v7ex9d {
+        background: linear-gradient(to top, currentColor 50%, #32323500)
+    }
+    .imso-hov:focus, .imso-hov:hover, .nHPTn, .f6F9Be, .DJbVFb .vYOkbe, .vC9buf, .c93Gbe {
+        background-color: var(--base)
+    }
+    .Rn1jbe, .BQeWAd, .Z8r5Gb, .l10H9c, .sx8gIb, .AvBz0e, .kLhEKe, .Ww4FFb, .rsGxI.Ww4FFb, .lWzCpb, .uch-xa-tl, .xNzW0d, .yvg0ob span, .qe1Dgc, .FalWJb, .KcXNxb, .I6TXqe, .jZWadf, .Lj9fsd, .s8GCU, .xk611b, .ey2qkf, .kuydt, .ECgenc, .qcTKEe, .nZWEZc .ttwCMe, .Lu57id, .fKmH1e, .fKmH1e:hover, .vXQmIe, .MR2UAc, .VvrH3b, .jCaeMe, .GKS7s, .YbqTTb, g-flat-button.BwMo1, .zItAnd, .tb_c, .dG2XIf, .MXl0lf, .cv2VAd, g-inner-card, .o3j99 .RNNXgb, .zaokob, .wH6SXe, .MtXiu.MtXiu, .eFM0qc.BCF2pd, .CbazZd, .liveresults-sports-immersive__empty-tile, .GLcBOb .pZvJc, .NEw0P, .exZRme, .Z3cUR .exZRme .qLYAZd.zbA8Me, .zNsLfb, .rfiSsc, .b53XLe .Xx7Mif, .w7LJsc, .VHFyob .CvDJxb {
+        background-color: var(--surface1)
+    }
+    .appbar, .sfbg, .yg51vc, body, body.srp, .gb_Pa.gb_ld, .gb_Ra.gb_md, .pGxpHc>header {
+        background-color: var(--surface1)!important
+    }
+    .GKS7s:hover, .SvoXfb:hover, .Lj9fsd.DU1Mzb, .RpqMib:hover, .BaegVc:hover, g-menu:first-child, .pD4qTd .yMAEcf, .DJbVFb .xAmryf, .W6pGoe, .o6juZc, .Lj9fsd.DU1Mzb, .sbfc .RNNXgb, .emcav .RNNXgb:hover, .minidiv .RNNXgb, .aajZCb, .RNNXgb, .H5sZMe, .GCSyeb, .UafVBb, .y6CIle, .uv2Bcc, .UivI7b, .qJnhT, .zqrO0 .niO4u {
+        background-color: var(--surface2)
+    }
+    .minidiv .sfbg, g-raised-button, .emcav .RNNXgb {
+        background-color: var(--surface2)!important
+    }
+    .DJbVFb, .RNNXgb:hover, .sbfc .RNNXgb:hover {
+        background-color: var(--surface3)
+    }
+    .o6OF0:hover, .H5sZMe:hover {
+        background-color: var(--surface3);
+        filter: brightness(1.2)
+    }
+    .MXl0lf:hover, .cEW58, .h312td, .pb5vrc, .akqY6, .imso-fpm, .nGHNmf, .JgfpDb .cZEg1e, .JgfpDb.cZEg1e, .vk_c, .hqwb1b, .x7Klsd, .AOIqse .nHPTn, .Ix6LGe, .cF4V5c, .knowledge-finance-wholepage-chart__hover-card, .CybWFf, .cu-container .mnr-c, .h3L8Ub .yMAEcf, .cO53qb, .dw-sb-cont .dw-sb-btn, .dw-sb-cont .dw-sbi, .TVSh, .Pvpvv, .ZkkK1e, .pla-hovercard-container, #tw-target, .ADs2Tc>div, .b2Rnsc, .ePEmoc {
+        background-color: var(--overlay1)
+    }
+    .k4o2Hc, .aRDKUe .N2ncR, .VvrH3b:hover, .YXe3R, .Qc895c, .b3puKe {
+        background-color: var(--overlay1)!important
+    }
+    .dU5Kl, .rhHIGd, .k8XOCe, .mQo3nc, .jTw2d, .NtaMpb.k0Jjg:hover .kHtcsd, .JgfpDb .legCh, .JgfpDb .unDjgb, .ssfWCe .ZXJQ7c:hover, .EuKAde, .Hm7Qac:hover, .zP7KFe, .kwbMAe, .uais2d, .sbhl, .fw-ch-sel .KWk7r.qUjgX, .o6OF0, .XAFD5c, .uais2d:hover, .H73aad:hover, .S8ee5:hover, .WRhYSc:hover, .nfSF8e:hover, .iqd6N:hover, .ZFiwCf:hover, .MR2UAc:hover, .WZH4jc .GNJvt, .KXbwLb, .nPDzT.d4DFfb:hover, .CjiZvb, g-menu:first-child g-menu-item:hover, .gEYEQc, .MagqMc .ZFiwCf, .H73aad, .LNn04b, .zItAnd:not(.MgQdud):hover, .ZFiwCf, .gbqfba, .lJ9FBc input[type="submit"], .OouJcb, .rzG2be, .vIifob:hover, .rXoM2c .niO4u {
+        background-color: var(--overlay2)
+    }
+    .G1frSb, .REySof, .W0urI.SodP3b, .XY8hlc.ZYbY5b.PZPZlf, .aRDKUe .y5Iqsb, .aRDKUe .y5Iqsb.jFfZdd, .efwPxe, .FFGkpb>div, .A7KlJf, .S8ee5, .pxhZNb, div>g-right-button>g-fab, .IFmkIb.IFmkIb, .rUB73, .p8Jhnd, .nGzje, .Hr51pb.tb_h.TbbqEc {
+        background-color: var(--overlay2)!important
+    }
+    .WZH4jc .VknLRd:hover .GNJv, .lJ9FBc input[type="submit"]:hover {
+        background-color: var(--overlay3)
+    }
+    .S8ee5:hover, .xAmryf.LvqzR {
+        background-color: var(--overlay3)!important
+    }
+    .gbZSUe:active, .gbZSUe:hover, .gb_Oc .gb_Zd button:hover svg, .gb_Oc .gb_d:hover, .fLciMb:hover, .pCK9cd, .pD4qTd .yMAEcf:hover {
+        background-color: var(--gray1)
+    }
+    .ssfWCe .XD1Bsc, .ssfWCe .XD1Bsc:hover, .og3lId::selection, .gLFyf::selection, .gEYEQc:hover {
+        background-color: var(--gray2)
+    }
+    .U0faLd, g-fab.CNf3nf.OvQkSb.LhCR5d {
+        background-color: var(--gray2)!important
+    }
+    .W6pGoe, .o6juZc, .RNNXgb:hover, .sbfc .RNNXgb, .emcav .RNNXgb, .minidiv .RNNXgb:hover {
+        border-color: transparent
+    }
+    .sbfc .RNNXgb, .u676ze, .exZRme {
+        border-color: transparent !important;
+    }
+    .gbqfba, .lJ9FBc input[type="submit"], .o3j99 .RNNXgb {
+        border-color: var(--surface2)
+    }
+    #rhs .MXl0lf, .MXl0lf, .cv2VAd, g-inner-card, .UHCRod, .YENodc {
+        border-color: var(--overlay1)
+    }
+    .H73aad, .LNn04b, .ZkkK1e, .o3j99 .RNNXgb, .uv2Bcc {
+        border-color: var(--overlay3)
+    }
+    .YbqTTb:hover, g-flat-button.BwMo1:hover, .pD4qTd .yMAEcf, .j1iyq, .tw-lp-search {
+        border-color: var(--gray1)
+    }
+    .Lj9fsd.DU1Mzb .o6juZc, .minidiv .RNNXgb, .LiOdre {
+        border-color: var(--gray2)
+    }
+    .lJ9FBc input[type="submit"]:hover, .gEYEQc:hover {
+        border-color: var(--gray3)
+    }
+    .eQ47Fc {
+        border-color: var(--gold);
+    }
+    .LiOdre:focus {
+        border-color: var(--foam);
+    }
+    .YeThId {
+        border-top: 1px solid var(--surface1)
+    }
+    .f6F9Be, .Pvpvv {
+        border-top: 1px solid var(--overlay1)
+    }
+    .rKnmn, .RzdJxc, .aNytqb .rKnmn, .aUSklf, .wwfboe, .p0tlZe, .RpqMib::after, .xtSCL, .vC9buf, .pla-hovercard-container, .UafVBb, .MmyPhf, .Vs2K6 {
+        border-top: 1px solid var(--overlay2)
+    }
+    .sBROid, .kVs2Uc {
+        border-top: 1px solid var(--overlay2)!important
+    }
+    .JJZKK.Wui1sd, .em0nhb {
+        border-right: 1px solid var(--overlay1)
+    }
+    .liveresults-sports-immersive__match-grid-right-border {
+        border-right: solid 1px var(--overlay2)
+    }
+    #swml, #rhs .u7yw9, .em0nhb {
+        border-left: 1px solid var(--overlay1)
+    }
+    .Hwkikb.WY0eLb, .IVvPP .cLjAic.WY0eLb, .GOE2if, .ez8jFf, .ncXjTe, .ZFiwCf {
+        border-left: 1px solid var(--overlay2)
+    }
+    .ACRAdd {
+        border-left: 1px solid var(--gray1)
+    }
+    .b2hzT, .qJnhT, .OcbAbf, .JryvJ .qS9jbf {
+        border-bottom: 1px solid var(--overlay1)
+    }
+    div.HsZQAe, .a2qDab, .umRolb {
+        border-bottom: 1px solid var(--overlay2)!important
+    }
+    .HSryR a.B1uW2d, .IVvPP .i8qq8b .mFVw3b, .TQc1id .ss6qqb .mFVw3b, hr, .iRPzcb, #rhs .u7yw9 .cLjAic, .eQ47Fc, .cEPPT, .liveresults-sports-immersive__match-grid-bottom-border, .Wymdae, .DFDLnc, .TQc1id .HSryR .KsRP6, .zLSRge {
+        border-bottom: 1px solid var(--overlay2)
+    }
+    .KLEmSd {
+        border-bottom-color: var(--surface2)
+    }
+    .pla-hovercard-container, .pkWBse {
+        box-shadow: 1px 1px 10px 0 var(--base)
+    }
+    .Rn1jbe.hieTTe, .TQc1id .I6TXqe, g-card, .ZZ7G7b, .wdQNof, .AUiS2, .bh13Qc g-inner-card, .o6OF0 .xAmryf, .MsCHpb, .pRZvsd .vswGqe, .ETWPw, .vXQmIe, .MR2UAc, .VvrH3b, .jCaeMe, .GKS7s, .YbqTTb, g-flat-button.BwMo1, .zItAnd, .cu-container .mnr-c, .h3L8Ub .yMAEcf, .cO53qb, .dw-sb-cont .dw-sb-btn, .dw-sb-cont .dw-sbi, .TVSh, .gEYEQc, .MagqMc .ZFiwCf, .zItAnd:not(.MgQdud):hover, .dG2XIf {
+        border-color: var(--overlay2)
+    }
+}

@@ -3,4 +3,15 @@
 -- Add any additional options here
 local opt = vim.opt
 
+opt.list = false
+opt.listchars = {
+  tab = "» ",
+  space = "·",
+  trail = "•",
+  nbsp = "␣",
+  extends = "⟩",
+  precedes = "⟨",
+  eol = "↴",
+}
+
 opt.tabstop = 2

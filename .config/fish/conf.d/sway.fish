@@ -3,6 +3,8 @@
 
 if status is-login
     set TTY1 (tty)
-    # [ "$TTY1" = /dev/tty1 ] && exec sway &>~/.Wsession.errors
-    [ "$TTY1" = /dev/tty1 ] && exec sway &>~/.Wsession.errors
+    if [ "$TTY1" = /dev/tty1 ]
+        set -Ux XDG_DATA_DIRS $HOME/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+        exec sway &>~/.Wsession.errors
+    end
 end
