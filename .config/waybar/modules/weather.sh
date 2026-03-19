@@ -7,11 +7,11 @@ cachefile=weather_cache
 wttrdir=~/.config/wttr
 
 if [ ! -d $cachedir ]; then
-	mkdir -p $cachedir
+  mkdir -p $cachedir
 fi
 
 if [ ! -f $cachedir/$cachefile ]; then
-	touch $cachedir/$cachefile
+  touch $cachedir/$cachefile
 fi
 
 # Save current IFS
@@ -21,20 +21,19 @@ IFS=$'\n'
 
 cacheage=$(($(date +%s) - $(stat -c '%Y' "$cachedir/$cachefile")))
 if [ $cacheage -gt 1740 ] || [ ! -s $cachedir/$cachefile ]; then
-	# Reading manually set location
-	if [ -f $wttrdir/geoloc ]; then
-		location=$(head -n 1 $wttrdir/geoloc)
-	fi
-	format="%t;+%f;+%w;+%C;+%h;+%m;+%p;+%l"
-	data=($(curl -s "https://en.wttr.in/$location?format=$format" 2>&1))
-
-	echo $data >$cachedir/$cachefile
+  # Reading manually set location
+  if [ -f $wttrdir/geoloc ]; then
+    location=$(head -n 1 $wttrdir/geoloc)
+  fi
+  format="%t%3B+%f%3B+%w%3B+%C%3B+%h%3B+%m%3B+%p%3B+%l"
+  data=($(curl -s "https://en.wttr.in/$location?format=$format" 2>&1))
+  echo $data >$cachedir/$cachefile
 fi
 
 IFS=';' read -r -a wdata <<<$(cat $cachedir/$cachefile)
 
 if [[ ${wdata[0]} == Sorry* ]]; then
-	wdata[0]='--'
+  wdata[0]='--'
 fi
 
 # Restore IFSClear
