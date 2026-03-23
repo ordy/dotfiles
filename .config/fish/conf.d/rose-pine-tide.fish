@@ -97,6 +97,7 @@ function _rose_pine_tide_gold --on-variable fish_color_gold
     set -gx tide_git_color_unstable $gold
     set -gx tide_jobs_bg_color $gold
     set -gx tide_shlvl_bg_color $gold
+    set -gx tide_git_color_upstream $gold
 end
 
 function _rose_pine_tide_pine --on-variable fish_color_pine

@@ -1,0 +1,20 @@
+font=Fira Sans 11
+border-size=3
+default-timeout=3500
+max-icon-size=200
+ignore-timeout=1
+width=360
+height=140
+padding=10
+margin=5
+
+# Colors
+
+background-color=#191724
+text-color=#e0def4
+border-color=#908caa
+progress-color=over #9D9BAB
+
+[urgency=high]
+border-color=#eb6f92
+default-timeout=10000
