@@ -1,12 +1,13 @@
 font=Fira Sans 11
 border-size=3
 default-timeout=3500
-max-icon-size=200
+max-icon-size=150
 ignore-timeout=1
 width=360
 height=140
 padding=10
 margin=5
+border-radius=7
 
 # Colors
 
