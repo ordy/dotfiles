@@ -77,7 +77,7 @@
     "spacing": 5
   },
   "clock": {
-    "format": "{:%a, %d %b • <span color='#EAEDF7' font-weight='800'>%H:%M</span>}",
+    "format": "{:%a, %d %b • <span font-weight='800'>%H:%M</span>}",
     "timezone": "Europe/Brussels",
     "smooth-scrolling-threshold": 4,
     "calendar": {
