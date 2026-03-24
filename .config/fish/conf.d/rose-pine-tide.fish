@@ -1,62 +1,8 @@
-# Rosé Pine theme for Tide prompt
-# https://github.com/rose-pine/fish
-#
-# Automatically applies Rosé Pine colors to Tide prompt
-# when a Rosé Pine fish theme is active.
-
 type -q tide; or return 0
 
 function _rose_pine_tide_base --on-variable fish_color_base
     set -q fish_color_base[1]; or return 0
     set -l base $fish_color_base[1]
-
-    # All segment foreground colors use base
-    set -gx tide_os_color $base
-    # set -gx tide_pwd_color_anchors $base
-    # set -gx tide_pwd_color_dirs $base
-    # set -gx tide_pwd_color_truncated_dirs $base
-    # set -gx tide_git_color_conflicted $base
-    # set -gx tide_git_color_dirty $base
-    # set -gx tide_git_color_operation $base
-    # set -gx tide_git_color_staged $base
-    # set -gx tide_git_color_stash $base
-    # set -gx tide_git_color_untracked $base
-    # set -gx tide_git_color_upstream $base
-    set -gx tide_status_color $base
-    # set -gx tide_status_color_failure $base
-    # set -gx tide_cmd_duration_color $base
-    # set -gx tide_time_color $base
-    set -gx tide_context_color_default $base
-    set -gx tide_context_color_root $base
-    set -gx tide_context_color_ssh $base
-    set -gx tide_jobs_color $base
-    set -gx tide_node_color $base
-    set -gx tide_go_color $base
-    set -gx tide_rustc_color $base
-    set -gx tide_ruby_color $base
-    set -gx tide_java_color $base
-    set -gx tide_php_color $base
-    set -gx tide_elixir_color $base
-    set -gx tide_crystal_color $base
-    set -gx tide_zig_color $base
-    set -gx tide_bun_color $base
-    set -gx tide_aws_color $base
-    set -gx tide_gcloud_color $base
-    set -gx tide_kubectl_color $base
-    set -gx tide_terraform_color $base
-    set -gx tide_pulumi_color $base
-    set -gx tide_docker_color $base
-    set -gx tide_distrobox_color $base
-    set -gx tide_toolbox_color $base
-    set -gx tide_direnv_color $base
-    set -gx tide_direnv_color_denied $base
-    set -gx tide_nix_shell_color $base
-    set -gx tide_shlvl_color $base
-    set -gx tide_private_mode_color $base
-    set -gx tide_vi_mode_color_default $base
-    set -gx tide_vi_mode_color_insert $base
-    set -gx tide_vi_mode_color_replace $base
-    set -gx tide_vi_mode_color_visual $base
 end
 
 function _rose_pine_tide_iris --on-variable fish_color_iris
@@ -97,12 +43,13 @@ function _rose_pine_tide_gold --on-variable fish_color_gold
     set -gx tide_git_color_unstable $gold
     set -gx tide_jobs_bg_color $gold
     set -gx tide_shlvl_bg_color $gold
+    set -gx tide_git_color_upstream $gold
 end
 
 function _rose_pine_tide_pine --on-variable fish_color_pine
     set -q fish_color_pine[1]; or return 0
     set -l pine $fish_color_pine[1]
-    set -gx tide_node_bg_color $pine
+    set -gx tide_node_color $pine
     set -gx tide_go_bg_color $pine
     set -gx tide_rustc_bg_color $pine
     set -gx tide_ruby_bg_color $pine

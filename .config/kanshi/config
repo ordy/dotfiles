@@ -1,9 +1,0 @@
-profile default {
-	output LVDS-1 enable position 0,0 mode 1600x900
-}
-
-profile vga {
-	output LVDS-1 disable
-	output VGA-1 enable position 0,0 mode 1680x1050
-}
-

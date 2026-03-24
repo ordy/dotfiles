@@ -3,7 +3,7 @@ pid=$(pgrep wf-recorder)
 status=$?
 
 if [ $status != 0 ]; then
-	wf-recorder -g "$(slurp)" -f $HOME/Videos/$(date +'recording_%Y-%m-%d-%H%M%S.mp4')
+  wf-recorder -g "$(slurp)" -f $HOME/Videos/Random/$(date +'recording_%Y-%m-%d-%H%M%S.mp4')
 else
-	pkill --signal SIGINT wf-recorder
+  pkill --signal SIGINT wf-recorder
 fi

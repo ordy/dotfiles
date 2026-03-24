@@ -48,6 +48,7 @@ require("lazy").setup({
         "zipPlugin",
         "nvim-notify",
         "kanagawa",
+        "colorizer",
       },
     },
   },
