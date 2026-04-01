@@ -1,0 +1,25 @@
+[templates]
+text = "{{.Current.Temperature}}{{.Current.Units.Temperature}}"
+tooltip = """
+WEATHER\n\
+━━━━━━━━━\n\
+{{.Address.City}}, {{.Address.Country}}\n\
+{{.Current.Condition}}   {{.Current.ConditionIcon}}\n\
+╌╌╌╌╌╌╌╌╌\n\
+Feels like:\t{{.Current.ApparentTemperature}}{{.Current.Units.Temperature}}\n\
+Humidity:\t{{.Current.RelativeHumidity}}%\n\
+Wind:\t\t{{.Current.WindSpeed}} -> {{.Current.WindGusts}}{{.Current.Units.WindSpeed}}\n\
+╌╌╌╌╌╌╌╌╌\n\
+Sunrise: {{localizedTime .SunriseTime}}\n\
+Sunrise: {{localizedTime .SunsetTime}}\n\
+{{.MoonPhase}} {{.MoonPhaseIcon}}"""
+
+alt_text = ""
+alt_tooltip = ""
+
+[geolocation]
+disable_geoip = true
+disable_geoapi = true
+disable_cityname_file = true
+disable_ichnaea = true
+disable_gpsd = true
