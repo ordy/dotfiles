@@ -32,7 +32,7 @@ abbr --add pacro 'sudo pacman -Qtdq | sudo pacman -Rns -'
 abbr --add pacru 'comm -23 (pacman -Qqt | sort | psub) (expac -l \'\n\' \'%E\' base | sort | psub)'
 
 abbr --add pacu 'sudo pacman -Syu'
-abbr --add pacmu 'sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+abbr --add pacmu 'sudo reflector --verbose --latest 15 --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 abbr --add yas 'yay -S --noconfirm'
 abbr --add yau 'yay -Syu --noconfirm'
 
