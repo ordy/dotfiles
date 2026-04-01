@@ -2,3 +2,5 @@ fish_variables*
 fishd.*
 fishd.tmp.*
 fishhd.tmp.*
+
+.config/waybar-weather/geolocation 
