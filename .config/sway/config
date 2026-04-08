@@ -226,10 +226,10 @@ bar {
 #window colors
 font pango:Inter Bold 10
 
-set $active-bg-color            #e0def4
+set $active-bg-color            #635d79
 set $active-fg-color            #36335b
-set $inactive-bg-color          #1f1d27
-set $focused_inactive-bg-color  #1f1d27
+set $inactive-bg-color          #1e1b27
+set $focused_inactive-bg-color  #221f2c
 set $inactive-fg-color          #625582
 set $urgent-bg-color            #F2AD9F
 
