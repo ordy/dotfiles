@@ -179,6 +179,7 @@ highlight {
 #custom-mediaplayer {
 	background-color: transparent;
   color: @rose-text;
+  font-family: "Fira Sans";
 	padding-right: 4px;
 	padding-left: 5px;
 }
