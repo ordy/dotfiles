@@ -1,0 +1,20 @@
+GIMP Palette
+Name: mirage-rose-pine
+#
+ 20  18  27 base
+ 35  32  51 surface1
+ 53  53  77 surface2
+ 57  54  86 overlay
+184 180 207 muted
+144 140 170 subtle
+224 222 244 text
+255 255 255 white
+235 111 146 love
+246 193 119 gold
+235 188 186 rose
+ 49 116 143 pine
+156 207 216 foam
+196 167 231 iris
+ 33  32  46 highlight_low
+ 64  61  82 highlight_med
+ 82  79 103 highlight_high

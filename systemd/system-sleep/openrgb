@@ -1,0 +1,5 @@
+#!/bin/bash
+case "$1" in
+pre) runuser -l sano -c '/usr/bin/openrgb --noautoconnect --profile "off"' ;;
+post) sleep 2 && runuser -l sano -c '/usr/bin/openrgb --noautoconnect --profile "shiori"' ;;
+esac

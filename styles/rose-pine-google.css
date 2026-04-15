@@ -89,8 +89,11 @@
         background-image: linear-gradient(to right, #1f202000 0, #23232400 0)!important
     }
     .language_list_languages.tw-ll-top::after {
-        background: linear-gradient(to bottom, #0f111a00, #252626);
+        background: linear-gradient(to bottom, #0f111a00, var(--surface1));
     }
+    .zOwEef {
+	background: linear-gradient(90deg,transparent,var(--surface1) 75%,var(--surface1));
+}
     .tb_c {
         box-shadow: 0 1px 3px 0 var(--surface1)
     }
@@ -101,17 +104,20 @@
         border-radius: 22px;
         margin: 20px 0 20px 18px
     }
+    .VuuXrf {
+        color: var(--text);
+    }
     g-fab.CNf3nf.OvQkSb.LhCR5d {
         color: var(--text)!important
     }
-    .NDTw3e.K7R36c, .b0KoTc, .fbar a, .fbar p, .knowledge-finance-wholepage-chart__fw-uch .uch-svg {
-        color: var(--gray4)
-    }
-    .wSGdUc, .ExCKkf, .J6UZg .goog-date-picker-other-month {
+    .wSGdUc, .ExCKkf, .J6UZg .goog-date-picker-other-month, .R1QWuf, .M5dSnd {
         color: var(--gray2)
     }
-    .LHJvCe, .ss6qqb .reBFM, .J6UZg td.goog-date-picker-date:hover, .b3puKe .w8qArf.w8qArf {
+    .LHJvCe, .ss6qqb .reBFM, .J6UZg td.goog-date-picker-date:hover, .b3puKe .w8qArf.w8qArf, .ZYHQ7e, .HwW5E, .v5uz4e, .YrbPuc {
         color: var(--gray3)
+    }
+        .NDTw3e.K7R36c, .b0KoTc, .fbar a, .fbar p, .knowledge-finance-wholepage-chart__fw-uch .uch-svg, .p4wth, cite, .ylgVCe {
+        color: var(--gray4)
     }
     .SW5pqf, .ynAwRc, a {
         color: var(--foam)
@@ -143,7 +149,7 @@
     .GVLmE.e2UC7d {
         background: linear-gradient(to left, #2c2c2d0d, var(--surface1) 60%, var(--surface))
     }
-    .RDmXvc {
+    .RDmXvc, .b0Zsmc {
 	background-image: linear-gradient(transparent 0px,rgba(30, 28, 44, .9) 52px, #1f1d2e 80px);
 }
     .v7ex9d {
@@ -152,38 +158,38 @@
     .imso-hov:focus, .imso-hov:hover, .nHPTn, .f6F9Be, .DJbVFb .vYOkbe, .vC9buf, .c93Gbe {
         background-color: var(--base)
     }
-    .Rn1jbe, .BQeWAd, .Z8r5Gb, .l10H9c, .sx8gIb, .AvBz0e, .kLhEKe, .Ww4FFb, .rsGxI.Ww4FFb, .lWzCpb, .uch-xa-tl, .xNzW0d, .yvg0ob span, .qe1Dgc, .FalWJb, .KcXNxb, .I6TXqe, .jZWadf, .Lj9fsd, .s8GCU, .xk611b, .ey2qkf, .kuydt, .ECgenc, .qcTKEe, .nZWEZc .ttwCMe, .Lu57id, .fKmH1e, .fKmH1e:hover, .vXQmIe, .MR2UAc, .VvrH3b, .jCaeMe, .GKS7s, .YbqTTb, g-flat-button.BwMo1, .zItAnd, .tb_c, .dG2XIf, .MXl0lf, .cv2VAd, g-inner-card, .o3j99 .RNNXgb, .zaokob, .wH6SXe, .MtXiu.MtXiu, .eFM0qc.BCF2pd, .CbazZd, .liveresults-sports-immersive__empty-tile, .GLcBOb .pZvJc, .NEw0P, .exZRme, .Z3cUR .exZRme .qLYAZd.zbA8Me, .zNsLfb, .rfiSsc, .b53XLe .Xx7Mif, .w7LJsc, .VHFyob .CvDJxb {
-        background-color: var(--surface1)
+    .Rn1jbe, .BQeWAd, .Z8r5Gb, .l10H9c, .sx8gIb, .AvBz0e, .kLhEKe, .Ww4FFb, .rsGxI.Ww4FFb, .lWzCpb, .uch-xa-tl, .xNzW0d, .yvg0ob span, .qe1Dgc, .FalWJb, .KcXNxb, .I6TXqe, .jZWadf, .Lj9fsd, .s8GCU, .xk611b, .ey2qkf, .kuydt, .ECgenc, .qcTKEe, .nZWEZc .ttwCMe, .Lu57id, .fKmH1e, .fKmH1e:hover, .vXQmIe, .MR2UAc, .VvrH3b, .jCaeMe, .GKS7s, .YbqTTb, g-flat-button.BwMo1, .zItAnd, .tb_c, .dG2XIf, .MXl0lf, .cv2VAd, g-inner-card, .o3j99 .RNNXgb, .zaokob, .wH6SXe, .MtXiu.MtXiu, .eFM0qc.BCF2pd, .CbazZd, .liveresults-sports-immersive__empty-tile, .GLcBOb .pZvJc, .NEw0P, .exZRme, .Z3cUR .exZRme .qLYAZd.zbA8Me, .zNsLfb, .rfiSsc, .b53XLe .Xx7Mif, .w7LJsc, .VHFyob .CvDJxb, .BGBBnd.FR7ZSc .niO4u, .f196ee, .GS02Vb, .EnAcmd, .fGdMz .ZFiwCf, .E5xKtc .ZFiwCf, .cRrHvd, .EUZsD .ZFiwCf, .NPlqLd .ZFiwCf, .iQYbye {
+        background-color: var(--surface1);
     }
-    .appbar, .sfbg, .yg51vc, body, body.srp, .gb_Pa.gb_ld, .gb_Ra.gb_md, .pGxpHc>header {
+    .appbar, .sfbg, .yg51vc, body, body.srp, .gb_Pa.gb_ld, .gb_Ra.gb_md, .pGxpHc>header, .gb_Ha.gb_Dd {
         background-color: var(--surface1)!important
     }
-    .GKS7s:hover, .SvoXfb:hover, .Lj9fsd.DU1Mzb, .RpqMib:hover, .BaegVc:hover, g-menu:first-child, .pD4qTd .yMAEcf, .DJbVFb .xAmryf, .W6pGoe, .o6juZc, .Lj9fsd.DU1Mzb, .sbfc .RNNXgb, .emcav .RNNXgb:hover, .minidiv .RNNXgb, .aajZCb, .RNNXgb, .H5sZMe, .GCSyeb, .UafVBb, .y6CIle, .uv2Bcc, .UivI7b, .qJnhT, .zqrO0 .niO4u {
+    .GKS7s:hover, .SvoXfb:hover, .Lj9fsd.DU1Mzb, .RpqMib:hover, .BaegVc:hover, g-menu:first-child, .pD4qTd .yMAEcf, .DJbVFb .xAmryf, .W6pGoe, .o6juZc, .Lj9fsd.DU1Mzb, .sbfc .RNNXgb, .emcav .RNNXgb:hover, .minidiv .RNNXgb, .aajZCb, .RNNXgb, .H5sZMe, .GCSyeb, .UafVBb, .y6CIle, .uv2Bcc, .UivI7b, .qJnhT, .zqrO0 .niO4u, .HV5Yde, .VKHL9c, .gx72we {
         background-color: var(--surface2)
     }
     .minidiv .sfbg, g-raised-button, .emcav .RNNXgb {
         background-color: var(--surface2)!important
     }
-    .DJbVFb, .RNNXgb:hover, .sbfc .RNNXgb:hover {
+    .DJbVFb, .RNNXgb:hover, .sbfc .RNNXgb:hover, .KDcb0c {
         background-color: var(--surface3)
     }
     .o6OF0:hover, .H5sZMe:hover {
         background-color: var(--surface3);
         filter: brightness(1.2)
     }
-    .MXl0lf:hover, .cEW58, .h312td, .pb5vrc, .akqY6, .imso-fpm, .nGHNmf, .JgfpDb .cZEg1e, .JgfpDb.cZEg1e, .vk_c, .hqwb1b, .x7Klsd, .AOIqse .nHPTn, .Ix6LGe, .cF4V5c, .knowledge-finance-wholepage-chart__hover-card, .CybWFf, .cu-container .mnr-c, .h3L8Ub .yMAEcf, .cO53qb, .dw-sb-cont .dw-sb-btn, .dw-sb-cont .dw-sbi, .TVSh, .Pvpvv, .ZkkK1e, .pla-hovercard-container, #tw-target, .ADs2Tc>div, .b2Rnsc, .ePEmoc {
+    .MXl0lf:hover, .cEW58, .h312td, .pb5vrc, .akqY6, .imso-fpm, .nGHNmf, .JgfpDb .cZEg1e, .JgfpDb.cZEg1e, .vk_c, .hqwb1b, .x7Klsd, .AOIqse .nHPTn, .Ix6LGe, .cF4V5c, .knowledge-finance-wholepage-chart__hover-card, .CybWFf, .cu-container .mnr-c, .h3L8Ub .yMAEcf, .cO53qb, .dw-sb-cont .dw-sb-btn, .dw-sb-cont .dw-sbi, .TVSh, .Pvpvv, .ZkkK1e, .pla-hovercard-container, #tw-target, .ADs2Tc>div, .b2Rnsc, .ePEmoc,.pCTyYe {
         background-color: var(--overlay1)
     }
     .k4o2Hc, .aRDKUe .N2ncR, .VvrH3b:hover, .YXe3R, .Qc895c, .b3puKe {
         background-color: var(--overlay1)!important
     }
-    .dU5Kl, .rhHIGd, .k8XOCe, .mQo3nc, .jTw2d, .NtaMpb.k0Jjg:hover .kHtcsd, .JgfpDb .legCh, .JgfpDb .unDjgb, .ssfWCe .ZXJQ7c:hover, .EuKAde, .Hm7Qac:hover, .zP7KFe, .kwbMAe, .uais2d, .sbhl, .fw-ch-sel .KWk7r.qUjgX, .o6OF0, .XAFD5c, .uais2d:hover, .H73aad:hover, .S8ee5:hover, .WRhYSc:hover, .nfSF8e:hover, .iqd6N:hover, .ZFiwCf:hover, .MR2UAc:hover, .WZH4jc .GNJvt, .KXbwLb, .nPDzT.d4DFfb:hover, .CjiZvb, g-menu:first-child g-menu-item:hover, .gEYEQc, .MagqMc .ZFiwCf, .H73aad, .LNn04b, .zItAnd:not(.MgQdud):hover, .ZFiwCf, .gbqfba, .lJ9FBc input[type="submit"], .OouJcb, .rzG2be, .vIifob:hover, .rXoM2c .niO4u {
+    .dU5Kl, .rhHIGd, .k8XOCe, .mQo3nc, .jTw2d, .NtaMpb.k0Jjg:hover .kHtcsd, .JgfpDb .legCh, .JgfpDb .unDjgb, .ssfWCe .ZXJQ7c:hover, .EuKAde, .Hm7Qac:hover, .zP7KFe, .kwbMAe, .uais2d, .sbhl, .fw-ch-sel .KWk7r.qUjgX, .o6OF0, .XAFD5c, .uais2d:hover, .H73aad:hover, .S8ee5:hover, .WRhYSc:hover, .nfSF8e:hover, .iqd6N:hover, .ZFiwCf:hover, .MR2UAc:hover, .WZH4jc .GNJvt, .KXbwLb, .nPDzT.d4DFfb:hover, .CjiZvb, g-menu:first-child g-menu-item:hover, .gEYEQc, .MagqMc .ZFiwCf, .H73aad, .LNn04b, .zItAnd:not(.MgQdud):hover, .ZFiwCf, .gbqfba, .lJ9FBc input[type="submit"], .OouJcb, .rzG2be, .vIifob:hover, .rXoM2c .niO4u, .o8j0Mc, .vVRw1d, .rG9tvd, .Q2WBBe, .Bi9oQd {
         background-color: var(--overlay2)
     }
-    .G1frSb, .REySof, .W0urI.SodP3b, .XY8hlc.ZYbY5b.PZPZlf, .aRDKUe .y5Iqsb, .aRDKUe .y5Iqsb.jFfZdd, .efwPxe, .FFGkpb>div, .A7KlJf, .S8ee5, .pxhZNb, div>g-right-button>g-fab, .IFmkIb.IFmkIb, .rUB73, .p8Jhnd, .nGzje, .Hr51pb.tb_h.TbbqEc {
+    .G1frSb, .REySof, .W0urI.SodP3b, .XY8hlc.ZYbY5b.PZPZlf, .aRDKUe .y5Iqsb, .aRDKUe .y5Iqsb.jFfZdd, .efwPxe, .FFGkpb>div, .A7KlJf, .S8ee5, .pxhZNb, div>g-right-button>g-fab, .IFmkIb.IFmkIb, .rUB73, .p8Jhnd, .nGzje, .Hr51pb.tb_h.TbbqEc, .Xkjimd::before {
         background-color: var(--overlay2)!important
     }
-    .WZH4jc .VknLRd:hover .GNJv, .lJ9FBc input[type="submit"]:hover {
+    .WZH4jc .VknLRd:hover .GNJv, .lJ9FBc input[type="submit"]:hover, .BjvG9b {
         background-color: var(--overlay3)
     }
     .S8ee5:hover, .xAmryf.LvqzR {
@@ -210,7 +216,7 @@
     #rhs .MXl0lf, .MXl0lf, .cv2VAd, g-inner-card, .UHCRod, .YENodc {
         border-color: var(--overlay1)
     }
-    .H73aad, .LNn04b, .ZkkK1e, .o3j99 .RNNXgb, .uv2Bcc {
+    .H73aad, .LNn04b, .ZkkK1e, .o3j99 .RNNXgb, .uv2Bcc, .pHpOfb, .FR7ZSc .niO4u, #rhs .dG2XIf, .in7vHe, .fGdMz .ZFiwCf, .E5xKtc .ZFiwCf, .EUZsD .ZFiwCf, .NPlqLd .ZFiwCf{
         border-color: var(--overlay3)
     }
     .YbqTTb:hover, g-flat-button.BwMo1:hover, .pD4qTd .yMAEcf, .j1iyq, .tw-lp-search {
@@ -225,7 +231,7 @@
     .eQ47Fc {
         border-color: var(--gold);
     }
-    .LiOdre:focus {
+    .LiOdre:focus  {
         border-color: var(--foam);
     }
     .YeThId {
@@ -234,7 +240,7 @@
     .f6F9Be, .Pvpvv {
         border-top: 1px solid var(--overlay1)
     }
-    .rKnmn, .RzdJxc, .aNytqb .rKnmn, .aUSklf, .wwfboe, .p0tlZe, .RpqMib::after, .xtSCL, .vC9buf, .pla-hovercard-container, .UafVBb, .MmyPhf, .Vs2K6 {
+    .rKnmn, .RzdJxc, .aNytqb .rKnmn, .aUSklf, .wwfboe, .p0tlZe, .RpqMib::after, .xtSCL, .vC9buf, .pla-hovercard-container, .UafVBb, .MmyPhf, .Vs2K6, .y8Jpof.pPLc9e.kpQuGf, .nm6nmc.l0jSyf.kpQuGf, .sHEJob {
         border-top: 1px solid var(--overlay2)
     }
     .sBROid, .kVs2Uc {
@@ -264,6 +270,9 @@
     .HSryR a.B1uW2d, .IVvPP .i8qq8b .mFVw3b, .TQc1id .ss6qqb .mFVw3b, hr, .iRPzcb, #rhs .u7yw9 .cLjAic, .eQ47Fc, .cEPPT, .liveresults-sports-immersive__match-grid-bottom-border, .Wymdae, .DFDLnc, .TQc1id .HSryR .KsRP6, .zLSRge {
         border-bottom: 1px solid var(--overlay2)
     }
+    .vVRw1d {
+        border-bottom: 1px solid var(--overlay3)
+    }
     .KLEmSd {
         border-bottom-color: var(--surface2)
     }
@@ -273,4 +282,9 @@
     .Rn1jbe.hieTTe, .TQc1id .I6TXqe, g-card, .ZZ7G7b, .wdQNof, .AUiS2, .bh13Qc g-inner-card, .o6OF0 .xAmryf, .MsCHpb, .pRZvsd .vswGqe, .ETWPw, .vXQmIe, .MR2UAc, .VvrH3b, .jCaeMe, .GKS7s, .YbqTTb, g-flat-button.BwMo1, .zItAnd, .cu-container .mnr-c, .h3L8Ub .yMAEcf, .cO53qb, .dw-sb-cont .dw-sb-btn, .dw-sb-cont .dw-sbi, .TVSh, .gEYEQc, .MagqMc .ZFiwCf, .zItAnd:not(.MgQdud):hover, .dG2XIf {
         border-color: var(--overlay2)
     }
+    .vKEkVd {
+        --btn-bg-color: var(--overlay2);
+        --btn-bg-color-hover: var(--overlay3);
+    }
+    
 }

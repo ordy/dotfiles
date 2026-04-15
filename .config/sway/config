@@ -196,7 +196,7 @@ bindsym $mod+Ctrl+q exec librewolf $(grim -g "$(slurp)" - | zbarimg PNG:- -q --r
 #
 # Assign to workspace
 #
-assign [app_id="Librewolf"] workspace 1
+assign [app_id="librewolf"] workspace 1
 for_window [app_id="vesktop"] move workspace 4
 for_window [app_id="spotify"] move workspace 5
 
