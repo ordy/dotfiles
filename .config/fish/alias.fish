@@ -5,7 +5,7 @@ abbr --add more less
 abbr --add vim nvim
 abbr --add svim sudoedit
 abbr --add sf 'clear && pfetch'
-abbr --add swaytree 'swaymsg -t get_tree | grep -E '\''app_id|name|shell'\'''
+abbr --add swaytree 'swaymsg -t get_tree | jq \'.. | objects | select(.app_id?) | {name, pid, app_id, shell}\''
 abbr --add cls clear
 abbr --add wget 'wget --hsts-file='\''$XDG_DATA_HOME/wget-hsts'\'''
 abbr --add unp 'unp -U'
