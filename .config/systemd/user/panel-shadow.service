@@ -4,7 +4,7 @@ PartOf=sway-session.target
 
 [Service]
 Type=simple
-ExecStart=/home/sano/.config/waybar/shadow/panel-shadow.py
+ExecStart=/home/sano/.config/waybar/shadow/shadow
 
 [Install]
 WantedBy=sway-session.target

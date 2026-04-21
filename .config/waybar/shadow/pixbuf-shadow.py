@@ -20,7 +20,7 @@ layer.add(shadow)
 layer.set_app_paintable(True)
 
 # Vertical offset
-offset = -3
+offset = 23
 
 GtkLayerShell.init_for_window(layer)
 GtkLayerShell.set_monitor(layer, monitor)
