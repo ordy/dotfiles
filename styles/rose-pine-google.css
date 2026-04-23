@@ -28,6 +28,14 @@
         --surface2: #29283b;
         --surface3: #302f46;
         --text: #e0def4;
+        --IXoxUe: var(--gray3);
+        --ONhrGd: var(--surface3);
+        --gS5jXb: var(--surface3);
+        --bbQxAb: var(--gray4);
+        --XKMDxc: var(--surface3);
+        --aYn2S: var(--overlay2);
+        --Lm570b: var(--overlay3);
+        --xhUGwc: var(--surface1);
     }
     .c93Gbe, div[id^="eob_"], .XDyW0e {
         display: none
@@ -94,6 +102,9 @@
     .zOwEef {
 	background: linear-gradient(90deg,transparent,var(--surface1) 75%,var(--surface1));
 }
+    .Zze5V {
+	background: linear-gradient(to bottom,transparent 0,var(--surface1) 60px);
+}
     .tb_c {
         box-shadow: 0 1px 3px 0 var(--surface1)
     }
@@ -113,17 +124,17 @@
     .wSGdUc, .ExCKkf, .J6UZg .goog-date-picker-other-month, .R1QWuf, .M5dSnd {
         color: var(--gray2)
     }
-    .LHJvCe, .ss6qqb .reBFM, .J6UZg td.goog-date-picker-date:hover, .b3puKe .w8qArf.w8qArf, .ZYHQ7e, .HwW5E, .v5uz4e, .YrbPuc {
+    .LHJvCe, .ss6qqb .reBFM, .J6UZg td.goog-date-picker-date:hover, .b3puKe .w8qArf.w8qArf, .ZYHQ7e, .HwW5E, .v5uz4e, .YrbPuc, .yaX1fe .nZ1RBb, .yaX1fe .pW8op {
         color: var(--gray3)
     }
-        .NDTw3e.K7R36c, .b0KoTc, .fbar a, .fbar p, .knowledge-finance-wholepage-chart__fw-uch .uch-svg, .p4wth, cite, .ylgVCe {
+        .NDTw3e.K7R36c, .b0KoTc, .fbar a, .fbar p, .knowledge-finance-wholepage-chart__fw-uch .uch-svg, .p4wth, cite, .ylgVCe, .ADx4Yb, .usJj9c .zz3gNc {
         color: var(--gray4)
     }
     .SW5pqf, .ynAwRc, a {
         color: var(--foam)
     }
     a:visited {
-        color: var(--rose)
+        color: var(--iris)
     }
     .pdpvld {
         color: var(--pine)
@@ -161,10 +172,10 @@
     .Rn1jbe, .BQeWAd, .Z8r5Gb, .l10H9c, .sx8gIb, .AvBz0e, .kLhEKe, .Ww4FFb, .rsGxI.Ww4FFb, .lWzCpb, .uch-xa-tl, .xNzW0d, .yvg0ob span, .qe1Dgc, .FalWJb, .KcXNxb, .I6TXqe, .jZWadf, .Lj9fsd, .s8GCU, .xk611b, .ey2qkf, .kuydt, .ECgenc, .qcTKEe, .nZWEZc .ttwCMe, .Lu57id, .fKmH1e, .fKmH1e:hover, .vXQmIe, .MR2UAc, .VvrH3b, .jCaeMe, .GKS7s, .YbqTTb, g-flat-button.BwMo1, .zItAnd, .tb_c, .dG2XIf, .MXl0lf, .cv2VAd, g-inner-card, .o3j99 .RNNXgb, .zaokob, .wH6SXe, .MtXiu.MtXiu, .eFM0qc.BCF2pd, .CbazZd, .liveresults-sports-immersive__empty-tile, .GLcBOb .pZvJc, .NEw0P, .exZRme, .Z3cUR .exZRme .qLYAZd.zbA8Me, .zNsLfb, .rfiSsc, .b53XLe .Xx7Mif, .w7LJsc, .VHFyob .CvDJxb, .BGBBnd.FR7ZSc .niO4u, .f196ee, .GS02Vb, .EnAcmd, .fGdMz .ZFiwCf, .E5xKtc .ZFiwCf, .cRrHvd, .EUZsD .ZFiwCf, .NPlqLd .ZFiwCf, .iQYbye {
         background-color: var(--surface1);
     }
-    .appbar, .sfbg, .yg51vc, body, body.srp, .gb_Pa.gb_ld, .gb_Ra.gb_md, .pGxpHc>header, .gb_Ha.gb_Dd {
+    .appbar, .sfbg, .yg51vc, body, body.srp, .gb_Pa.gb_ld, .gb_Ra.gb_md, .pGxpHc>header, .gb_Ha.gb_Dd, #gb {
         background-color: var(--surface1)!important
     }
-    .GKS7s:hover, .SvoXfb:hover, .Lj9fsd.DU1Mzb, .RpqMib:hover, .BaegVc:hover, g-menu:first-child, .pD4qTd .yMAEcf, .DJbVFb .xAmryf, .W6pGoe, .o6juZc, .Lj9fsd.DU1Mzb, .sbfc .RNNXgb, .emcav .RNNXgb:hover, .minidiv .RNNXgb, .aajZCb, .RNNXgb, .H5sZMe, .GCSyeb, .UafVBb, .y6CIle, .uv2Bcc, .UivI7b, .qJnhT, .zqrO0 .niO4u, .HV5Yde, .VKHL9c, .gx72we {
+    .GKS7s:hover, .SvoXfb:hover, .Lj9fsd.DU1Mzb, .RpqMib:hover, .BaegVc:hover, g-menu:first-child, .pD4qTd .yMAEcf, .DJbVFb .xAmryf, .W6pGoe, .o6juZc, .Lj9fsd.DU1Mzb, .sbfc .RNNXgb, .emcav .RNNXgb:hover, .minidiv .RNNXgb, .aajZCb, .RNNXgb, .H5sZMe, .GCSyeb, .UafVBb, .y6CIle, .uv2Bcc, .UivI7b, .qJnhT, .zqrO0 .niO4u, .HV5Yde, .VKHL9c, .gx72we, .qEn1od, .rG9tvd {
         background-color: var(--surface2)
     }
     .minidiv .sfbg, g-raised-button, .emcav .RNNXgb {
@@ -183,10 +194,10 @@
     .k4o2Hc, .aRDKUe .N2ncR, .VvrH3b:hover, .YXe3R, .Qc895c, .b3puKe {
         background-color: var(--overlay1)!important
     }
-    .dU5Kl, .rhHIGd, .k8XOCe, .mQo3nc, .jTw2d, .NtaMpb.k0Jjg:hover .kHtcsd, .JgfpDb .legCh, .JgfpDb .unDjgb, .ssfWCe .ZXJQ7c:hover, .EuKAde, .Hm7Qac:hover, .zP7KFe, .kwbMAe, .uais2d, .sbhl, .fw-ch-sel .KWk7r.qUjgX, .o6OF0, .XAFD5c, .uais2d:hover, .H73aad:hover, .S8ee5:hover, .WRhYSc:hover, .nfSF8e:hover, .iqd6N:hover, .ZFiwCf:hover, .MR2UAc:hover, .WZH4jc .GNJvt, .KXbwLb, .nPDzT.d4DFfb:hover, .CjiZvb, g-menu:first-child g-menu-item:hover, .gEYEQc, .MagqMc .ZFiwCf, .H73aad, .LNn04b, .zItAnd:not(.MgQdud):hover, .ZFiwCf, .gbqfba, .lJ9FBc input[type="submit"], .OouJcb, .rzG2be, .vIifob:hover, .rXoM2c .niO4u, .o8j0Mc, .vVRw1d, .rG9tvd, .Q2WBBe, .Bi9oQd {
+    .dU5Kl, .rhHIGd, .k8XOCe, .mQo3nc, .jTw2d, .NtaMpb.k0Jjg:hover .kHtcsd, .JgfpDb .legCh, .JgfpDb .unDjgb, .ssfWCe .ZXJQ7c:hover, .EuKAde, .Hm7Qac:hover, .zP7KFe, .kwbMAe, .uais2d, .sbhl, .fw-ch-sel .KWk7r.qUjgX, .o6OF0, .XAFD5c, .uais2d:hover, .H73aad:hover, .S8ee5:hover, .WRhYSc:hover, .nfSF8e:hover, .iqd6N:hover, .ZFiwCf:hover, .MR2UAc:hover, .WZH4jc .GNJvt, .KXbwLb, .nPDzT.d4DFfb:hover, .CjiZvb, g-menu:first-child g-menu-item:hover, .gEYEQc, .MagqMc .ZFiwCf, .H73aad, .LNn04b, .zItAnd:not(.MgQdud):hover, .ZFiwCf, .gbqfba, .lJ9FBc input[type="submit"], .OouJcb, .rzG2be, .vIifob:hover, .rXoM2c .niO4u, .o8j0Mc, .vVRw1d, .Q2WBBe, .Bi9oQd {
         background-color: var(--overlay2)
     }
-    .G1frSb, .REySof, .W0urI.SodP3b, .XY8hlc.ZYbY5b.PZPZlf, .aRDKUe .y5Iqsb, .aRDKUe .y5Iqsb.jFfZdd, .efwPxe, .FFGkpb>div, .A7KlJf, .S8ee5, .pxhZNb, div>g-right-button>g-fab, .IFmkIb.IFmkIb, .rUB73, .p8Jhnd, .nGzje, .Hr51pb.tb_h.TbbqEc, .Xkjimd::before {
+    .G1frSb, .REySof, .W0urI.SodP3b, .XY8hlc.ZYbY5b.PZPZlf, .aRDKUe .y5Iqsb, .aRDKUe .y5Iqsb.jFfZdd, .efwPxe, .FFGkpb>div, .A7KlJf, .S8ee5, .pxhZNb, div>g-right-button>g-fab, .IFmkIb.IFmkIb, .rUB73, .p8Jhnd, .nGzje, .Hr51pb.tb_h.TbbqEc, .Xkjimd::before, .LaPu0 {
         background-color: var(--overlay2)!important
     }
     .WZH4jc .VknLRd:hover .GNJv, .lJ9FBc input[type="submit"]:hover, .BjvG9b {
